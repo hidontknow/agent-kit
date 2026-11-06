@@ -1533,6 +1533,34 @@
       ]
     },
     {
+      "id": "tool/bui",
+      "type": "tool",
+      "name": "bui",
+      "description": "BUI：把 Blender 的用户界面拆成独立的 UI 库，可以在 Python、Rust、JavaScript（React、Svelte）、C / C++ 和 Dear ImGui 里使用；提供 Blender 风格组件（面板、数值滑块、向量输入、颜色等）、兼容 tkinter 和 Qt 写法、HTML 风格外观，CPU / GPU 渲染，启动快、省电省内存。",
+      "tags": [
+        "ui",
+        "gui",
+        "blender",
+        "python",
+        "rust",
+        "react",
+        "imgui",
+        "cross-platform"
+      ],
+      "origin": "linked",
+      "path": "tools/bui.json",
+      "category": "library",
+      "repo": "https://github.com/ppmpreetham/BUI",
+      "homepage": "https://bui.preetham.top",
+      "license": "GPL-3.0-or-later（沿用 Blender 的许可，来自 Blender 的文件为 GPL-2.0-or-later；闭源软件链接使用前注意 GPL 的传染性）",
+      "platforms": [
+        "windows",
+        "linux",
+        "macos"
+      ],
+      "targets": []
+    },
+    {
       "id": "tool/craft-anything",
       "type": "tool",
       "name": "craft-anything",

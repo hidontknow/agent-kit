@@ -1,0 +1,17 @@
+{
+  "name": "bui",
+  "description": "BUI：把 Blender 的用户界面拆成独立的 UI 库，可以在 Python、Rust、JavaScript（React、Svelte）、C / C++ 和 Dear ImGui 里使用；提供 Blender 风格组件（面板、数值滑块、向量输入、颜色等）、兼容 tkinter 和 Qt 写法、HTML 风格外观，CPU / GPU 渲染，启动快、省电省内存。",
+  "category": "library",
+  "tags": ["ui", "gui", "blender", "python", "rust", "react", "imgui", "cross-platform"],
+  "repo": "https://github.com/ppmpreetham/BUI",
+  "homepage": "https://bui.preetham.top",
+  "license": "GPL-3.0-or-later（沿用 Blender 的许可，来自 Blender 的文件为 GPL-2.0-or-later；闭源软件链接使用前注意 GPL 的传染性）",
+  "platforms": ["windows", "linux", "macos"],
+  "notes": [
+    "Python（CPython 3.11+，三平台都有预编译 wheel）：pip install blenderui，import blenderui；一个包同时提供 tkinter 写法、Qt 写法、Blender 组件和 Dear ImGui",
+    "Rust：cargo add blenderui，首次构建会编译 C 内核，需要 Rust 1.88+、CMake 和 C 编译器，Linux 还要 X11 头文件（libx11-dev）",
+    "JavaScript（Node 18+ 或 Bun）：npm install @blender-ui/react react、@blender-ui/svelte svelte，或 @blender-ui/native；npm 包目前只预编译了 Windows x64，Linux 需从源码构建，macOS 暂时只能无界面运行",
+    "C / C++：克隆后 cmake -S . -B build && cmake --build build，在自己的 CMake 项目里加为子目录并链接 bui::kit",
+    "Python 里旧示例的 import bui 是同一份代码，但 PyPI 上的 bui 包属于别的项目，发布时请用 blenderui"
+  ]
+}

@@ -279,10 +279,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (17)
+#### tools (18)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`bui`](tools/bui.json) | BUI：把 Blender 的用户界面拆成独立的 UI 库，可以在 Python、Rust、JavaScript（React、Svelte）、C / C++ 和 Dear ImGui 里使用；提供 Blender 风格组件（面板、数值滑块… | [link](https://github.com/ppmpreetham/BUI) |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`cui`](tools/cui.json) | CUI：C 语言的原生 UI 组件库，约 150 个组件（表单、选择器、对话框、表格、命令面板、虚拟化数据表格、看板、日历、甘特图、十几种图表、AI 聊天组件），带弹簧动效和完整键盘支持；一份 C99 代码跑 Windows / macO… | [link](https://github.com/yappologistic/CUI) |
 | [`ecc`](tools/ecc.json) | ECC（Everything Claude Code，"Agent 运行环境的操作系统"）：超大型 Agent 增强套件，71 个子 Agent、300+ skill、98 个命令、规则、可复用的 hooks 和 MCP 约定，覆盖 TD… | [link](https://github.com/affaan-m/ECC) |
