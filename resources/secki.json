@@ -1,0 +1,15 @@
+{
+  "name": "secki",
+  "description": "面向设计工程师的精选链接库（332 个）：UI 组件、图标与 SVG、着色器与动效、图片素材、视频动画、设计工具、配色字体、Agent skills、开发工具、工作流自动化，每条都由用过的人收录。免费浏览，无广告、无需注册。",
+  "kind": "list",
+  "tags": ["design", "ui-components", "icons", "shaders", "design-engineering", "skills"],
+  "homepage": "https://secki.dev/",
+  "license": "免费浏览，网站未声明内容许可；每条链接指向的工具各有自己的许可和价格",
+  "notes": [
+    "分类：Components、Icons & SVG、Shaders & motion、Photos & stock、Video & animation、Design tools、Color, type & pattern、Skills、Dev tools、Work & automation",
+    "Library Pack：全部链接的 CSV / JSON / Markdown，自愿付费（$1 起），可导入 Notion、Obsidian 或自己的脚本",
+    "Agent key：让 Claude Code 或 Cursor 搜索全部链接、读写你的收藏和笔记；目前是原型，正式 key 随支持者收据发放，可随时吊销",
+    "Skills 分类里有不少可以直接收藏的 skill（如 wondelai/skills、emilkowalski/skills、ibelick/ui-skills），需要时用 agent-kit add <GitHub 链接> 导入",
+    "没有 llms.txt 或公开 API；站点地图：https://secki.dev/sitemap.xml"
+  ]
+}

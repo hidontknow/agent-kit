@@ -60,7 +60,7 @@ agent-kit list --installed                          # 查看装了什么、装�
 | script | 安装到 `~/.local/bin`，与客户端无关 | | | | | | |
 | cli | 只登记链接，通过 uv / pipx / pip / npm / brew / cargo / go 安装到本机，与客户端无关 | | | | | | |
 | tool | 其他开源工具（应用、库、框架、服务…）：只登记链接、下载地址和说明；声明了 `install` 时可以自动安装 | | | | | | |
-| resource | 资源（素材库、数据集、文档、精选列表、API…）：只登记链接、许可和用法，不安装 | | | | | | |
+| resource | 资源（素材库、数据集、文档、精选列表、资源站、API…）：只登记链接、许可和用法，不安装 | | | | | | |
 
 ¹ 仅项目级（`--project`）。² Codex 没有子 Agent 格式，转换为 `/prompts:<name>` 自定义提示词。
 ³ Claude Desktop 配置文件只支持本地 stdio 服务；远程服务会通过 `mcp-remote` 桥接，`${env:X}` 在安装时展开成实际值。
@@ -248,11 +248,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 
-#### resources (1)
+#### resources (2)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`polyfork`](resources/polyfork.json) | Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。 | [link](https://github.com/lucas-martinic/polyfork-catalog) |
+| [`secki`](resources/secki.json) | 面向设计工程师的精选链接库（332 个）：UI 组件、图标与 SVG、着色器与动效、图片素材、视频动画、设计工具、配色字体、Agent skills、开发工具、工作流自动化，每条都由用过的人收录。免费浏览，无广告、无需注册。 | [link](https://secki.dev/) |
 <!-- catalog:end -->
 
 ## 参考与致谢

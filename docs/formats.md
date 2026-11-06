@@ -226,7 +226,7 @@ plugins/my-plugin/
 ```
 
 - 必填字段：`name`（与文件名一致）、`description`、`kind`、`repo` 或 `homepage`。
-- `kind` 可选值：`assets`（素材库）、`dataset`（数据集）、`docs`（文档）、`list`（精选列表）、`api`、`course`（教程）、`other`。
+- `kind` 可选值：`assets`（素材库）、`dataset`（数据集）、`docs`（文档）、`list`（精选列表、资源导航站）、`api`、`course`（教程）、`other`。
 - 资源经常不是标准开源许可，比如"免费商用但不能再分发"。`license` 写一句话说明，原文链接放在 `licenseUrl`。
 - `agent-kit install resource/<name>` 不安装任何东西，只打印链接和 `notes`。资源没有 `install` 字段，validate 会拒绝；可以安装的东西请登记到 `tools/` 或 `clis/`。
 
