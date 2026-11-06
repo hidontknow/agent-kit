@@ -449,3 +449,23 @@ test('resource: link-only, never installed, validated kinds', () => {
   s.env.AGENT_KIT_REPO = kit;
   assert.throws(() => s.run('validate'), /"kind" must be one of[\s\S]*resources have no "install"/);
 });
+
+test('tool with claudePlugin is listed in the marketplace with a GitHub source', () => {
+  const s = sandbox();
+  const kit = path.join(s.dir, 'kit');
+  fs.mkdirSync(path.join(kit, 'tools'), { recursive: true });
+  fs.writeFileSync(path.join(kit, 'tools/ext.json'), JSON.stringify({
+    name: 'ext', description: 'External plugin.', repo: 'https://github.com/o/ext', category: 'skills', claudePlugin: { repo: 'o/ext', ref: 'v1' },
+  }));
+  s.env.AGENT_KIT_REPO = kit;
+  s.run('build');
+  const market = JSON.parse(s.read(path.join(kit, '.claude-plugin/marketplace.json')));
+  assert.deepStrictEqual(market.plugins, [{ name: 'ext', source: { source: 'github', repo: 'o/ext', ref: 'v1' }, description: 'External plugin.', homepage: 'https://github.com/o/ext' }]);
+
+  fs.mkdirSync(path.join(kit, 'bundles'));
+  fs.cpSync(path.join(ROOT, 'skills/readme-writer'), path.join(kit, 'skills/readme-writer'), { recursive: true });
+  fs.writeFileSync(path.join(kit, 'bundles/ext.json'), JSON.stringify({ name: 'ext', description: 'x', include: ['skill/readme-writer'] }));
+  assert.throws(() => s.run('validate'), /claudePlugin name "ext" clashes/);
+  fs.writeFileSync(path.join(kit, 'tools/ext.json'), JSON.stringify({ name: 'ext', description: 'x', repo: 'https://github.com/o/ext', claudePlugin: { repo: 'https://github.com/o/ext' } }));
+  assert.throws(() => s.run('validate'), /"claudePlugin\.repo" must be "owner\/repo"/);
+});

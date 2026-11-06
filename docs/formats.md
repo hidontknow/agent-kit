@@ -204,6 +204,7 @@ plugins/my-plugin/
 - 没有 `install` 时，`agent-kit install tool/<name>` 不会执行任何操作，只打印下载地址和 `notes`。
 - 声明了 `install` 时，行为和 CLI 类型一样（需要同时填 `bin`）。`args` 可以替换默认的包参数，比如 `cargo install --git <url> <crate>`；这时 `package` 只在卸载时使用。
 - 主要通过包管理器安装的命令行工具，优先使用 CLI 类型（`clis/`）。
+- `claudePlugin`：如果这个工具本身就是 Claude Code 插件（仓库根目录有 `.claude-plugin/plugin.json`），填 `{ "repo": "owner/repo" }`，可选 `ref`（分支或 tag）和 `name`（默认等于工具名）。`agent-kit build` 会把它写进本仓库的插件市场，来源指向上游 GitHub 仓库，`/plugin install <name>@agent-kit` 直接从上游安装、始终是最新版，本仓库不保存任何文件。名字不能和 `plugins/` 下的插件重复。
 
 ## Resource — `resources/<name>.json`
 

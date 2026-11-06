@@ -1,0 +1,19 @@
+{
+  "name": "ponytail",
+  "description": "\"懒惰的资深开发\"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命令。支持 Claude Code、Codex、Cursor、Copilot CLI 等约 20 个 Agent。",
+  "category": "skills",
+  "tags": ["skills", "code-quality", "code-review", "yagni", "claude-code", "codex"],
+  "repo": "https://github.com/DietrichGebert/ponytail",
+  "homepage": "https://ponytail.dev/",
+  "docs": "https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md",
+  "license": "MIT",
+  "claudePlugin": { "repo": "DietrichGebert/ponytail" },
+  "notes": [
+    "Claude Code：/plugin install ponytail@agent-kit（直接从上游仓库安装，始终是最新版）；也可以用官方市场 /plugin marketplace add DietrichGebert/ponytail 再 /plugin install ponytail@ponytail，二选一，不要都装",
+    "Codex：codex plugin marketplace add DietrichGebert/ponytail，然后 codex plugin add ponytail@ponytail，在 /hooks 里信任它的两个 hook",
+    "其他 Agent（Cursor、Copilot CLI、Gemini、Windsurf、Kiro…）见 INSTALL.md；读 AGENTS.md 的 Agent 也可以直接把仓库里的 AGENTS.md 复制到项目",
+    "插件的 hook 需要 node 在 PATH 上；没有 node 时 skill 仍可用，但每次 hook 调用会提示 node: command not found",
+    "用法：/ponytail（可加 lite / ultra 切换强度）、/ponytail-review 审查改动、/ponytail-audit 审计整个仓库、/ponytail-help",
+    "插件默认在每轮结束后把任务统计写到 ~/.config/ponytail/band/<project>.csv；可选的 webhook 默认关闭，不配置就不会外发数据"
+  ]
+}

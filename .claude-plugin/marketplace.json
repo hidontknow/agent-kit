@@ -53,6 +53,23 @@
       ]
     },
     {
+      "name": "ponytail",
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      },
+      "description": "\"懒惰的资深开发\"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命令。支持 Claude Code、Codex、Cursor、Copilot CLI 等约 20 个 Agent。",
+      "homepage": "https://ponytail.dev/",
+      "keywords": [
+        "skills",
+        "code-quality",
+        "code-review",
+        "yagni",
+        "claude-code",
+        "codex"
+      ]
+    },
+    {
       "name": "rust-migration",
       "source": "./plugins/rust-migration",
       "description": "把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。",

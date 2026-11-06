@@ -929,6 +929,28 @@
       "targets": []
     },
     {
+      "id": "tool/ponytail",
+      "type": "tool",
+      "name": "ponytail",
+      "description": "\"懒惰的资深开发\"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命令。支持 Claude Code、Codex、Cursor、Copilot CLI 等约 20 个 Agent。",
+      "tags": [
+        "skills",
+        "code-quality",
+        "code-review",
+        "yagni",
+        "claude-code",
+        "codex"
+      ],
+      "origin": "linked",
+      "path": "tools/ponytail.json",
+      "category": "skills",
+      "repo": "https://github.com/DietrichGebert/ponytail",
+      "homepage": "https://ponytail.dev/",
+      "docs": "https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/solidcraft",
       "type": "tool",
       "name": "solidcraft",
