@@ -67,9 +67,18 @@ argument-hint: <file | symbol>
   "url": "https://example.com/mcp",
   "headers": { "Authorization": "Bearer ${env:TOKEN}" },
   // 可选：针对某个客户端覆盖部分字段
-  "overrides": { "claude-desktop": { "args": ["-y", "pkg@1.2.3"] } }
+  "overrides": { "claude-desktop": { "args": ["-y", "pkg@1.2.3"] } },
+  // 可选：写入客户端配置时使用的 server 名，默认等于 name
+  "serverName": "github",
+  // 可选：依赖的命令，安装时检查 PATH，缺失时给出提示
+  "requires": { "bin": ["npx"] },
+  // 可选：安装后显示的使用提示
+  "notes": ["首次使用前先登录：…"]
 }
 ```
+
+`serverName` 用于同一个服务的多种运行方式，比如 `mcp/goofish`（本机）和 `mcp/goofish-sandbox`（Docker 沙箱）都写成 `goofish`。
+这样 skills 里引用的工具名 `mcp__goofish__*` 不用改。在同一客户端、同一作用域中安装其中一个时，会先卸载另一个，避免两份配置同时存在。
 
 支持的占位符：
 

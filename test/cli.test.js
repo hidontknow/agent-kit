@@ -374,3 +374,28 @@ test('cli: package names are unpinned for uninstall', () => {
   assert.strictEqual(packageName('npm', 'tool'), 'tool');
   assert.strictEqual(packageName('cargo', 'ripgrep@14'), 'ripgrep');
 });
+
+test('mcp: variants sharing serverName replace each other cleanly', () => {
+  const s = sandbox();
+  fs.mkdirSync(s.home('.codex'), { recursive: true });
+  s.run('install', 'mcp/goofish', 'mcp/context7', '-t', 'claude-code,codex');
+  let cfg = JSON.parse(s.read(s.home('.claude.json'))).mcpServers;
+  assert.deepStrictEqual(cfg.goofish, { type: 'stdio', command: 'uvx', args: ['goofish-cli'] });
+
+  const out = s.run('install', 'mcp/goofish-sandbox', '-t', 'claude-code,codex');
+  assert.match(out, /replaced mcp\/goofish with mcp\/goofish-sandbox/);
+  cfg = JSON.parse(s.read(s.home('.claude.json'))).mcpServers;
+  assert.deepStrictEqual(cfg.goofish, { type: 'stdio', command: 'goofish', args: ['sandbox', 'mcp'] });
+  assert.ok(!('goofish-sandbox' in cfg), 'written under the shared server name');
+  assert.ok(cfg.context7, 'other servers untouched');
+  const toml = s.read(s.home('.codex/config.toml'));
+  assert.strictEqual(toml.match(/\[mcp_servers\.goofish\]/g).length, 1);
+  assert.match(toml, /command = "goofish"\nargs = \["sandbox", "mcp"\]/);
+  const installed = s.run('list', '--installed');
+  assert.doesNotMatch(installed, /mcp\/goofish\s/);
+  assert.match(installed, /mcp\/goofish-sandbox/);
+
+  s.run('uninstall', 'goofish-sandbox', '-t', 'claude-code,codex');
+  assert.ok(!('goofish' in JSON.parse(s.read(s.home('.claude.json'))).mcpServers));
+  assert.doesNotMatch(s.read(s.home('.codex/config.toml')), /goofish/);
+});

@@ -177,7 +177,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (6)
+#### mcp (8)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -185,6 +185,8 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`fetch`](mcp/fetch.json) | Fetch web pages and convert them to markdown for the model (official reference server, needs uv). | original |
 | [`filesystem`](mcp/filesystem.json) | Read, write and search files inside allowed directories (official reference server). | original |
 | [`github`](mcp/github.json) | GitHub's official remote MCP server: repos, issues, pull requests, actions, code search. | original |
+| [`goofish-sandbox`](mcp/goofish-sandbox.json) | 闲鱼 MCP server（Docker 沙箱模式）：浏览器自动化在容器虚拟桌面中运行，不占用本机浏览器。与 mcp/goofish 使用同一个 server 名，二者互相替换。 | original |
+| [`goofish`](mcp/goofish.json) | 闲鱼（Goofish/Xianyu）MCP server（本机模式）：商品查询/发布/下架、搜索、图片上传、AI 类目识别、IM 消息收发等 17 个工具，由 goofish-cli 提供。 | original |
 | [`kit-tools`](mcp/kit-tools) | Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing. | original |
 | [`playwright`](mcp/playwright.json) | Browser automation via Playwright accessibility snapshots (Microsoft). | original |
 

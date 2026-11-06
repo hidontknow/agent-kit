@@ -1,0 +1,17 @@
+{
+  "name": "goofish-sandbox",
+  "serverName": "goofish",
+  "description": "闲鱼 MCP server（Docker 沙箱模式）：浏览器自动化在容器虚拟桌面中运行，不占用本机浏览器。与 mcp/goofish 使用同一个 server 名，二者互相替换。",
+  "tags": ["xianyu", "goofish", "ecommerce", "docker"],
+  "homepage": "https://github.com/fancyboi999/goofish-cli/blob/main/docs/sandbox.md",
+  "transport": "stdio",
+  "command": "goofish",
+  "args": ["sandbox", "mcp"],
+  "requires": { "bin": ["goofish", "docker"] },
+  "notes": [
+    "需要先安装支持沙箱的 goofish：agent-kit install cli/goofish-cli",
+    "先在终端启动并登录沙箱：goofish sandbox start，然后 goofish sandbox login（在观察页面扫码）；sandbox mcp 不会自动启动容器",
+    "桌面客户端找不到命令时，把 command 改为 `command -v goofish` 输出的绝对路径，并确保客户端 PATH 中有 docker",
+    "升级 CLI 后：goofish sandbox stop，再 goofish sandbox start --rebuild"
+  ]
+}
