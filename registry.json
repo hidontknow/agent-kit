@@ -503,6 +503,8 @@
       "path": "clis/goofish-cli.json",
       "repo": "https://github.com/fancyboi999/goofish-cli",
       "homepage": "https://github.com/fancyboi999/goofish-cli",
+      "docs": "https://github.com/fancyboi999/goofish-cli/blob/main/docs/mcp-setup.md",
+      "license": "Apache-2.0",
       "bin": "goofish",
       "install": [
         {
@@ -521,6 +523,37 @@
       "targets": [
         "system"
       ]
+    },
+    {
+      "id": "tool/craft-anything",
+      "type": "tool",
+      "name": "craft-anything",
+      "description": "研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP server（320 个工具）。",
+      "tags": [
+        "rust",
+        "reverse-engineering",
+        "website-clone",
+        "game",
+        "mcp",
+        "coding-agent"
+      ],
+      "origin": "linked",
+      "path": "tools/craft-anything.json",
+      "category": "app",
+      "repo": "https://github.com/storytold/craft-anything",
+      "homepage": "https://getartcraft.com/",
+      "docs": "https://github.com/storytold/craft-anything/blob/main/docs/STATUS.md",
+      "downloads": "https://github.com/storytold/craft-anything/releases/latest",
+      "license": "MIT OR Apache-2.0",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "freebsd",
+        "web"
+      ],
+      "status": "alpha",
+      "targets": []
     }
   ]
 }

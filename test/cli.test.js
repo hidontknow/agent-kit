@@ -399,3 +399,26 @@ test('mcp: variants sharing serverName replace each other cleanly', () => {
   assert.ok(!('goofish' in JSON.parse(s.read(s.home('.claude.json'))).mcpServers));
   assert.doesNotMatch(s.read(s.home('.codex/config.toml')), /goofish/);
 });
+
+test('tool: link-only open-source tools; install optional', () => {
+  const s = sandbox();
+  // no automated install → skipped with the download link and notes
+  const out = s.run('install', 'tool/craft-anything');
+  assert.match(out, /skipped — no automated install — get it from https:\/\/github\.com\/storytold\/craft-anything\/releases\/latest/);
+  assert.match(out, /craft-anything-cli mcp/);
+  assert.match(s.run('list', 'tools'), /craft-anything/);
+  assert.match(s.run('info', 'craft-anything'), /license:\s+MIT OR Apache-2\.0/);
+
+  // a tool that declares install (with custom args) goes through the package manager
+  const kit = path.join(s.dir, 'kit');
+  fs.mkdirSync(path.join(kit, 'tools'), { recursive: true });
+  fs.writeFileSync(path.join(kit, 'tools/demo.json'), JSON.stringify({
+    name: 'demo', description: 'Demo.', repo: 'https://example.com/demo', bin: 'demo-bin-not-installed',
+    install: [{ manager: 'cargo', package: 'demo', args: ['--git', 'https://example.com/demo', 'demo', '--locked'] }],
+  }));
+  s.env.AGENT_KIT_REPO = kit;
+  s.run('validate');
+  assert.match(s.run('install', 'tool/demo', '--via', 'cargo', '--dry-run'), /would run: cargo install --git https:\/\/example\.com\/demo demo --locked/);
+  fs.writeFileSync(path.join(kit, 'tools/demo.json'), JSON.stringify({ name: 'demo', description: 'Demo.', repo: 'not-a-url', category: 'thing' }));
+  assert.throws(() => s.run('validate'), /"repo" must be an http\(s\) URL[\s\S]*"category" must be one of/);
+});

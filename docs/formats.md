@@ -175,6 +175,35 @@ plugins/my-plugin/
 - 升级用包管理器自己的命令，比如 `uv tool upgrade goofish-cli`。
 - 如果这个工具还提供 MCP server 或 skills，可以另外在 `mcp/` 下登记一份配置，或在 `notes` 里写明用法。
 
+## Tool — `tools/<name>.json`
+
+用于收藏其他开源工具：桌面应用、库、框架、服务、模型等。和 CLI 一样**只登记链接，不复制源码**，但不要求能自动安装。
+
+```json
+{
+  "name": "craft-anything",
+  "description": "这个工具是什么、为什么值得收藏",
+  "category": "app",
+  "tags": ["rust"],
+  "repo": "https://github.com/storytold/craft-anything",
+  "homepage": "https://getartcraft.com/",
+  "docs": "https://…",
+  "downloads": "https://github.com/storytold/craft-anything/releases/latest",
+  "license": "MIT OR Apache-2.0",
+  "platforms": ["macos", "windows", "linux"],
+  "status": "alpha",
+  "notes": ["安装方法、使用提示、注意事项"],
+  "bin": "tool-command",
+  "install": [{ "manager": "cargo", "package": "crate", "args": ["--git", "https://…", "crate"] }]
+}
+```
+
+- 必填字段：`name`（与文件名一致）、`description`、`repo` 或 `homepage`。其余都是可选的。
+- `category` 可选值：`app`、`cli`、`library`、`framework`、`service`、`model`、`dataset`、`other`。
+- 没有 `install` 时，`agent-kit install tool/<name>` 不会执行任何操作，只打印下载地址和 `notes`。
+- 声明了 `install` 时，行为和 CLI 类型一样（需要同时填 `bin`）。`args` 可以替换默认的包参数，比如 `cargo install --git <url> <crate>`；这时 `package` 只在卸载时使用。
+- 主要通过包管理器安装的命令行工具，优先使用 CLI 类型（`clis/`）。
+
 ## Script — `scripts/<file>`
 
 任意可执行脚本。在前 15 行内写一行 `# description: …` 作为说明。

@@ -1,6 +1,6 @@
 # AGENTS.md
 
-本仓库是一个 AI Agent 工具包，同时包含：(1) 内容：skills/agents/commands/mcp/hooks/plugins/scripts，以及只保存链接的外部 CLI（clis/）；(2) 一个零依赖的 Node CLI（`bin/`、`lib/`），负责把内容安装到 Claude Code、Codex、Cursor 等客户端，并同步收藏工具的上游。
+本仓库是一个 AI Agent 工具包，同时包含：(1) 内容：skills/agents/commands/mcp/hooks/plugins/scripts，以及只保存链接的外部 CLI（clis/）和其他开源工具（tools/）；(2) 一个零依赖的 Node CLI（`bin/`、`lib/`），负责把内容安装到 Claude Code、Codex、Cursor 等客户端，并同步收藏工具的上游。
 
 ## 常用命令
 
@@ -14,7 +14,7 @@
 - 不要引入 npm 依赖，只使用 Node ≥ 18 标准库和 git。
 - 名称使用 kebab-case，并且必须和文件名或目录名一致。
 - 收藏的第三方工具必须用 `agent-kit add` 导入，保证 `sources.json` 有登记；不要手动编辑其中的 `commit` / `hash`。
-- 外部 CLI 只在 `clis/<name>.json` 中登记链接和安装方式，不要把它的源码复制进仓库。
+- 外部 CLI 和开源工具只在 `clis/<name>.json`、`tools/<name>.json` 中登记链接和说明，不要把它们的源码复制进仓库。
 - 由 bundle 生成的 `plugins/<name>/`（README 第一行带 generated 标记）不要手动修改，改源工具或 `bundles/<name>.json` 后重新 build。
 - MCP 清单里不能出现密钥，用 `${env:VAR}` 引用。
 - 新增客户端适配器时，`install()` 必须返回可撤销的操作（`lib/state.js`），不要在适配器里自己实现卸载。

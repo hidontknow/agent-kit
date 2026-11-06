@@ -1,0 +1,20 @@
+{
+  "name": "craft-anything",
+  "description": "研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP server（320 个工具）。",
+  "category": "app",
+  "tags": ["rust", "reverse-engineering", "website-clone", "game", "mcp", "coding-agent"],
+  "repo": "https://github.com/storytold/craft-anything",
+  "homepage": "https://getartcraft.com/",
+  "docs": "https://github.com/storytold/craft-anything/blob/main/docs/STATUS.md",
+  "downloads": "https://github.com/storytold/craft-anything/releases/latest",
+  "license": "MIT OR Apache-2.0",
+  "platforms": ["macos", "windows", "linux", "freebsd", "web"],
+  "status": "alpha",
+  "notes": [
+    "安装：从 Releases 下载对应平台的安装包（Windows .msi / macOS .dmg / Linux / FreeBSD）；0.2.0 之后的版本已在应用内附带命令行工具 craft-anything-cli",
+    "源码构建（需 Rust ≥ 1.97）：cargo install --git https://github.com/storytold/craft-anything craft-anything-cli",
+    "检查环境：craft-anything-cli doctor；连接到 Claude Code 等编码 Agent：craft-anything-cli setup",
+    "作为 MCP server：craft-anything-cli mcp（stdio）",
+    "构建阶段需要本机已登录的编码 Agent（目前以 Claude Code 为主）；只用于你拥有或获准检查的软件"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "{{name}}",
+  "description": "What this tool is and why it is worth keeping.",
+  "category": "app",
+  "tags": [],
+  "repo": "https://github.com/owner/{{name}}",
+  "homepage": "",
+  "docs": "",
+  "downloads": "",
+  "license": "",
+  "platforms": [],
+  "status": "",
+  "notes": []
+}
