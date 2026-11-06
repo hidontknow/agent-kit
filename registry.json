@@ -1432,6 +1432,30 @@
       ]
     },
     {
+      "id": "plugin/utools",
+      "type": "plugin",
+      "name": "utools",
+      "description": "uTools 插件应用开发：uTools 官方的 utools-plugin-dev skill，内置 uTools 8.0+ 的 API 参考和开发规范，辅助编写、修改和排查 uTools 插件。",
+      "tags": [
+        "utools",
+        "plugin-development",
+        "desktop",
+        "chinese"
+      ],
+      "origin": "original",
+      "path": "plugins/utools",
+      "bundle": "bundles/utools.json",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "plugin/wxjava",
       "type": "plugin",
       "name": "wxjava",

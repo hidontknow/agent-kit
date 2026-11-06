@@ -281,6 +281,20 @@
       ]
     },
     {
+      "name": "utools",
+      "source": "./plugins/utools",
+      "description": "uTools 插件应用开发：uTools 官方的 utools-plugin-dev skill，内置 uTools 8.0+ 的 API 参考和开发规范，辅助编写、修改和排查 uTools 插件。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "utools",
+        "plugin-development",
+        "desktop",
+        "chinese"
+      ]
+    },
+    {
       "name": "wxjava",
       "source": "./plugins/wxjava",
       "description": "WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。",

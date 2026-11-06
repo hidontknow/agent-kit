@@ -112,6 +112,7 @@ claude plugin install text-to-cad@agent-kit        # 用 Python 脚本设计实�
 claude plugin install rust-native-ui@agent-kit     # Rust 原生 UI：NSH 与 GPUI Kit 的编码和设计规范 skill
 claude plugin install ecc@agent-kit                # ECC 大型增强套件：子 Agent、skill、命令、hooks（直接从上游 affaan-m/ECC 安装）
 claude plugin install prompts-chat@agent-kit       # prompts.chat 提示词库：MCP + 检索 skill（上游仓库子目录中的官方插件）
+claude plugin install utools@agent-kit             # uTools 插件开发（官方 utools-plugin-dev skill）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -253,7 +254,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (8)
+#### plugins (9)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -264,6 +265,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
 | [`rust-native-ui`](plugins/rust-native-ui) | 长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规… | bundle（[bundles/rust-native-ui.json](bundles/rust-native-ui.json)） |
 | [`security`](plugins/security) | 安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。 | bundle（[bundles/security.json](bundles/security.json)） |
+| [`utools`](plugins/utools) | uTools 插件应用开发：uTools 官方的 utools-plugin-dev skill，内置 uTools 8.0+ 的 API 参考和开发规范，辅助编写、修改和排查 uTools 插件。 | bundle（[bundles/utools.json](bundles/utools.json)） |
 | [`wxjava`](plugins/wxjava) | WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。 | bundle（[bundles/wxjava.json](bundles/wxjava.json)） |
 
 #### scripts (2)
