@@ -223,7 +223,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (13)
+#### mcp (14)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -240,6 +240,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`rea`](mcp/rea.json) | REA 的 MCP server（stdio）：逆向分析原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，结果附带证据与局限。 | original |
 | [`scenario`](mcp/scenario.json) | Scenario（scenario.com）的远程 MCP server：生成和编辑图片、视频、音频、贴图、天空盒、3D 模型、精灵图等游戏素材，选模型、跑 LoRA、训练自定义模型、管理团队用量。需要 Scenario 账号（OAuth… | original |
 | [`solidcraft`](mcp/solidcraft.json) | SolidCraft 的 MCP server（stdio）：Agent 用和界面相同的命令建模（batch、execute、measure、screenshot…）；无界面时自带设计会话，桌面应用运行时自动连接，可以看着 Agent 建… | original |
+| [`treg`](mcp/treg.json) | treg（"工具界的 OpenRouter"）的远程 MCP server：用一个账号按次付费调用数千个第三方 API（SEO 与外链、社媒与趋势、人员与公司信息补全、广告库、网页抓取、图片视频生成），以及团队自己登记的密钥、CLI 和 … | original |
 
 #### hooks (2)
 
@@ -276,7 +277,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (16)
+#### tools (17)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -296,6 +297,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`superpowers`](tools/superpowers.json) | Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、… | [link](https://github.com/obra/superpowers) |
 | [`taste-skill`](tools/taste-skill.json) | Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。 | [link](https://github.com/Leonxlnx/taste-skill) |
 | [`text-to-cad`](tools/text-to-cad.json) | text-to-cad：让 Agent 设计实体产品。模型写成 build123d Python 脚本，生成 STEP / GLB / STL / 3MF，带 CAD 查看器；另有 12 个 skill，覆盖标准件查找（step.part… | [link](https://github.com/earthtojake/text-to-cad) |
+| [`treg`](tools/treg.json) | treg（Superdesign 出品，"工具界的 OpenRouter"）：一个地址、一个 token，让 Agent 按次付费调用 4,000+ 个第三方工具接口（SEO、外链、关键词、社媒与趋势、人员和公司信息补全、广告库、网页抓取… | [link](https://github.com/superdesigndev/treg) |
 
 #### resources (4)
 

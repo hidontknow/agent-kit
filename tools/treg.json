@@ -1,0 +1,17 @@
+{
+  "name": "treg",
+  "description": "treg（Superdesign 出品，\"工具界的 OpenRouter\"）：一个地址、一个 token，让 Agent 按次付费调用 4,000+ 个第三方工具接口（SEO、外链、关键词、社媒与趋势、人员和公司信息补全、广告库、网页抓取、图片视频和语音生成），不用逐个注册供应商；团队自己的 API 账号、OAuth 连接、CLI 和 skill 也能登记进去共享，凭据只留在服务器端。托管在 treg.to，也可以自建。",
+  "category": "service",
+  "tags": ["api-gateway", "agent-tools", "seo", "enrichment", "web-data", "skills", "mcp"],
+  "repo": "https://github.com/superdesigndev/treg",
+  "homepage": "https://treg.to",
+  "docs": "https://github.com/superdesigndev/treg/blob/main/USAGE.md",
+  "license": "Apache-2.0 + 附加条款：可以自由使用、修改，在自己组织内部署也可以；未经书面授权，不得拿它给第三方提供托管 / SaaS 服务",
+  "licenseUrl": "https://github.com/superdesigndev/treg/blob/main/LICENSE",
+  "notes": [
+    "命令行：curl -fsSL https://treg.to/install.sh | sh，然后 treg login；用法如 treg catalog search \"backlinks for a domain\"、treg call <工具id>、treg balance",
+    "Claude Code：/plugin marketplace add superdesigndev/treg，再 /plugin install treg@treg（主插件，含 MCP 和 treg skill，装完运行 /mcp 登录）；同一市场还有 web-access、lead-signals、recruit、make-ugc、jev-memory、rea-growth 等工作流插件",
+    "只要 MCP 时：agent-kit install mcp/treg -t <客户端>；其他 Agent 装 skill：npx skills add superdesigndev/treg -s treg",
+    "计费：按次付费、从 1 美分起，用团队预付余额；新验证账号首次建团队送 $1；用自己的 key 调用不计费"
+  ]
+}

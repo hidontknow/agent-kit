@@ -1134,6 +1134,31 @@
       ]
     },
     {
+      "id": "mcp/treg",
+      "type": "mcp",
+      "name": "treg",
+      "description": "treg（\"工具界的 OpenRouter\"）的远程 MCP server：用一个账号按次付费调用数千个第三方 API（SEO 与外链、社媒与趋势、人员与公司信息补全、广告库、网页抓取、图片视频生成），以及团队自己登记的密钥、CLI 和 skill。",
+      "tags": [
+        "api-gateway",
+        "seo",
+        "enrichment",
+        "web-data",
+        "remote"
+      ],
+      "origin": "original",
+      "path": "mcp/treg.json",
+      "transport": "http",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "hook/block-dangerous-commands",
       "type": "hook",
       "name": "block-dangerous-commands",
@@ -1909,6 +1934,30 @@
       "homepage": "https://www.texttocad.dev",
       "docs": "https://github.com/earthtojake/text-to-cad/blob/main/docs/install.md",
       "license": "MIT",
+      "targets": []
+    },
+    {
+      "id": "tool/treg",
+      "type": "tool",
+      "name": "treg",
+      "description": "treg（Superdesign 出品，\"工具界的 OpenRouter\"）：一个地址、一个 token，让 Agent 按次付费调用 4,000+ 个第三方工具接口（SEO、外链、关键词、社媒与趋势、人员和公司信息补全、广告库、网页抓取、图片视频和语音生成），不用逐个注册供应商；团队自己的 API 账号、OAuth 连接、CLI 和 skill 也能登记进去共享，凭据只留在服务器端。托管在 treg.to，也可以自建。",
+      "tags": [
+        "api-gateway",
+        "agent-tools",
+        "seo",
+        "enrichment",
+        "web-data",
+        "skills",
+        "mcp"
+      ],
+      "origin": "linked",
+      "path": "tools/treg.json",
+      "category": "service",
+      "repo": "https://github.com/superdesigndev/treg",
+      "homepage": "https://treg.to",
+      "docs": "https://github.com/superdesigndev/treg/blob/main/USAGE.md",
+      "license": "Apache-2.0 + 附加条款：可以自由使用、修改，在自己组织内部署也可以；未经书面授权，不得拿它给第三方提供托管 / SaaS 服务",
+      "licenseUrl": "https://github.com/superdesigndev/treg/blob/main/LICENSE",
       "targets": []
     },
     {

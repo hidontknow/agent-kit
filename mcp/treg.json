@@ -1,0 +1,13 @@
+{
+  "name": "treg",
+  "description": "treg（\"工具界的 OpenRouter\"）的远程 MCP server：用一个账号按次付费调用数千个第三方 API（SEO 与外链、社媒与趋势、人员与公司信息补全、广告库、网页抓取、图片视频生成），以及团队自己登记的密钥、CLI 和 skill。",
+  "tags": ["api-gateway", "seo", "enrichment", "web-data", "remote"],
+  "homepage": "https://treg.to",
+  "transport": "http",
+  "url": "https://treg.to/mcp/",
+  "notes": [
+    "首次使用时在客户端里登录（Claude Code 运行 /mcp，选 treg 后登录），配置里不写密钥",
+    "按次计费、从 1 美分起，用团队预付余额；新验证的账号首次创建团队送 $1；用团队自己的 key 调用不计费",
+    "调用前可以先 treg catalog search 按任务找工具、看价格；配套 skill 和插件见 agent-kit info tool/treg"
+  ]
+}
