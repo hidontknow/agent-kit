@@ -1657,6 +1657,35 @@
       ]
     },
     {
+      "id": "tool/openmausbot",
+      "type": "tool",
+      "name": "openmausbot",
+      "description": "OpenMausBot：开源的\"聊天软件式\"Agent 团队（Grok Bot / Meta Muse / OpenAI dots / Cue 的开源替代）。侧边栏里每个联系人都是一个真实 Agent，底层跑你本机的 claude、codex、grok CLI，各有自己的性格、模型、云电脑和连接的应用；像聊天一样派活、看它干活、审批关键操作。本地优先，数据在 ~/.openmausbot。",
+      "tags": [
+        "agents",
+        "multi-agent",
+        "desktop-app",
+        "claude-code",
+        "codex",
+        "computer-use",
+        "local-first"
+      ],
+      "origin": "linked",
+      "path": "tools/openmausbot.json",
+      "category": "app",
+      "repo": "https://github.com/milind-soni/OpenMausBot",
+      "homepage": "https://www.openmausbot.com",
+      "downloads": "https://github.com/milind-soni/OpenMausBot/releases/latest",
+      "license": "Apache-2.0（enterprise/ 目录除外：源码可见，生产使用需要授权）",
+      "licenseUrl": "https://github.com/milind-soni/OpenMausBot/blob/main/LICENSING.md",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux"
+      ],
+      "targets": []
+    },
+    {
       "id": "tool/paperclip",
       "type": "tool",
       "name": "paperclip",

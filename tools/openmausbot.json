@@ -1,0 +1,19 @@
+{
+  "name": "openmausbot",
+  "description": "OpenMausBot：开源的\"聊天软件式\"Agent 团队（Grok Bot / Meta Muse / OpenAI dots / Cue 的开源替代）。侧边栏里每个联系人都是一个真实 Agent，底层跑你本机的 claude、codex、grok CLI，各有自己的性格、模型、云电脑和连接的应用；像聊天一样派活、看它干活、审批关键操作。本地优先，数据在 ~/.openmausbot。",
+  "category": "app",
+  "tags": ["agents", "multi-agent", "desktop-app", "claude-code", "codex", "computer-use", "local-first"],
+  "repo": "https://github.com/milind-soni/OpenMausBot",
+  "homepage": "https://www.openmausbot.com",
+  "downloads": "https://github.com/milind-soni/OpenMausBot/releases/latest",
+  "license": "Apache-2.0（enterprise/ 目录除外：源码可见，生产使用需要授权）",
+  "licenseUrl": "https://github.com/milind-soni/OpenMausBot/blob/main/LICENSING.md",
+  "platforms": ["macos", "windows", "linux"],
+  "notes": [
+    "下载：macOS（Apple 芯片 / Intel，已签名公证的 .dmg）、Windows x64 安装包、Ubuntu 24.04 x64 的 .deb 或 AppImage，见 Releases 最新版",
+    "前提：本机已安装并登录 claude、codex 或 grok CLI，机器人直接用你现有的登录和订阅，不需要新账号，也不经过代理；可在 设置 → Engines 指定自定义 CLI",
+    "每个机器人可以用云端 Linux 桌面、隔离的本地虚拟机，或在你明确开启后控制本机（目前支持 macOS 和 Ubuntu Xorg），并可通过 Composio 连接 500+ 应用",
+    "本地有一个只监听 127.0.0.1 的服务管理所有 Agent 进程，对话记录、密钥和事件都存在 ~/.openmausbot",
+    "项目没有发行任何加密货币，用 OpenMausBot / Maus / SupaMaus 名字的代币都与它无关"
+  ]
+}

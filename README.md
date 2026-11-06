@@ -274,7 +274,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (13)
+#### tools (14)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -285,6 +285,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`interfaces`](tools/interfaces.json) | Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预… | [link](https://github.com/jakubkrehel/skills) |
 | [`mattpocock-skills`](tools/mattpocock-skills.json) | Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改… | [link](https://github.com/mattpocock/skills) |
 | [`nsh`](tools/nsh.json) | Native Shell（NSH，长桥 Longbridge）：Rust 写的原生 UI 框架，一套组件、状态和逻辑跑在 iOS、Android、macOS、Windows、Linux、Web、GPUI 和终端上，各平台用自己的原生控件渲… | [link](https://github.com/longbridge/nsh) |
+| [`openmausbot`](tools/openmausbot.json) | OpenMausBot：开源的"聊天软件式"Agent 团队（Grok Bot / Meta Muse / OpenAI dots / Cue 的开源替代）。侧边栏里每个联系人都是一个真实 Agent，底层跑你本机的 claude、cod… | [link](https://github.com/milind-soni/OpenMausBot) |
 | [`paperclip`](tools/paperclip.json) | Paperclip：开源、可自托管的 AI Agent 团队编排平台（Node.js 服务 + React 界面）。给一个业务目标，"雇"一组 Agent（CEO、CTO、工程师、设计、市场……可混用 Claude Code、Codex、… | [link](https://github.com/paperclipai/paperclip) |
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
