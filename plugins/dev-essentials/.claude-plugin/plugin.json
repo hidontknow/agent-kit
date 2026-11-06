@@ -1,0 +1,8 @@
+{
+  "name": "dev-essentials",
+  "version": "0.1.0",
+  "description": "Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill.",
+  "author": { "name": "hidontknow" },
+  "license": "MIT",
+  "keywords": ["review", "testing", "changelog"]
+}

@@ -1,0 +1,347 @@
+{
+  "name": "agent-kit",
+  "items": [
+    {
+      "id": "skill/conventional-commit",
+      "type": "skill",
+      "name": "conventional-commit",
+      "description": "Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, or summarize staged changes for git.",
+      "tags": [
+        "git",
+        "writing"
+      ],
+      "origin": "original",
+      "path": "skills/conventional-commit",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/mcp-builder",
+      "type": "skill",
+      "name": "mcp-builder",
+      "description": "Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. Use when building MCP servers to integrate external APIs or services, whether in Python (FastMCP) or Node/TypeScript (MCP SDK).",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/mcp-builder",
+      "source": {
+        "repo": "https://github.com/anthropics/skills",
+        "path": "skills/mcp-builder",
+        "ref": "main",
+        "commit": "ca45fc496a3436251f191354091d557da31c15b5"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/readme-writer",
+      "type": "skill",
+      "name": "readme-writer",
+      "description": "Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a README or project documentation landing page.",
+      "tags": [
+        "docs",
+        "writing"
+      ],
+      "origin": "original",
+      "path": "skills/readme-writer",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "agent/code-reviewer",
+      "type": "agent",
+      "name": "code-reviewer",
+      "description": "Reviews code changes for bugs, security issues and maintainability. Use proactively after writing or modifying code, or when the user asks for a review.",
+      "tags": [
+        "review",
+        "quality"
+      ],
+      "origin": "original",
+      "path": "agents/code-reviewer.md",
+      "targets": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "agent/debugger",
+      "type": "agent",
+      "name": "debugger",
+      "description": "Root-cause analysis for errors, failing tests and unexpected behavior. Use when something is broken and the cause is not obvious.",
+      "tags": [
+        "debugging"
+      ],
+      "origin": "original",
+      "path": "agents/debugger.md",
+      "targets": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "command/explain",
+      "type": "command",
+      "name": "explain",
+      "description": "Explain how a file, function or feature works, with a short walkthrough.",
+      "tags": [
+        "learning"
+      ],
+      "origin": "original",
+      "path": "commands/explain.md",
+      "targets": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "command/fix-issue",
+      "type": "command",
+      "name": "fix-issue",
+      "description": "Investigate and fix a GitHub issue end to end — reproduce, fix, test.",
+      "tags": [
+        "github",
+        "workflow"
+      ],
+      "origin": "original",
+      "path": "commands/fix-issue.md",
+      "targets": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/context7",
+      "type": "mcp",
+      "name": "context7",
+      "description": "Up-to-date, version-specific library documentation and code examples pulled into the prompt.",
+      "tags": [
+        "docs",
+        "search"
+      ],
+      "origin": "original",
+      "path": "mcp/context7.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/fetch",
+      "type": "mcp",
+      "name": "fetch",
+      "description": "Fetch web pages and convert them to markdown for the model (official reference server, needs uv).",
+      "tags": [
+        "web"
+      ],
+      "origin": "original",
+      "path": "mcp/fetch.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/filesystem",
+      "type": "mcp",
+      "name": "filesystem",
+      "description": "Read, write and search files inside allowed directories (official reference server).",
+      "tags": [
+        "files"
+      ],
+      "origin": "original",
+      "path": "mcp/filesystem.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/github",
+      "type": "mcp",
+      "name": "github",
+      "description": "GitHub's official remote MCP server: repos, issues, pull requests, actions, code search.",
+      "tags": [
+        "github",
+        "remote"
+      ],
+      "origin": "original",
+      "path": "mcp/github.json",
+      "transport": "http",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/kit-tools",
+      "type": "mcp",
+      "name": "kit-tools",
+      "description": "Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing.",
+      "tags": [
+        "example",
+        "local"
+      ],
+      "origin": "original",
+      "path": "mcp/kit-tools",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/playwright",
+      "type": "mcp",
+      "name": "playwright",
+      "description": "Browser automation via Playwright accessibility snapshots (Microsoft).",
+      "tags": [
+        "browser",
+        "testing"
+      ],
+      "origin": "original",
+      "path": "mcp/playwright.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "hook/block-dangerous-commands",
+      "type": "hook",
+      "name": "block-dangerous-commands",
+      "description": "Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl | sh …) before the agent runs them.",
+      "tags": [
+        "safety",
+        "shell"
+      ],
+      "origin": "original",
+      "path": "hooks/block-dangerous-commands",
+      "targets": [
+        "claude-code",
+        "cursor"
+      ]
+    },
+    {
+      "id": "hook/notify-on-stop",
+      "type": "hook",
+      "name": "notify-on-stop",
+      "description": "Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows).",
+      "tags": [
+        "notification"
+      ],
+      "origin": "original",
+      "path": "hooks/notify-on-stop",
+      "targets": [
+        "claude-code",
+        "cursor"
+      ]
+    },
+    {
+      "id": "plugin/dev-essentials",
+      "type": "plugin",
+      "name": "dev-essentials",
+      "description": "Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill.",
+      "tags": [
+        "review",
+        "testing",
+        "changelog"
+      ],
+      "origin": "original",
+      "path": "plugins/dev-essentials",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "script/agent-context",
+      "type": "script",
+      "name": "agent-context",
+      "description": "Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat.",
+      "tags": [],
+      "origin": "original",
+      "path": "scripts/agent-context.sh",
+      "targets": []
+    },
+    {
+      "id": "script/git-prune-branches",
+      "type": "script",
+      "name": "git-prune-branches",
+      "description": "Delete local git branches whose upstream is gone or that are merged into the default branch.",
+      "tags": [],
+      "origin": "original",
+      "path": "scripts/git-prune-branches.sh",
+      "targets": []
+    }
+  ]
+}

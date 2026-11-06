@@ -1,0 +1,9 @@
+{
+  "name": "playwright",
+  "description": "Browser automation via Playwright accessibility snapshots (Microsoft).",
+  "tags": ["browser", "testing"],
+  "homepage": "https://github.com/microsoft/playwright-mcp",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@playwright/mcp@latest"]
+}

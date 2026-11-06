@@ -1,0 +1,10 @@
+{
+  "name": "fetch",
+  "description": "Fetch web pages and convert them to markdown for the model (official reference server, needs uv).",
+  "tags": ["web"],
+  "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["mcp-server-fetch"],
+  "requires": { "bin": ["uvx"] }
+}

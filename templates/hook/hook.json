@@ -1,0 +1,13 @@
+{
+  "name": "{{name}}",
+  "description": "What this hook does.",
+  "tags": [],
+  "claude": {
+    "PostToolUse": [
+      { "matcher": "Edit|Write", "hooks": [{ "type": "command", "command": "node \"${HOOK_DIR}/hook.js\"" }] }
+    ]
+  },
+  "cursor": {
+    "afterFileEdit": [{ "command": "node \"${HOOK_DIR}/hook.js\"" }]
+  }
+}

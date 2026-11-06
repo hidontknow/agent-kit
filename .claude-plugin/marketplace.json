@@ -1,0 +1,27 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "agent-kit",
+  "owner": {
+    "name": "hidontknow"
+  },
+  "metadata": {
+    "description": "Personal toolkit of skills, MCP servers, sub-agents, commands, hooks, plugins and scripts — installable into Claude Code, Claude Desktop, Codex, Cursor, Windsurf, Gemini CLI and ChatGPT.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "dev-essentials",
+      "source": "./plugins/dev-essentials",
+      "description": "Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill.",
+      "version": "0.1.0",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "review",
+        "testing",
+        "changelog"
+      ]
+    }
+  ]
+}

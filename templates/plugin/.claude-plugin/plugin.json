@@ -1,0 +1,7 @@
+{
+  "name": "{{name}}",
+  "version": "0.1.0",
+  "description": "What this plugin bundles.",
+  "author": { "name": "hidontknow" },
+  "keywords": []
+}

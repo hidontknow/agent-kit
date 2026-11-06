@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "items": {
+    "skill/mcp-builder": {
+      "repo": "https://github.com/anthropics/skills",
+      "ref": "main",
+      "path": "skills/mcp-builder",
+      "commit": "ca45fc496a3436251f191354091d557da31c15b5",
+      "hash": "sha256:3e62325b392401dfffcc7ce0db0e11e27ed5910d8f903973ee93e860bf067d83",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    }
+  }
+}

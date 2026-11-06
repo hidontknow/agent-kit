@@ -1,0 +1,10 @@
+{
+  "name": "{{name}}",
+  "description": "What this MCP server provides.",
+  "tags": [],
+  "homepage": "",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "some-mcp-package"],
+  "env": { "SOME_API_KEY": "${env:SOME_API_KEY}" }
+}

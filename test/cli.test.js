@@ -1,0 +1,246 @@
+'use strict';
+const test = require('node:test');
+const assert = require('node:assert');
+const fs = require('fs');
+const os = require('os');
+const path = require('path');
+const { execFileSync, spawnSync } = require('child_process');
+
+const ROOT = path.resolve(__dirname, '..');
+const CLI = path.join(ROOT, 'bin', 'agent-kit.js');
+
+function sandbox() {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'agent-kit-test-'));
+  const env = {
+    ...process.env,
+    AGENT_KIT_HOME_OVERRIDE: path.join(dir, 'home'),
+    AGENT_KIT_STATE_DIR: path.join(dir, 'home', '.agent-kit'),
+    AGENT_KIT_BIN: path.join(dir, 'home', 'bin'),
+    CLAUDE_DESKTOP_CONFIG_DIR: path.join(dir, 'home', 'desktop'),
+    NO_COLOR: '1',
+    GITHUB_PERSONAL_ACCESS_TOKEN: 'test-token',
+  };
+  delete env.CLAUDE_CONFIG_DIR;
+  delete env.CODEX_HOME;
+  fs.mkdirSync(env.AGENT_KIT_HOME_OVERRIDE, { recursive: true });
+  const run = (...args) => {
+    const r = spawnSync(process.execPath, [CLI, ...args], { env, encoding: 'utf8', cwd: dir });
+    if (r.status !== 0) throw new Error(`agent-kit ${args.join(' ')} failed (${r.status}):\n${r.stdout}\n${r.stderr}`);
+    return r.stdout + r.stderr;
+  };
+  const home = (...p) => path.join(env.AGENT_KIT_HOME_OVERRIDE, ...p);
+  const read = (p) => fs.readFileSync(p, 'utf8');
+  return { dir, env, run, home, read };
+}
+
+test('claude-code: install & uninstall every native type', () => {
+  const s = sandbox();
+  fs.writeFileSync(s.home('.claude.json'), JSON.stringify({ numStartups: 3, mcpServers: { mine: { command: 'x' } } }));
+  s.run('install', 'skill/conventional-commit', 'agent/code-reviewer', 'command/explain', 'mcp/github', 'mcp/kit-tools', 'hook/block-dangerous-commands', '-t', 'claude-code');
+
+  assert.ok(fs.existsSync(s.home('.claude/skills/conventional-commit/SKILL.md')));
+  assert.ok(fs.existsSync(s.home('.claude/agents/code-reviewer.md')));
+  assert.ok(fs.existsSync(s.home('.claude/commands/explain.md')));
+  const cfg = JSON.parse(s.read(s.home('.claude.json')));
+  assert.strictEqual(cfg.numStartups, 3, 'keeps unrelated keys');
+  assert.deepStrictEqual(cfg.mcpServers.github, { type: 'http', url: 'https://api.githubcopilot.com/mcp/', headers: { Authorization: 'Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}' } });
+  assert.match(cfg.mcpServers['kit-tools'].args[0], /\.agent-kit\/mcp\/claude-code\/kit-tools\/server\.js$/);
+  assert.ok(fs.existsSync(cfg.mcpServers['kit-tools'].args[0]));
+  const settings = JSON.parse(s.read(s.home('.claude/settings.json')));
+  assert.match(settings.hooks.PreToolUse[0].hooks[0].command, /guard\.js" --format claude$/);
+
+  // installing twice must not duplicate hooks
+  s.run('install', 'hook/block-dangerous-commands', '-t', 'claude-code');
+  assert.strictEqual(JSON.parse(s.read(s.home('.claude/settings.json'))).hooks.PreToolUse.length, 1);
+
+  assert.match(s.run('list', '--installed'), /skill\/conventional-commit/);
+  s.run('uninstall', 'conventional-commit', 'code-reviewer', 'explain', 'github', 'kit-tools', 'block-dangerous-commands', '-t', 'claude-code');
+  assert.ok(!fs.existsSync(s.home('.claude/skills/conventional-commit')));
+  const after = JSON.parse(s.read(s.home('.claude.json')));
+  assert.deepStrictEqual(after.mcpServers, { mine: { command: 'x' } });
+  assert.deepStrictEqual(JSON.parse(s.read(s.home('.claude/settings.json'))), {});
+});
+
+test('claude-code project scope writes .claude/ and .mcp.json in the project', () => {
+  const s = sandbox();
+  const proj = path.join(s.dir, 'proj');
+  fs.mkdirSync(proj);
+  s.run('install', 'skill/readme-writer', 'mcp/context7', '-t', 'claude-code', '--project', proj);
+  assert.ok(fs.existsSync(path.join(proj, '.claude/skills/readme-writer/references/sections.md')));
+  assert.strictEqual(JSON.parse(s.read(path.join(proj, '.mcp.json'))).mcpServers.context7.command, 'npx');
+});
+
+test('codex: toml blocks, prompts, skills; uninstall keeps user config', () => {
+  const s = sandbox();
+  fs.mkdirSync(s.home('.codex'), { recursive: true });
+  fs.writeFileSync(s.home('.codex/config.toml'), 'model = "gpt-5"\n');
+  s.run('install', 'mcp/github', 'mcp/context7', 'skill/conventional-commit', 'command/fix-issue', 'agent/debugger', '-t', 'codex');
+  const toml = s.read(s.home('.codex/config.toml'));
+  assert.match(toml, /^model = "gpt-5"/);
+  assert.match(toml, /\[mcp_servers\.github\]\nurl = "https:\/\/api\.githubcopilot\.com\/mcp\/"\nbearer_token_env_var = "GITHUB_PERSONAL_ACCESS_TOKEN"/);
+  assert.match(toml, /\[mcp_servers\.context7\]\ncommand = "npx"\nargs = \["-y", "@upstash\/context7-mcp@latest"\]/);
+  assert.ok(fs.existsSync(s.home('.codex/skills/conventional-commit/SKILL.md')));
+  assert.match(s.read(s.home('.codex/prompts/fix-issue.md')), /\$ARGUMENTS/);
+  assert.match(s.read(s.home('.codex/prompts/debugger.md')), /"debugger" agent/);
+  s.run('uninstall', 'github', 'context7', '-t', 'codex');
+  assert.strictEqual(s.read(s.home('.codex/config.toml')).trim(), 'model = "gpt-5"');
+});
+
+test('cursor: mcp env refs, hooks, project rules', () => {
+  const s = sandbox();
+  const proj = path.join(s.dir, 'proj');
+  fs.mkdirSync(proj);
+  s.run('install', 'mcp/github', 'hook/block-dangerous-commands', 'command/explain', '-t', 'cursor');
+  const m = JSON.parse(s.read(s.home('.cursor/mcp.json')));
+  assert.strictEqual(m.mcpServers.github.headers.Authorization, 'Bearer ${env:GITHUB_PERSONAL_ACCESS_TOKEN}');
+  const hooks = JSON.parse(s.read(s.home('.cursor/hooks.json')));
+  assert.strictEqual(hooks.version, 1);
+  assert.match(hooks.hooks.beforeShellExecution[0].command, /--format cursor/);
+  assert.ok(fs.existsSync(s.home('.cursor/commands/explain.md')));
+
+  // skills/agents are project-scoped rules; user scope is skipped, not an error
+  assert.match(s.run('install', 'skill/readme-writer', '-t', 'cursor'), /skipped/);
+  s.run('install', 'skill/readme-writer', 'agent/code-reviewer', '-t', 'cursor', '--project', proj);
+  const rule = s.read(path.join(proj, '.cursor/rules/readme-writer.mdc'));
+  assert.match(rule, /^---\ndescription: /);
+  assert.match(rule, /alwaysApply: false/);
+  assert.match(rule, /@\.cursor\/rules\/readme-writer\/references\/sections\.md/);
+  assert.ok(fs.existsSync(path.join(proj, '.cursor/rules/code-reviewer.mdc')));
+});
+
+test('claude-desktop: resolves env vars, bridges remote servers, zips skills', () => {
+  const s = sandbox();
+  s.run('install', 'mcp/github', 'mcp/fetch', 'skill/conventional-commit', '-t', 'claude-desktop');
+  const cfg = JSON.parse(s.read(path.join(s.env.CLAUDE_DESKTOP_CONFIG_DIR, 'claude_desktop_config.json')));
+  assert.deepStrictEqual(cfg.mcpServers.github.args, ['-y', 'mcp-remote', 'https://api.githubcopilot.com/mcp/', '--header', 'Authorization:Bearer test-token']);
+  assert.strictEqual(cfg.mcpServers.fetch.command, 'uvx');
+  const zip = s.home('.agent-kit/dist/claude-desktop/conventional-commit.zip');
+  const listing = execFileSync('unzip', ['-l', zip], { encoding: 'utf8' });
+  assert.match(listing, /conventional-commit\/SKILL\.md/);
+});
+
+test('plugins expand into tools without plugin support', () => {
+  const s = sandbox();
+  const out = s.run('install', 'plugin/dev-essentials', '-t', 'codex,claude-code');
+  assert.ok(fs.existsSync(s.home('.codex/skills/changelog/SKILL.md')));
+  assert.ok(fs.existsSync(s.home('.codex/prompts/review.md')));
+  assert.ok(fs.existsSync(s.home('.codex/prompts/test-writer.md')));
+  assert.match(out, /claude plugin marketplace add/);
+  s.run('install', 'plugin/dev-essentials', '-t', 'claude-code', '--expand');
+  assert.ok(fs.existsSync(s.home('.claude/agents/test-writer.md')));
+});
+
+test('gpt export, gemini command, windsurf mcp, scripts', () => {
+  const s = sandbox();
+  const out = path.join(s.dir, 'gpt');
+  s.run('install', 'agent/code-reviewer', 'mcp/github', '-t', 'gpt', '--out', out);
+  assert.match(s.read(path.join(out, 'code-reviewer/instructions.md')), /^# code-reviewer/);
+  assert.match(s.read(path.join(out, 'github.connector.md')), /api\.githubcopilot\.com/);
+  assert.match(s.run('install', 'mcp/fetch', '-t', 'gpt', '--out', out), /skipped/);
+
+  s.run('install', 'command/explain', 'mcp/context7', '-t', 'gemini');
+  assert.match(s.read(s.home('.gemini/commands/explain.toml')), /\{\{args\}\}/);
+  assert.ok(JSON.parse(s.read(s.home('.gemini/settings.json'))).mcpServers.context7);
+
+  s.run('install', 'mcp/github', '-t', 'windsurf');
+  assert.strictEqual(JSON.parse(s.read(s.home('.codeium/windsurf/mcp_config.json'))).mcpServers.github.serverUrl, 'https://api.githubcopilot.com/mcp/');
+
+  s.run('install', 'script/agent-context');
+  const bin = path.join(s.env.AGENT_KIT_BIN, 'agent-context');
+  assert.ok(fs.statSync(bin).mode & 0o100);
+});
+
+test('dry-run changes nothing', () => {
+  const s = sandbox();
+  s.run('install', 'mcp/github', 'skill/conventional-commit', '-t', 'claude-code,codex', '--dry-run');
+  assert.ok(!fs.existsSync(s.home('.claude.json')));
+  assert.ok(!fs.existsSync(s.home('.claude')));
+  assert.ok(!fs.existsSync(s.home('.codex')));
+});
+
+// ---------------------------------------------------------------- upstream sync
+function git(cwd, ...args) {
+  return execFileSync('git', ['-c', 'user.name=t', '-c', 'user.email=t@t', '-c', 'commit.gpgsign=false', ...args], { cwd, encoding: 'utf8' }).trim();
+}
+
+function upstreamFixture() {
+  const s = sandbox();
+  const up = path.join(s.dir, 'upstream');
+  fs.mkdirSync(path.join(up, 'skills/demo'), { recursive: true });
+  fs.writeFileSync(path.join(up, 'skills/demo/SKILL.md'), '---\nname: demo\ndescription: Demo skill. Use for tests.\n---\n\nline 1\nline 2\nline 3\nline 4\nline 5\n');
+  fs.writeFileSync(path.join(up, 'skills/demo/notes.md'), 'notes v1\n');
+  git(s.dir, 'init', '-q', '-b', 'main', up);
+  git(up, 'add', '.');
+  git(up, 'commit', '-qm', 'init');
+  // the kit repo under test
+  const kit = path.join(s.dir, 'kit');
+  fs.mkdirSync(kit);
+  s.env.AGENT_KIT_REPO = kit;
+  return { ...s, up, kit, url: `file://${up}` };
+}
+
+test('sync: add → outdated → update (clean and with 3-way merge)', () => {
+  const f = upstreamFixture();
+  f.run('add', f.url, '--path', 'skills/demo', '--ref', 'main');
+  const skill = path.join(f.kit, 'skills/demo/SKILL.md');
+  assert.ok(fs.existsSync(skill));
+  const src = JSON.parse(f.read(path.join(f.kit, 'sources.json'))).items['skill/demo'];
+  assert.strictEqual(src.path, 'skills/demo');
+  assert.match(f.run('outdated'), /up-to-date\s+skill\/demo/);
+  assert.match(f.run('list'), /demo .*\[collected\]/);
+
+  // upstream changes line 1 and notes; clean update
+  fs.writeFileSync(path.join(f.up, 'skills/demo/notes.md'), 'notes v2\n');
+  git(f.up, 'commit', '-qam', 'v2');
+  assert.match(f.run('outdated', '--verbose'), /update-available\s+skill\/demo[\s\S]*v2/);
+  assert.match(f.run('diff', 'demo'), /\+notes v2/);
+  f.run('update', 'demo');
+  assert.strictEqual(f.read(path.join(f.kit, 'skills/demo/notes.md')), 'notes v2\n');
+  assert.match(f.run('outdated'), /up-to-date/);
+
+  // local edit + non-overlapping upstream edit → merged, local edit kept
+  fs.writeFileSync(skill, f.read(skill).replace('line 5', 'line 5 (local)'));
+  assert.match(f.run('outdated'), /local-modified/);
+  fs.writeFileSync(path.join(f.up, 'skills/demo/SKILL.md'), f.read(path.join(f.up, 'skills/demo/SKILL.md')).replace('line 1', 'line 1 (upstream)'));
+  fs.writeFileSync(path.join(f.up, 'skills/demo/new.md'), 'new file\n');
+  git(f.up, 'add', '.');
+  git(f.up, 'commit', '-qm', 'v3');
+  assert.match(f.run('outdated'), /diverged/);
+  f.run('update', 'demo');
+  const merged = f.read(skill);
+  assert.match(merged, /line 1 \(upstream\)/);
+  assert.match(merged, /line 5 \(local\)/);
+  assert.ok(fs.existsSync(path.join(f.kit, 'skills/demo/new.md')));
+  assert.match(f.run('outdated'), /local-modified/);
+
+  // overlapping edits → conflict markers + non-zero exit
+  fs.writeFileSync(skill, f.read(skill).replace('line 3', 'line 3 local'));
+  fs.writeFileSync(path.join(f.up, 'skills/demo/SKILL.md'), f.read(path.join(f.up, 'skills/demo/SKILL.md')).replace('line 3', 'line 3 upstream'));
+  git(f.up, 'commit', '-qam', 'v4');
+  assert.throws(() => f.run('update', 'demo'), /conflicts/);
+  assert.match(f.read(skill), /<<<<<<< local[\s\S]*line 3 local[\s\S]*=======[\s\S]*line 3 upstream[\s\S]*>>>>>>> upstream/);
+
+  // --theirs discards local edits
+  f.run('update', 'demo', '--theirs');
+  assert.strictEqual(f.read(skill), f.read(path.join(f.up, 'skills/demo/SKILL.md')));
+  assert.match(f.run('outdated'), /up-to-date/);
+});
+
+test('sync: importing a folder of skills', () => {
+  const f = upstreamFixture();
+  fs.mkdirSync(path.join(f.up, 'skills/other'));
+  fs.writeFileSync(path.join(f.up, 'skills/other/SKILL.md'), '---\nname: other\ndescription: Other. Use for tests.\n---\n\nbody\n');
+  git(f.up, 'add', '.');
+  git(f.up, 'commit', '-qm', 'other');
+  const out = f.run('add', f.url, '--path', 'skills');
+  assert.match(out, /Found 2 items/);
+  const items = JSON.parse(f.read(path.join(f.kit, 'sources.json'))).items;
+  assert.deepStrictEqual(Object.keys(items).sort(), ['skill/demo', 'skill/other']);
+  assert.strictEqual(items['skill/other'].path, 'skills/other');
+});
+
+test('repo content is valid and generated files are current', () => {
+  const s = sandbox();
+  s.run('validate');
+  s.run('build', '--check');
+});

@@ -1,0 +1,10 @@
+{
+  "name": "github",
+  "description": "GitHub's official remote MCP server: repos, issues, pull requests, actions, code search.",
+  "tags": ["github", "remote"],
+  "homepage": "https://github.com/github/github-mcp-server",
+  "transport": "http",
+  "url": "https://api.githubcopilot.com/mcp/",
+  "headers": { "Authorization": "Bearer ${env:GITHUB_PERSONAL_ACCESS_TOKEN}" },
+  "requires": { "env": ["GITHUB_PERSONAL_ACCESS_TOKEN"] }
+}

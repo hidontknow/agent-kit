@@ -1,0 +1,8 @@
+{
+  "name": "kit-tools",
+  "description": "Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing.",
+  "tags": ["example", "local"],
+  "transport": "stdio",
+  "command": "node",
+  "args": ["${ITEM_DIR}/server.js"]
+}

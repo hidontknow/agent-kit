@@ -1,0 +1,13 @@
+{
+  "name": "block-dangerous-commands",
+  "description": "Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl | sh …) before the agent runs them.",
+  "tags": ["safety", "shell"],
+  "claude": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": "node \"${HOOK_DIR}/guard.js\" --format claude", "timeout": 10 }] }
+    ]
+  },
+  "cursor": {
+    "beforeShellExecution": [{ "command": "node \"${HOOK_DIR}/guard.js\" --format cursor" }]
+  }
+}

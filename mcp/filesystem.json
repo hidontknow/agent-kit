@@ -1,0 +1,9 @@
+{
+  "name": "filesystem",
+  "description": "Read, write and search files inside allowed directories (official reference server).",
+  "tags": ["files"],
+  "homepage": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-filesystem", "${HOME}"]
+}

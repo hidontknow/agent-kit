@@ -1,0 +1,12 @@
+{
+  "name": "notify-on-stop",
+  "description": "Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows).",
+  "tags": ["notification"],
+  "claude": {
+    "Stop": [{ "hooks": [{ "type": "command", "command": "node \"${HOOK_DIR}/notify.js\" \"Claude Code finished\"" }] }],
+    "Notification": [{ "hooks": [{ "type": "command", "command": "node \"${HOOK_DIR}/notify.js\" \"Claude Code needs your input\"" }] }]
+  },
+  "cursor": {
+    "stop": [{ "command": "node \"${HOOK_DIR}/notify.js\" \"Cursor agent finished\"" }]
+  }
+}

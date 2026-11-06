@@ -1,0 +1,18 @@
+{
+  "name": "agent-kit",
+  "version": "0.1.0",
+  "description": "Personal toolkit of skills, MCP servers, sub-agents, commands, hooks, plugins and scripts — installable into Claude Code, Claude Desktop, Codex, Cursor, Windsurf, Gemini CLI and ChatGPT.",
+  "author": { "name": "hidontknow" },
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/hidontknow/agent-kit" },
+  "bin": { "agent-kit": "bin/agent-kit.js" },
+  "files": ["bin", "lib", "skills", "agents", "commands", "mcp", "hooks", "plugins", "scripts", "templates", "sources.json", "registry.json", ".claude-plugin"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "validate": "node bin/agent-kit.js validate",
+    "build": "node bin/agent-kit.js build",
+    "check": "node bin/agent-kit.js validate && node bin/agent-kit.js build --check && node --test test/*.test.js"
+  },
+  "keywords": ["claude-code", "claude", "codex", "cursor", "mcp", "skills", "agents", "hooks", "plugins", "ai-agents"]
+}
