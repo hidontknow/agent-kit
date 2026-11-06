@@ -41,6 +41,46 @@
       "updatedAt": "2026-11-06",
       "license": "MIT"
     },
+    "skill/solidcraft-checking": {
+      "repo": "https://github.com/tangency-labs/solidcraft",
+      "ref": "main",
+      "path": "skills/solidcraft-checking",
+      "commit": "5faacb55d68f1c1d39071686baa77d21226b98ad",
+      "hash": "sha256:2bfebdf886764c1d5ff1f8a62cbfc54f3bf73f3fea0f76bf2314ffe2093adaea",
+      "license": "MIT OR Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
+    "skill/solidcraft-editing": {
+      "repo": "https://github.com/tangency-labs/solidcraft",
+      "ref": "main",
+      "path": "skills/solidcraft-editing",
+      "commit": "5faacb55d68f1c1d39071686baa77d21226b98ad",
+      "hash": "sha256:a911e00778be0821da90c3134bb26ef26ac43a0fddb964c72cef61af00605d94",
+      "license": "MIT OR Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
+    "skill/solidcraft-mechanisms": {
+      "repo": "https://github.com/tangency-labs/solidcraft",
+      "ref": "main",
+      "path": "skills/solidcraft-mechanisms",
+      "commit": "5faacb55d68f1c1d39071686baa77d21226b98ad",
+      "hash": "sha256:fa0525e5e75cf724805eda397f9ea9dbf937960b576aa84c5311dc9c0f91324b",
+      "license": "MIT OR Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
+    "skill/solidcraft-modeling": {
+      "repo": "https://github.com/tangency-labs/solidcraft",
+      "ref": "main",
+      "path": "skills/solidcraft-modeling",
+      "commit": "5faacb55d68f1c1d39071686baa77d21226b98ad",
+      "hash": "sha256:de292bd188353b068d793a97a2db84d49ee71099a968813cdff07f08664ce529",
+      "license": "MIT OR Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
     "skill/wxjava-integration-guide": {
       "repo": "https://github.com/binarywang/WxJava",
       "ref": "develop",

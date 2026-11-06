@@ -100,6 +100,7 @@ claude plugin install rust-migration@agent-kit     # 迁移到 Rust（migrate-to
 claude plugin install wxjava@agent-kit             # WxJava 微信开发（wxjava-integration-guide）
 claude plugin install security@agent-kit           # 安全审计（Cloudflare security-audit）
 claude plugin install desktop-automation@agent-kit # 桌面 computer use（agent-desktop skill + MCP，需先装 agent-desktop CLI）
+claude plugin install cad-modeling@agent-kit       # 参数化 3D CAD（SolidCraft MCP + 4 个建模 skill，需先装 SolidCraft）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -160,7 +161,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (7)
+#### skills (11)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -170,6 +171,10 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |
 | [`readme-writer`](skills/readme-writer) | Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a … | original |
 | [`security-audit`](skills/security-audit) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for se… | [collected](https://github.com/cloudflare/security-audit-skill) |
+| [`solidcraft-checking`](skills/solidcraft-checking) | Use alongside solidcraft-modeling and solidcraft-editing whenever you build, change or port a SolidCraft design. Checks… | [collected](https://github.com/tangency-labs/solidcraft) |
+| [`solidcraft-editing`](skills/solidcraft-editing) | Use when changing, fixing or extending an existing SolidCraft design through its MCP server - a .sc file (or an older .… | [collected](https://github.com/tangency-labs/solidcraft) |
+| [`solidcraft-mechanisms`](skills/solidcraft-mechanisms) | Use when building, driving or animating an assembly or mechanism in SolidCraft through its MCP server - components, gro… | [collected](https://github.com/tangency-labs/solidcraft) |
+| [`solidcraft-modeling`](skills/solidcraft-modeling) | Use when building a new part, enclosure, bracket, plate, flange or any other 3D solid in SolidCraft through its MCP ser… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`wxjava-integration-guide`](skills/wxjava-integration-guide) | 为 Java、Spring Boot 或 Solon 项目生成可验证的 WxJava 接入方案，包括模块选择、BOM、配置、最小调用代码以及单/多账号集成。适用于用户要求接入公众号、小程序、支付、企业微信、开放平台、视频号或微信小店时。 | [collected](https://github.com/binarywang/WxJava) |
 
 #### agents (2)
@@ -186,7 +191,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (10)
+#### mcp (11)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -200,6 +205,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish`](mcp/goofish.json) | 闲鱼（Goofish/Xianyu）MCP server（本机模式）：商品查询/发布/下架、搜索、图片上传、AI 类目识别、IM 消息收发等 17 个工具，由 goofish-cli 提供。 | original |
 | [`kit-tools`](mcp/kit-tools) | Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing. | original |
 | [`playwright`](mcp/playwright.json) | Browser automation via Playwright accessibility snapshots (Microsoft). | original |
+| [`solidcraft`](mcp/solidcraft.json) | SolidCraft 的 MCP server（stdio）：Agent 用和界面相同的命令建模（batch、execute、measure、screenshot…）；无界面时自带设计会话，桌面应用运行时自动连接，可以看着 Agent 建… | original |
 
 #### hooks (2)
 
@@ -208,10 +214,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (5)
+#### plugins (6)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`cad-modeling`](plugins/cad-modeling) | 用 SolidCraft 做参数化 3D CAD 建模：MCP server，加上官方推荐的 4 个建模 skill（新建零件、修改设计、参数与 STEP 校验、装配与机构）。需要先安装 SolidCraft。 | bundle（[bundles/cad-modeling.json](bundles/cad-modeling.json)） |
 | [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
@@ -232,11 +239,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 
-#### tools (1)
+#### tools (2)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
+| [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 
 #### resources (1)
 

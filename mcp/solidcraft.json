@@ -1,0 +1,16 @@
+{
+  "name": "solidcraft",
+  "description": "SolidCraft 的 MCP server（stdio）：Agent 用和界面相同的命令建模（batch、execute、measure、screenshot…）；无界面时自带设计会话，桌面应用运行时自动连接，可以看着 Agent 建模。",
+  "tags": ["cad", "3d", "parametric"],
+  "homepage": "https://github.com/tangency-labs/solidcraft/blob/main/docs/mcp.md",
+  "transport": "stdio",
+  "command": "solidcraft-cli",
+  "args": ["mcp"],
+  "requires": { "bin": ["solidcraft-cli"] },
+  "notes": [
+    "先安装 SolidCraft（agent-kit info tool/solidcraft 查看下载地址）",
+    "找不到 solidcraft-cli 时把 command 改为完整路径，Windows 默认 C:\\Program Files\\SolidCraft\\solidcraft-cli.exe",
+    "桌面应用默认在 127.0.0.1:27878 开放控制通道，server 会自动连上；加 \"--headless\" 强制无界面，加 \"--param-check\", \"warn\" 检查命令参数",
+    "工具只能读写当前设计所在的文件夹；建模技巧见 skill solidcraft-modeling / editing / checking / mechanisms"
+  ]
+}

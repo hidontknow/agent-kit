@@ -10,6 +10,21 @@
   },
   "plugins": [
     {
+      "name": "cad-modeling",
+      "source": "./plugins/cad-modeling",
+      "description": "用 SolidCraft 做参数化 3D CAD 建模：MCP server，加上官方推荐的 4 个建模 skill（新建零件、修改设计、参数与 STEP 校验、装配与机构）。需要先安装 SolidCraft。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "cad",
+        "3d",
+        "parametric",
+        "solidcraft",
+        "mcp"
+      ]
+    },
+    {
       "name": "desktop-automation",
       "source": "./plugins/desktop-automation",
       "description": "桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-desktop CLI。",
