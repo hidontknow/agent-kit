@@ -10,6 +10,16 @@
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
+    },
+    "skill/migrate-to-rust": {
+      "repo": "https://github.com/google/skills",
+      "ref": "main",
+      "path": "skills/developers/migrate-to-rust",
+      "commit": "c2cf4ba74c0e47f0e7a81d29e053e740998a0ae2",
+      "hash": "sha256:0ca563d0657a50636c7f00e7e4c71cad4ed3e6bd80ab7d0c6434d5129c1691af",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06",
+      "license": "Apache-2.0"
     }
   }
 }
