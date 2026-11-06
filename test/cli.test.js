@@ -407,7 +407,7 @@ test('tool: link-only open-source tools; install optional', () => {
   assert.match(out, /skipped — no automated install — get it from https:\/\/github\.com\/storytold\/craft-anything\/releases\/latest/);
   assert.match(out, /craft-anything-cli mcp/);
   assert.match(s.run('list', 'tools'), /craft-anything/);
-  assert.match(s.run('info', 'craft-anything'), /license:\s+MIT OR Apache-2\.0/);
+  assert.match(s.run('info', 'tool/craft-anything'), /license:\s+MIT OR Apache-2\.0/);
 
   // a tool that declares install (with custom args) goes through the package manager
   const kit = path.join(s.dir, 'kit');
@@ -421,4 +421,14 @@ test('tool: link-only open-source tools; install optional', () => {
   assert.match(s.run('install', 'tool/demo', '--via', 'cargo', '--dry-run'), /would run: cargo install --git https:\/\/example\.com\/demo demo --locked/);
   fs.writeFileSync(path.join(kit, 'tools/demo.json'), JSON.stringify({ name: 'demo', description: 'Demo.', repo: 'not-a-url', category: 'thing' }));
   assert.throws(() => s.run('validate'), /"repo" must be an http\(s\) URL[\s\S]*"category" must be one of/);
+});
+
+test('mcp: craft-anything matches the upstream setup entry', () => {
+  const s = sandbox();
+  fs.mkdirSync(s.home('.codex'), { recursive: true });
+  const out = s.run('install', 'mcp/craft-anything', '-t', 'claude-code,codex');
+  assert.deepStrictEqual(JSON.parse(s.read(s.home('.claude.json'))).mcpServers['craft-anything'], { type: 'stdio', command: 'craft-anything-cli', args: ['mcp'] });
+  assert.match(s.read(s.home('.codex/config.toml')), /\[mcp_servers\.craft-anything\]\ncommand = "craft-anything-cli"\nargs = \["mcp"\]\nstartup_timeout_sec = 30/);
+  assert.match(out, /--allow-run/);
+  assert.throws(() => s.run('info', 'craft-anything'), /Ambiguous name "craft-anything"/);
 });

@@ -209,6 +209,30 @@
       ]
     },
     {
+      "id": "mcp/craft-anything",
+      "type": "mcp",
+      "name": "craft-anything",
+      "description": "Craft Anything 的 MCP server：320 个工具，用于研究网站/应用/游戏的实现（页面、代码、文件、运行行为），并驱动编码 Agent 重建（rebuild）。需要先安装 tool/craft-anything。",
+      "tags": [
+        "rust",
+        "reverse-engineering",
+        "website-clone",
+        "game"
+      ],
+      "origin": "original",
+      "path": "mcp/craft-anything.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/fetch",
       "type": "mcp",
       "name": "fetch",

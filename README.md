@@ -32,7 +32,7 @@ agent-kit install hook/block-dangerous-commands -t claude-code --dry-run
 agent-kit install mcp                               # 安装某一类的全部工具
 agent-kit uninstall mcp/github -t codex
 agent-kit install cli/goofish-cli                   # 外部 CLI：自动选用本机已有的 uv / pipx / pip 安装
-agent-kit list tools && agent-kit info craft-anything # 浏览收藏的开源工具和它们的链接、下载地址
+agent-kit list tools && agent-kit info tool/craft-anything # 浏览收藏的开源工具和它们的链接、下载地址
 agent-kit list --installed                          # 查看装了什么、装在哪
 ```
 
@@ -180,11 +180,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (8)
+#### mcp (9)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`context7`](mcp/context7.json) | Up-to-date, version-specific library documentation and code examples pulled into the prompt. | original |
+| [`craft-anything`](mcp/craft-anything.json) | Craft Anything 的 MCP server：320 个工具，用于研究网站/应用/游戏的实现（页面、代码、文件、运行行为），并驱动编码 Agent 重建（rebuild）。需要先安装 tool/craft-anything。 | original |
 | [`fetch`](mcp/fetch.json) | Fetch web pages and convert them to markdown for the model (official reference server, needs uv). | original |
 | [`filesystem`](mcp/filesystem.json) | Read, write and search files inside allowed directories (official reference server). | original |
 | [`github`](mcp/github.json) | GitHub's official remote MCP server: repos, issues, pull requests, actions, code search. | original |
