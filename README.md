@@ -224,7 +224,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (15)
+#### mcp (16)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -236,6 +236,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`github`](mcp/github.json) | GitHub's official remote MCP server: repos, issues, pull requests, actions, code search. | original |
 | [`goofish-sandbox`](mcp/goofish-sandbox.json) | 闲鱼 MCP server（Docker 沙箱模式）：浏览器自动化在容器虚拟桌面中运行，不占用本机浏览器。与 mcp/goofish 使用同一个 server 名，二者互相替换。 | original |
 | [`goofish`](mcp/goofish.json) | 闲鱼（Goofish/Xianyu）MCP server（本机模式）：商品查询/发布/下架、搜索、图片上传、AI 类目识别、IM 消息收发等 17 个工具，由 goofish-cli 提供。 | original |
+| [`iconmcp`](mcp/iconmcp.json) | IconMCP 的远程 MCP server（无需登录）：按含义搜索约 6,800 个原创图标（search_icons），取 SVG 或 React 组件（get_icon），浏览主题图标集（list_sets / get_set）；找… | original |
 | [`kit-tools`](mcp/kit-tools) | Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing. | original |
 | [`playwright`](mcp/playwright.json) | Browser automation via Playwright accessibility snapshots (Microsoft). | original |
 | [`prompts-chat`](mcp/prompts-chat.json) | prompts.chat 的远程 MCP server：搜索和获取提示词、Agent skill 和 Bot，改进提示词；登录后还能保存自己的提示词和 skill。 | original |
@@ -302,11 +303,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`text-to-cad`](tools/text-to-cad.json) | text-to-cad：让 Agent 设计实体产品。模型写成 build123d Python 脚本，生成 STEP / GLB / STL / 3MF，带 CAD 查看器；另有 12 个 skill，覆盖标准件查找（step.part… | [link](https://github.com/earthtojake/text-to-cad) |
 | [`treg`](tools/treg.json) | treg（Superdesign 出品，"工具界的 OpenRouter"）：一个地址、一个 token，让 Agent 按次付费调用 4,000+ 个第三方工具接口（SEO、外链、关键词、社媒与趋势、人员和公司信息补全、广告库、网页抓取… | [link](https://github.com/superdesigndev/treg) |
 
-#### resources (5)
+#### resources (6)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`ai-pose-gallery-zh`](resources/ai-pose-gallery-zh.json) | AI 角色参考与合成工作台（中文版）：姿势（素体白模 + 深度图）、服装（写实、中国历代、动漫、二次元）、人像三大参考图库共 6,000+ 条，元数据全中文；附带网页合成台（人像 + 服装 + 姿势组合，直连 Gemini、GPT Ima… | [link](https://github.com/anhao/ai-pose-gallery-zh) |
+| [`iconmcp`](resources/iconmcp.json) | IconMCP：原创图标库，约 6,800 个图标、58 套主题，16 单位网格绘制，提供线框、实心和双色三种风格，可导出 SVG 或 React 组件；附带一个 MCP server，让编码 Agent 按含义搜索图标。可免费用于任何用… | [link](https://iconmcp.com/) |
 | [`polyfork`](resources/polyfork.json) | Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。 | [link](https://github.com/lucas-martinic/polyfork-catalog) |
 | [`prompts-chat`](resources/prompts-chat.json) | prompts.chat（原 Awesome ChatGPT Prompts）：最大的开源提示词库，适用于 ChatGPT、Claude、Gemini 等，可在网站浏览、下载 CSV 或用 Hugging Face 数据集；另有 Agen… | [link](https://github.com/f/prompts.chat) |
 | [`secki`](resources/secki.json) | 面向设计工程师的精选链接库（332 个）：UI 组件、图标与 SVG、着色器与动效、图片素材、视频动画、设计工具、配色字体、Agent skills、开发工具、工作流自动化，每条都由用过的人收录。免费浏览，无广告、无需注册。 | [link](https://secki.dev/) |

@@ -1,0 +1,15 @@
+{
+  "name": "iconmcp",
+  "description": "IconMCP：原创图标库，约 6,800 个图标、58 套主题，16 单位网格绘制，提供线框、实心和双色三种风格，可导出 SVG 或 React 组件；附带一个 MCP server，让编码 Agent 按含义搜索图标。可免费用于任何用途。",
+  "kind": "assets",
+  "tags": ["icons", "svg", "react", "design", "mcp"],
+  "homepage": "https://iconmcp.com/",
+  "api": "https://iconmcp.com/mcp",
+  "license": "MIT（可免费用于任何用途）",
+  "licenseUrl": "https://iconmcp.com/licence",
+  "notes": [
+    "在网站上按名称或含义浏览和下载图标：https://iconmcp.com/",
+    "让 Agent 直接找图标：agent-kit install mcp/iconmcp -t <客户端>，然后让它 search_icons 按含义搜索，再 get_icon 取 SVG 或 React 组件",
+    "接入说明见 https://iconmcp.com/agents"
+  ]
+}

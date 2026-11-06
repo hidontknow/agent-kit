@@ -1,0 +1,12 @@
+{
+  "name": "iconmcp",
+  "description": "IconMCP 的远程 MCP server（无需登录）：按含义搜索约 6,800 个原创图标（search_icons），取 SVG 或 React 组件（get_icon），浏览主题图标集（list_sets / get_set）；找不到时可以请求新图标（request_icon），也能反馈或修正图标。",
+  "tags": ["icons", "svg", "react", "remote"],
+  "homepage": "https://iconmcp.com/agents",
+  "transport": "http",
+  "url": "https://iconmcp.com/mcp",
+  "notes": [
+    "不需要账号和密钥；图标为 MIT 许可",
+    "典型用法：让 Agent \"找一个表示同步失败的图标，给我 React 组件\""
+  ]
+}

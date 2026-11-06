@@ -1018,6 +1018,30 @@
       ]
     },
     {
+      "id": "mcp/iconmcp",
+      "type": "mcp",
+      "name": "iconmcp",
+      "description": "IconMCP 的远程 MCP server（无需登录）：按含义搜索约 6,800 个原创图标（search_icons），取 SVG 或 React 组件（get_icon），浏览主题图标集（list_sets / get_set）；找不到时可以请求新图标（request_icon），也能反馈或修正图标。",
+      "tags": [
+        "icons",
+        "svg",
+        "react",
+        "remote"
+      ],
+      "origin": "original",
+      "path": "mcp/iconmcp.json",
+      "transport": "http",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/kit-tools",
       "type": "mcp",
       "name": "kit-tools",
@@ -2032,6 +2056,27 @@
       "homepage": "https://ai-pose-gallery.anhao.app/",
       "license": "代码（src/、comfyui_plugin/、scripts/）为 MIT；图片和原始数据不在 MIT 范围内，版权归原作者ギア（@giaaibusi）和 CharaDB（たき AI）所有，CharaDB 图片禁止再分发、禁止用于真人或未成年人；仅限个人学习和合法创作",
       "licenseUrl": "https://github.com/anhao/ai-pose-gallery-zh#免责声明与版权说明disclaimer",
+      "targets": []
+    },
+    {
+      "id": "resource/iconmcp",
+      "type": "resource",
+      "name": "iconmcp",
+      "description": "IconMCP：原创图标库，约 6,800 个图标、58 套主题，16 单位网格绘制，提供线框、实心和双色三种风格，可导出 SVG 或 React 组件；附带一个 MCP server，让编码 Agent 按含义搜索图标。可免费用于任何用途。",
+      "tags": [
+        "icons",
+        "svg",
+        "react",
+        "design",
+        "mcp"
+      ],
+      "origin": "linked",
+      "path": "resources/iconmcp.json",
+      "kind": "assets",
+      "homepage": "https://iconmcp.com/",
+      "api": "https://iconmcp.com/mcp",
+      "license": "MIT（可免费用于任何用途）",
+      "licenseUrl": "https://iconmcp.com/licence",
       "targets": []
     },
     {
