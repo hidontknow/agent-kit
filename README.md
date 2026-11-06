@@ -280,7 +280,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (18)
+#### tools (19)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -296,6 +296,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`openmausbot`](tools/openmausbot.json) | OpenMausBot：开源的"聊天软件式"Agent 团队（Grok Bot / Meta Muse / OpenAI dots / Cue 的开源替代）。侧边栏里每个联系人都是一个真实 Agent，底层跑你本机的 claude、cod… | [link](https://github.com/milind-soni/OpenMausBot) |
 | [`paperclip`](tools/paperclip.json) | Paperclip：开源、可自托管的 AI Agent 团队编排平台（Node.js 服务 + React 界面）。给一个业务目标，"雇"一组 Agent（CEO、CTO、工程师、设计、市场……可混用 Claude Code、Codex、… | [link](https://github.com/paperclipai/paperclip) |
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
+| [`sand3d`](tools/sand3d.json) | sand3d（Sandflow）：给大模型用的 Python 3D 建模库，在 Blender 的 bpy 之上用很短的程序描述零件、实体、编辑、坐标系、关节和装配体；零件和边面按名字引用、结果确定可复现，同一个零件比 Blender P… | [link](https://github.com/Sandflow-ai/sand3d) |
 | [`scenario-skills`](tools/scenario-skills.json) | Scenario 官方 Agent skill 套件：168 个 skill，分成 23 个插件，覆盖图片、视频、音频、3D 生成与编辑，游戏美术（精灵、图标、瓦片、贴图、天空盒、可行走场景），社交媒体内容，角色与风格一致性和自定义模型训… | [link](https://github.com/scenario-labs/skills) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 | [`superpowers`](tools/superpowers.json) | Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、… | [link](https://github.com/obra/superpowers) |

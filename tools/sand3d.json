@@ -1,0 +1,19 @@
+{
+  "name": "sand3d",
+  "description": "sand3d（Sandflow）：给大模型用的 Python 3D 建模库，在 Blender 的 bpy 之上用很短的程序描述零件、实体、编辑、坐标系、关节和装配体；零件和边面按名字引用、结果确定可复现，同一个零件比 Blender Python / CadQuery / FeatureScript 少 2-6 倍 token；可导出 GLB、URDF、USD、OBJ、STL。",
+  "category": "library",
+  "tags": ["3d", "cad", "python", "blender", "llm", "urdf", "usd"],
+  "repo": "https://github.com/Sandflow-ai/sand3d",
+  "homepage": "https://sand3d.sandflow.ai/",
+  "docs": "https://github.com/Sandflow-ai/sand3d/blob/main/docs/api.md",
+  "api": "https://github.com/Sandflow-ai/sand3d/blob/main/llms.txt",
+  "license": "Apache-2.0",
+  "platforms": ["macos", "linux", "windows"],
+  "notes": [
+    "安装：pip install sand3d（或 uv add sand3d），推荐 Python 3.13（自带 Blender 5.2 的 bpy），也支持 3.11（bpy 4.5）；3.12 和 Intel Mac 上的 bpy 5.2 没有 wheel，请用 Python 3.11",
+    "给大模型用：把 docs/api.md（约 3,600 token，含全部签名和示例）放进系统提示词；多零件装配体按官方 guidelines 的 8 条规则写：先规划、再细节、再零件",
+    "导出：s3d.export(obj, \"x.glb\")，扩展名决定格式（.glb / .urdf / .usda / .obj / .stl），单位米；URDF 可直接用于 ROS、PyBullet、MuJoCo、Isaac",
+    "示例和数据：网站上的快速入门与可交互图库、仓库 programs/ 目录，以及 Hugging Face 上的数据集和 sand3d-explorer",
+    "仓库里其他 CAD 工具：text-to-cad（build123d 脚本 + 加工服务）、SolidCraft（带界面的参数化 CAD）"
+  ]
+}

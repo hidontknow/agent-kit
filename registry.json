@@ -1892,6 +1892,35 @@
       "targets": []
     },
     {
+      "id": "tool/sand3d",
+      "type": "tool",
+      "name": "sand3d",
+      "description": "sand3d（Sandflow）：给大模型用的 Python 3D 建模库，在 Blender 的 bpy 之上用很短的程序描述零件、实体、编辑、坐标系、关节和装配体；零件和边面按名字引用、结果确定可复现，同一个零件比 Blender Python / CadQuery / FeatureScript 少 2-6 倍 token；可导出 GLB、URDF、USD、OBJ、STL。",
+      "tags": [
+        "3d",
+        "cad",
+        "python",
+        "blender",
+        "llm",
+        "urdf",
+        "usd"
+      ],
+      "origin": "linked",
+      "path": "tools/sand3d.json",
+      "category": "library",
+      "repo": "https://github.com/Sandflow-ai/sand3d",
+      "homepage": "https://sand3d.sandflow.ai/",
+      "docs": "https://github.com/Sandflow-ai/sand3d/blob/main/docs/api.md",
+      "api": "https://github.com/Sandflow-ai/sand3d/blob/main/llms.txt",
+      "license": "Apache-2.0",
+      "platforms": [
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "targets": []
+    },
+    {
       "id": "tool/scenario-skills",
       "type": "tool",
       "name": "scenario-skills",
