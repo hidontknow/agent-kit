@@ -121,6 +121,32 @@
       ]
     },
     {
+      "name": "rea",
+      "source": {
+        "source": "npm",
+        "package": "rea-agents"
+      },
+      "description": "REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也可以在终端直接用。看到别的应用里喜欢的功能，可以让 Agent 搞清它怎么实现并在自己的项目里做一个。",
+      "homepage": "https://rea.tools/",
+      "keywords": [
+        "reverse-engineering",
+        "binary-analysis",
+        "decompiler",
+        "mcp",
+        "electron"
+      ],
+      "strict": false,
+      "mcpServers": {
+        "rea": {
+          "command": "node",
+          "args": [
+            "${CLAUDE_PLUGIN_ROOT}/scripts/rea.mjs",
+            "mcp"
+          ]
+        }
+      }
+    },
+    {
       "name": "rust-migration",
       "source": "./plugins/rust-migration",
       "description": "把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。",

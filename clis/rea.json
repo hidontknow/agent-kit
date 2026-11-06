@@ -1,0 +1,47 @@
+{
+  "name": "rea",
+  "description": "REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也可以在终端直接用。看到别的应用里喜欢的功能，可以让 Agent 搞清它怎么实现并在自己的项目里做一个。",
+  "tags": [
+    "reverse-engineering",
+    "binary-analysis",
+    "decompiler",
+    "mcp",
+    "electron"
+  ],
+  "repo": "https://github.com/morluto/rea",
+  "homepage": "https://rea.tools/",
+  "docs": "https://github.com/morluto/rea/blob/main/docs/installation.md",
+  "license": "MIT",
+  "bin": "rea",
+  "requires": "Node.js ^22.23.4 / ^24.22.1 / >=26.12.1",
+  "install": [
+    {
+      "manager": "npm",
+      "package": "rea-agents"
+    }
+  ],
+  "claudePlugin": {
+    "npm": "rea-agents",
+    "name": "rea",
+    "entry": {
+      "strict": false,
+      "mcpServers": {
+        "rea": {
+          "command": "node",
+          "args": [
+            "${CLAUDE_PLUGIN_ROOT}/scripts/rea.mjs",
+            "mcp"
+          ]
+        }
+      }
+    }
+  },
+  "notes": [
+    "推荐的安装方式：npx rea-agents setup，交互选择要接入的 Agent（Claude Code、Codex、Cursor、Gemini CLI…），审核后写入 MCP 配置和配套 skill，并备份原有配置；装完重启 Agent",
+    "Claude Code 插件：/plugin install rea@agent-kit（从 npm 包 rea-agents 安装，和官方 /plugin marketplace add morluto/rea 后 /plugin install rea@rea 相同，二选一）",
+    "原生二进制分析会用已安装的 Hopper、Ghidra、IDA 或 Kuna（setup 可在你同意后安装 Hopper）；静态 JS / Electron 分析不需要额外引擎",
+    "Linux 上 Ghidra、JADX 等需要 PATH 里有 procps 版本的 ps",
+    "检查与卸载：rea doctor --json（只读）；rea uninstall 只移除 REA 自己的注册和 skill，加 --purge-data 同时清除缓存",
+    "只从 github.com/morluto/rea、rea.tools 或 npm 的 rea-agents 获取，名字相近的仓库不一定是官方的；只分析你有权分析的软件"
+  ]
+}

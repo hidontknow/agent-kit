@@ -970,6 +970,29 @@
       ]
     },
     {
+      "id": "mcp/rea",
+      "type": "mcp",
+      "name": "rea",
+      "description": "REA 的 MCP server（stdio）：逆向分析原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，结果附带证据与局限。",
+      "tags": [
+        "reverse-engineering",
+        "binary-analysis",
+        "decompiler"
+      ],
+      "origin": "original",
+      "path": "mcp/rea.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/solidcraft",
       "type": "mcp",
       "name": "solidcraft",
@@ -1281,6 +1304,35 @@
         {
           "manager": "pip",
           "package": "goofish-cli"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
+      "id": "cli/rea",
+      "type": "cli",
+      "name": "rea",
+      "description": "REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也可以在终端直接用。看到别的应用里喜欢的功能，可以让 Agent 搞清它怎么实现并在自己的项目里做一个。",
+      "tags": [
+        "reverse-engineering",
+        "binary-analysis",
+        "decompiler",
+        "mcp",
+        "electron"
+      ],
+      "origin": "linked",
+      "path": "clis/rea.json",
+      "repo": "https://github.com/morluto/rea",
+      "homepage": "https://rea.tools/",
+      "docs": "https://github.com/morluto/rea/blob/main/docs/installation.md",
+      "license": "MIT",
+      "bin": "rea",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "rea-agents"
         }
       ],
       "targets": [

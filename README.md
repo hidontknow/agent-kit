@@ -107,6 +107,7 @@ claude plugin install interfaces@agent-kit         # 界面设计：排版、配
 claude plugin install taste-skill@agent-kit        # 高水准公司官网（直接从上游 Leonxlnx/taste-skill 安装）
 claude plugin install superpowers@agent-kit        # 完整开发方法论：计划、TDD、调试、审查（直接从上游 obra/superpowers 安装）
 claude plugin install mattpocock-skills@agent-kit  # Matt Pocock 的工程 skill（直接从上游 mattpocock/skills 安装）
+claude plugin install rea@agent-kit                # 逆向工程 MCP + skill（从 npm 包 rea-agents 安装）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -215,7 +216,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (11)
+#### mcp (12)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -229,6 +230,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish`](mcp/goofish.json) | 闲鱼（Goofish/Xianyu）MCP server（本机模式）：商品查询/发布/下架、搜索、图片上传、AI 类目识别、IM 消息收发等 17 个工具，由 goofish-cli 提供。 | original |
 | [`kit-tools`](mcp/kit-tools) | Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing. | original |
 | [`playwright`](mcp/playwright.json) | Browser automation via Playwright accessibility snapshots (Microsoft). | original |
+| [`rea`](mcp/rea.json) | REA 的 MCP server（stdio）：逆向分析原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，结果附带证据与局限。 | original |
 | [`solidcraft`](mcp/solidcraft.json) | SolidCraft 的 MCP server（stdio）：Agent 用和界面相同的命令建模（batch、execute、measure、screenshot…）；无界面时自带设计会话，桌面应用运行时自动连接，可以看着 Agent 建… | original |
 
 #### hooks (2)
@@ -257,12 +259,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (2)
+#### clis (3)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
+| [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
 #### tools (8)
 

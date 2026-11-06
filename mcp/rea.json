@@ -1,0 +1,16 @@
+{
+  "name": "rea",
+  "description": "REA 的 MCP server（stdio）：逆向分析原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，结果附带证据与局限。",
+  "tags": ["reverse-engineering", "binary-analysis", "decompiler"],
+  "homepage": "https://github.com/morluto/rea/blob/main/docs/mcp-contracts.md",
+  "transport": "stdio",
+  "command": "rea",
+  "args": ["mcp"],
+  "requires": { "bin": ["rea"] },
+  "notes": [
+    "先安装 CLI：agent-kit install cli/rea（npm install -g rea-agents）；或者直接用官方的 npx rea-agents setup，它会自动写好 MCP 和 skill，不需要再装这条",
+    "Claude Code 优先用插件：/plugin install rea@agent-kit",
+    "桌面客户端找不到 rea 时，官方推荐的手动写法是 command 为 node 的绝对路径、args 为 [rea.mjs 的绝对路径, \"mcp\"]",
+    "工具输入默认是精简 schema；需要完整字段说明时设置环境变量 REA_MCP_INPUT_SCHEMA_PROFILE=full；客户端限制 tools/list 大小时设置 REA_MCP_OUTPUT_SCHEMA_PROFILE=compact"
+  ]
+}

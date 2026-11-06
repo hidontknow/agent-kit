@@ -469,3 +469,29 @@ test('tool with claudePlugin is listed in the marketplace with a GitHub source',
   fs.writeFileSync(path.join(kit, 'tools/ext.json'), JSON.stringify({ name: 'ext', description: 'x', repo: 'https://github.com/o/ext', claudePlugin: { repo: 'https://github.com/o/ext' } }));
   assert.throws(() => s.run('validate'), /"claudePlugin\.repo" must be "owner\/repo"/);
 });
+
+test('claudePlugin: npm source, extra entry fields, allowed on clis but not resources', () => {
+  const s = sandbox();
+  const kit = path.join(s.dir, 'kit');
+  for (const d of ['clis', 'resources']) fs.mkdirSync(path.join(kit, d), { recursive: true });
+  fs.writeFileSync(path.join(kit, 'clis/npmtool.json'), JSON.stringify({
+    name: 'npmtool', description: 'x', repo: 'https://github.com/o/npmtool', bin: 'npmtool',
+    install: [{ manager: 'npm', package: 'npmtool' }],
+    claudePlugin: { npm: '@o/npmtool', version: '1.2.3', entry: { strict: false, mcpServers: { t: { command: 'node', args: ['${CLAUDE_PLUGIN_ROOT}/x.mjs'] } } } },
+  }));
+  s.env.AGENT_KIT_REPO = kit;
+  s.run('build');
+  const [p] = JSON.parse(s.read(path.join(kit, '.claude-plugin/marketplace.json'))).plugins;
+  assert.deepStrictEqual(p.source, { source: 'npm', package: '@o/npmtool', version: '1.2.3' });
+  assert.strictEqual(p.strict, false);
+  assert.deepStrictEqual(p.mcpServers.t.args, ['${CLAUDE_PLUGIN_ROOT}/x.mjs']);
+
+  fs.writeFileSync(path.join(kit, 'resources/r.json'), JSON.stringify({ name: 'r', description: 'x', kind: 'list', homepage: 'https://e.com', claudePlugin: { npm: 'r' } }));
+  assert.throws(() => s.run('validate'), /resources cannot be plugins/);
+  fs.rmSync(path.join(kit, 'resources/r.json'));
+  fs.writeFileSync(path.join(kit, 'clis/npmtool.json'), JSON.stringify({
+    name: 'npmtool', description: 'x', repo: 'https://github.com/o/npmtool', bin: 'npmtool', install: [{ manager: 'npm', package: 'npmtool' }],
+    claudePlugin: { npm: 'npmtool', repo: 'o/npmtool', entry: { source: 'x' } },
+  }));
+  assert.throws(() => s.run('validate'), /either "repo" or "npm"[\s\S]*must not set "source"/);
+});
