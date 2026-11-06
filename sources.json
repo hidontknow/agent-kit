@@ -20,6 +20,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06",
       "license": "Apache-2.0"
+    },
+    "skill/wxjava-integration-guide": {
+      "repo": "https://github.com/binarywang/WxJava",
+      "ref": "develop",
+      "path": "skills/wxjava-integration-guide",
+      "commit": "a955ac1754d9ed6506bf28bcc2b41cb592fcb37f",
+      "hash": "sha256:f158d533c2bd69b7a65748a74bc17065aa027bbff75d872ada0687ce176fb349",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06",
+      "license": "Apache-2.0"
     }
   }
 }
