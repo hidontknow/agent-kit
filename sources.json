@@ -291,6 +291,15 @@
       "updatedAt": "2026-11-06",
       "license": "MIT"
     },
+    "skill/utools-plugin-dev": {
+      "repo": "https://github.com/uTools-Labs/utools-plugin-dev-skill",
+      "path": "",
+      "commit": "8b05bee403ea0cac091979f14e4931d0853ce358",
+      "hash": "sha256:d359145766eac42022371a0129ffa0c3c9e3927b7701468b7d4a67f3c21df15a",
+      "license": "未声明（上游仓库没有 LICENSE）",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
     "skill/write-swift": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",

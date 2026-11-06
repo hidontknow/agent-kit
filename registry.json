@@ -716,6 +716,28 @@
       ]
     },
     {
+      "id": "skill/utools-plugin-dev",
+      "type": "skill",
+      "name": "utools-plugin-dev",
+      "description": "开发和维护 uTools 插件应用时使用。适用于已有插件项目的功能实现、代码修改、uTools API 集成、问题排查与开发规范查询。",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/utools-plugin-dev",
+      "source": {
+        "repo": "https://github.com/uTools-Labs/utools-plugin-dev-skill",
+        "path": "",
+        "commit": "8b05bee403ea0cac091979f14e4931d0853ce358"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/write-swift",
       "type": "skill",
       "name": "write-swift",
@@ -2062,26 +2084,6 @@
       "docs": "https://github.com/superdesigndev/treg/blob/main/USAGE.md",
       "license": "Apache-2.0 + 附加条款：可以自由使用、修改，在自己组织内部署也可以；未经书面授权，不得拿它给第三方提供托管 / SaaS 服务",
       "licenseUrl": "https://github.com/superdesigndev/treg/blob/main/LICENSE",
-      "targets": []
-    },
-    {
-      "id": "tool/utools-plugin-dev",
-      "type": "tool",
-      "name": "utools-plugin-dev",
-      "description": "uTools 官方的 Agent Skill（utools-plugin-dev）：辅助开发 uTools 8.0+ 插件应用，内置官方开发文档（API 参考：事件、窗口、系统能力、数据存储、AI、定时任务、自动化、截图、ffmpeg、sharp、ubrowser、支付等；开发规范：项目结构、plugin.json、preload、存储、自定义窗口、MCP），只按文档回答，不臆造 API。",
-      "tags": [
-        "skills",
-        "utools",
-        "plugin-development",
-        "desktop",
-        "chinese"
-      ],
-      "origin": "linked",
-      "path": "tools/utools-plugin-dev.json",
-      "category": "skills",
-      "repo": "https://github.com/uTools-Labs/utools-plugin-dev-skill",
-      "homepage": "https://github.com/uTools-Labs/utools-plugin-dev-skill",
-      "license": "仓库未声明许可证（没有 LICENSE 文件），因此只登记链接、不复制内容",
       "targets": []
     },
     {
