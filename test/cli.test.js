@@ -335,3 +335,42 @@ test('sync: update --all --skip-conflicts --json updates clean items, skips conf
   assert.strictEqual(after['skill/demo'].commit, sources.items['skill/demo'].commit, 'conflicting item keeps its base');
   assert.notStrictEqual(after['skill/other'].commit, sources.items['skill/other'].commit);
 });
+
+test('cli: link-only tools install/uninstall through a package manager', () => {
+  const s = sandbox();
+  const stub = path.join(s.dir, 'stub');
+  const logFile = path.join(s.dir, 'calls.log');
+  fs.mkdirSync(stub);
+  // fake `uv` that logs its arguments and "installs" the tool's binary
+  fs.writeFileSync(path.join(stub, 'uv'), `#!/bin/sh\necho "uv $*" >> "${logFile}"\nif [ "$2" = install ]; then printf '#!/bin/sh\\n' > "${stub}/goofish"; chmod +x "${stub}/goofish"; else rm -f "${stub}/goofish"; fi\n`);
+  fs.chmodSync(path.join(stub, 'uv'), 0o755);
+  const sysPath = (process.env.PATH || '').split(path.delimiter).filter((d) => !fs.existsSync(path.join(d, 'uv')) && !fs.existsSync(path.join(d, 'pipx')) && !fs.existsSync(path.join(d, 'goofish')));
+  s.env.PATH = [stub, ...sysPath].join(path.delimiter);
+
+  const out = s.run('install', 'cli/goofish-cli');
+  assert.match(out, /goofish auth login/, 'prints usage notes');
+  assert.strictEqual(s.read(logFile).trim(), 'uv tool install goofish-cli');
+  assert.ok(fs.existsSync(path.join(stub, 'goofish')));
+  assert.ok(!fs.existsSync(path.join(ROOT, 'clis', 'goofish-cli')), 'nothing vendored');
+
+  // already on PATH → skipped, not reinstalled
+  assert.match(s.run('install', 'cli/goofish-cli'), /already on PATH/);
+  assert.strictEqual(s.read(logFile).trim().split('\n').length, 1);
+
+  s.run('uninstall', 'goofish-cli');
+  assert.strictEqual(s.read(logFile).trim().split('\n')[1], 'uv tool uninstall goofish-cli');
+  assert.ok(!fs.existsSync(path.join(stub, 'goofish')));
+
+  // no package manager available → skipped with the manual commands
+  s.env.PATH = sysPath.join(path.delimiter);
+  const none = s.run('install', 'cli/goofish-cli', '--via', 'pipx', '--dry-run');
+  assert.match(none, /would run: pipx install goofish-cli/);
+});
+
+test('cli: package names are unpinned for uninstall', () => {
+  const { packageName } = require('../lib/clis');
+  assert.strictEqual(packageName('uv', 'goofish-cli==0.6.3'), 'goofish-cli');
+  assert.strictEqual(packageName('npm', '@scope/tool@1.2.3'), '@scope/tool');
+  assert.strictEqual(packageName('npm', 'tool'), 'tool');
+  assert.strictEqual(packageName('cargo', 'ripgrep@14'), 'ripgrep');
+});

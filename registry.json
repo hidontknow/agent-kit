@@ -424,7 +424,9 @@
       "tags": [],
       "origin": "original",
       "path": "scripts/agent-context.sh",
-      "targets": []
+      "targets": [
+        "bin"
+      ]
     },
     {
       "id": "script/git-prune-branches",
@@ -434,7 +436,44 @@
       "tags": [],
       "origin": "original",
       "path": "scripts/git-prune-branches.sh",
-      "targets": []
+      "targets": [
+        "bin"
+      ]
+    },
+    {
+      "id": "cli/goofish-cli",
+      "type": "cli",
+      "name": "goofish-cli",
+      "description": "闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。",
+      "tags": [
+        "xianyu",
+        "goofish",
+        "ecommerce",
+        "mcp",
+        "python"
+      ],
+      "origin": "linked",
+      "path": "clis/goofish-cli.json",
+      "repo": "https://github.com/fancyboi999/goofish-cli",
+      "homepage": "https://github.com/fancyboi999/goofish-cli",
+      "bin": "goofish",
+      "install": [
+        {
+          "manager": "uv",
+          "package": "goofish-cli"
+        },
+        {
+          "manager": "pipx",
+          "package": "goofish-cli"
+        },
+        {
+          "manager": "pip",
+          "package": "goofish-cli"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
     }
   ]
 }

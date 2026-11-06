@@ -1,0 +1,16 @@
+{
+  "name": "{{name}}",
+  "description": "What this CLI does and why it is useful for agents.",
+  "tags": [],
+  "repo": "https://github.com/owner/{{name}}",
+  "homepage": "",
+  "docs": "",
+  "license": "",
+  "bin": "{{name}}",
+  "requires": "",
+  "install": [
+    { "manager": "uv", "package": "{{name}}" },
+    { "manager": "pipx", "package": "{{name}}" }
+  ],
+  "notes": []
+}

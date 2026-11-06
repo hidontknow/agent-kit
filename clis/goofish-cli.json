@@ -1,0 +1,22 @@
+{
+  "name": "goofish-cli",
+  "description": "闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。",
+  "tags": ["xianyu", "goofish", "ecommerce", "mcp", "python"],
+  "repo": "https://github.com/fancyboi999/goofish-cli",
+  "homepage": "https://github.com/fancyboi999/goofish-cli",
+  "docs": "https://github.com/fancyboi999/goofish-cli/blob/main/docs/mcp-setup.md",
+  "license": "Apache-2.0",
+  "bin": "goofish",
+  "requires": "Python >= 3.11",
+  "install": [
+    { "manager": "uv", "package": "goofish-cli" },
+    { "manager": "pipx", "package": "goofish-cli" },
+    { "manager": "pip", "package": "goofish-cli" }
+  ],
+  "notes": [
+    "登录：goofish auth login ~/Downloads/goofish-cookies.json（或 --qr 扫码），然后 goofish auth status 验证",
+    "作为 MCP server：command \"uvx\"，args [\"goofish-cli\"]；需要 PATH 中有 uv",
+    "安装内置 skills 到 ~/.claude/skills：goofish skills install",
+    "Claude Code 插件市场：claude plugin marketplace add fancyboi999/goofish-cli"
+  ]
+}

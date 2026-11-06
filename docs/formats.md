@@ -135,6 +135,37 @@ plugins/my-plugin/
 - 不写 `version` 时，Claude Code 使用 git commit SHA 作为版本号，源工具更新后用户一定能收到；写了 `version` 就固定为这个版本，需要手动升版本号才会推送更新。
 - 和手写插件重名时，validate 会报错。
 
+## CLI — `clis/<name>.json`
+
+用于收藏外部命令行工具。**只保存链接和安装方式，不复制源码**，所以没有上游同步的问题，升级交给包管理器。
+
+```json
+{
+  "name": "goofish-cli",
+  "description": "这个 CLI 做什么",
+  "tags": ["python"],
+  "repo": "https://github.com/fancyboi999/goofish-cli",
+  "homepage": "",
+  "docs": "https://…/docs/mcp-setup.md",
+  "license": "Apache-2.0",
+  "bin": "goofish",
+  "requires": "Python >= 3.11",
+  "install": [
+    { "manager": "uv", "package": "goofish-cli" },
+    { "manager": "pipx", "package": "goofish-cli" },
+    { "manager": "pip", "package": "goofish-cli" }
+  ],
+  "notes": ["安装后的使用提示，install / info 时显示"]
+}
+```
+
+- 必填字段：`name`（与文件名一致）、`description`、`repo` 或 `homepage`、`bin`（工具提供的命令名）、`install`。
+- `install` 按顺序尝试，使用第一个本机可用的包管理器，也可以用 `--via <manager>` 指定。支持 `uv`（`uv tool install`）、`pipx`、`pip`（`--user`）、`npm`（`-g`）、`brew`、`cargo`、`go`。`package` 里可以写版本，如 `pkg==1.2.3` 或 `pkg@1.2.3`。
+- `bin` 已经在 PATH 上时跳过安装，加 `--force` 可以强制安装。
+- `uninstall` 会调用对应包管理器的卸载命令（`go` 没有卸载命令，需要手动删除）。
+- 升级用包管理器自己的命令，比如 `uv tool upgrade goofish-cli`。
+- 如果这个工具还提供 MCP server 或 skills，可以另外在 `mcp/` 下登记一份配置，或在 `notes` 里写明用法。
+
 ## Script — `scripts/<file>`
 
 任意可执行脚本。在前 15 行内写一行 `# description: …` 作为说明。

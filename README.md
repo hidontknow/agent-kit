@@ -1,6 +1,6 @@
 # agent-kit
 
-> 个人 AI Agent 工具包：集中存放自己开发或收藏的 **Skill / MCP / Agent / Command / Hook / Plugin / Script**，
+> 个人 AI Agent 工具包：集中存放自己开发或收藏的 **Skill / MCP / Agent / Command / Hook / Plugin / Script / CLI**，
 > 一条命令安装到 **Claude Code、Claude Desktop、Codex、Cursor、Windsurf、Gemini CLI、ChatGPT**。收藏的工具会记录上游来源，之后可以随时同步、对比和更新。
 
 - **一份源文件，多端安装**：每类工具只写一次。安装时自动转换成各客户端需要的格式和路径，比如 MCP 会写成 JSON 或 TOML，Skill 会写成 Cursor Rule 或 Codex Skill。
@@ -31,6 +31,7 @@ agent-kit install agent/code-reviewer -t cursor --project .   # 项目级安装
 agent-kit install hook/block-dangerous-commands -t claude-code --dry-run
 agent-kit install mcp                               # 安装某一类的全部工具
 agent-kit uninstall mcp/github -t codex
+agent-kit install cli/goofish-cli                   # 外部 CLI：自动选用本机已有的 uv / pipx / pip 安装
 agent-kit list --installed                          # 查看装了什么、装在哪
 ```
 
@@ -56,6 +57,7 @@ agent-kit list --installed                          # 查看装了什么、装�
 | hook | `settings.json` hooks | – | – | `~/.cursor/hooks.json` | – | – | – |
 | plugin | 插件市场 / `--expand` | 拆成组件 | 拆成组件 | 拆成组件 | 拆成组件 | 拆成组件 | 拆成组件 |
 | script | 安装到 `~/.local/bin`，与客户端无关 | | | | | | |
+| cli | 只登记链接，通过 uv / pipx / pip / npm / brew / cargo / go 安装到本机，与客户端无关 | | | | | | |
 
 ¹ 仅项目级（`--project`）。² Codex 没有子 Agent 格式，转换为 `/prompts:<name>` 自定义提示词。
 ³ Claude Desktop 配置文件只支持本地 stdio 服务；远程服务会通过 `mcp-remote` 桥接，`${env:X}` 在安装时展开成实际值。
@@ -127,6 +129,7 @@ agent-kit/
 ├── plugins/<name>/               # Claude Code 插件（.claude-plugin/plugin.json）
 ├── bundles/<name>.json           # 主题插件清单，build 时生成 plugins/<name>/
 ├── scripts/                      # 独立的命令行脚本
+├── clis/<name>.json              # 外部 CLI 工具，只保存链接和安装方式，不复制源码
 ├── templates/                    # `agent-kit new` 使用的模板
 ├── sources.json                  # 收藏工具的上游锁文件
 ├── registry.json                 # 生成的索引（供其他工具或网站读取）
@@ -138,7 +141,7 @@ agent-kit/
 ## 添加自己的工具
 
 ```bash
-agent-kit new skill my-skill        # 也可以是 agent / command / mcp / hook / plugin / script
+agent-kit new skill my-skill        # 也可以是 agent / command / mcp / hook / plugin / script / cli
 $EDITOR skills/my-skill/SKILL.md
 agent-kit validate                  # 检查格式
 agent-kit build                     # 更新 registry.json、marketplace.json 和下面的目录表
@@ -206,6 +209,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | --- | --- | --- |
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
+
+#### clis (1)
+
+| 名称 | 说明 | 来源 |
+| --- | --- | --- |
+| [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 <!-- catalog:end -->
 
 ## 参考与致谢
