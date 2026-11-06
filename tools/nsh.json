@@ -1,0 +1,24 @@
+{
+  "name": "nsh",
+  "description": "Native Shell（NSH，长桥 Longbridge）：Rust 写的原生 UI 框架，一套组件、状态和逻辑跑在 iOS、Android、macOS、Windows、Linux、Web、GPUI 和终端上，各平台用自己的原生控件渲染；应用可以用 Rust、TSX 或两者混写，还能在运行时加载签名的 TSX 模块（插件、AI 生成的界面）并放进沙箱。",
+  "category": "framework",
+  "tags": ["rust", "ui", "cross-platform", "native", "tsx", "mobile", "desktop"],
+  "repo": "https://github.com/longbridge/nsh",
+  "homepage": "https://nsh.dev",
+  "docs": "https://nsh.dev/docs/installation",
+  "api": "https://nsh.dev/llms.txt",
+  "license": "Apache-2.0",
+  "platforms": ["ios", "android", "macos", "windows", "linux", "web"],
+  "status": "0.4",
+  "bin": "nsh",
+  "install": [
+    { "manager": "brew", "package": "longbridge/tap/nsh" }
+  ],
+  "notes": [
+    "安装 nsh 命令：macOS / Linux 运行 curl -fsSL https://nsh.dev/install.sh | sh（加 -s -- --source 从 main 源码构建）；Windows PowerShell 运行 irm https://nsh.dev/install.ps1 | iex；或 brew install longbridge/tap/nsh",
+    "新建项目：nsh init my-app --template rust | ts | mixed；运行：nsh run my-app --target ios | android | macos | windows | linux | gpui | web | tui",
+    "iOS 需要 Xcode，Android 需要 Android SDK，Linux 需要 GTK 4.14+；TSX 应用改动支持保留状态的热更新",
+    "给 Agent 用：skill nsh（构建、运行、测试、打包）和 nsh-design-guides（界面设计规范），Claude Code 可装插件 rust-native-ui@agent-kit；模型可读文档：https://nsh.dev/llms.txt",
+    "和 GPUI Kit 的关系：NSH 可以用 GPUI 后端渲染，并嵌入 GPUI / GPUI Kit 应用"
+  ]
+}

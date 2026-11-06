@@ -111,6 +111,26 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
     },
+    "skill/gpui-kit": {
+      "repo": "https://github.com/longbridge/gpui-kit",
+      "ref": "main",
+      "path": "skills/gpui-kit",
+      "commit": "b92bb66d148fca10e15d1e3fb77d565ac4d306ec",
+      "hash": "sha256:0c8907392c141f17ef311c531b9b88abdb4cb759a5809acc3d83973812e709e1",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
+    "skill/gpui-kit-design-guides": {
+      "repo": "https://github.com/longbridge/gpui-kit",
+      "ref": "main",
+      "path": "skills/gpui-kit-design-guides",
+      "commit": "b92bb66d148fca10e15d1e3fb77d565ac4d306ec",
+      "hash": "sha256:897081196e86317a0c6572d83db07b8bc25c7c42e39d727a676af099612e5b09",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
     "skill/improve-animations": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
@@ -148,6 +168,26 @@
       "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833",
       "hash": "sha256:952dad47a2f9683f93f3afc47bf24b2d4fd11bbca60432667b18d76383fa07b2",
       "license": "MIT",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
+    "skill/nsh": {
+      "repo": "https://github.com/longbridge/nsh",
+      "ref": "main",
+      "path": "skills/nsh",
+      "commit": "e1163cd7847bb8bf84093dd34f8bb4eae86aa9c1",
+      "hash": "sha256:c77a9fd05cf9489450774e51b65f195a4790809b89c7fb308516337e047f3bca",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
+    "skill/nsh-design-guides": {
+      "repo": "https://github.com/longbridge/nsh",
+      "ref": "main",
+      "path": "skills/nsh-design-guides",
+      "commit": "e1163cd7847bb8bf84093dd34f8bb4eae86aa9c1",
+      "hash": "sha256:77ac724b28ab4a0460d878163ca41625960278e826c7b8ed7e3bf097eb9255f3",
+      "license": "Apache-2.0",
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
     },

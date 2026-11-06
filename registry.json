@@ -282,6 +282,52 @@
       ]
     },
     {
+      "id": "skill/gpui-kit",
+      "type": "skill",
+      "name": "gpui-kit",
+      "description": "How to build desktop applications with GPUI Kit, the Rust framework published as the gpui-kit crate (GPUI plus gpui_kit::component, gpui_kit::base, gpui_kit::assets). Use when setting up a gpui-kit app, choosing or using a component (Button, Input, Select, Dialog, Sheet, Tabs, Sidebar, List, DataTable, Tree, Chart, etc.), handling component state, theming, or window overlays, and for GPUI mechanics: actions and keybindings, async tasks, contexts, custom elements, entities, events, focus, global state, layout and styling, ElementId, and tests including UI integration testing. Holds the normative Coding Guides: read them before any architecture, state-ownership, public API, naming, or testing decision. Pairs with the gpui-kit-design-guides skill for the Design Guides.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/gpui-kit",
+      "source": {
+        "repo": "https://github.com/longbridge/gpui-kit",
+        "path": "skills/gpui-kit",
+        "ref": "main",
+        "commit": "b92bb66d148fca10e15d1e3fb77d565ac4d306ec"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/gpui-kit-design-guides",
+      "type": "skill",
+      "name": "gpui-kit-design-guides",
+      "description": "The normative Design Guides for GPUI Kit desktop applications. Read in full before designing or changing any screen, layout, spacing, visual hierarchy, color, density, component choice, interaction state, overlay, motion, data-heavy view, or interface copy in a GPUI Kit (gpui-kit / gpui-component) application, and before reviewing UI work for design quality. Also use when asked what the design rules are, or whether a UI decision follows them.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/gpui-kit-design-guides",
+      "source": {
+        "repo": "https://github.com/longbridge/gpui-kit",
+        "path": "skills/gpui-kit-design-guides",
+        "ref": "main",
+        "commit": "b92bb66d148fca10e15d1e3fb77d565ac4d306ec"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/improve-animations",
       "type": "skill",
       "name": "improve-animations",
@@ -363,6 +409,52 @@
         "path": "skills/mobile-native",
         "ref": "main",
         "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/nsh",
+      "type": "skill",
+      "name": "nsh",
+      "description": "Build, run, test and package Native Shell (NSH) apps in Rust, TSX or both. Use for NSH development requests and projects with nsh.json, nsh-* crate dependencies or imports from nsh modules. Covers NSH reactivity, components, styling and tooling, with Coding Guides and working app recipes.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/nsh",
+      "source": {
+        "repo": "https://github.com/longbridge/nsh",
+        "path": "skills/nsh",
+        "ref": "main",
+        "commit": "e1163cd7847bb8bf84093dd34f8bb4eae86aa9c1"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/nsh-design-guides",
+      "type": "skill",
+      "name": "nsh-design-guides",
+      "description": "The normative Design Guides for Native Shell (NSH) apps. Read before designing or changing any screen, layout, spacing, visual hierarchy, color, density, component choice, interaction state, overlay, motion, data-heavy view or interface copy in an NSH app, in TSX or Rust, and before reviewing UI work for design quality. Also use when asked what the design rules are, or whether a UI decision follows them.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/nsh-design-guides",
+      "source": {
+        "repo": "https://github.com/longbridge/nsh",
+        "path": "skills/nsh-design-guides",
+        "ref": "main",
+        "commit": "e1163cd7847bb8bf84093dd34f8bb4eae86aa9c1"
       },
       "targets": [
         "claude-code",
@@ -1168,6 +1260,33 @@
       ]
     },
     {
+      "id": "plugin/rust-native-ui",
+      "type": "plugin",
+      "name": "rust-native-ui",
+      "description": "长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规范 skill。",
+      "tags": [
+        "rust",
+        "ui",
+        "nsh",
+        "gpui",
+        "gpui-kit",
+        "desktop",
+        "mobile"
+      ],
+      "origin": "original",
+      "path": "plugins/rust-native-ui",
+      "bundle": "bundles/rust-native-ui.json",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "plugin/security",
       "type": "plugin",
       "name": "security",
@@ -1399,6 +1518,33 @@
       "targets": []
     },
     {
+      "id": "tool/gpui-kit",
+      "type": "tool",
+      "name": "gpui-kit",
+      "description": "GPUI Kit（长桥 Longbridge）：基于 GPUI 的 Rust 桌面应用框架，75+ 组件和基础构件，内置 AccessKit 无障碍、UI 集成测试、WebAssembly、可承载 20 万行的代码编辑器（Tree-sitter + LSP）、虚拟滚动数据表格、可停靠布局、Markdown / HTML 渲染和图表；支撑长桥 Pro 桌面端，可选 JavaScript 扩展运行时。",
+      "tags": [
+        "rust",
+        "gpui",
+        "ui",
+        "desktop",
+        "components"
+      ],
+      "origin": "linked",
+      "path": "tools/gpui-kit.json",
+      "category": "framework",
+      "repo": "https://github.com/longbridge/gpui-kit",
+      "homepage": "https://gpui-kit.com",
+      "docs": "https://docs.rs/gpui-kit",
+      "license": "Apache-2.0（website 下的文档文字另以 CC BY 4.0 提供）",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "web"
+      ],
+      "targets": []
+    },
+    {
       "id": "tool/gstack",
       "type": "tool",
       "name": "gstack",
@@ -1467,6 +1613,48 @@
       "homepage": "https://www.aihero.dev/s/skills-newsletter",
       "license": "MIT",
       "targets": []
+    },
+    {
+      "id": "tool/nsh",
+      "type": "tool",
+      "name": "nsh",
+      "description": "Native Shell（NSH，长桥 Longbridge）：Rust 写的原生 UI 框架，一套组件、状态和逻辑跑在 iOS、Android、macOS、Windows、Linux、Web、GPUI 和终端上，各平台用自己的原生控件渲染；应用可以用 Rust、TSX 或两者混写，还能在运行时加载签名的 TSX 模块（插件、AI 生成的界面）并放进沙箱。",
+      "tags": [
+        "rust",
+        "ui",
+        "cross-platform",
+        "native",
+        "tsx",
+        "mobile",
+        "desktop"
+      ],
+      "origin": "linked",
+      "path": "tools/nsh.json",
+      "category": "framework",
+      "repo": "https://github.com/longbridge/nsh",
+      "homepage": "https://nsh.dev",
+      "docs": "https://nsh.dev/docs/installation",
+      "api": "https://nsh.dev/llms.txt",
+      "license": "Apache-2.0",
+      "platforms": [
+        "ios",
+        "android",
+        "macos",
+        "windows",
+        "linux",
+        "web"
+      ],
+      "status": "0.4",
+      "bin": "nsh",
+      "install": [
+        {
+          "manager": "brew",
+          "package": "longbridge/tap/nsh"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
     },
     {
       "id": "tool/ponytail",

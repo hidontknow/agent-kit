@@ -1,0 +1,16 @@
+{
+  "name": "rust-native-ui",
+  "description": "长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规范 skill。",
+  "author": {
+    "name": "hidontknow"
+  },
+  "keywords": [
+    "rust",
+    "ui",
+    "nsh",
+    "gpui",
+    "gpui-kit",
+    "desktop",
+    "mobile"
+  ]
+}

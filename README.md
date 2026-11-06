@@ -109,6 +109,7 @@ claude plugin install superpowers@agent-kit        # 完整开发方法论：计
 claude plugin install mattpocock-skills@agent-kit  # Matt Pocock 的工程 skill（直接从上游 mattpocock/skills 安装）
 claude plugin install rea@agent-kit                # 逆向工程 MCP + skill（从 npm 包 rea-agents 安装）
 claude plugin install text-to-cad@agent-kit        # 用 Python 脚本设计实体产品 + 加工服务（上游 earthtojake/text-to-cad 的 latest 分支）
+claude plugin install rust-native-ui@agent-kit     # Rust 原生 UI：NSH 与 GPUI Kit 的编码和设计规范 skill
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -169,7 +170,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (29)
+#### skills (33)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -185,10 +186,14 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |
 | [`emil-design-eng`](skills/emil-design-eng) | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible de… | [collected](https://github.com/emilkowalski/skills) |
 | [`find-animation-opportunities`](skills/find-animation-opportunities) | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it p… | [collected](https://github.com/emilkowalski/skills) |
+| [`gpui-kit`](skills/gpui-kit) | How to build desktop applications with GPUI Kit, the Rust framework published as the gpui-kit crate (GPUI plus gpui_kit… | [collected](https://github.com/longbridge/gpui-kit) |
+| [`gpui-kit-design-guides`](skills/gpui-kit-design-guides) | The normative Design Guides for GPUI Kit desktop applications. Read in full before designing or changing any screen, la… | [collected](https://github.com/longbridge/gpui-kit) |
 | [`improve-animations`](skills/improve-animations) | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-con… | [collected](https://github.com/emilkowalski/skills) |
 | [`mcp-builder`](skills/mcp-builder) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external service… | [collected](https://github.com/anthropics/skills) |
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |
 | [`mobile-native`](skills/mobile-native) | Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate "a website in a browser" from so… | [collected](https://github.com/emilkowalski/skills) |
+| [`nsh`](skills/nsh) | Build, run, test and package Native Shell (NSH) apps in Rust, TSX or both. Use for NSH development requests and project… | [collected](https://github.com/longbridge/nsh) |
+| [`nsh-design-guides`](skills/nsh-design-guides) | The normative Design Guides for Native Shell (NSH) apps. Read before designing or changing any screen, layout, spacing,… | [collected](https://github.com/longbridge/nsh) |
 | [`pick-ui-library`](skills/pick-ui-library) | Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, comman… | [collected](https://github.com/emilkowalski/skills) |
 | [`prototype`](skills/prototype) | Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip… | [collected](https://github.com/emilkowalski/skills) |
 | [`readme-writer`](skills/readme-writer) | Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a … | original |
@@ -241,7 +246,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (7)
+#### plugins (8)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -250,6 +255,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
+| [`rust-native-ui`](plugins/rust-native-ui) | 长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规… | bundle（[bundles/rust-native-ui.json](bundles/rust-native-ui.json)） |
 | [`security`](plugins/security) | 安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。 | bundle（[bundles/security.json](bundles/security.json)） |
 | [`wxjava`](plugins/wxjava) | WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。 | bundle（[bundles/wxjava.json](bundles/wxjava.json)） |
 
@@ -268,15 +274,17 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (10)
+#### tools (12)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`cui`](tools/cui.json) | CUI：C 语言的原生 UI 组件库，约 150 个组件（表单、选择器、对话框、表格、命令面板、虚拟化数据表格、看板、日历、甘特图、十几种图表、AI 聊天组件），带弹簧动效和完整键盘支持；一份 C99 代码跑 Windows / macO… | [link](https://github.com/yappologistic/CUI) |
+| [`gpui-kit`](tools/gpui-kit.json) | GPUI Kit（长桥 Longbridge）：基于 GPUI 的 Rust 桌面应用框架，75+ 组件和基础构件，内置 AccessKit 无障碍、UI 集成测试、WebAssembly、可承载 20 万行的代码编辑器（Tree-sit… | [link](https://github.com/longbridge/gpui-kit) |
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
 | [`interfaces`](tools/interfaces.json) | Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预… | [link](https://github.com/jakubkrehel/skills) |
 | [`mattpocock-skills`](tools/mattpocock-skills.json) | Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改… | [link](https://github.com/mattpocock/skills) |
+| [`nsh`](tools/nsh.json) | Native Shell（NSH，长桥 Longbridge）：Rust 写的原生 UI 框架，一套组件、状态和逻辑跑在 iOS、Android、macOS、Windows、Linux、Web、GPUI 和终端上，各平台用自己的原生控件渲… | [link](https://github.com/longbridge/nsh) |
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 | [`superpowers`](tools/superpowers.json) | Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、… | [link](https://github.com/obra/superpowers) |

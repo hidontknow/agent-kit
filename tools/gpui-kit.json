@@ -1,0 +1,17 @@
+{
+  "name": "gpui-kit",
+  "description": "GPUI Kit（长桥 Longbridge）：基于 GPUI 的 Rust 桌面应用框架，75+ 组件和基础构件，内置 AccessKit 无障碍、UI 集成测试、WebAssembly、可承载 20 万行的代码编辑器（Tree-sitter + LSP）、虚拟滚动数据表格、可停靠布局、Markdown / HTML 渲染和图表；支撑长桥 Pro 桌面端，可选 JavaScript 扩展运行时。",
+  "category": "framework",
+  "tags": ["rust", "gpui", "ui", "desktop", "components"],
+  "repo": "https://github.com/longbridge/gpui-kit",
+  "homepage": "https://gpui-kit.com",
+  "docs": "https://docs.rs/gpui-kit",
+  "license": "Apache-2.0（website 下的文档文字另以 CC BY 4.0 提供）",
+  "platforms": ["macos", "windows", "linux", "web"],
+  "notes": [
+    "接入：在 Cargo 项目里添加依赖 gpui-kit（cargo add gpui-kit），它固定了匹配的 GPUI 版本并重新导出 GPUI、base、component 和 assets，只需这一个依赖；JavaScript 扩展宿主另加 gpui-shell",
+    "分层：gpui-base 提供无样式的行为、状态和基础设施，gpui-component 是完整的有样式组件系统，可以只用 base 自己做视觉",
+    "给 Agent 用：skill gpui-kit（组件、状态、主题、浮层用法和 GPUI 参考）和 gpui-kit-design-guides（界面设计规范），Claude Code 可装插件 rust-native-ui@agent-kit",
+    "仓库里的 examples/ai_recipes 有经过测试的起步应用和 AI 辅助开发的验收检查命令"
+  ]
+}
