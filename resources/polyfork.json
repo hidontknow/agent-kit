@@ -1,0 +1,18 @@
+{
+  "name": "polyfork",
+  "description": "Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。",
+  "kind": "assets",
+  "tags": ["3d", "low-poly", "threejs", "glb", "game-assets", "gamedev"],
+  "repo": "https://github.com/lucas-martinic/polyfork-catalog",
+  "homepage": "https://polyfork.dev/assets",
+  "docs": "https://github.com/lucas-martinic/polyfork-catalog/blob/main/catalog.json",
+  "api": "https://polyfork.dev/llms.txt",
+  "license": "索引可自由使用；模型可免费用于个人和商业项目、可修改、无需署名，但不得转卖或再分发模型文件",
+  "licenseUrl": "https://polyfork.dev/licensing",
+  "notes": [
+    "把模型放进项目：npx polyfork add <模型 id>（如 pop-top-camper-van-62a322；polyfork CLI 在 npm 上，MIT，无需安装）",
+    "three.js 直接加载：GLB 用 https://polyfork.dev/cdn/<id>.glb；可调参数的 ES module 用 import { createAsset } from 'https://polyfork.dev/cdn/<id>.mjs'",
+    "给 Agent 用：完整模型列表见 polyfork.dev/llms.txt，套件列表见仓库里的 catalog.json",
+    "Unity 用户可用官方 connector：https://github.com/lucas-martinic/polyfork-unity-connector；模型页另提供 FBX、USD、OBJ 格式"
+  ]
+}

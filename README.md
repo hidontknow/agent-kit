@@ -1,6 +1,6 @@
 # agent-kit
 
-> 个人 AI Agent 工具包：集中存放自己开发或收藏的 **Skill / MCP / Agent / Command / Hook / Plugin / Script / CLI / 开源工具**，
+> 个人 AI Agent 工具包：集中存放自己开发或收藏的 **Skill / MCP / Agent / Command / Hook / Plugin / Script / CLI / 开源工具 / 资源**，
 > 一条命令安装到 **Claude Code、Claude Desktop、Codex、Cursor、Windsurf、Gemini CLI、ChatGPT**。收藏的工具会记录上游来源，之后可以随时同步、对比和更新。
 
 - **一份源文件，多端安装**：每类工具只写一次。安装时自动转换成各客户端需要的格式和路径，比如 MCP 会写成 JSON 或 TOML，Skill 会写成 Cursor Rule 或 Codex Skill。
@@ -60,6 +60,7 @@ agent-kit list --installed                          # 查看装了什么、装�
 | script | 安装到 `~/.local/bin`，与客户端无关 | | | | | | |
 | cli | 只登记链接，通过 uv / pipx / pip / npm / brew / cargo / go 安装到本机，与客户端无关 | | | | | | |
 | tool | 其他开源工具（应用、库、框架、服务…）：只登记链接、下载地址和说明；声明了 `install` 时可以自动安装 | | | | | | |
+| resource | 资源（素材库、数据集、文档、精选列表、API…）：只登记链接、许可和用法，不安装 | | | | | | |
 
 ¹ 仅项目级（`--project`）。² Codex 没有子 Agent 格式，转换为 `/prompts:<name>` 自定义提示词。
 ³ Claude Desktop 配置文件只支持本地 stdio 服务；远程服务会通过 `mcp-remote` 桥接，`${env:X}` 在安装时展开成实际值。
@@ -133,6 +134,7 @@ agent-kit/
 ├── scripts/                      # 独立的命令行脚本
 ├── clis/<name>.json              # 外部 CLI 工具，只保存链接和安装方式，不复制源码
 ├── tools/<name>.json             # 其他开源工具（应用、库、框架、服务…），只保存链接和说明
+├── resources/<name>.json         # 资源（素材库、数据集、文档、精选列表、API…），只保存链接、许可和用法
 ├── templates/                    # `agent-kit new` 使用的模板
 ├── sources.json                  # 收藏工具的上游锁文件
 ├── registry.json                 # 生成的索引（供其他工具或网站读取）
@@ -144,7 +146,7 @@ agent-kit/
 ## 添加自己的工具
 
 ```bash
-agent-kit new skill my-skill        # 也可以是 agent / command / mcp / hook / plugin / script / cli / tool
+agent-kit new skill my-skill        # 也可以是 agent / command / mcp / hook / plugin / script / cli / tool / resource
 $EDITOR skills/my-skill/SKILL.md
 agent-kit validate                  # 检查格式
 agent-kit build                     # 更新 registry.json、marketplace.json 和下面的目录表
@@ -227,6 +229,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
+
+#### resources (1)
+
+| 名称 | 说明 | 来源 |
+| --- | --- | --- |
+| [`polyfork`](resources/polyfork.json) | Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。 | [link](https://github.com/lucas-martinic/polyfork-catalog) |
 <!-- catalog:end -->
 
 ## 参考与致谢

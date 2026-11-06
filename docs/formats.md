@@ -204,6 +204,33 @@ plugins/my-plugin/
 - 声明了 `install` 时，行为和 CLI 类型一样（需要同时填 `bin`）。`args` 可以替换默认的包参数，比如 `cargo install --git <url> <crate>`；这时 `package` 只在卸载时使用。
 - 主要通过包管理器安装的命令行工具，优先使用 CLI 类型（`clis/`）。
 
+## Resource — `resources/<name>.json`
+
+用于收藏**拿来用的资源**，而不是需要运行或安装的程序，比如素材库、数据集、文档、精选列表、公开 API。只登记链接、许可和用法，不复制内容，也不安装。
+
+```json
+{
+  "name": "polyfork",
+  "description": "这份资源包含什么、什么时候用得上",
+  "kind": "assets",
+  "tags": ["3d"],
+  "repo": "https://github.com/lucas-martinic/polyfork-catalog",
+  "homepage": "https://polyfork.dev/assets",
+  "docs": "https://…",
+  "api": "https://polyfork.dev/llms.txt",
+  "license": "用一句话说清楚能怎么用",
+  "licenseUrl": "https://polyfork.dev/licensing",
+  "notes": ["怎么用：命令、加载方式、给 Agent 的入口"]
+}
+```
+
+- 必填字段：`name`（与文件名一致）、`description`、`kind`、`repo` 或 `homepage`。
+- `kind` 可选值：`assets`（素材库）、`dataset`（数据集）、`docs`（文档）、`list`（精选列表）、`api`、`course`（教程）、`other`。
+- 资源经常不是标准开源许可，比如"免费商用但不能再分发"。`license` 写一句话说明，原文链接放在 `licenseUrl`。
+- `agent-kit install resource/<name>` 不安装任何东西，只打印链接和 `notes`。资源没有 `install` 字段，validate 会拒绝；可以安装的东西请登记到 `tools/` 或 `clis/`。
+
+**怎么判断放哪一类：** 能用包管理器一条命令装好的命令行工具放 `clis/`；需要运行或安装的程序（应用、库、框架、服务）放 `tools/`；拿来查阅、下载或引用的内容放 `resources/`。
+
 ## Script — `scripts/<file>`
 
 任意可执行脚本。在前 15 行内写一行 `# description: …` 作为说明。

@@ -432,3 +432,20 @@ test('mcp: craft-anything matches the upstream setup entry', () => {
   assert.match(out, /--allow-run/);
   assert.throws(() => s.run('info', 'craft-anything'), /Ambiguous name "craft-anything"/);
 });
+
+test('resource: link-only, never installed, validated kinds', () => {
+  const s = sandbox();
+  const out = s.run('install', 'resource/polyfork');
+  assert.match(out, /skipped — a resource, nothing to install — use it from https:\/\/polyfork\.dev\/assets/);
+  assert.match(out, /npx polyfork add/);
+  assert.match(s.run('list', 'resources'), /polyfork/);
+  assert.match(s.run('info', 'polyfork'), /kind:\s+assets[\s\S]*api:\s+https:\/\/polyfork\.dev\/llms\.txt/);
+
+  const kit = path.join(s.dir, 'kit');
+  fs.mkdirSync(path.join(kit, 'resources'), { recursive: true });
+  fs.writeFileSync(path.join(kit, 'resources/bad.json'), JSON.stringify({
+    name: 'bad', description: 'x', homepage: 'https://example.com', kind: 'stuff', install: [{ manager: 'npm', package: 'x' }],
+  }));
+  s.env.AGENT_KIT_REPO = kit;
+  assert.throws(() => s.run('validate'), /"kind" must be one of[\s\S]*resources have no "install"/);
+});

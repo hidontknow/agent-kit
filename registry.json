@@ -578,6 +578,30 @@
       ],
       "status": "alpha",
       "targets": []
+    },
+    {
+      "id": "resource/polyfork",
+      "type": "resource",
+      "name": "polyfork",
+      "description": "Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。",
+      "tags": [
+        "3d",
+        "low-poly",
+        "threejs",
+        "glb",
+        "game-assets",
+        "gamedev"
+      ],
+      "origin": "linked",
+      "path": "resources/polyfork.json",
+      "kind": "assets",
+      "repo": "https://github.com/lucas-martinic/polyfork-catalog",
+      "homepage": "https://polyfork.dev/assets",
+      "docs": "https://github.com/lucas-martinic/polyfork-catalog/blob/main/catalog.json",
+      "api": "https://polyfork.dev/llms.txt",
+      "license": "索引可自由使用；模型可免费用于个人和商业项目、可修改、无需署名，但不得转卖或再分发模型文件",
+      "licenseUrl": "https://polyfork.dev/licensing",
+      "targets": []
     }
   ]
 }

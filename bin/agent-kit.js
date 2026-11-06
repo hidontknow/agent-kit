@@ -6,7 +6,7 @@ const sync = require('../lib/commands/sync');
 const repo = require('../lib/commands/repo');
 const pkg = require('../package.json');
 
-const HELP = `${c.bold('agent-kit')} ${pkg.version} — manage skills, MCP servers, agents, commands, hooks, plugins, scripts, CLIs and other open-source tools
+const HELP = `${c.bold('agent-kit')} ${pkg.version} — manage skills, MCP servers, agents, commands, hooks, plugins, scripts, CLIs, open-source tools and resources
 and install them into Claude Code, Claude Desktop, Codex, Cursor, Windsurf, Gemini CLI and ChatGPT.
 
 ${c.bold('Browse')}
@@ -22,6 +22,7 @@ ${c.bold('Install')}
       targets: claude-code, claude-desktop, codex, cursor, windsurf, gemini, gpt | all | detected (default)
       cli/<name>: installs the tool with its package manager (uv/pipx/pip/npm/brew/cargo/go); --via <manager>, --force
       tool/<name>: same when the tool declares "install", otherwise prints its download link and notes
+      resource/<name>: nothing is installed; prints links and usage notes
   pack [skill...] [--out dir]                                    zip skills for Claude Desktop / claude.ai upload
 
 ${c.bold('Collect & sync upstream')}

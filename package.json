@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": { "type": "git", "url": "https://github.com/hidontknow/agent-kit" },
   "bin": { "agent-kit": "bin/agent-kit.js" },
-  "files": ["bin", "lib", "skills", "agents", "commands", "mcp", "hooks", "plugins", "bundles", "scripts", "clis", "tools", "templates", "sources.json", "registry.json", ".claude-plugin"],
+  "files": ["bin", "lib", "skills", "agents", "commands", "mcp", "hooks", "plugins", "bundles", "scripts", "clis", "tools", "resources", "templates", "sources.json", "registry.json", ".claude-plugin"],
   "engines": { "node": ">=18" },
   "scripts": {
     "test": "node --test test/*.test.js",

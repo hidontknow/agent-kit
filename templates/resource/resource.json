@@ -1,0 +1,13 @@
+{
+  "name": "{{name}}",
+  "description": "What this resource contains and when it is useful.",
+  "kind": "assets",
+  "tags": [],
+  "repo": "",
+  "homepage": "https://example.com",
+  "docs": "",
+  "api": "",
+  "license": "",
+  "licenseUrl": "",
+  "notes": []
+}
