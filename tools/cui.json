@@ -1,0 +1,18 @@
+{
+  "name": "cui",
+  "description": "CUI：C 语言的原生 UI 组件库，约 150 个组件（表单、选择器、对话框、表格、命令面板、虚拟化数据表格、看板、日历、甘特图、十几种图表、AI 聊天组件），带弹簧动效和完整键盘支持；一份 C99 代码跑 Windows / macOS / Linux，无依赖，完整应用约 240 KB。",
+  "category": "library",
+  "tags": ["c", "ui", "gui", "components", "immediate-mode", "cross-platform"],
+  "repo": "https://github.com/yappologistic/CUI",
+  "homepage": "https://yappologistic.github.io/CUI/",
+  "docs": "https://github.com/yappologistic/CUI/blob/master/docs/getting-started.md",
+  "license": "MIT",
+  "platforms": ["windows", "macos", "linux", "web"],
+  "notes": [
+    "在线文档可以直接在浏览器里试所有组件（同一份 C 库编译成 WebAssembly）：https://yappologistic.github.io/CUI/",
+    "接入 CMake 项目：FetchContent_Declare(cui GIT_REPOSITORY https://github.com/yappologistic/CUI.git GIT_TAG master)，FetchContent_MakeAvailable(cui)，target_link_libraries(my_app PRIVATE cui::cui)",
+    "自己构建并跑示例：cmake -S CUI -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build && ./build/examples/tracker",
+    "Linux 需要 X11 开发头文件（libx11-dev）；后端可选 Win32 / Cocoa / X11 或 SDL2 / GLFW，OpenGL 或软件渲染",
+    "写法是即时模式：组件就是函数，每帧重新描述界面，状态就是你自己的变量；组件清单见 docs/components.md，设计原则见 docs/design.md"
+  ]
+}
