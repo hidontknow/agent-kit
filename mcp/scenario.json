@@ -1,0 +1,14 @@
+{
+  "name": "scenario",
+  "description": "Scenario（scenario.com）的远程 MCP server：生成和编辑图片、视频、音频、贴图、天空盒、3D 模型、精灵图等游戏素材，选模型、跑 LoRA、训练自定义模型、管理团队用量。需要 Scenario 账号（OAuth 登录）。",
+  "tags": ["image-generation", "video", "audio", "3d", "game-assets", "remote"],
+  "homepage": "https://mcp.scenario.com/docs",
+  "transport": "http",
+  "url": "https://mcp.scenario.com/mcp",
+  "notes": [
+    "首次调用时客户端会打开浏览器，用 Scenario 账号 OAuth 登录；配置里不需要也不要写任何密钥",
+    "生成会消耗 Scenario 账号的额度（商业服务）；团队管理员可以限制可用模型和每人花费",
+    "配套用法在 skill 套件 scenario-labs/skills 里（agent-kit info tool/scenario-skills）",
+    "沙箱环境访问不到时，把 mcp.scenario.com 加入网络白名单，见 https://mcp.scenario.com/docs/troubleshooting#sandbox-network-access"
+  ]
+}

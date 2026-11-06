@@ -1,0 +1,26 @@
+{
+  "name": "scenario-skills",
+  "description": "Scenario 官方 Agent skill 套件：168 个 skill，分成 23 个插件，覆盖图片、视频、音频、3D 生成与编辑，游戏美术（精灵、图标、瓦片、贴图、天空盒、可行走场景），社交媒体内容，角色与风格一致性和自定义模型训练，以及驱动 Blender、Maya、ZBrush、Unreal、Unity、Godot、Roblox Studio 的专家 skill。基于 Scenario 的 MCP server。",
+  "category": "skills",
+  "tags": [
+    "skills",
+    "image-generation",
+    "video",
+    "3d",
+    "game-assets",
+    "blender",
+    "unity",
+    "unreal",
+    "godot"
+  ],
+  "repo": "https://github.com/scenario-labs/skills",
+  "homepage": "https://scenario.com",
+  "docs": "https://github.com/scenario-labs/skills/blob/main/INSTALL.md",
+  "license": "MIT（skill 本身）；生成功能依赖 Scenario 的商业服务和账号",
+  "notes": [
+    "先接入 MCP：agent-kit install mcp/scenario -t <客户端>，或 claude mcp add --transport http scenario https://mcp.scenario.com/mcp，用 Scenario 账号 OAuth 登录",
+    "Claude Code 插件：/plugin marketplace add scenario-labs/skills，然后在 /plugin 里按需安装 23 个插件之一（如 01.-getting-started、03.-images、04.-game-art-and-3d、18.-expert-tools-blender、21.-expert-tools-unity），它们来自同一个市场 scenario-skills",
+    "其他 Agent：npx skills add scenario-labs/skills --skill scenario …（INSTALL.md 按用途列出了每组要装的 skill）",
+    "入门 skill 是 scenario（连接 MCP 和核心生成流程），其他 skill 都建立在它之上；DCC 和游戏引擎专家 skill 需要本机安装对应软件（Blender 5.2、Maya 2027、ZBrush 2026、Unreal 5.8、Unity 6.3 LTS、Godot 4.7、Roblox Studio），其中游戏引擎部分目前写明针对 macOS"
+  ]
+}

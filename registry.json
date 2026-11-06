@@ -1085,6 +1085,32 @@
       ]
     },
     {
+      "id": "mcp/scenario",
+      "type": "mcp",
+      "name": "scenario",
+      "description": "Scenario（scenario.com）的远程 MCP server：生成和编辑图片、视频、音频、贴图、天空盒、3D 模型、精灵图等游戏素材，选模型、跑 LoRA、训练自定义模型、管理团队用量。需要 Scenario 账号（OAuth 登录）。",
+      "tags": [
+        "image-generation",
+        "video",
+        "audio",
+        "3d",
+        "game-assets",
+        "remote"
+      ],
+      "origin": "original",
+      "path": "mcp/scenario.json",
+      "transport": "http",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/solidcraft",
       "type": "mcp",
       "name": "solidcraft",
@@ -1763,6 +1789,31 @@
       "homepage": "https://ponytail.dev/",
       "docs": "https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md",
       "license": "MIT",
+      "targets": []
+    },
+    {
+      "id": "tool/scenario-skills",
+      "type": "tool",
+      "name": "scenario-skills",
+      "description": "Scenario 官方 Agent skill 套件：168 个 skill，分成 23 个插件，覆盖图片、视频、音频、3D 生成与编辑，游戏美术（精灵、图标、瓦片、贴图、天空盒、可行走场景），社交媒体内容，角色与风格一致性和自定义模型训练，以及驱动 Blender、Maya、ZBrush、Unreal、Unity、Godot、Roblox Studio 的专家 skill。基于 Scenario 的 MCP server。",
+      "tags": [
+        "skills",
+        "image-generation",
+        "video",
+        "3d",
+        "game-assets",
+        "blender",
+        "unity",
+        "unreal",
+        "godot"
+      ],
+      "origin": "linked",
+      "path": "tools/scenario-skills.json",
+      "category": "skills",
+      "repo": "https://github.com/scenario-labs/skills",
+      "homepage": "https://scenario.com",
+      "docs": "https://github.com/scenario-labs/skills/blob/main/INSTALL.md",
+      "license": "MIT（skill 本身）；生成功能依赖 Scenario 的商业服务和账号",
       "targets": []
     },
     {
