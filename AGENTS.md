@@ -19,3 +19,11 @@
 - MCP 清单里不能出现密钥，用 `${env:VAR}` 引用。
 - 新增客户端适配器时，`install()` 必须返回可撤销的操作（`lib/state.js`），不要在适配器里自己实现卸载。
 - 格式规范：`docs/formats.md`；各客户端的路径和转换规则：`docs/targets.md`；上游同步：`docs/sync.md`。
+
+## 提交与合入
+
+`master` 是主分支和默认分支：插件市场、`install.sh`、npx 和每日上游同步都读它。
+
+- 在工作分支上完成改动后，执行 `node bin/agent-kit.js build` 和 `npm run check`，全部通过后提交，并**直接合入 `master` 推送**，不需要另外询问维护者。
+- 合入前先 `git fetch origin master`。`master` 上可能有工作分支没有的提交，比如每日同步的 `chore(sync)` 提交，要先把它们合进工作分支，重新执行 `npm run check`，再推送；不要强推，也不要覆盖 `master` 上的提交。
+- 合并出现冲突，或检查不通过时，停下来告诉维护者，不要推送到 `master`。
