@@ -10,6 +10,20 @@
   },
   "plugins": [
     {
+      "name": "desktop-automation",
+      "source": "./plugins/desktop-automation",
+      "description": "桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-desktop CLI。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "computer-use",
+        "desktop-automation",
+        "accessibility",
+        "mcp"
+      ]
+    },
+    {
       "name": "dev-essentials",
       "source": "./plugins/dev-essentials",
       "description": "Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill.",

@@ -2,6 +2,36 @@
   "name": "agent-kit",
   "items": [
     {
+      "id": "skill/agent-desktop",
+      "type": "skill",
+      "name": "agent-desktop",
+      "description": "Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CLI. Use when an AI agent must see or act on a desktop GUI: click buttons, fill forms, read UI state, navigate menus, toggle checkboxes, scroll, drag, type text, press shortcuts, take screenshots, manage windows, use the clipboard, launch or close apps, read notifications. Triggers on: \"click button\", \"fill form\", \"open app\", \"read UI\", \"computer use\", \"operate desktop\", \"accessibility tree\", \"snapshot app\", \"type into field\", \"navigate menu\", \"toggle checkbox\", \"take screenshot\", \"desktop automation\", \"agent-desktop\", or any desktop GUI task on macOS, Windows or Linux.",
+      "tags": [
+        "computer-use",
+        "desktop-automation",
+        "accessibility",
+        "ai-agent",
+        "gui-automation",
+        "cli"
+      ],
+      "origin": "collected",
+      "path": "skills/agent-desktop",
+      "source": {
+        "repo": "https://github.com/vercel-labs/agent-desktop",
+        "path": "skills/agent-desktop",
+        "ref": "main",
+        "commit": "b43ac4f6e892ef608f8851428613c4009f0e84c7"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/conventional-commit",
       "type": "skill",
       "name": "conventional-commit",
@@ -202,6 +232,29 @@
       "path": "commands/fix-issue.md",
       "targets": [
         "claude-code",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "mcp/agent-desktop",
+      "type": "mcp",
+      "name": "agent-desktop",
+      "description": "agent-desktop 的 MCP server（stdio）：每个命令都是一个工具（desktop_snapshot、desktop_click、desktop_session_start…），通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用。",
+      "tags": [
+        "computer-use",
+        "desktop-automation",
+        "accessibility"
+      ],
+      "origin": "original",
+      "path": "mcp/agent-desktop.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
         "codex",
         "cursor",
         "windsurf",
@@ -442,6 +495,30 @@
       ]
     },
     {
+      "id": "plugin/desktop-automation",
+      "type": "plugin",
+      "name": "desktop-automation",
+      "description": "桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-desktop CLI。",
+      "tags": [
+        "computer-use",
+        "desktop-automation",
+        "accessibility",
+        "mcp"
+      ],
+      "origin": "original",
+      "path": "plugins/desktop-automation",
+      "bundle": "bundles/desktop-automation.json",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "plugin/dev-essentials",
       "type": "plugin",
       "name": "dev-essentials",
@@ -557,6 +634,39 @@
       "path": "scripts/git-prune-branches.sh",
       "targets": [
         "bin"
+      ]
+    },
+    {
+      "id": "cli/agent-desktop",
+      "type": "cli",
+      "name": "agent-desktop",
+      "description": "Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖截图或像素匹配；提供 CLI、C 库和 MCP server。",
+      "tags": [
+        "computer-use",
+        "desktop-automation",
+        "accessibility",
+        "mcp",
+        "rust"
+      ],
+      "origin": "linked",
+      "path": "clis/agent-desktop.json",
+      "repo": "https://github.com/vercel-labs/agent-desktop",
+      "homepage": "https://agent-browser.dev/desktop",
+      "docs": "https://agent-browser.dev/desktop/quick-start",
+      "license": "Apache-2.0",
+      "bin": "agent-desktop",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "agent-desktop"
+        },
+        {
+          "manager": "brew",
+          "package": "agent-desktop"
+        }
+      ],
+      "targets": [
+        "system"
       ]
     },
     {

@@ -1,0 +1,15 @@
+{
+  "name": "agent-desktop",
+  "description": "agent-desktop 的 MCP server（stdio）：每个命令都是一个工具（desktop_snapshot、desktop_click、desktop_session_start…），通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用。",
+  "tags": ["computer-use", "desktop-automation", "accessibility"],
+  "homepage": "https://github.com/vercel-labs/agent-desktop#mcp",
+  "transport": "stdio",
+  "command": "agent-desktop",
+  "args": ["mcp"],
+  "requires": { "bin": ["agent-desktop"] },
+  "notes": [
+    "先安装 CLI：agent-kit install cli/agent-desktop（npm install -g agent-desktop 或 brew install agent-desktop）；macOS 需先运行 agent-desktop permissions --guide 授权",
+    "给 mcp 的全局参数会作用于每次调用，例如在 args 中加入 \"--headed\" 允许真实鼠标键盘输入（默认无头，不移动指针、不抢焦点）",
+    "桌面客户端找不到命令时，把 command 改为 agent-desktop 的绝对路径（which agent-desktop / where agent-desktop）"
+  ]
+}

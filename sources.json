@@ -1,6 +1,16 @@
 {
   "version": 1,
   "items": {
+    "skill/agent-desktop": {
+      "repo": "https://github.com/vercel-labs/agent-desktop",
+      "ref": "main",
+      "path": "skills/agent-desktop",
+      "commit": "b43ac4f6e892ef608f8851428613c4009f0e84c7",
+      "hash": "sha256:22b9fda90def3892f27447a25257a3bcee2b555573b68d803fa71bbe582d14f4",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06"
+    },
     "skill/mcp-builder": {
       "repo": "https://github.com/anthropics/skills",
       "ref": "main",

@@ -99,6 +99,7 @@ claude plugin install dev-essentials@agent-kit     # 通用开发：/review、/t
 claude plugin install rust-migration@agent-kit     # 迁移到 Rust（migrate-to-rust）
 claude plugin install wxjava@agent-kit             # WxJava 微信开发（wxjava-integration-guide）
 claude plugin install security@agent-kit           # 安全审计（Cloudflare security-audit）
+claude plugin install desktop-automation@agent-kit # 桌面 computer use（agent-desktop skill + MCP，需先装 agent-desktop CLI）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -159,10 +160,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (6)
+#### skills (7)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`agent-desktop`](skills/agent-desktop) | Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CL… | [collected](https://github.com/vercel-labs/agent-desktop) |
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |
 | [`mcp-builder`](skills/mcp-builder) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external service… | [collected](https://github.com/anthropics/skills) |
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |
@@ -184,10 +186,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (9)
+#### mcp (10)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`agent-desktop`](mcp/agent-desktop.json) | agent-desktop 的 MCP server（stdio）：每个命令都是一个工具（desktop_snapshot、desktop_click、desktop_session_start…），通过无障碍树查看和操作 macOS /… | original |
 | [`context7`](mcp/context7.json) | Up-to-date, version-specific library documentation and code examples pulled into the prompt. | original |
 | [`craft-anything`](mcp/craft-anything.json) | Craft Anything 的 MCP server：320 个工具，用于研究网站/应用/游戏的实现（页面、代码、文件、运行行为），并驱动编码 Agent 重建（rebuild）。需要先安装 tool/craft-anything。 | original |
 | [`fetch`](mcp/fetch.json) | Fetch web pages and convert them to markdown for the model (official reference server, needs uv). | original |
@@ -205,10 +208,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (4)
+#### plugins (5)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
 | [`security`](plugins/security) | 安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。 | bundle（[bundles/security.json](bundles/security.json)） |
@@ -221,10 +225,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (1)
+#### clis (2)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 
 #### tools (1)
