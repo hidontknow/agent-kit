@@ -1,0 +1,19 @@
+{
+  "name": "text-to-cad",
+  "description": "text-to-cad：让 Agent 设计实体产品。模型写成 build123d Python 脚本，生成 STEP / GLB / STL / 3MF，带 CAD 查看器；另有 12 个 skill，覆盖标准件查找（step.parts）、工程图、DXF、可制造性检查（DFM / 3D 打印 DfAM）、切片出 G-code、发送到拓竹打印机、SendCutSend 加工，以及机器人 URDF / SRDF / SDF。",
+  "category": "skills",
+  "tags": ["cad", "3d", "build123d", "step", "fabrication", "3d-printing", "robotics", "mcp"],
+  "repo": "https://github.com/earthtojake/text-to-cad",
+  "homepage": "https://www.texttocad.dev",
+  "docs": "https://github.com/earthtojake/text-to-cad/blob/main/docs/install.md",
+  "license": "MIT",
+  "claudePlugin": { "repo": "earthtojake/text-to-cad", "ref": "latest" },
+  "notes": [
+    "一键安装（推荐，覆盖本机所有 Agent 并注册 cad 命令）：macOS / Linux 运行 curl -fsSL https://texttocad.dev/install.sh | sh；Windows PowerShell 运行 irm https://www.texttocad.dev/install.ps1 | iex；再次运行即更新",
+    "只装到 Claude Code：/plugin install text-to-cad@agent-kit（跟随上游 latest 发布分支，含 12 个 skill 和 CAD MCP server）；或官方 claude plugin marketplace add earthtojake/text-to-cad#latest 再 claude plugin install text-to-cad@earthtojake，和一键安装三选一",
+    "MCP server 通过 uvx 运行 cad-mcp（Python 3.14，由 uv 自动管理），需要 PATH 中有 uv / uvx；Claude Desktop 找不到 uvx 时写它的绝对路径",
+    "用法：直接让 Agent 做一个零件或装配体，它会写 Python 脚本、运行生成模型，并在 CAD 查看器里展示；出问题时附上 cad doctor 的输出",
+    "默认会发送匿名使用统计和崩溃报告（不含文件、路径和提示词），关闭方法见 https://www.texttocad.dev/privacy-policy",
+    "和 SolidCraft（插件 cad-modeling@agent-kit）的区别：text-to-cad 用 Python 脚本建模并接加工服务，SolidCraft 是带界面的参数化 CAD 应用"
+  ]
+}
