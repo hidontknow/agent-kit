@@ -161,7 +161,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (11)
+#### skills (12)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -175,6 +175,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`solidcraft-editing`](skills/solidcraft-editing) | Use when changing, fixing or extending an existing SolidCraft design through its MCP server - a .sc file (or an older .… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`solidcraft-mechanisms`](skills/solidcraft-mechanisms) | Use when building, driving or animating an assembly or mechanism in SolidCraft through its MCP server - components, gro… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`solidcraft-modeling`](skills/solidcraft-modeling) | Use when building a new part, enclosure, bracket, plate, flange or any other 3D solid in SolidCraft through its MCP ser… | [collected](https://github.com/tangency-labs/solidcraft) |
+| [`untangle-codebase`](skills/untangle-codebase) | Untangle a whole codebase in one pass, so agents working in it read less per change, break less without noticing, and d… | [collected](https://github.com/caldoai/skills) |
 | [`wxjava-integration-guide`](skills/wxjava-integration-guide) | 为 Java、Spring Boot 或 Solon 项目生成可验证的 WxJava 接入方案，包括模块选择、BOM、配置、最小调用代码以及单/多账号集成。适用于用户要求接入公众号、小程序、支付、企业微信、开放平台、视频号或微信小店时。 | [collected](https://github.com/binarywang/WxJava) |
 
 #### agents (2)

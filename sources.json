@@ -81,6 +81,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
     },
+    "skill/untangle-codebase": {
+      "repo": "https://github.com/caldoai/skills",
+      "ref": "main",
+      "path": "skills/untangle-codebase",
+      "commit": "f3cf47774975a7d9fca45730babf4ff7ad765ada",
+      "hash": "sha256:d92af461caa06e2e1131f4f8154d28742f61433c680afb9f1987f170608841b5",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06",
+      "license": "MIT"
+    },
     "skill/wxjava-integration-guide": {
       "repo": "https://github.com/binarywang/WxJava",
       "ref": "develop",

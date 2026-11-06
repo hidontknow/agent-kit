@@ -233,6 +233,29 @@
       ]
     },
     {
+      "id": "skill/untangle-codebase",
+      "type": "skill",
+      "name": "untangle-codebase",
+      "description": "Untangle a whole codebase in one pass, so agents working in it read less per change, break less without noticing, and debug faster.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/untangle-codebase",
+      "source": {
+        "repo": "https://github.com/caldoai/skills",
+        "path": "skills/untangle-codebase",
+        "ref": "main",
+        "commit": "f3cf47774975a7d9fca45730babf4ff7ad765ada"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/wxjava-integration-guide",
       "type": "skill",
       "name": "wxjava-integration-guide",
