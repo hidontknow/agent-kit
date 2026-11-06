@@ -158,7 +158,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (5)
+#### skills (6)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -166,6 +166,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`mcp-builder`](skills/mcp-builder) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external service… | [collected](https://github.com/anthropics/skills) |
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |
 | [`readme-writer`](skills/readme-writer) | Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a … | original |
+| [`security-audit`](skills/security-audit) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for se… | [collected](https://github.com/cloudflare/security-audit-skill) |
 | [`wxjava-integration-guide`](skills/wxjava-integration-guide) | 为 Java、Spring Boot 或 Solon 项目生成可验证的 WxJava 接入方案，包括模块选择、BOM、配置、最小调用代码以及单/多账号集成。适用于用户要求接入公众号、小程序、支付、企业微信、开放平台、视频号或微信小店时。 | [collected](https://github.com/binarywang/WxJava) |
 
 #### agents (2)

@@ -21,6 +21,16 @@
       "updatedAt": "2026-11-06",
       "license": "Apache-2.0"
     },
+    "skill/security-audit": {
+      "repo": "https://github.com/cloudflare/security-audit-skill",
+      "ref": "main",
+      "path": "skills/security-audit",
+      "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "hash": "sha256:c7970d862af9b8bfd7601f31db6d3ea638c6e833f2f8bcf81293bcdb36f3f6f4",
+      "addedAt": "2026-11-06",
+      "updatedAt": "2026-11-06",
+      "license": "MIT"
+    },
     "skill/wxjava-integration-guide": {
       "repo": "https://github.com/binarywang/WxJava",
       "ref": "develop",

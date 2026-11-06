@@ -88,6 +88,29 @@
       ]
     },
     {
+      "id": "skill/security-audit",
+      "type": "skill",
+      "name": "security-audit",
+      "description": "Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, focused reviews, vulnerability research, security audits, or pen tests. Run the complete workflow only for explicit codebase audit or pen-test requests, full/comprehensive/end-to-end reviews, or requested report artifacts.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/security-audit",
+      "source": {
+        "repo": "https://github.com/cloudflare/security-audit-skill",
+        "path": "skills/security-audit",
+        "ref": "main",
+        "commit": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/wxjava-integration-guide",
       "type": "skill",
       "name": "wxjava-integration-guide",
