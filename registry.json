@@ -370,6 +370,53 @@
       ]
     },
     {
+      "id": "plugin/rust-migration",
+      "type": "plugin",
+      "name": "rust-migration",
+      "description": "把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。",
+      "tags": [
+        "rust",
+        "migration",
+        "refactoring"
+      ],
+      "origin": "original",
+      "path": "plugins/rust-migration",
+      "bundle": "bundles/rust-migration.json",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "plugin/wxjava",
+      "type": "plugin",
+      "name": "wxjava",
+      "description": "WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。",
+      "tags": [
+        "wechat",
+        "wxjava",
+        "java",
+        "spring-boot"
+      ],
+      "origin": "original",
+      "path": "plugins/wxjava",
+      "bundle": "bundles/wxjava.json",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "script/agent-context",
       "type": "script",
       "name": "agent-context",

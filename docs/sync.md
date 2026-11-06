@@ -61,8 +61,8 @@ agent-kit outdated -v            # 查看哪些有更新、上游新增了哪些
 agent-kit diff <item> --base     # 看上游自导入以来改了什么
 agent-kit update <item>          # 合并更新
 git diff                         # 检查结果，处理冲突
-agent-kit validate && agent-kit build
-git commit -am "chore(sync): update <item> from upstream"
+agent-kit validate && agent-kit build   # build 会同时重新生成包含该工具的 bundle 插件
+git add -A && git commit -m "chore(sync): update <item> from upstream"
 ```
 
 `.github/workflows/upstream-check.yml` 每周执行一次 `outdated --json`。有更新时，它会创建或更新标题为 "Upstream updates available for collected items" 的 issue。

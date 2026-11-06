@@ -90,10 +90,30 @@ agent-kit untrack x           # 不再跟踪上游（视为自己 fork 的版本
 
 ```bash
 claude plugin marketplace add hidontknow/agent-kit
-claude plugin install dev-essentials@agent-kit
+claude plugin install dev-essentials@agent-kit     # 通用开发：/review、/test、test-writer、changelog
+claude plugin install rust-migration@agent-kit     # 迁移到 Rust（migrate-to-rust）
+claude plugin install wxjava@agent-kit             # WxJava 微信开发（wxjava-integration-guide）
 ```
 
-在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
+在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
+
+### 按主题打包（bundle）
+
+想把仓库里已有的 skill / agent / command / MCP / hook 按主题组合成插件，不需要复制文件，只要在 `bundles/` 下写一份清单：
+
+```json
+// bundles/wxjava.json
+{
+  "name": "wxjava",
+  "description": "WxJava 微信开发 …",
+  "keywords": ["wechat", "java"],
+  "include": ["skill/wxjava-integration-guide"]
+}
+```
+
+执行 `agent-kit build` 后会生成 `plugins/wxjava/`。生成的目录不要手动修改，内容以 `skills/` 等源目录为准。
+收藏的工具经过 `agent-kit update` 同步上游后，再执行一次 `build`，插件内容就会跟着更新；CI 中的 `build --check` 会拦截没有重新生成的情况。
+bundle 默认不写 `version`，Claude Code 会把 git commit SHA 当作版本号，所以每次推送后，用户都能通过 `claude plugin marketplace update agent-kit` 拿到更新。这种情况下 `claude plugin validate` 会提示缺少 version，属于预期行为。如果想手动发版，可以在清单里写 `"version": "1.0.0"` 固定版本。格式见 [docs/formats.md](docs/formats.md#bundle--bundlesnamejson)。
 
 ## 目录结构
 
@@ -105,6 +125,7 @@ agent-kit/
 ├── mcp/<name>.json               # 通用 MCP 清单；本地服务用目录形式 mcp/<name>/mcp.json + 代码
 ├── hooks/<name>/hook.json        # Hook 清单（claude / cursor 两套事件）和脚本
 ├── plugins/<name>/               # Claude Code 插件（.claude-plugin/plugin.json）
+├── bundles/<name>.json           # 主题插件清单，build 时生成 plugins/<name>/
 ├── scripts/                      # 独立的命令行脚本
 ├── templates/                    # `agent-kit new` 使用的模板
 ├── sources.json                  # 收藏工具的上游锁文件
@@ -171,11 +192,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (1)
+#### plugins (3)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
+| [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
+| [`wxjava`](plugins/wxjava) | WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。 | bundle（[bundles/wxjava.json](bundles/wxjava.json)） |
 
 #### scripts (2)
 

@@ -22,6 +22,33 @@
         "testing",
         "changelog"
       ]
+    },
+    {
+      "name": "rust-migration",
+      "source": "./plugins/rust-migration",
+      "description": "把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "rust",
+        "migration",
+        "refactoring"
+      ]
+    },
+    {
+      "name": "wxjava",
+      "source": "./plugins/wxjava",
+      "description": "WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "wechat",
+        "wxjava",
+        "java",
+        "spring-boot"
+      ]
     }
   ]
 }

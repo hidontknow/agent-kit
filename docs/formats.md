@@ -114,6 +114,27 @@ plugins/my-plugin/
 
 安装到其他客户端时，插件会被拆成 skills / agents / commands / .mcp.json 分别安装，hooks 只对 Claude Code 生效。
 
+## Bundle — `bundles/<name>.json`
+
+把仓库里已有的工具按主题组合成 Claude Code 插件，不需要复制文件：
+
+```json
+{
+  "name": "rust-migration",
+  "description": "插件说明",
+  "keywords": ["rust"],
+  "include": ["skill/migrate-to-rust", "agent/debugger", "mcp/context7", "hook/notify-on-stop"],
+  "version": "1.0.0"
+}
+```
+
+- `include` 中可以写 `type/name` 或 `type/*`，支持 skill、agent、command、mcp、hook，不能包含 plugin 或 script。
+- `agent-kit build` 会重新生成 `plugins/<name>/`，并在其中的 README 第一行写入 generated 标记。这个目录不要手动修改；删除 bundle 清单后，再次 build 会删除对应的插件目录。
+- MCP 汇总写入插件的 `.mcp.json`。目录形式的本地 MCP 服务会复制到 `mcp/<name>/`，`${ITEM_DIR}` 改写为 `${CLAUDE_PLUGIN_ROOT}/mcp/<name>`，`${HOME}` 保持原样，由 Claude Code 在运行时展开。
+- hook 的 `claude` 段汇总写入 `hooks/hooks.json`，`${HOOK_DIR}` 改写为 `${CLAUDE_PLUGIN_ROOT}/hooks/<name>`。
+- 不写 `version` 时，Claude Code 使用 git commit SHA 作为版本号，源工具更新后用户一定能收到；写了 `version` 就固定为这个版本，需要手动升版本号才会推送更新。
+- 和手写插件重名时，validate 会报错。
+
 ## Script — `scripts/<file>`
 
 任意可执行脚本。在前 15 行内写一行 `# description: …` 作为说明。

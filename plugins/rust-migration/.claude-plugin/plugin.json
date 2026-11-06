@@ -1,0 +1,12 @@
+{
+  "name": "rust-migration",
+  "description": "把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。",
+  "author": {
+    "name": "hidontknow"
+  },
+  "keywords": [
+    "rust",
+    "migration",
+    "refactoring"
+  ]
+}

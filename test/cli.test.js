@@ -244,3 +244,58 @@ test('repo content is valid and generated files are current', () => {
   s.run('validate');
   s.run('build', '--check');
 });
+
+test('bundles: build generates topic plugins from existing items and detects drift', () => {
+  const s = sandbox();
+  const kit = path.join(s.dir, 'kit');
+  for (const d of ['skills', 'mcp', 'hooks']) fs.cpSync(path.join(ROOT, d), path.join(kit, d), { recursive: true });
+  fs.copyFileSync(path.join(ROOT, 'package.json'), path.join(kit, 'package.json'));
+  fs.mkdirSync(path.join(kit, 'bundles'));
+  fs.writeFileSync(path.join(kit, 'bundles/topic.json'), JSON.stringify({
+    name: 'topic', description: 'Topic bundle.', include: ['skill/readme-writer', 'mcp/kit-tools', 'mcp/filesystem', 'hook/block-dangerous-commands'],
+  }));
+  s.env.AGENT_KIT_REPO = kit;
+  s.run('build');
+  const p = path.join(kit, 'plugins/topic');
+  assert.ok(fs.existsSync(path.join(p, 'skills/readme-writer/references/sections.md')));
+  const m = JSON.parse(s.read(path.join(p, '.mcp.json'))).mcpServers;
+  assert.deepStrictEqual(m['kit-tools'].args, ['${CLAUDE_PLUGIN_ROOT}/mcp/kit-tools/server.js']);
+  assert.ok(fs.existsSync(path.join(p, 'mcp/kit-tools/server.js')));
+  assert.strictEqual(m.filesystem.args[2], '${HOME}', 'HOME is not baked in at build time');
+  const hooks = JSON.parse(s.read(path.join(p, 'hooks/hooks.json'))).hooks;
+  assert.match(hooks.PreToolUse[0].hooks[0].command, /\$\{CLAUDE_PLUGIN_ROOT\}\/hooks\/block-dangerous-commands\/guard\.js/);
+  const market = JSON.parse(s.read(path.join(kit, '.claude-plugin/marketplace.json')));
+  assert.deepStrictEqual(market.plugins.map((x) => x.source), ['./plugins/topic']);
+  s.run('build', '--check');
+
+  // editing the source item makes the generated plugin stale
+  fs.appendFileSync(path.join(kit, 'skills/readme-writer/SKILL.md'), '\nextra\n');
+  assert.throws(() => s.run('build', '--check'), /out of date: plugins\/topic\//);
+  s.run('build');
+  assert.match(s.read(path.join(p, 'skills/readme-writer/SKILL.md')), /extra/);
+
+  // unknown items and name clashes with hand-written plugins are rejected
+  fs.writeFileSync(path.join(kit, 'bundles/bad.json'), JSON.stringify({ name: 'bad', description: 'x', include: ['skill/nope'] }));
+  assert.throws(() => s.run('validate'), /bundles\/bad\.json: Not found: skill\/nope/);
+  fs.rmSync(path.join(kit, 'bundles/bad.json'));
+
+  // removing the bundle removes its generated plugin
+  fs.rmSync(path.join(kit, 'bundles/topic.json'));
+  s.run('build');
+  assert.ok(!fs.existsSync(p));
+});
+
+test('bundles: version omitted by default (Claude Code falls back to the commit SHA), pinned when set', () => {
+  const s = sandbox();
+  const kit = path.join(s.dir, 'kit');
+  fs.cpSync(path.join(ROOT, 'skills'), path.join(kit, 'skills'), { recursive: true });
+  fs.mkdirSync(path.join(kit, 'bundles'));
+  fs.writeFileSync(path.join(kit, 'bundles/a.json'), JSON.stringify({ name: 'a', description: 'A.', include: ['skill/readme-writer'] }));
+  fs.writeFileSync(path.join(kit, 'bundles/b.json'), JSON.stringify({ name: 'b', description: 'B.', version: '1.2.3', include: ['skill/readme-writer'] }));
+  s.env.AGENT_KIT_REPO = kit;
+  s.run('build');
+  assert.ok(!('version' in JSON.parse(s.read(path.join(kit, 'plugins/a/.claude-plugin/plugin.json')))));
+  assert.strictEqual(JSON.parse(s.read(path.join(kit, 'plugins/b/.claude-plugin/plugin.json'))).version, '1.2.3');
+  const market = JSON.parse(s.read(path.join(kit, '.claude-plugin/marketplace.json')));
+  assert.deepStrictEqual(market.plugins.map((p) => [p.name, p.version]), [['a', undefined], ['b', '1.2.3']]);
+});
