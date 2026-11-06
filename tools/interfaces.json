@@ -1,0 +1,15 @@
+{
+  "name": "interfaces",
+  "description": "Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预览、多方案对比、解释网页效果等。",
+  "category": "skills",
+  "tags": ["skills", "ui", "typography", "color", "accessibility", "design-engineering"],
+  "repo": "https://github.com/jakubkrehel/skills",
+  "homepage": "https://interfaces.dev/",
+  "license": "MIT",
+  "claudePlugin": { "repo": "jakubkrehel/skills", "name": "interfaces" },
+  "notes": [
+    "Claude Code：/plugin install interfaces@agent-kit（直接从上游安装）；或官方市场 /plugin marketplace add jakubkrehel/skills 再 /plugin install interfaces@interfaces，二选一",
+    "其他 Agent（Codex、Cursor 等）：npx skills add jakubkrehel/skills",
+    "入口 skill：better-interface 一次审查无障碍、布局、文案、排版、配色和 UI 细节并给出排序后的报告；interface-review 审查分支或 PR 引入的界面问题（需手动调用）"
+  ]
+}

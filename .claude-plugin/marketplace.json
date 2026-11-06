@@ -25,6 +25,23 @@
       ]
     },
     {
+      "name": "design-engineering",
+      "source": "./plugins/design-engineering",
+      "description": "Emil Kowalski 的设计工程 skill（17 个）：动画从零构建、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "design-engineering",
+        "animation",
+        "motion",
+        "ui",
+        "react",
+        "expo",
+        "swift"
+      ]
+    },
+    {
       "name": "desktop-automation",
       "source": "./plugins/desktop-automation",
       "description": "桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-desktop CLI。",
@@ -50,6 +67,23 @@
         "review",
         "testing",
         "changelog"
+      ]
+    },
+    {
+      "name": "interfaces",
+      "source": {
+        "source": "github",
+        "repo": "jakubkrehel/skills"
+      },
+      "description": "Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预览、多方案对比、解释网页效果等。",
+      "homepage": "https://interfaces.dev/",
+      "keywords": [
+        "skills",
+        "ui",
+        "typography",
+        "color",
+        "accessibility",
+        "design-engineering"
       ]
     },
     {

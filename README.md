@@ -102,6 +102,8 @@ claude plugin install security@agent-kit           # 安全审计（Cloudflare s
 claude plugin install desktop-automation@agent-kit # 桌面 computer use（agent-desktop skill + MCP，需先装 agent-desktop CLI）
 claude plugin install cad-modeling@agent-kit       # 参数化 3D CAD（SolidCraft MCP + 4 个建模 skill，需先装 SolidCraft）
 claude plugin install ponytail@agent-kit           # 懒惰资深开发模式（直接从上游 DietrichGebert/ponytail 安装）
+claude plugin install design-engineering@agent-kit # 动画与设计工程（Emil Kowalski 的 17 个 skill）
+claude plugin install interfaces@agent-kit         # 界面设计：排版、配色、无障碍、布局、文案（直接从上游 jakubkrehel/skills 安装）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -162,21 +164,38 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (12)
+#### skills (29)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`agent-desktop`](skills/agent-desktop) | Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CL… | [collected](https://github.com/vercel-labs/agent-desktop) |
+| [`animate`](skills/animate) | Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it a… | [collected](https://github.com/emilkowalski/skills) |
+| [`animate-expo`](skills/animate-expo) | Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — … | [collected](https://github.com/emilkowalski/skills) |
+| [`animation-performance`](skills/animation-performance) | Keep web animations inside the frame budget — animate composite-only properties, keep motion off the main thread when t… | [collected](https://github.com/emilkowalski/skills) |
+| [`animation-vocabulary`](skills/animation-vocabulary) | Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term ("the bo… | [collected](https://github.com/emilkowalski/skills) |
+| [`apple-design`](skills/apple-design) | Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing… | [collected](https://github.com/emilkowalski/skills) |
+| [`ask-sonner`](skills/ask-sonner) | Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and lo… | [collected](https://github.com/emilkowalski/skills) |
+| [`break-ui`](skills/break-ui) | Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fi… | [collected](https://github.com/emilkowalski/skills) |
+| [`choreograph`](skills/choreograph) | Coordinate several elements that animate together — decide what moves, in what order, how much they overlap, and what s… | [collected](https://github.com/emilkowalski/skills) |
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |
+| [`emil-design-eng`](skills/emil-design-eng) | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible de… | [collected](https://github.com/emilkowalski/skills) |
+| [`find-animation-opportunities`](skills/find-animation-opportunities) | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it p… | [collected](https://github.com/emilkowalski/skills) |
+| [`improve-animations`](skills/improve-animations) | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-con… | [collected](https://github.com/emilkowalski/skills) |
 | [`mcp-builder`](skills/mcp-builder) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external service… | [collected](https://github.com/anthropics/skills) |
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |
+| [`mobile-native`](skills/mobile-native) | Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate "a website in a browser" from so… | [collected](https://github.com/emilkowalski/skills) |
+| [`pick-ui-library`](skills/pick-ui-library) | Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, comman… | [collected](https://github.com/emilkowalski/skills) |
+| [`prototype`](skills/prototype) | Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip… | [collected](https://github.com/emilkowalski/skills) |
 | [`readme-writer`](skills/readme-writer) | Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a … | original |
+| [`remove-animations`](skills/remove-animations) | Find the animations an interface doesn't need and remove them — motion on keyboard actions, high-frequency surfaces, fu… | [collected](https://github.com/emilkowalski/skills) |
+| [`review-animations`](skills/review-animations) | Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. … | [collected](https://github.com/emilkowalski/skills) |
 | [`security-audit`](skills/security-audit) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for se… | [collected](https://github.com/cloudflare/security-audit-skill) |
 | [`solidcraft-checking`](skills/solidcraft-checking) | Use alongside solidcraft-modeling and solidcraft-editing whenever you build, change or port a SolidCraft design. Checks… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`solidcraft-editing`](skills/solidcraft-editing) | Use when changing, fixing or extending an existing SolidCraft design through its MCP server - a .sc file (or an older .… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`solidcraft-mechanisms`](skills/solidcraft-mechanisms) | Use when building, driving or animating an assembly or mechanism in SolidCraft through its MCP server - components, gro… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`solidcraft-modeling`](skills/solidcraft-modeling) | Use when building a new part, enclosure, bracket, plate, flange or any other 3D solid in SolidCraft through its MCP ser… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`untangle-codebase`](skills/untangle-codebase) | Untangle a whole codebase in one pass, so agents working in it read less per change, break less without noticing, and d… | [collected](https://github.com/caldoai/skills) |
+| [`write-swift`](skills/write-swift) | How to write modern Swift well — modeling with value types, Swift 6 data-race safety and approachable concurrency (@con… | [collected](https://github.com/emilkowalski/skills) |
 | [`wxjava-integration-guide`](skills/wxjava-integration-guide) | 为 Java、Spring Boot 或 Solon 项目生成可验证的 WxJava 接入方案，包括模块选择、BOM、配置、最小调用代码以及单/多账号集成。适用于用户要求接入公众号、小程序、支付、企业微信、开放平台、视频号或微信小店时。 | [collected](https://github.com/binarywang/WxJava) |
 
 #### agents (2)
@@ -216,11 +235,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (6)
+#### plugins (7)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`cad-modeling`](plugins/cad-modeling) | 用 SolidCraft 做参数化 3D CAD 建模：MCP server，加上官方推荐的 4 个建模 skill（新建零件、修改设计、参数与 STEP 校验、装配与机构）。需要先安装 SolidCraft。 | bundle（[bundles/cad-modeling.json](bundles/cad-modeling.json)） |
+| [`design-engineering`](plugins/design-engineering) | Emil Kowalski 的设计工程 skill（17 个）：动画从零构建、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。 | bundle（[bundles/design-engineering.json](bundles/design-engineering.json)） |
 | [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
@@ -241,12 +261,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 
-#### tools (4)
+#### tools (5)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
+| [`interfaces`](tools/interfaces.json) | Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预… | [link](https://github.com/jakubkrehel/skills) |
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 

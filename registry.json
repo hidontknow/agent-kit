@@ -32,6 +32,190 @@
       ]
     },
     {
+      "id": "skill/animate",
+      "type": "skill",
+      "name": "animate",
+      "description": "Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it animate at all, what purpose, which tool, which properties, which curve and duration, how it interrupts, how it exits. Writes the implementation. Use when asked to animate something, add motion, make a component feel alive, or build a transition. For critiquing existing motion use review-animations; for auditing a whole codebase use improve-animations.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/animate",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/animate",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/animate-expo",
+      "type": "skill",
+      "name": "animate-expo",
+      "description": "Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — should it animate, which thread it runs on, which properties, spring or timing, how the gesture hands off, how it degrades. Writes the implementation with Reanimated, Gesture Handler, Expo Router and expo-haptics. Use when animating anything in an Expo app, adding gestures, sheets, screen transitions, press feedback or haptics, or fixing motion that stutters on device. For web animation use `animate`.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/animate-expo",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/animate-expo",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/animation-performance",
+      "type": "skill",
+      "name": "animation-performance",
+      "description": "Keep web animations inside the frame budget — animate composite-only properties, keep motion off the main thread when the page is busy, and find the cause when an animation drops frames. Covers the layout/paint/composite pipeline, cheaper property swaps, CSS vs WAAPI vs requestAnimationFrame, Motion's hardware-accelerated path, React re-rendering per frame, inherited CSS variable recalculation, blur cost, and when `will-change` actually helps. Use when an animation is janky, choppy, stutters, or drops frames; when choosing which property to animate; when deciding between CSS and JS animation on performance grounds; or when reaching for `will-change` or GPU layers. For choosing easing, duration, or whether to animate at all use animate; for reviewing motion as a whole use review-animations.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/animation-performance",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/animation-performance",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/animation-vocabulary",
+      "type": "skill",
+      "name": "animation-vocabulary",
+      "description": "Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term (\"the bouncy thing when a popover opens\" → Pop in; \"the iOS rubber-band scroll\" → Rubber-banding). Use when the user asks \"what's it called when…\", or describes a motion effect without knowing its name and wants the right word to prompt an AI or designer with. For naming an effect, not designing or building one.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/animation-vocabulary",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/animation-vocabulary",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/apple-design",
+      "type": "skill",
+      "name": "apple-design",
+      "description": "Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing gesture-driven UI, spring animations, drag/swipe/sheet interactions, momentum and interruptible transitions, translucent materials and depth, typography (optical sizing, tracking, leading), reduced-motion, or the design foundations (feedback, spatial consistency, restraint) behind Apple-style interfaces.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/apple-design",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/apple-design",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/ask-sonner",
+      "type": "skill",
+      "name": "ask-sonner",
+      "description": "Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and loading toasts, updating, dismissing and persisting toasts, styling, theming and icons, positioning and multiple toasters. Use when working with Sonner or troubleshooting it — toasts that don't appear, appear twice, lose their styles, ignore Tailwind classes, sit behind a modal, or don't follow dark mode.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/ask-sonner",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/ask-sonner",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/break-ui",
+      "type": "skill",
+      "name": "break-ui",
+      "description": "Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fields, huge counts, zero items, long labels, non-Latin text, emoji, extreme numbers — then render it behind a \"Demo data / Worst case\" toggle and report everything that broke, with the fix for each. Use when the user asks to stress-test, break, or find edge cases in a component or screen, or to \"try the worst case\". For visual design critique use emil-design-eng; for motion use review-animations.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/break-ui",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/break-ui",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/choreograph",
+      "type": "skill",
+      "name": "choreograph",
+      "description": "Coordinate several elements that animate together — decide what moves, in what order, how much they overlap, and what stays still — so a group reads as one intentional motion instead of a pile of separate animations. Use when building or fixing a staggered list, a hero entrance, a view swap inside a container, a multi-step flow, an element leaving while its siblings close the gap, a morph between rich states, or any interaction with several moving parts (icon + background + lines, panel + content, items flying into a target). Triggers on — stagger, staggerChildren, delayChildren, animation-delay, sequence, sequencing, orchestration, choreography, cascade, wave, timeline, \"one after another\", \"at the same time\", crossfade, popLayout, mode=\"wait\", AnimatePresence mode, hero entrance, list entrance, multi-step, step transition, morph, useAnimate, Promise.all animations, \"feels mechanical\", \"feels robotic\", \"too much going on\", \"feels slow to open\".",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/choreograph",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/choreograph",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/conventional-commit",
       "type": "skill",
       "name": "conventional-commit",
@@ -42,6 +226,75 @@
       ],
       "origin": "original",
       "path": "skills/conventional-commit",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/emil-design-eng",
+      "type": "skill",
+      "name": "emil-design-eng",
+      "description": "This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible details that make software feel great.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/emil-design-eng",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/emil-design-eng",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/find-animation-opportunities",
+      "type": "skill",
+      "name": "find-animation-opportunities",
+      "description": "Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it proposes motion with exact values, it does not implement it. Use when the user asks \"what could be animated here?\" or wants to \"make this feel more alive\". For fixing existing animations, use improve-animations or review-animations instead.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/find-animation-opportunities",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/find-animation-opportunities",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/improve-animations",
+      "type": "skill",
+      "name": "improve-animations",
+      "description": "Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-contained implementation plans for other agents (or cheaper models) to execute. Read-only on source code — it plans improvements, it does not apply them. Use when the user asks to \"improve the animations\", \"audit the motion\", \"make this app feel better\", or wants a roadmap of animation fixes rather than a review of a single diff.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/improve-animations",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/improve-animations",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
       "targets": [
         "claude-code",
         "claude-desktop",
@@ -98,6 +351,75 @@
       ]
     },
     {
+      "id": "skill/mobile-native",
+      "type": "skill",
+      "name": "mobile-native",
+      "description": "Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate \"a website in a browser\" from something that feels installed. Covers sticky hover states, tap highlight flashes, the 100vh bug, inputs that zoom the page, laggy taps, pull-to-refresh hijacking scroll, content under the notch, long-press selecting button text, carousels that scroll the wrong way, mismatched status bars, and the rule that you test on real hardware. Use when a web app is being built for or reviewed on mobile, when something \"works in Chrome but feels wrong on my phone\", when building a PWA, a bottom sheet, a carousel, a full-screen layout, or any touch interaction. For motion itself use animate; for React Native use animate-expo.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/mobile-native",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/mobile-native",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/pick-ui-library",
+      "type": "skill",
+      "name": "pick-ui-library",
+      "description": "Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, command menus, virtualization, drag and drop, toasts, state, styling, and more. Only runs when explicitly invoked; it does not trigger on its own.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/pick-ui-library",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/pick-ui-library",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/prototype",
+      "type": "skill",
+      "name": "prototype",
+      "description": "Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip through them live and promote the one that feels right. Only runs when explicitly invoked; it does not trigger on its own.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/prototype",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/prototype",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/readme-writer",
       "type": "skill",
       "name": "readme-writer",
@@ -108,6 +430,52 @@
       ],
       "origin": "original",
       "path": "skills/readme-writer",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/remove-animations",
+      "type": "skill",
+      "name": "remove-animations",
+      "description": "Find the animations an interface doesn't need and remove them — motion on keyboard actions, high-frequency surfaces, functional data, and decoration with no purpose — then clean up what they leave behind. Edits code, but only to subtract; it never adds or retunes motion. Use when the user says the app \"feels slow\", \"has too much animation\", \"feels over-animated\", wants to \"tone down the motion\", or asks what animations to remove. For finding places that should animate, use find-animation-opportunities; for fixing animations that should stay, use improve-animations or review-animations.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/remove-animations",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/remove-animations",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/review-animations",
+      "type": "skill",
+      "name": "review-animations",
+      "description": "Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/review-animations",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/review-animations",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
+      },
       "targets": [
         "claude-code",
         "claude-desktop",
@@ -245,6 +613,29 @@
         "path": "skills/untangle-codebase",
         "ref": "main",
         "commit": "f3cf47774975a7d9fca45730babf4ff7ad765ada"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/write-swift",
+      "type": "skill",
+      "name": "write-swift",
+      "description": "How to write modern Swift well — modeling with value types, Swift 6 data-race safety and approachable concurrency (@concurrent, main-actor-by-default, actors, task groups), protocols and generics (some vs any), API design, performance and ARC, Swift Testing, macros, and the modern language features agents don't know about yet. Use when writing, reviewing, or migrating Swift, or when a concurrency error, a hang, a data race, a retain cycle, or a performance problem needs fixing.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/write-swift",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/write-swift",
+        "ref": "main",
+        "commit": "c8a79627b59d72d764d6ab6f2c87c09a48169833"
       },
       "targets": [
         "claude-code",
@@ -658,6 +1049,33 @@
       ]
     },
     {
+      "id": "plugin/design-engineering",
+      "type": "plugin",
+      "name": "design-engineering",
+      "description": "Emil Kowalski 的设计工程 skill（17 个）：动画从零构建、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。",
+      "tags": [
+        "design-engineering",
+        "animation",
+        "motion",
+        "ui",
+        "react",
+        "expo",
+        "swift"
+      ],
+      "origin": "original",
+      "path": "plugins/design-engineering",
+      "bundle": "bundles/design-engineering.json",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "plugin/desktop-automation",
       "type": "plugin",
       "name": "desktop-automation",
@@ -926,6 +1344,27 @@
         "linux",
         "windows"
       ],
+      "targets": []
+    },
+    {
+      "id": "tool/interfaces",
+      "type": "tool",
+      "name": "interfaces",
+      "description": "Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预览、多方案对比、解释网页效果等。",
+      "tags": [
+        "skills",
+        "ui",
+        "typography",
+        "color",
+        "accessibility",
+        "design-engineering"
+      ],
+      "origin": "linked",
+      "path": "tools/interfaces.json",
+      "category": "skills",
+      "repo": "https://github.com/jakubkrehel/skills",
+      "homepage": "https://interfaces.dev/",
+      "license": "MIT",
       "targets": []
     },
     {
