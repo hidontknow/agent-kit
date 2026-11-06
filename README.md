@@ -83,7 +83,7 @@ agent-kit untrack x           # 不再跟踪上游（视为自己 fork 的版本
 ```
 
 合并冲突时，冲突的文件里会留下 `<<<<<<< local / >>>>>>> upstream` 标记，二进制文件会另存一份 `*.upstream`，同时命令以非零状态退出。
-仓库内置的 GitHub Action（`.github/workflows/upstream-check.yml`）每周检查一次上游，有更新时会自动创建或更新一个跟踪 issue。
+仓库内置的 GitHub Action（`.github/workflows/upstream-sync.yml`）**每天自动同步一次**：能干净更新的工具，会在全部检查通过后直接提交到默认分支，bundle 插件也会一起重新生成；与本地修改冲突的工具，会开一个带冲突标记的 PR 等你处理。启用前需要在仓库设置中给 Actions 开写权限，见 [docs/sync.md](docs/sync.md#每日自动同步github-actions)。
 原理和 `sources.json` 格式见 [docs/sync.md](docs/sync.md)。
 
 ## 作为 Claude Code 插件市场使用

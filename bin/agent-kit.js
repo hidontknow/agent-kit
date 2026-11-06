@@ -27,7 +27,8 @@ ${c.bold('Collect & sync upstream')}
       source: https://github.com/o/r/tree/main/path | o/r/path@ref | any git URL with --path
   outdated [item...] [--verbose] [--json] [--exit-code]          check collected items against upstream
   diff <item...> [--base] [--stat]                               local vs upstream (or base vs upstream)
-  update <item...> | --all [--theirs] [--dry-run]                pull upstream; 3-way merge keeps local edits
+  update <item...> | --all [--theirs] [--skip-conflicts] [--json] [--dry-run]
+                                                                 pull upstream; 3-way merge keeps local edits
   untrack <item...>                                              stop tracking upstream (treat as forked)
 
 ${c.bold('Author')}
@@ -36,7 +37,7 @@ ${c.bold('Author')}
   build [--check]                                                regenerate registry.json, marketplace.json, README catalog
 `;
 
-const BOOL = new Set(['json', 'installed', 'link', 'dry-run', 'expand', 'force', 'check', 'verbose', 'base', 'stat', 'all', 'theirs', 'deep', 'exit-code', 'any-scope', 'help', 'version']);
+const BOOL = new Set(['json', 'skip-conflicts', 'installed', 'link', 'dry-run', 'expand', 'force', 'check', 'verbose', 'base', 'stat', 'all', 'theirs', 'deep', 'exit-code', 'any-scope', 'help', 'version']);
 const SHORT = { t: 'target', s: 'scope', p: 'project', n: 'dry-run', h: 'help', v: 'verbose', o: 'out' };
 
 function parse(argv) {

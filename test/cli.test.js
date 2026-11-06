@@ -299,3 +299,39 @@ test('bundles: version omitted by default (Claude Code falls back to the commit 
   const market = JSON.parse(s.read(path.join(kit, '.claude-plugin/marketplace.json')));
   assert.deepStrictEqual(market.plugins.map((p) => [p.name, p.version]), [['a', undefined], ['b', '1.2.3']]);
 });
+
+test('sync: update --all --skip-conflicts --json updates clean items, skips conflicts, reports errors', () => {
+  const f = upstreamFixture();
+  fs.mkdirSync(path.join(f.up, 'skills/other'));
+  fs.writeFileSync(path.join(f.up, 'skills/other/SKILL.md'), '---\nname: other\ndescription: Other. Use for tests.\n---\n\nx\n');
+  git(f.up, 'add', '.');
+  git(f.up, 'commit', '-qm', 'other');
+  f.run('add', f.url, '--path', 'skills');
+  const demo = path.join(f.kit, 'skills/demo/SKILL.md');
+  const other = path.join(f.kit, 'skills/other/SKILL.md');
+  // demo: conflicting edits on both sides; other: clean upstream change
+  fs.writeFileSync(demo, f.read(demo).replace('line 3', 'line 3 local'));
+  fs.writeFileSync(path.join(f.up, 'skills/demo/SKILL.md'), f.read(path.join(f.up, 'skills/demo/SKILL.md')).replace('line 3', 'line 3 upstream'));
+  fs.writeFileSync(path.join(f.up, 'skills/other/SKILL.md'), f.read(path.join(f.up, 'skills/other/SKILL.md')).replace('x', 'y'));
+  git(f.up, 'commit', '-qam', 'change both');
+  // a third item whose upstream is unreachable
+  fs.mkdirSync(path.join(f.kit, 'skills/gone'));
+  fs.writeFileSync(path.join(f.kit, 'skills/gone/SKILL.md'), '---\nname: gone\ndescription: Gone. Use for tests.\n---\n\nz\n');
+  const srcFile = path.join(f.kit, 'sources.json');
+  const sources = JSON.parse(f.read(srcFile));
+  sources.items['skill/gone'] = { repo: `file://${f.dir}/missing`, path: 'x', commit: 'a'.repeat(40), hash: 'sha256:x' };
+  fs.writeFileSync(srcFile, JSON.stringify(sources));
+
+  const r = spawnSync(process.execPath, [CLI, 'update', '--all', '--skip-conflicts', '--json'], { env: f.env, encoding: 'utf8' });
+  assert.strictEqual(r.status, 1, 'unreachable upstream makes the run fail');
+  const results = Object.fromEntries(JSON.parse(r.stdout).map((x) => [x.id, x]));
+  assert.strictEqual(results['skill/other'].action, 'updated');
+  assert.strictEqual(results['skill/demo'].action, 'conflict');
+  assert.deepStrictEqual(results['skill/demo'].conflicts, ['SKILL.md']);
+  assert.strictEqual(results['skill/gone'].action, 'error');
+  assert.match(f.read(other), /\ny\n/);
+  assert.doesNotMatch(f.read(demo), /<<<<<<<|line 3 upstream/, 'conflicting item left untouched');
+  const after = JSON.parse(f.read(srcFile)).items;
+  assert.strictEqual(after['skill/demo'].commit, sources.items['skill/demo'].commit, 'conflicting item keeps its base');
+  assert.notStrictEqual(after['skill/other'].commit, sources.items['skill/other'].commit);
+});

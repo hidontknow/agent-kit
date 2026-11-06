@@ -1,0 +1,102 @@
+name: Upstream sync
+
+# 每天检查收藏工具（sources.json）的上游更新：
+#   - 能干净更新/合并的：更新 → build → 全量检查 → 提交到默认分支（或开 PR，见 mode）
+#   - 与本地修改冲突的：不进默认分支，开一个带冲突标记的 PR 等你处理
+#   - 上游不可达或被删除：记录在运行摘要里，并让这次运行标红
+on:
+  schedule:
+    - cron: '23 1 * * *' # 每天 01:23 UTC（北京时间 09:23）
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'push = 直接提交到默认分支；pr = 开 PR 由你合并'
+        type: choice
+        options: [push, pr]
+        default: push
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: upstream-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      # 也可以在仓库 Settings → Variables 中设置 UPSTREAM_SYNC_MODE=pr，修改定时运行的默认行为
+      MODE: ${{ inputs.mode || vars.UPSTREAM_SYNC_MODE || 'push' }}
+      GH_TOKEN: ${{ github.token }}
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+
+      - name: Update collected items (conflicting ones are skipped)
+        run: node bin/agent-kit.js update --all --skip-conflicts --json > result.json || true
+
+      - name: Report
+        id: report
+        run: node .github/scripts/sync-report.js result.json
+
+      - name: Rebuild generated files and run all checks
+        if: steps.report.outputs.changed != '0'
+        run: |
+          node bin/agent-kit.js build
+          npm run check
+
+      - name: Commit updates
+        if: steps.report.outputs.changed != '0'
+        run: |
+          git add -A -- . ':!result.json' ':!commit-msg.txt' ':!conflicts.md'
+          git diff --cached --quiet && { echo "nothing to commit"; exit 0; }
+          git commit -q -F commit-msg.txt
+          if [ "$MODE" = "push" ]; then
+            git push origin "HEAD:$DEFAULT_BRANCH"
+          else
+            git push -f origin "HEAD:refs/heads/upstream-sync/auto"
+            if [ -z "$(gh pr list --head upstream-sync/auto --state open --json number --jq '.[0].number')" ]; then
+              gh pr create --head upstream-sync/auto --base "$DEFAULT_BRANCH" \
+                --title "chore(sync): upstream updates" --body-file commit-msg.txt
+            fi
+          fi
+
+      - name: Open a PR for conflicting updates
+        if: steps.report.outputs.conflicts != '0'
+        env:
+          IDS: ${{ steps.report.outputs.conflict_ids }}
+        run: |
+          branch=upstream-sync/conflicts
+          pr=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number')
+          if [ -n "$pr" ]; then
+            # 不覆盖你可能正在处理的分支，只刷新说明
+            gh pr edit "$pr" --body-file conflicts.md
+            exit 0
+          fi
+          git checkout -q -B "$branch"
+          node bin/agent-kit.js update $IDS || true   # 写入冲突标记
+          node bin/agent-kit.js build || true
+          git add -A -- . ':!result.json' ':!commit-msg.txt' ':!conflicts.md'
+          git commit -q -m "chore(sync): merge upstream with conflicts ($IDS)"
+          git push -f origin "$branch"
+          gh pr create --head "$branch" --base "$DEFAULT_BRANCH" \
+            --title "chore(sync): resolve upstream conflicts" --body-file conflicts.md
+
+      - name: Fail on unreachable / removed upstreams
+        if: steps.report.outputs.errors != '0'
+        run: |
+          echo "::error::Some collected items could not be synced — see the job summary."
+          exit 1
