@@ -13,7 +13,7 @@
 
 ```bash
 # 方式 1：一键安装 CLI（克隆到 ~/.agent-kit/repo，并链接到 ~/.local/bin/agent-kit）
-curl -fsSL https://raw.githubusercontent.com/hidontknow/agent-kit/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/hidontknow/agent-kit/master/install.sh | bash
 
 # 方式 2：不安装，直接运行
 npx github:hidontknow/agent-kit list

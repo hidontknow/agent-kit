@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # One-line installer: clones (or updates) agent-kit and links the `agent-kit` CLI into ~/.local/bin.
-#   curl -fsSL https://raw.githubusercontent.com/hidontknow/agent-kit/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/hidontknow/agent-kit/master/install.sh | bash
 set -euo pipefail
 
 REPO="${AGENT_KIT_REPO_URL:-https://github.com/hidontknow/agent-kit.git}"

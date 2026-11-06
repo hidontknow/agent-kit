@@ -80,7 +80,7 @@ git add -A && git commit -m "chore(sync): update <item> from upstream"
 ### 启用前需要的设置
 
 - **Settings → Actions → General → Workflow permissions**：选择 *Read and write permissions*，并勾选 *Allow GitHub Actions to create and approve pull requests*。不开的话，推送和开 PR 都会失败。
-- **定时任务只在默认分支上运行**。把仓库的默认分支设为包含这个 workflow 的分支，比如合并后的 `main`。
+- **定时任务只在默认分支上运行**。把仓库的默认分支设为包含这个 workflow 的分支，即 `master`。
 - 默认分支开启了保护规则、不允许直接推送时，改成 PR 模式：在 *Settings → Secrets and variables → Actions → Variables* 中添加 `UPSTREAM_SYNC_MODE=pr`。之后的更新会推送到 `upstream-sync/auto` 分支并开 PR，由你合并。手动触发时也可以选 mode。
 - 用 `GITHUB_TOKEN` 推送的提交和创建的 PR **不会触发其他 workflow**，比如 CI。所以同步 workflow 会在提交前自己跑完整的 `npm run check`。
 - 仓库连续 60 天没有活动时，GitHub 会自动停用定时任务，需要在 Actions 页面重新启用。
