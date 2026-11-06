@@ -37,6 +37,21 @@
       ]
     },
     {
+      "name": "security",
+      "source": "./plugins/security",
+      "description": "安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。",
+      "author": {
+        "name": "hidontknow"
+      },
+      "keywords": [
+        "security",
+        "audit",
+        "vulnerability",
+        "pentest",
+        "code-review"
+      ]
+    },
+    {
       "name": "wxjava",
       "source": "./plugins/wxjava",
       "description": "WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。",

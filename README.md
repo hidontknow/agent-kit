@@ -98,6 +98,7 @@ claude plugin marketplace add hidontknow/agent-kit
 claude plugin install dev-essentials@agent-kit     # 通用开发：/review、/test、test-writer、changelog
 claude plugin install rust-migration@agent-kit     # 迁移到 Rust（migrate-to-rust）
 claude plugin install wxjava@agent-kit             # WxJava 微信开发（wxjava-integration-guide）
+claude plugin install security@agent-kit           # 安全审计（Cloudflare security-audit）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -204,12 +205,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (3)
+#### plugins (4)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
+| [`security`](plugins/security) | 安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。 | bundle（[bundles/security.json](bundles/security.json)） |
 | [`wxjava`](plugins/wxjava) | WxJava 微信开发：为 Java / Spring Boot / Solon 项目生成公众号、小程序、支付、企业微信、开放平台等的最小接入方案。 | bundle（[bundles/wxjava.json](bundles/wxjava.json)） |
 
 #### scripts (2)
