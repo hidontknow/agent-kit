@@ -1,0 +1,19 @@
+{
+  "name": "gstack",
+  "description": "Garry Tan（YC）的开源\"虚拟工程团队\" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cso）到发布（/ship）。支持 Claude Code、Codex、Cursor、Gemini CLI 等。",
+  "category": "skills",
+  "tags": ["claude-code", "skills", "code-review", "qa", "workflow", "codex", "cursor"],
+  "repo": "https://github.com/garrytan/gstack",
+  "homepage": "https://github.com/garrytan/gstack",
+  "docs": "https://github.com/garrytan/gstack/blob/main/docs/install.md",
+  "license": "MIT",
+  "platforms": ["macos", "linux", "windows"],
+  "notes": [
+    "依赖：Git、Bun ≥ 1.4.2（setup 拒绝低于 1.3.3 的版本），Windows 还需 Node.js；skill 依赖套件自带的脚本、hooks 和浏览器，必须用官方 setup 安装，不能单独复制 skill",
+    "Claude Code 安装：git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack && cd ~/.claude/skills/gstack && ./setup",
+    "其他 Agent：clone 到 ~/gstack 后运行 ./setup --host auto（或 --host codex / cursor / gemini 等）；./setup --status 查看各客户端的安装情况",
+    "上手：/office-hours 描述你要做的东西 → 在有改动的分支上 /review → 对预发环境 /qa；完整流程用 /autoplan 和 /ship",
+    "团队模式会在仓库里写入自动更新检查和 hooks（./setup --team），升级用 /gstack-upgrade；卸载见 docs/uninstall.md",
+    "不想安装时，任何读取 AGENTS.md 的 Agent 都可以直接使用 2KB 的摘要：agents-digest/gstack-AGENTS.md"
+  ]
+}

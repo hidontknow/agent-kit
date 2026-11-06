@@ -240,11 +240,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 
-#### tools (2)
+#### tools (3)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
+| [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 
 #### resources (1)

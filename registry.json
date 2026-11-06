@@ -901,6 +901,34 @@
       "targets": []
     },
     {
+      "id": "tool/gstack",
+      "type": "tool",
+      "name": "gstack",
+      "description": "Garry Tan（YC）的开源\"虚拟工程团队\" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cso）到发布（/ship）。支持 Claude Code、Codex、Cursor、Gemini CLI 等。",
+      "tags": [
+        "claude-code",
+        "skills",
+        "code-review",
+        "qa",
+        "workflow",
+        "codex",
+        "cursor"
+      ],
+      "origin": "linked",
+      "path": "tools/gstack.json",
+      "category": "skills",
+      "repo": "https://github.com/garrytan/gstack",
+      "homepage": "https://github.com/garrytan/gstack",
+      "docs": "https://github.com/garrytan/gstack/blob/main/docs/install.md",
+      "license": "MIT",
+      "platforms": [
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "targets": []
+    },
+    {
       "id": "tool/solidcraft",
       "type": "tool",
       "name": "solidcraft",

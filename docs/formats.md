@@ -199,7 +199,8 @@ plugins/my-plugin/
 ```
 
 - 必填字段：`name`（与文件名一致）、`description`、`repo` 或 `homepage`。其余都是可选的。
-- `category` 可选值：`app`、`cli`、`library`、`framework`、`service`、`model`、`dataset`、`other`。
+- `category` 可选值：`app`、`cli`、`skills`、`library`、`framework`、`service`、`model`、`dataset`、`other`。
+- `skills` 用于自带安装程序的 skill 套件（比如 gstack）。这类 skill 依赖套件里的脚本、hooks 或编译产物，单独复制到 `skills/` 里无法运行，所以只登记链接和官方安装方式。
 - 没有 `install` 时，`agent-kit install tool/<name>` 不会执行任何操作，只打印下载地址和 `notes`。
 - 声明了 `install` 时，行为和 CLI 类型一样（需要同时填 `bin`）。`args` 可以替换默认的包参数，比如 `cargo install --git <url> <crate>`；这时 `package` 只在卸载时使用。
 - 主要通过包管理器安装的命令行工具，优先使用 CLI 类型（`clis/`）。
