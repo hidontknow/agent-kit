@@ -70,6 +70,24 @@
       ]
     },
     {
+      "name": "ecc",
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/ECC"
+      },
+      "description": "ECC（Everything Claude Code，\"Agent 运行环境的操作系统\"）：超大型 Agent 增强套件，71 个子 Agent、300+ skill、98 个命令、规则、可复用的 hooks 和 MCP 约定，覆盖 TDD、代码审查、安全、性能、多语言最佳实践和运维工作流；支持 Claude Code、Codex、Cursor、OpenCode、Kimi 等。",
+      "homepage": "https://ecc.tools",
+      "keywords": [
+        "skills",
+        "agents",
+        "hooks",
+        "rules",
+        "claude-code",
+        "codex",
+        "workflow"
+      ]
+    },
+    {
       "name": "interfaces",
       "source": {
         "source": "github",

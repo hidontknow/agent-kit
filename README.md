@@ -110,6 +110,7 @@ claude plugin install mattpocock-skills@agent-kit  # Matt Pocock 的工程 skill
 claude plugin install rea@agent-kit                # 逆向工程 MCP + skill（从 npm 包 rea-agents 安装）
 claude plugin install text-to-cad@agent-kit        # 用 Python 脚本设计实体产品 + 加工服务（上游 earthtojake/text-to-cad 的 latest 分支）
 claude plugin install rust-native-ui@agent-kit     # Rust 原生 UI：NSH 与 GPUI Kit 的编码和设计规范 skill
+claude plugin install ecc@agent-kit                # ECC 大型增强套件：子 Agent、skill、命令、hooks（直接从上游 affaan-m/ECC 安装）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -274,12 +275,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (14)
+#### tools (15)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`cui`](tools/cui.json) | CUI：C 语言的原生 UI 组件库，约 150 个组件（表单、选择器、对话框、表格、命令面板、虚拟化数据表格、看板、日历、甘特图、十几种图表、AI 聊天组件），带弹簧动效和完整键盘支持；一份 C99 代码跑 Windows / macO… | [link](https://github.com/yappologistic/CUI) |
+| [`ecc`](tools/ecc.json) | ECC（Everything Claude Code，"Agent 运行环境的操作系统"）：超大型 Agent 增强套件，71 个子 Agent、300+ skill、98 个命令、规则、可复用的 hooks 和 MCP 约定，覆盖 TD… | [link](https://github.com/affaan-m/ECC) |
 | [`gpui-kit`](tools/gpui-kit.json) | GPUI Kit（长桥 Longbridge）：基于 GPUI 的 Rust 桌面应用框架，75+ 组件和基础构件，内置 AccessKit 无障碍、UI 集成测试、WebAssembly、可承载 20 万行的代码编辑器（Tree-sit… | [link](https://github.com/longbridge/gpui-kit) |
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
 | [`interfaces`](tools/interfaces.json) | Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预… | [link](https://github.com/jakubkrehel/skills) |
