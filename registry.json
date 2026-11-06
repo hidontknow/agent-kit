@@ -2065,6 +2065,26 @@
       "targets": []
     },
     {
+      "id": "tool/utools-plugin-dev",
+      "type": "tool",
+      "name": "utools-plugin-dev",
+      "description": "uTools 官方的 Agent Skill（utools-plugin-dev）：辅助开发 uTools 8.0+ 插件应用，内置官方开发文档（API 参考：事件、窗口、系统能力、数据存储、AI、定时任务、自动化、截图、ffmpeg、sharp、ubrowser、支付等；开发规范：项目结构、plugin.json、preload、存储、自定义窗口、MCP），只按文档回答，不臆造 API。",
+      "tags": [
+        "skills",
+        "utools",
+        "plugin-development",
+        "desktop",
+        "chinese"
+      ],
+      "origin": "linked",
+      "path": "tools/utools-plugin-dev.json",
+      "category": "skills",
+      "repo": "https://github.com/uTools-Labs/utools-plugin-dev-skill",
+      "homepage": "https://github.com/uTools-Labs/utools-plugin-dev-skill",
+      "license": "仓库未声明许可证（没有 LICENSE 文件），因此只登记链接、不复制内容",
+      "targets": []
+    },
+    {
       "id": "resource/ai-pose-gallery-zh",
       "type": "resource",
       "name": "ai-pose-gallery-zh",

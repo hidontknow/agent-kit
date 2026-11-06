@@ -280,7 +280,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 
-#### tools (19)
+#### tools (20)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -303,6 +303,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`taste-skill`](tools/taste-skill.json) | Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。 | [link](https://github.com/Leonxlnx/taste-skill) |
 | [`text-to-cad`](tools/text-to-cad.json) | text-to-cad：让 Agent 设计实体产品。模型写成 build123d Python 脚本，生成 STEP / GLB / STL / 3MF，带 CAD 查看器；另有 12 个 skill，覆盖标准件查找（step.part… | [link](https://github.com/earthtojake/text-to-cad) |
 | [`treg`](tools/treg.json) | treg（Superdesign 出品，"工具界的 OpenRouter"）：一个地址、一个 token，让 Agent 按次付费调用 4,000+ 个第三方工具接口（SEO、外链、关键词、社媒与趋势、人员和公司信息补全、广告库、网页抓取… | [link](https://github.com/superdesigndev/treg) |
+| [`utools-plugin-dev`](tools/utools-plugin-dev.json) | uTools 官方的 Agent Skill（utools-plugin-dev）：辅助开发 uTools 8.0+ 插件应用，内置官方开发文档（API 参考：事件、窗口、系统能力、数据存储、AI、定时任务、自动化、截图、ffmpeg、s… | [link](https://github.com/uTools-Labs/utools-plugin-dev-skill) |
 
 #### resources (6)
 
