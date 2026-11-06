@@ -1,0 +1,17 @@
+{
+  "name": "ai-pose-gallery-zh",
+  "description": "AI 角色参考与合成工作台（中文版）：姿势（素体白模 + 深度图）、服装（写实、中国历代、动漫、二次元）、人像三大参考图库共 6,000+ 条，元数据全中文；附带网页合成台（人像 + 服装 + 姿势组合，直连 Gemini、GPT Image、通义千问、豆包和本地 ComfyUI 生图）和 ComfyUI 自定义节点插件。",
+  "kind": "assets",
+  "tags": ["ai-art", "reference-images", "pose", "costume", "portrait", "comfyui", "chinese"],
+  "repo": "https://github.com/anhao/ai-pose-gallery-zh",
+  "homepage": "https://ai-pose-gallery.anhao.app/",
+  "license": "代码（src/、comfyui_plugin/、scripts/）为 MIT；图片和原始数据不在 MIT 范围内，版权归原作者ギア（@giaaibusi）和 CharaDB（たき AI）所有，CharaDB 图片禁止再分发、禁止用于真人或未成年人；仅限个人学习和合法创作",
+  "licenseUrl": "https://github.com/anhao/ai-pose-gallery-zh#免责声明与版权说明disclaimer",
+  "notes": [
+    "在线使用：https://ai-pose-gallery.anhao.app/（图库检索、灯箱下载、一键加入合成配方，合成台在 /studio）",
+    "包含 18+ 人体姿势和性感穿搭参考，默认开启安全模式（SFW）隐藏；未成年人不得解锁",
+    "ComfyUI 插件：把仓库克隆到 ComfyUI/custom_nodes/ai-pose-gallery-zh，画布右键菜单出现姿势 / 服装 / 人像 / 三合一配方 4 个节点，无需额外 Python 依赖",
+    "仓库 skills/ 下有 9 个检索姿势、服装、人像参考的 Agent skill，引用仓库里的图片，只能在克隆的仓库里用：git clone 后执行 for d in ~/ai-pose-gallery-zh/skills/*-reference*; do ln -s \"$d\" ~/.claude/skills/; done",
+    "自建：Node.js 20+ 和 pnpm，pnpm install && pnpm dev；可用 npx wrangler deploy 部署到 Cloudflare Workers（仓库约 1.1 GB）"
+  ]
+}

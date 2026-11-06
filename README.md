@@ -293,10 +293,11 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`taste-skill`](tools/taste-skill.json) | Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。 | [link](https://github.com/Leonxlnx/taste-skill) |
 | [`text-to-cad`](tools/text-to-cad.json) | text-to-cad：让 Agent 设计实体产品。模型写成 build123d Python 脚本，生成 STEP / GLB / STL / 3MF，带 CAD 查看器；另有 12 个 skill，覆盖标准件查找（step.part… | [link](https://github.com/earthtojake/text-to-cad) |
 
-#### resources (2)
+#### resources (3)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
+| [`ai-pose-gallery-zh`](resources/ai-pose-gallery-zh.json) | AI 角色参考与合成工作台（中文版）：姿势（素体白模 + 深度图）、服装（写实、中国历代、动漫、二次元）、人像三大参考图库共 6,000+ 条，元数据全中文；附带网页合成台（人像 + 服装 + 姿势组合，直连 Gemini、GPT Ima… | [link](https://github.com/anhao/ai-pose-gallery-zh) |
 | [`polyfork`](resources/polyfork.json) | Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。 | [link](https://github.com/lucas-martinic/polyfork-catalog) |
 | [`secki`](resources/secki.json) | 面向设计工程师的精选链接库（332 个）：UI 组件、图标与 SVG、着色器与动效、图片素材、视频动画、设计工具、配色字体、Agent skills、开发工具、工作流自动化，每条都由用过的人收录。免费浏览，无广告、无需注册。 | [link](https://secki.dev/) |
 <!-- catalog:end -->

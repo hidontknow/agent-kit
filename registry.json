@@ -1839,6 +1839,29 @@
       "targets": []
     },
     {
+      "id": "resource/ai-pose-gallery-zh",
+      "type": "resource",
+      "name": "ai-pose-gallery-zh",
+      "description": "AI 角色参考与合成工作台（中文版）：姿势（素体白模 + 深度图）、服装（写实、中国历代、动漫、二次元）、人像三大参考图库共 6,000+ 条，元数据全中文；附带网页合成台（人像 + 服装 + 姿势组合，直连 Gemini、GPT Image、通义千问、豆包和本地 ComfyUI 生图）和 ComfyUI 自定义节点插件。",
+      "tags": [
+        "ai-art",
+        "reference-images",
+        "pose",
+        "costume",
+        "portrait",
+        "comfyui",
+        "chinese"
+      ],
+      "origin": "linked",
+      "path": "resources/ai-pose-gallery-zh.json",
+      "kind": "assets",
+      "repo": "https://github.com/anhao/ai-pose-gallery-zh",
+      "homepage": "https://ai-pose-gallery.anhao.app/",
+      "license": "代码（src/、comfyui_plugin/、scripts/）为 MIT；图片和原始数据不在 MIT 范围内，版权归原作者ギア（@giaaibusi）和 CharaDB（たき AI）所有，CharaDB 图片禁止再分发、禁止用于真人或未成年人；仅限个人学习和合法创作",
+      "licenseUrl": "https://github.com/anhao/ai-pose-gallery-zh#免责声明与版权说明disclaimer",
+      "targets": []
+    },
+    {
       "id": "resource/polyfork",
       "type": "resource",
       "name": "polyfork",
