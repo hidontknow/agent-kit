@@ -1,0 +1,16 @@
+{
+  "name": "superpowers",
+  "description": "Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、收尾分支，以及编写新 skill。",
+  "category": "skills",
+  "tags": ["skills", "tdd", "debugging", "planning", "code-review", "workflow"],
+  "repo": "https://github.com/obra/superpowers",
+  "homepage": "https://github.com/obra/superpowers",
+  "license": "MIT",
+  "claudePlugin": { "repo": "obra/superpowers" },
+  "notes": [
+    "Claude Code：/plugin install superpowers@agent-kit（直接从上游仓库安装）；它也在官方插件市场：/plugin install superpowers@claude-plugins-official，二选一",
+    "插件带一个 SessionStart hook，在每次会话开始时注入 using-superpowers 的说明，让 Agent 主动使用这些 skill",
+    "其他 Agent（Codex、Cursor、Gemini CLI、Copilot CLI、OpenCode…）的安装方式见仓库 README",
+    "基本流程：brainstorming → writing-plans → executing-plans / subagent-driven-development，过程中配合 test-driven-development 和 systematic-debugging，结束前 verification-before-completion"
+  ]
+}

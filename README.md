@@ -104,6 +104,9 @@ claude plugin install cad-modeling@agent-kit       # 参数化 3D CAD（SolidCra
 claude plugin install ponytail@agent-kit           # 懒惰资深开发模式（直接从上游 DietrichGebert/ponytail 安装）
 claude plugin install design-engineering@agent-kit # 动画与设计工程（Emil Kowalski 的 17 个 skill）
 claude plugin install interfaces@agent-kit         # 界面设计：排版、配色、无障碍、布局、文案（直接从上游 jakubkrehel/skills 安装）
+claude plugin install taste-skill@agent-kit        # 高水准公司官网（直接从上游 Leonxlnx/taste-skill 安装）
+claude plugin install superpowers@agent-kit        # 完整开发方法论：计划、TDD、调试、审查（直接从上游 obra/superpowers 安装）
+claude plugin install mattpocock-skills@agent-kit  # Matt Pocock 的工程 skill（直接从上游 mattpocock/skills 安装）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -261,15 +264,18 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 
-#### tools (5)
+#### tools (8)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
 | [`interfaces`](tools/interfaces.json) | Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预… | [link](https://github.com/jakubkrehel/skills) |
+| [`mattpocock-skills`](tools/mattpocock-skills.json) | Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改… | [link](https://github.com/mattpocock/skills) |
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
+| [`superpowers`](tools/superpowers.json) | Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、… | [link](https://github.com/obra/superpowers) |
+| [`taste-skill`](tools/taste-skill.json) | Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。 | [link](https://github.com/Leonxlnx/taste-skill) |
 
 #### resources (2)
 

@@ -1368,6 +1368,27 @@
       "targets": []
     },
     {
+      "id": "tool/mattpocock-skills",
+      "type": "tool",
+      "name": "mattpocock-skills",
+      "description": "Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改进、调研、复盘、交接、教学等，小而可组合，适合真实工程而非 vibe coding。",
+      "tags": [
+        "skills",
+        "tdd",
+        "code-review",
+        "planning",
+        "domain-modeling",
+        "engineering"
+      ],
+      "origin": "linked",
+      "path": "tools/mattpocock-skills.json",
+      "category": "skills",
+      "repo": "https://github.com/mattpocock/skills",
+      "homepage": "https://www.aihero.dev/s/skills-newsletter",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/ponytail",
       "type": "tool",
       "name": "ponytail",
@@ -1417,6 +1438,47 @@
         "web"
       ],
       "status": "early",
+      "targets": []
+    },
+    {
+      "id": "tool/superpowers",
+      "type": "tool",
+      "name": "superpowers",
+      "description": "Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、收尾分支，以及编写新 skill。",
+      "tags": [
+        "skills",
+        "tdd",
+        "debugging",
+        "planning",
+        "code-review",
+        "workflow"
+      ],
+      "origin": "linked",
+      "path": "tools/superpowers.json",
+      "category": "skills",
+      "repo": "https://github.com/obra/superpowers",
+      "homepage": "https://github.com/obra/superpowers",
+      "license": "MIT",
+      "targets": []
+    },
+    {
+      "id": "tool/taste-skill",
+      "type": "tool",
+      "name": "taste-skill",
+      "description": "Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。",
+      "tags": [
+        "skills",
+        "frontend",
+        "design",
+        "websites",
+        "ui"
+      ],
+      "origin": "linked",
+      "path": "tools/taste-skill.json",
+      "category": "skills",
+      "repo": "https://github.com/Leonxlnx/taste-skill",
+      "homepage": "https://tasteskill.dev",
+      "license": "MIT",
       "targets": []
     },
     {

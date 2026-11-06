@@ -87,6 +87,23 @@
       ]
     },
     {
+      "name": "mattpocock-skills",
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      },
+      "description": "Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改进、调研、复盘、交接、教学等，小而可组合，适合真实工程而非 vibe coding。",
+      "homepage": "https://www.aihero.dev/s/skills-newsletter",
+      "keywords": [
+        "skills",
+        "tdd",
+        "code-review",
+        "planning",
+        "domain-modeling",
+        "engineering"
+      ]
+    },
+    {
       "name": "ponytail",
       "source": {
         "source": "github",
@@ -129,6 +146,39 @@
         "vulnerability",
         "pentest",
         "code-review"
+      ]
+    },
+    {
+      "name": "superpowers",
+      "source": {
+        "source": "github",
+        "repo": "obra/superpowers"
+      },
+      "description": "Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、收尾分支，以及编写新 skill。",
+      "homepage": "https://github.com/obra/superpowers",
+      "keywords": [
+        "skills",
+        "tdd",
+        "debugging",
+        "planning",
+        "code-review",
+        "workflow"
+      ]
+    },
+    {
+      "name": "taste-skill",
+      "source": {
+        "source": "github",
+        "repo": "Leonxlnx/taste-skill"
+      },
+      "description": "Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。",
+      "homepage": "https://tasteskill.dev",
+      "keywords": [
+        "skills",
+        "frontend",
+        "design",
+        "websites",
+        "ui"
       ]
     },
     {

@@ -1,0 +1,16 @@
+{
+  "name": "mattpocock-skills",
+  "description": "Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改进、调研、复盘、交接、教学等，小而可组合，适合真实工程而非 vibe coding。",
+  "category": "skills",
+  "tags": ["skills", "tdd", "code-review", "planning", "domain-modeling", "engineering"],
+  "repo": "https://github.com/mattpocock/skills",
+  "homepage": "https://www.aihero.dev/s/skills-newsletter",
+  "license": "MIT",
+  "claudePlugin": { "repo": "mattpocock/skills", "name": "mattpocock-skills" },
+  "notes": [
+    "Claude Code：/plugin install mattpocock-skills@agent-kit（直接从上游仓库安装）；它也在官方插件市场：/plugin install mattpocock-skills@claude-plugins-official，二选一",
+    "其他 Agent：codex plugin marketplace add mattpocock/skills 后 codex plugin add mattpocock-skills@mattpocock；或 npx skills add mattpocock/skills（复制到项目，需要手动更新）",
+    "插件和 npx skills 也只选一种，否则每个 skill 会出现两次",
+    "首次使用可运行 setup-matt-pocock-skills；仓库里 in-progress、misc 目录的 skill 不在插件里"
+  ]
+}
