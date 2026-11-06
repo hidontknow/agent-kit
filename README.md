@@ -111,6 +111,7 @@ claude plugin install rea@agent-kit                # 逆向工程 MCP + skill（
 claude plugin install text-to-cad@agent-kit        # 用 Python 脚本设计实体产品 + 加工服务（上游 earthtojake/text-to-cad 的 latest 分支）
 claude plugin install rust-native-ui@agent-kit     # Rust 原生 UI：NSH 与 GPUI Kit 的编码和设计规范 skill
 claude plugin install ecc@agent-kit                # ECC 大型增强套件：子 Agent、skill、命令、hooks（直接从上游 affaan-m/ECC 安装）
+claude plugin install prompts-chat@agent-kit       # prompts.chat 提示词库：MCP + 检索 skill（上游仓库子目录中的官方插件）
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -223,7 +224,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (14)
+#### mcp (15)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -237,6 +238,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish`](mcp/goofish.json) | 闲鱼（Goofish/Xianyu）MCP server（本机模式）：商品查询/发布/下架、搜索、图片上传、AI 类目识别、IM 消息收发等 17 个工具，由 goofish-cli 提供。 | original |
 | [`kit-tools`](mcp/kit-tools) | Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing. | original |
 | [`playwright`](mcp/playwright.json) | Browser automation via Playwright accessibility snapshots (Microsoft). | original |
+| [`prompts-chat`](mcp/prompts-chat.json) | prompts.chat 的远程 MCP server：搜索和获取提示词、Agent skill 和 Bot，改进提示词；登录后还能保存自己的提示词和 skill。 | original |
 | [`rea`](mcp/rea.json) | REA 的 MCP server（stdio）：逆向分析原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，结果附带证据与局限。 | original |
 | [`scenario`](mcp/scenario.json) | Scenario（scenario.com）的远程 MCP server：生成和编辑图片、视频、音频、贴图、天空盒、3D 模型、精灵图等游戏素材，选模型、跑 LoRA、训练自定义模型、管理团队用量。需要 Scenario 账号（OAuth… | original |
 | [`solidcraft`](mcp/solidcraft.json) | SolidCraft 的 MCP server（stdio）：Agent 用和界面相同的命令建模（batch、execute、measure、screenshot…）；无界面时自带设计会话，桌面应用运行时自动连接，可以看着 Agent 建… | original |
@@ -299,12 +301,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`text-to-cad`](tools/text-to-cad.json) | text-to-cad：让 Agent 设计实体产品。模型写成 build123d Python 脚本，生成 STEP / GLB / STL / 3MF，带 CAD 查看器；另有 12 个 skill，覆盖标准件查找（step.part… | [link](https://github.com/earthtojake/text-to-cad) |
 | [`treg`](tools/treg.json) | treg（Superdesign 出品，"工具界的 OpenRouter"）：一个地址、一个 token，让 Agent 按次付费调用 4,000+ 个第三方工具接口（SEO、外链、关键词、社媒与趋势、人员和公司信息补全、广告库、网页抓取… | [link](https://github.com/superdesigndev/treg) |
 
-#### resources (4)
+#### resources (5)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`ai-pose-gallery-zh`](resources/ai-pose-gallery-zh.json) | AI 角色参考与合成工作台（中文版）：姿势（素体白模 + 深度图）、服装（写实、中国历代、动漫、二次元）、人像三大参考图库共 6,000+ 条，元数据全中文；附带网页合成台（人像 + 服装 + 姿势组合，直连 Gemini、GPT Ima… | [link](https://github.com/anhao/ai-pose-gallery-zh) |
 | [`polyfork`](resources/polyfork.json) | Polyfork 免费低多边形（low-poly）3D 模型库：2,791 个模型、26 个主题套件（同一调色板和比例），提供 GLB 与可调参数的 ES module，适用于 three.js、游戏和网页，无需账号和 key。 | [link](https://github.com/lucas-martinic/polyfork-catalog) |
+| [`prompts-chat`](resources/prompts-chat.json) | prompts.chat（原 Awesome ChatGPT Prompts）：最大的开源提示词库，适用于 ChatGPT、Claude、Gemini 等，可在网站浏览、下载 CSV 或用 Hugging Face 数据集；另有 Agen… | [link](https://github.com/f/prompts.chat) |
 | [`secki`](resources/secki.json) | 面向设计工程师的精选链接库（332 个）：UI 组件、图标与 SVG、着色器与动效、图片素材、视频动画、设计工具、配色字体、Agent skills、开发工具、工作流自动化，每条都由用过的人收录。免费浏览，无广告、无需注册。 | [link](https://secki.dev/) |
 | [`skillstore`](resources/skillstore.json) | Skill Store（skillstore.io）：Agent Skill 应用商店，收录约 7,100 个经人工审核的 skill（来自 900+ 作者），每个都附自动安全审计报告（危险代码、越界文件访问、外部网络请求、混淆代码、凭据… | [link](https://github.com/aiskillstore/marketplace) |
 <!-- catalog:end -->

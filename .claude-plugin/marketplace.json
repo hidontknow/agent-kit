@@ -139,6 +139,24 @@
       ]
     },
     {
+      "name": "prompts-chat",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/f/prompts.chat.git",
+        "path": "plugins/claude/prompts.chat"
+      },
+      "description": "prompts.chat（原 Awesome ChatGPT Prompts）：最大的开源提示词库，适用于 ChatGPT、Claude、Gemini 等，可在网站浏览、下载 CSV 或用 Hugging Face 数据集；另有 Agent skill 和机器人（Bot）目录、免费的交互式提示工程教程，可以自建。",
+      "homepage": "https://prompts.chat",
+      "keywords": [
+        "prompts",
+        "prompt-engineering",
+        "dataset",
+        "skills",
+        "chatgpt",
+        "claude"
+      ]
+    },
+    {
       "name": "rea",
       "source": {
         "source": "npm",

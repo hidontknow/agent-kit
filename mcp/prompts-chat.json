@@ -1,0 +1,13 @@
+{
+  "name": "prompts-chat",
+  "serverName": "prompts.chat",
+  "description": "prompts.chat 的远程 MCP server：搜索和获取提示词、Agent skill 和 Bot，改进提示词；登录后还能保存自己的提示词和 skill。",
+  "tags": ["prompts", "skills", "remote"],
+  "homepage": "https://github.com/f/prompts.chat/blob/main/CLAUDE-PLUGIN.md",
+  "transport": "http",
+  "url": "https://prompts.chat/api/mcp",
+  "notes": [
+    "搜索和读取不需要密钥；要用 save_prompt、save_skill、save_bot 等写入工具时，在这个 server 的请求头里加 PROMPTS_API_KEY: <你的 key>（key 在 prompts.chat 账号里生成），不要提交到仓库",
+    "server 名沿用官方插件的 prompts.chat，和官方插件同时装时不会出现两份"
+  ]
+}

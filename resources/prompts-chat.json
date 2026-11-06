@@ -1,0 +1,20 @@
+{
+  "name": "prompts-chat",
+  "description": "prompts.chat（原 Awesome ChatGPT Prompts）：最大的开源提示词库，适用于 ChatGPT、Claude、Gemini 等，可在网站浏览、下载 CSV 或用 Hugging Face 数据集；另有 Agent skill 和机器人（Bot）目录、免费的交互式提示工程教程，可以自建。",
+  "kind": "dataset",
+  "tags": ["prompts", "prompt-engineering", "dataset", "skills", "chatgpt", "claude"],
+  "repo": "https://github.com/f/prompts.chat",
+  "homepage": "https://prompts.chat",
+  "docs": "https://github.com/f/prompts.chat/blob/main/CLAUDE-PLUGIN.md",
+  "api": "https://prompts.chat/api/mcp",
+  "license": "提示词内容（prompts.csv、PROMPTS.md 和用户提交的提示词）为 CC0 公有领域；代码和站点内容为 MIT",
+  "licenseUrl": "https://github.com/f/prompts.chat/blob/main/LICENSE",
+  "claudePlugin": { "repo": "f/prompts.chat", "path": "plugins/claude/prompts.chat", "name": "prompts-chat" },
+  "notes": [
+    "数据下载：prompts.csv（仓库根目录）、PROMPTS.md，或 Hugging Face 数据集 fka/prompts.chat",
+    "Claude Code：/plugin install prompts-chat@agent-kit（官方插件，含 MCP、prompt-lookup / skill-lookup 两个 skill 和 /prompts、/skills 命令）；或官方 /plugin marketplace add f/prompts.chat 再 /plugin install prompts.chat@prompts.chat，二选一",
+    "其他客户端只要 MCP：agent-kit install mcp/prompts-chat -t <客户端>",
+    "搜索和读取提示词、skill 不需要账号；保存提示词、skill 或管理自己的 Bot 需要 prompts.chat 的 API key（设置 PROMPTS_API_KEY 环境变量或在 MCP 请求头里加 PROMPTS_API_KEY）",
+    "新增提示词请在 https://prompts.chat/prompts/new 提交，会自动同步到仓库"
+  ]
+}

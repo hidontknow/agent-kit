@@ -486,8 +486,13 @@ test('claudePlugin: npm source, extra entry fields, allowed on clis but not reso
   assert.strictEqual(p.strict, false);
   assert.deepStrictEqual(p.mcpServers.t.args, ['${CLAUDE_PLUGIN_ROOT}/x.mjs']);
 
-  fs.writeFileSync(path.join(kit, 'resources/r.json'), JSON.stringify({ name: 'r', description: 'x', kind: 'list', homepage: 'https://e.com', claudePlugin: { npm: 'r' } }));
-  assert.throws(() => s.run('validate'), /resources cannot be plugins/);
+  // a resource may ship a companion plugin living in a subfolder of its repo
+  fs.writeFileSync(path.join(kit, 'resources/r.json'), JSON.stringify({ name: 'r', description: 'x', kind: 'list', homepage: 'https://e.com', claudePlugin: { repo: 'o/r', path: 'plugins/claude/r/' } }));
+  s.run('build');
+  const sub = JSON.parse(s.read(path.join(kit, '.claude-plugin/marketplace.json'))).plugins.find((x) => x.name === 'r');
+  assert.deepStrictEqual(sub.source, { source: 'git-subdir', url: 'https://github.com/o/r.git', path: 'plugins/claude/r' });
+  fs.writeFileSync(path.join(kit, 'resources/r.json'), JSON.stringify({ name: 'r', description: 'x', kind: 'list', homepage: 'https://e.com', claudePlugin: { repo: 'o/r', path: '../x' } }));
+  assert.throws(() => s.run('validate'), /"claudePlugin\.path" must be a relative folder/);
   fs.rmSync(path.join(kit, 'resources/r.json'));
   fs.writeFileSync(path.join(kit, 'clis/npmtool.json'), JSON.stringify({
     name: 'npmtool', description: 'x', repo: 'https://github.com/o/npmtool', bin: 'npmtool', install: [{ manager: 'npm', package: 'npmtool' }],

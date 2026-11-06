@@ -1062,6 +1062,29 @@
       ]
     },
     {
+      "id": "mcp/prompts-chat",
+      "type": "mcp",
+      "name": "prompts-chat",
+      "description": "prompts.chat 的远程 MCP server：搜索和获取提示词、Agent skill 和 Bot，改进提示词；登录后还能保存自己的提示词和 skill。",
+      "tags": [
+        "prompts",
+        "skills",
+        "remote"
+      ],
+      "origin": "original",
+      "path": "mcp/prompts-chat.json",
+      "transport": "http",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/rea",
       "type": "mcp",
       "name": "rea",
@@ -2005,6 +2028,30 @@
       "api": "https://polyfork.dev/llms.txt",
       "license": "索引可自由使用；模型可免费用于个人和商业项目、可修改、无需署名，但不得转卖或再分发模型文件",
       "licenseUrl": "https://polyfork.dev/licensing",
+      "targets": []
+    },
+    {
+      "id": "resource/prompts-chat",
+      "type": "resource",
+      "name": "prompts-chat",
+      "description": "prompts.chat（原 Awesome ChatGPT Prompts）：最大的开源提示词库，适用于 ChatGPT、Claude、Gemini 等，可在网站浏览、下载 CSV 或用 Hugging Face 数据集；另有 Agent skill 和机器人（Bot）目录、免费的交互式提示工程教程，可以自建。",
+      "tags": [
+        "prompts",
+        "prompt-engineering",
+        "dataset",
+        "skills",
+        "chatgpt",
+        "claude"
+      ],
+      "origin": "linked",
+      "path": "resources/prompts-chat.json",
+      "kind": "dataset",
+      "repo": "https://github.com/f/prompts.chat",
+      "homepage": "https://prompts.chat",
+      "docs": "https://github.com/f/prompts.chat/blob/main/CLAUDE-PLUGIN.md",
+      "api": "https://prompts.chat/api/mcp",
+      "license": "提示词内容（prompts.csv、PROMPTS.md 和用户提交的提示词）为 CC0 公有领域；代码和站点内容为 MIT",
+      "licenseUrl": "https://github.com/f/prompts.chat/blob/main/LICENSE",
       "targets": []
     },
     {

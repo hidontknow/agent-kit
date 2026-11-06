@@ -204,8 +204,8 @@ plugins/my-plugin/
 - 没有 `install` 时，`agent-kit install tool/<name>` 不会执行任何操作，只打印下载地址和 `notes`。
 - 声明了 `install` 时，行为和 CLI 类型一样（需要同时填 `bin`）。`args` 可以替换默认的包参数，比如 `cargo install --git <url> <crate>`；这时 `package` 只在卸载时使用。
 - 主要通过包管理器安装的命令行工具，优先使用 CLI 类型（`clis/`）。
-- `claudePlugin`：如果这个工具本身就是 Claude Code 插件，`agent-kit build` 会把它写进本仓库的插件市场，`/plugin install <name>@agent-kit` 直接从上游安装、始终是最新版，本仓库不保存任何文件。`tools/` 和 `clis/` 都可以用，`resources/` 不行。
-  - 来源二选一：GitHub 仓库 `{ "repo": "owner/repo", "ref": "可选分支或 tag" }`（仓库根目录是插件），或 npm 包 `{ "npm": "package-name", "version": "可选" }`（上游发布的是构建好的 npm 包时用这个，比如 REA）。
+- `claudePlugin`：如果这个工具本身就是 Claude Code 插件，`agent-kit build` 会把它写进本仓库的插件市场，`/plugin install <name>@agent-kit` 直接从上游安装、始终是最新版，本仓库不保存任何文件。`tools/`、`clis/` 都可以用；`resources/` 也可以，用于资源自带的配套插件。
+  - 来源二选一：GitHub 仓库 `{ "repo": "owner/repo", "ref": "可选分支或 tag" }`（仓库根目录是插件；插件在子目录时加 `"path": "plugins/claude/xxx"`），或 npm 包 `{ "npm": "package-name", "version": "可选" }`（上游发布的是构建好的 npm 包时用这个，比如 REA）。
   - `name`：插件名，默认等于工具名，不能和 `plugins/` 下的插件重复。
   - `entry`：可选，合并进市场条目的额外字段。上游包缺少某些声明时用它补上，比如 `{ "strict": false, "mcpServers": { … } }`；不能覆盖 `name` 和 `source`。
 
@@ -232,7 +232,7 @@ plugins/my-plugin/
 - 必填字段：`name`（与文件名一致）、`description`、`kind`、`repo` 或 `homepage`。
 - `kind` 可选值：`assets`（素材库）、`dataset`（数据集）、`docs`（文档）、`list`（精选列表、资源导航站）、`api`、`course`（教程）、`other`。
 - 资源经常不是标准开源许可，比如"免费商用但不能再分发"。`license` 写一句话说明，原文链接放在 `licenseUrl`。
-- `agent-kit install resource/<name>` 不安装任何东西，只打印链接和 `notes`。资源没有 `install` 字段，validate 会拒绝；可以安装的东西请登记到 `tools/` 或 `clis/`。
+- `agent-kit install resource/<name>` 不安装任何东西，只打印链接和 `notes`。资源没有 `install` 字段，validate 会拒绝；可以安装的东西请登记到 `tools/` 或 `clis/`。资源自带 Claude Code 插件时，可以用 `claudePlugin` 把插件接进本仓库的插件市场（格式同 Tool）。
 
 **怎么判断放哪一类：** 能用包管理器一条命令装好的命令行工具放 `clis/`；需要运行或安装的程序（应用、库、框架、服务）放 `tools/`；拿来查阅、下载或引用的内容放 `resources/`。
 
