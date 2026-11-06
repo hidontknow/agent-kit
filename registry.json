@@ -1977,6 +1977,29 @@
       "homepage": "https://secki.dev/",
       "license": "免费浏览，网站未声明内容许可；每条链接指向的工具各有自己的许可和价格",
       "targets": []
+    },
+    {
+      "id": "resource/skillstore",
+      "type": "resource",
+      "name": "skillstore",
+      "description": "Skill Store（skillstore.io）：Agent Skill 应用商店，收录约 7,100 个经人工审核的 skill（来自 900+ 作者），每个都附自动安全审计报告（危险代码、越界文件访问、外部网络请求、混淆代码、凭据处理），可按需一条命令装进 Claude Code 或 Codex。",
+      "tags": [
+        "skills",
+        "marketplace",
+        "directory",
+        "security-audit",
+        "claude-code",
+        "codex"
+      ],
+      "origin": "linked",
+      "path": "resources/skillstore.json",
+      "kind": "list",
+      "repo": "https://github.com/aiskillstore/marketplace",
+      "homepage": "https://skillstore.io",
+      "docs": "https://skillstore.io/docs/install-guides",
+      "license": "目录本身 MIT；每个 skill 使用各自的许可，安装前看它的 LICENSE",
+      "licenseUrl": "https://github.com/aiskillstore/marketplace#license",
+      "targets": []
     }
   ]
 }
