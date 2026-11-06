@@ -1657,6 +1657,42 @@
       ]
     },
     {
+      "id": "tool/paperclip",
+      "type": "tool",
+      "name": "paperclip",
+      "description": "Paperclip：开源、可自托管的 AI Agent 团队编排平台（Node.js 服务 + React 界面）。给一个业务目标，\"雇\"一组 Agent（CEO、CTO、工程师、设计、市场……可混用 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、OpenClaw 等），用组织架构、预算、审批和看板管理它们 7×24 小时自主工作，并跟踪成本。",
+      "tags": [
+        "agent-orchestration",
+        "multi-agent",
+        "self-hosted",
+        "claude-code",
+        "codex",
+        "dashboard"
+      ],
+      "origin": "linked",
+      "path": "tools/paperclip.json",
+      "category": "app",
+      "repo": "https://github.com/paperclipai/paperclip",
+      "homepage": "https://paperclip.ing",
+      "docs": "https://docs.paperclip.ing/guides/getting-started/five-minute-path/",
+      "license": "MIT",
+      "platforms": [
+        "macos",
+        "linux",
+        "windows"
+      ],
+      "bin": "paperclipai",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "paperclipai"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
       "id": "tool/ponytail",
       "type": "tool",
       "name": "ponytail",

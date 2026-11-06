@@ -1,0 +1,23 @@
+{
+  "name": "paperclip",
+  "description": "Paperclip：开源、可自托管的 AI Agent 团队编排平台（Node.js 服务 + React 界面）。给一个业务目标，\"雇\"一组 Agent（CEO、CTO、工程师、设计、市场……可混用 Claude Code、Codex、Cursor、Gemini CLI、OpenCode、OpenClaw 等），用组织架构、预算、审批和看板管理它们 7×24 小时自主工作，并跟踪成本。",
+  "category": "app",
+  "tags": ["agent-orchestration", "multi-agent", "self-hosted", "claude-code", "codex", "dashboard"],
+  "repo": "https://github.com/paperclipai/paperclip",
+  "homepage": "https://paperclip.ing",
+  "docs": "https://docs.paperclip.ing/guides/getting-started/five-minute-path/",
+  "license": "MIT",
+  "platforms": ["macos", "linux", "windows"],
+  "bin": "paperclipai",
+  "requires": "Node.js >= 24.11",
+  "install": [
+    { "manager": "npm", "package": "paperclipai" }
+  ],
+  "notes": [
+    "推荐启动方式（不用全局安装）：npx paperclipai@latest onboard --yes；默认只在本机回环地址上以受信任模式运行，加 --bind lan 改为需要登录的局域网模式",
+    "先试用：ANTHROPIC_API_KEY=... npx paperclipai test-drive，会建一个带 CEO Agent 的临时实例，不装后台服务；用 Codex 时加 --harness codex 并提供 OPENAI_API_KEY",
+    "实例配置和数据保存在本机；托管安装、固定版本、更新回滚、服务管理和卸载见 https://docs.paperclip.ing/reference/cli/installation/",
+    "使用私有 npm 源时 npx 可能报 E404，用 npx --registry https://registry.npmjs.org paperclipai@latest onboard --yes",
+    "仓库 skills/ 里的 skill 是给 Paperclip 内部 Agent 调用其服务端用的，没有单独收藏"
+  ]
+}
