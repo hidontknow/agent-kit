@@ -1603,6 +1603,37 @@
       ]
     },
     {
+      "id": "cli/wxa-runner",
+      "type": "cli",
+      "name": "wxa-runner",
+      "description": "wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达任意页面）和用 Playwright 做无头 E2E 测试，CI 里在 Linux 上运行也不需要微信开发者工具。",
+      "tags": [
+        "wechat",
+        "miniprogram",
+        "uni-app",
+        "taro",
+        "e2e",
+        "playwright",
+        "testing"
+      ],
+      "origin": "linked",
+      "path": "clis/wxa-runner.json",
+      "repo": "https://github.com/open-wxa/wxa-runner",
+      "homepage": "https://open-wxa.github.io/wxa-runner/",
+      "docs": "https://open-wxa.github.io/wxa-runner/getting-started",
+      "license": "MIT（内置的微信官方基础库 wxa-baselib 版权归腾讯所有，不适用 MIT）",
+      "bin": "wxa-runner",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "wxa-runner"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
       "id": "tool/bui",
       "type": "tool",
       "name": "bui",

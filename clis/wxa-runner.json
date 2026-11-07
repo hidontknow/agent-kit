@@ -1,0 +1,21 @@
+{
+  "name": "wxa-runner",
+  "description": "wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达任意页面）和用 Playwright 做无头 E2E 测试，CI 里在 Linux 上运行也不需要微信开发者工具。",
+  "tags": ["wechat", "miniprogram", "uni-app", "taro", "e2e", "playwright", "testing"],
+  "repo": "https://github.com/open-wxa/wxa-runner",
+  "homepage": "https://open-wxa.github.io/wxa-runner/",
+  "docs": "https://open-wxa.github.io/wxa-runner/getting-started",
+  "license": "MIT（内置的微信官方基础库 wxa-baselib 版权归腾讯所有，不适用 MIT）",
+  "bin": "wxa-runner",
+  "requires": "Node.js >= 18",
+  "install": [
+    { "manager": "npm", "package": "wxa-runner" }
+  ],
+  "notes": [
+    "不安装直接用：npx wxa-runner dev ./dist/dev/mp-weixin，然后打开 http://localhost:3000；地址加 ?path=pages/detail/detail&id=1 可以直接打开某个页面",
+    "在 setup 里预置登录态、mock 原生 API、拦截 wx.request，不用改业务代码；也能借用开发者工具的登录态拿真实 code 和手机号",
+    "E2E：用 Playwright 直接在浏览器里测试，见 https://open-wxa.github.io/wxa-runner/testing；uni-app 项目和 CI 运行各有专门文档",
+    "它不替代微信开发者工具：预览、上传和真机调试仍要用开发者工具",
+    "在线预览（不用安装）：https://wxa-viewer.picfinder.workers.dev"
+  ]
+}
