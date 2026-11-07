@@ -1911,6 +1911,37 @@
       "targets": []
     },
     {
+      "id": "tool/orca",
+      "type": "tool",
+      "name": "orca",
+      "description": "Orca（Stably AI）：AI 编码 Agent 编排桌面应用。让 Claude Code、Codex 等任意编码 Agent 并行运行，每个在自己的 git worktree 里；可以把大任务交给一个协调 Agent 拆分给多个子 Agent；支持聊天界面或原始终端、在本机 / SSH 主机 / 云端 VM 上运行、逐行审阅 diff 并把意见发回 Agent、生成提交和 PR、GitHub 与 Linear 集成、内置浏览器和 CLI，并有手机端随时查看和回复。",
+      "tags": [
+        "agents",
+        "orchestration",
+        "worktree",
+        "claude-code",
+        "codex",
+        "desktop-app",
+        "code-review"
+      ],
+      "origin": "linked",
+      "path": "tools/orca.json",
+      "category": "app",
+      "repo": "https://github.com/stablyai/orca",
+      "homepage": "https://onorca.dev",
+      "docs": "https://www.onorca.dev/docs/cli/overview",
+      "downloads": "https://onorca.dev/download",
+      "license": "MIT",
+      "platforms": [
+        "macos",
+        "windows",
+        "linux",
+        "ios",
+        "android"
+      ],
+      "targets": []
+    },
+    {
       "id": "tool/paperclip",
       "type": "tool",
       "name": "paperclip",

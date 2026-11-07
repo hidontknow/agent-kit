@@ -284,7 +284,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 
-#### tools (19)
+#### tools (20)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -298,6 +298,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`mattpocock-skills`](tools/mattpocock-skills.json) | Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改… | [link](https://github.com/mattpocock/skills) |
 | [`nsh`](tools/nsh.json) | Native Shell（NSH，长桥 Longbridge）：Rust 写的原生 UI 框架，一套组件、状态和逻辑跑在 iOS、Android、macOS、Windows、Linux、Web、GPUI 和终端上，各平台用自己的原生控件渲… | [link](https://github.com/longbridge/nsh) |
 | [`openmausbot`](tools/openmausbot.json) | OpenMausBot：开源的"聊天软件式"Agent 团队（Grok Bot / Meta Muse / OpenAI dots / Cue 的开源替代）。侧边栏里每个联系人都是一个真实 Agent，底层跑你本机的 claude、cod… | [link](https://github.com/milind-soni/OpenMausBot) |
+| [`orca`](tools/orca.json) | Orca（Stably AI）：AI 编码 Agent 编排桌面应用。让 Claude Code、Codex 等任意编码 Agent 并行运行，每个在自己的 git worktree 里；可以把大任务交给一个协调 Agent 拆分给多个子… | [link](https://github.com/stablyai/orca) |
 | [`paperclip`](tools/paperclip.json) | Paperclip：开源、可自托管的 AI Agent 团队编排平台（Node.js 服务 + React 界面）。给一个业务目标，"雇"一组 Agent（CEO、CTO、工程师、设计、市场……可混用 Claude Code、Codex、… | [link](https://github.com/paperclipai/paperclip) |
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
 | [`sand3d`](tools/sand3d.json) | sand3d（Sandflow）：给大模型用的 Python 3D 建模库，在 Blender 的 bpy 之上用很短的程序描述零件、实体、编辑、坐标系、关节和装配体；零件和边面按名字引用、结果确定可复现，同一个零件比 Blender P… | [link](https://github.com/Sandflow-ai/sand3d) |

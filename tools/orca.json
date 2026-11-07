@@ -1,0 +1,19 @@
+{
+  "name": "orca",
+  "description": "Orca（Stably AI）：AI 编码 Agent 编排桌面应用。让 Claude Code、Codex 等任意编码 Agent 并行运行，每个在自己的 git worktree 里；可以把大任务交给一个协调 Agent 拆分给多个子 Agent；支持聊天界面或原始终端、在本机 / SSH 主机 / 云端 VM 上运行、逐行审阅 diff 并把意见发回 Agent、生成提交和 PR、GitHub 与 Linear 集成、内置浏览器和 CLI，并有手机端随时查看和回复。",
+  "category": "app",
+  "tags": ["agents", "orchestration", "worktree", "claude-code", "codex", "desktop-app", "code-review"],
+  "repo": "https://github.com/stablyai/orca",
+  "homepage": "https://onorca.dev",
+  "docs": "https://www.onorca.dev/docs/cli/overview",
+  "downloads": "https://onorca.dev/download",
+  "license": "MIT",
+  "platforms": ["macos", "windows", "linux", "ios", "android"],
+  "notes": [
+    "桌面版下载：https://onorca.dev/download（macOS Apple 芯片 / Intel 的 .dmg、Windows .exe、Linux）",
+    "macOS Homebrew：brew install --cask stablyai/orca/orca（必须写全名，裸的 orca 是另一个无关的 Plotly cask），升级用 brew upgrade --cask stablyai/orca/orca；Arch Linux：yay -S stably-orca-bin",
+    "手机端：iOS App Store 搜 Orca IDE，Android 从 https://www.onorca.dev/download/android 下载 APK，与桌面端配对后可以在手机上收通知、回复 Agent",
+    "支持的 Agent 包括 Claude Code、Codex、GitHub Copilot CLI、Amp、Rovo Dev 等，需要先各自安装并登录",
+    "仓库 skills/ 里的 skill（orca-cli、orca-computer-use、Linear / Jira 工单等）是给 Orca 里的 Agent 调用 Orca 自身用的，没有单独收藏"
+  ]
+}
