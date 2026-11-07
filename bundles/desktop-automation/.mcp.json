@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "agent-desktop": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/node_modules/agent-desktop/bin/agent-desktop", "mcp"]
+    }
+  }
+}

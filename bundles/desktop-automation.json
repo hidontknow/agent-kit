@@ -1,6 +1,6 @@
 {
   "name": "desktop-automation",
-  "description": "桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-desktop CLI。",
+  "description": "桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。插件自带 agent-desktop 1.2.0，安装时由 Claude Code 自动下载，不需要另外安装 CLI（需要 Node.js）。",
   "keywords": ["computer-use", "desktop-automation", "accessibility", "mcp"],
-  "include": ["skill/agent-desktop", "mcp/agent-desktop"]
+  "include": ["skill/agent-desktop"]
 }

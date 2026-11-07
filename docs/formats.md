@@ -143,6 +143,11 @@ plugins/my-plugin/
 - hook 的 `claude` 段汇总写入 `hooks/hooks.json`，`${HOOK_DIR}` 改写为 `${CLAUDE_PLUGIN_ROOT}/hooks/<name>`。
 - 不写 `version` 时，Claude Code 使用 git commit SHA 作为版本号，源工具更新后用户一定能收到；写了 `version` 就固定为这个版本，需要手动升版本号才会推送更新。
 - 和手写插件重名时，validate 会报错。
+- 可选的叠加目录 `bundles/<name>/`：里面的文件按原路径复制进生成的插件，并覆盖同名的生成文件（不能覆盖 `README.md` 和 `.claude-plugin/plugin.json`）。常见用途：
+  - `package.json` + npm 锁文件（`package-lock.json`，用 `npm install --package-lock-only --ignore-scripts` 生成）：从 GitHub 插件市场安装时，Claude Code 会自动把依赖装进插件目录。注意它会跳过依赖的 postinstall 脚本，依赖要能在不跑安装脚本的情况下工作；从本地路径添加的市场不会自动安装依赖。不要把 `node_modules` 放进叠加目录。
+  - `bin/` 下的可执行文件：插件启用时会出现在 Bash 工具的 PATH 上，排在用户自己的 PATH 之后（Claude.ai 和 Cowork 不安装带 `bin/` 的插件）。
+  - 手写的 `.mcp.json`：比如让 MCP server 用插件自带的依赖（`${CLAUDE_PLUGIN_ROOT}/node_modules/...`）。
+  - 示例：`bundles/desktop-automation/` 让插件自带 agent-desktop，不需要用户另外安装。
 
 ## CLI — `clis/<name>.json`
 

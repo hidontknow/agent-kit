@@ -1,0 +1,12 @@
+#!/bin/sh
+# agent-desktop from this plugin's own dependency, which Claude Code installs from package.json
+# when it caches the plugin. Plugin bin/ comes after the user's PATH, so a copy you installed
+# yourself (npm install -g agent-desktop, brew install agent-desktop) is used instead when present.
+here=$(cd "$(dirname "$0")" && pwd)
+launcher="$here/../node_modules/agent-desktop/bin/agent-desktop"
+if [ ! -f "$launcher" ]; then
+  echo "agent-desktop: the plugin's bundled copy is missing (Claude Code could not install the plugin's dependencies; see /plugin)." >&2
+  echo "Install it yourself instead: npm install -g agent-desktop   (or: brew install agent-desktop)" >&2
+  exit 127
+fi
+exec node "$launcher" "$@"

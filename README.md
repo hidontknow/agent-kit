@@ -99,7 +99,7 @@ claude plugin install dev-essentials@agent-kit     # 通用开发：/review、/t
 claude plugin install rust-migration@agent-kit     # 迁移到 Rust（migrate-to-rust）
 claude plugin install wxjava@agent-kit             # WxJava 微信开发（wxjava-integration-guide）
 claude plugin install security@agent-kit           # 安全审计（Cloudflare security-audit）
-claude plugin install desktop-automation@agent-kit # 桌面 computer use（agent-desktop skill + MCP，需先装 agent-desktop CLI）
+claude plugin install desktop-automation@agent-kit # 桌面 computer use（agent-desktop skill + MCP，插件自带 agent-desktop）
 claude plugin install cad-modeling@agent-kit       # 参数化 3D CAD（SolidCraft MCP + 4 个建模 skill，需先装 SolidCraft）
 claude plugin install ponytail@agent-kit           # 懒惰资深开发模式（直接从上游 DietrichGebert/ponytail 安装）
 claude plugin install design-engineering@agent-kit # 动画与设计工程（Emil Kowalski 的 17 个 skill）
@@ -260,7 +260,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | --- | --- | --- |
 | [`cad-modeling`](plugins/cad-modeling) | 用 SolidCraft 做参数化 3D CAD 建模：MCP server，加上官方推荐的 4 个建模 skill（新建零件、修改设计、参数与 STEP 校验、装配与机构）。需要先安装 SolidCraft。 | bundle（[bundles/cad-modeling.json](bundles/cad-modeling.json)） |
 | [`design-engineering`](plugins/design-engineering) | Emil Kowalski 的设计工程 skill（17 个）：动画从零构建、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。 | bundle（[bundles/design-engineering.json](bundles/design-engineering.json)） |
-| [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。需要先安装 agent-… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
+| [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。插件自带 agent-d… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
 | [`rust-native-ui`](plugins/rust-native-ui) | 长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规… | bundle（[bundles/rust-native-ui.json](bundles/rust-native-ui.json)） |

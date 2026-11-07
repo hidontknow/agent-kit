@@ -500,3 +500,27 @@ test('claudePlugin: npm source, extra entry fields, allowed on clis but not reso
   }));
   assert.throws(() => s.run('validate'), /either "repo" or "npm"[\s\S]*must not set "source"/);
 });
+
+test('bundles: overlay folder adds files (package.json, bin/, .mcp.json) to the generated plugin', () => {
+  const s = sandbox();
+  const kit = path.join(s.dir, 'kit');
+  fs.cpSync(path.join(ROOT, 'skills/readme-writer'), path.join(kit, 'skills/readme-writer'), { recursive: true });
+  fs.mkdirSync(path.join(kit, 'bundles/ov/bin'), { recursive: true });
+  fs.writeFileSync(path.join(kit, 'bundles/ov.json'), JSON.stringify({ name: 'ov', description: 'Overlay.', include: ['skill/readme-writer'] }));
+  fs.writeFileSync(path.join(kit, 'bundles/ov/bin/tool'), '#!/bin/sh\necho hi\n');
+  fs.chmodSync(path.join(kit, 'bundles/ov/bin/tool'), 0o755);
+  fs.writeFileSync(path.join(kit, 'bundles/ov/.mcp.json'), '{"mcpServers":{}}\n');
+  fs.writeFileSync(path.join(kit, 'bundles/ov/package.json'), '{"dependencies":{"x":"1.0.0"}}\n');
+  s.env.AGENT_KIT_REPO = kit;
+  assert.throws(() => s.run('validate'), /needs a lockfile/);
+  fs.writeFileSync(path.join(kit, 'bundles/ov/package-lock.json'), '{"lockfileVersion":3}\n');
+  s.run('build');
+  const p = path.join(kit, 'plugins/ov');
+  assert.ok(fs.statSync(path.join(p, 'bin/tool')).mode & 0o100, 'executable bit kept');
+  assert.strictEqual(s.read(path.join(p, '.mcp.json')), '{"mcpServers":{}}\n');
+  assert.ok(fs.existsSync(path.join(p, 'package-lock.json')));
+  assert.ok(fs.existsSync(path.join(p, 'skills/readme-writer/SKILL.md')));
+  s.run('build', '--check');
+  fs.writeFileSync(path.join(kit, 'bundles/ov/README.md'), 'x');
+  assert.throws(() => s.run('validate'), /would replace a generated file/);
+});

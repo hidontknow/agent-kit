@@ -1,0 +1,8 @@
+{
+  "name": "desktop-automation-plugin",
+  "private": true,
+  "description": "Dependencies of the desktop-automation plugin: Claude Code installs them when it caches the plugin.",
+  "dependencies": {
+    "agent-desktop": "1.2.0"
+  }
+}

@@ -1,21 +1,33 @@
 {
   "name": "agent-desktop",
   "description": "Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖截图或像素匹配；提供 CLI、C 库和 MCP server。",
-  "tags": ["computer-use", "desktop-automation", "accessibility", "mcp", "rust"],
+  "tags": [
+    "computer-use",
+    "desktop-automation",
+    "accessibility",
+    "mcp",
+    "rust"
+  ],
   "repo": "https://github.com/vercel-labs/agent-desktop",
   "homepage": "https://agent-browser.dev/desktop",
   "docs": "https://agent-browser.dev/desktop/quick-start",
   "license": "Apache-2.0",
   "bin": "agent-desktop",
   "install": [
-    { "manager": "npm", "package": "agent-desktop" },
-    { "manager": "brew", "package": "agent-desktop" }
+    {
+      "manager": "npm",
+      "package": "agent-desktop"
+    },
+    {
+      "manager": "brew",
+      "package": "agent-desktop"
+    }
   ],
   "notes": [
     "检查环境：agent-desktop status；macOS 需要授予辅助功能权限：agent-desktop permissions --guide",
     "基本循环：agent-desktop snapshot --app Finder -i 拿到 ref → agent-desktop click @<snapshot>:<ref> → 再 snapshot 验证",
     "给 Agent 的用法指南随版本内置：agent-desktop skills get desktop、agent-desktop skills get platform",
-    "作为 MCP server：agent-kit install mcp/agent-desktop -t <客户端>；在 Claude Code 中可直接装插件 desktop-automation@agent-kit（含 skill 和 MCP）",
+    "作为 MCP server：agent-kit install mcp/agent-desktop -t <客户端>；Claude Code 可以直接装插件 desktop-automation@agent-kit（含 skill 和 MCP，并自带 agent-desktop 1.2.0，安装时自动下载，不需要先装 CLI）",
     "snapshot、剪贴板、截图可能包含桌面上的隐私内容，不要放进公开日志；PowerShell 中 ref 要加引号，如 '@s8f3k2p9:e8'"
   ]
 }
