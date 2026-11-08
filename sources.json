@@ -141,6 +141,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
     },
+    "skill/gestures": {
+      "repo": "https://github.com/emilkowalski/skills",
+      "ref": "main",
+      "path": "skills/gestures",
+      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "hash": "sha256:fc5d1d49f3b0dff634678e1ac32328401a63311b1d5b4612cf1af5673e0568ec",
+      "license": "MIT",
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08"
+    },
     "skill/gpui-kit": {
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",

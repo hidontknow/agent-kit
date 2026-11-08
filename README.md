@@ -102,7 +102,7 @@ claude plugin install security@agent-kit           # 安全审计（Cloudflare s
 claude plugin install desktop-automation@agent-kit # 桌面 computer use（agent-desktop skill + MCP，插件自带 agent-desktop）
 claude plugin install cad-modeling@agent-kit       # 参数化 3D CAD（SolidCraft MCP + 4 个建模 skill，需先装 SolidCraft）
 claude plugin install ponytail@agent-kit           # 懒惰资深开发模式（直接从上游 DietrichGebert/ponytail 安装）
-claude plugin install design-engineering@agent-kit # 动画与设计工程（Emil Kowalski 的 17 个 skill）
+claude plugin install design-engineering@agent-kit # 动画与设计工程（Emil Kowalski 的 18 个 skill）
 claude plugin install interfaces@agent-kit         # 界面设计：排版、配色、无障碍、布局、文案（直接从上游 jakubkrehel/skills 安装）
 claude plugin install taste-skill@agent-kit        # 高水准公司官网（直接从上游 Leonxlnx/taste-skill 安装）
 claude plugin install superpowers@agent-kit        # 完整开发方法论：计划、TDD、调试、审查（直接从上游 obra/superpowers 安装）
@@ -173,7 +173,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (35)
+#### skills (36)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -190,6 +190,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |
 | [`emil-design-eng`](skills/emil-design-eng) | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible de… | [collected](https://github.com/emilkowalski/skills) |
 | [`find-animation-opportunities`](skills/find-animation-opportunities) | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it p… | [collected](https://github.com/emilkowalski/skills) |
+| [`gestures`](skills/gestures) | Build drag, swipe, and sheet interactions that track the finger 1:1 and stay interruptible. Use when building or fixing… | [collected](https://github.com/emilkowalski/skills) |
 | [`gpui-kit`](skills/gpui-kit) | How to build desktop applications with GPUI Kit, the Rust framework published as the gpui-kit crate (GPUI plus gpui_kit… | [collected](https://github.com/longbridge/gpui-kit) |
 | [`gpui-kit-design-guides`](skills/gpui-kit-design-guides) | The normative Design Guides for GPUI Kit desktop applications. Read in full before designing or changing any screen, la… | [collected](https://github.com/longbridge/gpui-kit) |
 | [`improve-animations`](skills/improve-animations) | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-con… | [collected](https://github.com/emilkowalski/skills) |
@@ -261,7 +262,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`cad-modeling`](plugins/cad-modeling) | 用 SolidCraft 做参数化 3D CAD 建模：MCP server，加上官方推荐的 4 个建模 skill（新建零件、修改设计、参数与 STEP 校验、装配与机构）。需要先安装 SolidCraft。 | bundle（[bundles/cad-modeling.json](bundles/cad-modeling.json)） |
-| [`design-engineering`](plugins/design-engineering) | Emil Kowalski 的设计工程 skill（17 个）：动画从零构建、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。 | bundle（[bundles/design-engineering.json](bundles/design-engineering.json)） |
+| [`design-engineering`](plugins/design-engineering) | Emil Kowalski 的设计工程 skill（18 个）：动画从零构建、手势交互、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。 | bundle（[bundles/design-engineering.json](bundles/design-engineering.json)） |
 | [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。插件自带 agent-d… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |

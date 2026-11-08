@@ -304,6 +304,29 @@
       ]
     },
     {
+      "id": "skill/gestures",
+      "type": "skill",
+      "name": "gestures",
+      "description": "Build drag, swipe, and sheet interactions that track the finger 1:1 and stay interruptible. Use when building or fixing anything the user drags, swipes, flings, holds, or dismisses with a gesture — drawers, sheets, swipe-to-dismiss toasts and cards, drag-to-reorder, pull-to-refresh, hold-to-confirm — or when a gesture feels laggy, disconnected from the finger, jumps on release, or can't be caught mid-animation. Triggers on — gesture, drag, draggable, swipe, swipe to dismiss, fling, momentum, velocity, drawer, sheet, bottom sheet, snap points, Vaul, dragConstraints, dragElastic, dragMomentum, onDragEnd, whileDrag, useMotionValue, rubber-band, overscroll, pull to refresh, hold to delete, press and hold, touch-action, dismiss threshold, \"doesn't follow my finger\", \"jumps when I let go\", \"can't grab it mid-animation\".",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/gestures",
+      "source": {
+        "repo": "https://github.com/emilkowalski/skills",
+        "path": "skills/gestures",
+        "ref": "main",
+        "commit": "5206a950b715e0cabe7043ea0b2304332b91494e"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/gpui-kit",
       "type": "skill",
       "name": "gpui-kit",
@@ -1333,7 +1356,7 @@
       "id": "plugin/design-engineering",
       "type": "plugin",
       "name": "design-engineering",
-      "description": "Emil Kowalski 的设计工程 skill（17 个）：动画从零构建、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。",
+      "description": "Emil Kowalski 的设计工程 skill（18 个）：动画从零构建、手势交互、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。",
       "tags": [
         "design-engineering",
         "animation",
