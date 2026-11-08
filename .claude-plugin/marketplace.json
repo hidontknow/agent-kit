@@ -10,6 +10,24 @@
   },
   "plugins": [
     {
+      "name": "browser-harness",
+      "source": {
+        "source": "github",
+        "repo": "browser-use/browser-harness"
+      },
+      "description": "Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，Agent 缺什么 helper 就自己写进工作区，越用越顺手。附带 skill 和 MCP server。",
+      "homepage": "https://github.com/browser-use/browser-harness",
+      "keywords": [
+        "browser",
+        "automation",
+        "cdp",
+        "chrome",
+        "scraping",
+        "mcp",
+        "python"
+      ]
+    },
+    {
       "name": "cad-modeling",
       "source": "./plugins/cad-modeling",
       "description": "用 SolidCraft 做参数化 3D CAD 建模：MCP server，加上官方推荐的 4 个建模 skill（新建零件、修改设计、参数与 STEP 校验、装配与机构）。需要先安装 SolidCraft。",

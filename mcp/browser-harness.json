@@ -1,0 +1,15 @@
+{
+  "name": "browser-harness",
+  "description": "browser-harness 的 MCP server（stdio）：让 Cursor 等 MCP 客户端通过 CDP 控制你的 Chrome 或 Browser Use 云浏览器。",
+  "tags": ["browser", "automation", "cdp", "chrome"],
+  "homepage": "https://github.com/browser-use/browser-harness#cursor",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["--from", "browser-harness[mcp]", "browser-harness-mcp"],
+  "requires": { "bin": ["uvx"] },
+  "notes": [
+    "需要 uv（uvx 首次运行会自动下载 browser-harness）；官方给 Cursor 的就是这份配置",
+    "Claude Code / Codex 官方推荐用 CLI + skill：agent-kit install cli/browser-harness，Claude Code 再装插件 /plugin install browser-harness@agent-kit",
+    "先按 cli/browser-harness 的说明让 Chrome 允许远程调试，否则连不上浏览器"
+  ]
+}

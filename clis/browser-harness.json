@@ -1,0 +1,43 @@
+{
+  "name": "browser-harness",
+  "description": "Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，Agent 缺什么 helper 就自己写进工作区，越用越顺手。附带 skill 和 MCP server。",
+  "tags": [
+    "browser",
+    "automation",
+    "cdp",
+    "chrome",
+    "scraping",
+    "mcp",
+    "python"
+  ],
+  "repo": "https://github.com/browser-use/browser-harness",
+  "homepage": "https://github.com/browser-use/browser-harness",
+  "docs": "https://github.com/browser-use/browser-harness/blob/main/install.md",
+  "license": "MIT",
+  "bin": "browser-harness",
+  "requires": "Python >= 3.11（官方推荐用 uv 并指定 3.12）、Chrome",
+  "install": [
+    {
+      "manager": "uv",
+      "package": "browser-harness",
+      "args": ["--python", "3.12", "browser-harness"]
+    },
+    {
+      "manager": "pipx",
+      "package": "browser-harness"
+    }
+  ],
+  "claudePlugin": {
+    "repo": "browser-use/browser-harness",
+    "name": "browser-harness"
+  },
+  "notes": [
+    "Claude Code 插件：/plugin install browser-harness@agent-kit（和官方 /plugin marketplace add browser-use/browser-harness 后 /plugin install browser-harness@browser-harness 相同，二选一）。插件只带 skill，CLI 仍要先装：agent-kit install cli/browser-harness",
+    "Codex 等其他 Agent 注册 skill：mkdir -p ~/.codex/skills/browser-harness && browser-harness skill > ~/.codex/skills/browser-harness/SKILL.md",
+    "连接浏览器（二选一）：1) 正常打开 Chrome，访问 chrome://inspect/#remote-debugging 勾选允许远程调试，Chrome 144+ 首次连接时点 Allow，会继承你的登录和扩展；2) 用 --remote-debugging-port=9222 --user-data-dir=<非默认目录> 单独启动 Chrome，并设置 BU_CDP_URL=http://127.0.0.1:9222，适合无人值守",
+    "验证：printf 'print(page_info())\\n' | browser-harness；连不上时运行 browser-harness --doctor",
+    "升级：browser-harness --update -y；匿名遥测可用 browser-harness telemetry disable 关闭",
+    "数据目录 ${XDG_CONFIG_HOME:-~/.config}/browser-harness（登录凭据、Agent 工作区、日志、截图），可用 BH_HOME 改位置",
+    "方式 1 下 Agent 能操作你整个浏览器里的所有登录账号，按需选择方式 2 的独立配置"
+  ]
+}

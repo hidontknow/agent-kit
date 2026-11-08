@@ -905,6 +905,30 @@
       ]
     },
     {
+      "id": "mcp/browser-harness",
+      "type": "mcp",
+      "name": "browser-harness",
+      "description": "browser-harness 的 MCP server（stdio）：让 Cursor 等 MCP 客户端通过 CDP 控制你的 Chrome 或 Browser Use 云浏览器。",
+      "tags": [
+        "browser",
+        "automation",
+        "cdp",
+        "chrome"
+      ],
+      "origin": "original",
+      "path": "mcp/browser-harness.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/context7",
       "type": "mcp",
       "name": "context7",
@@ -1552,6 +1576,46 @@
         {
           "manager": "brew",
           "package": "agent-desktop"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
+      "id": "cli/browser-harness",
+      "type": "cli",
+      "name": "browser-harness",
+      "description": "Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，Agent 缺什么 helper 就自己写进工作区，越用越顺手。附带 skill 和 MCP server。",
+      "tags": [
+        "browser",
+        "automation",
+        "cdp",
+        "chrome",
+        "scraping",
+        "mcp",
+        "python"
+      ],
+      "origin": "linked",
+      "path": "clis/browser-harness.json",
+      "repo": "https://github.com/browser-use/browser-harness",
+      "homepage": "https://github.com/browser-use/browser-harness",
+      "docs": "https://github.com/browser-use/browser-harness/blob/main/install.md",
+      "license": "MIT",
+      "bin": "browser-harness",
+      "install": [
+        {
+          "manager": "uv",
+          "package": "browser-harness",
+          "args": [
+            "--python",
+            "3.12",
+            "browser-harness"
+          ]
+        },
+        {
+          "manager": "pipx",
+          "package": "browser-harness"
         }
       ],
       "targets": [

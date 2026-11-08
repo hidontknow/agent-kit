@@ -227,11 +227,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (16)
+#### mcp (17)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`agent-desktop`](mcp/agent-desktop.json) | agent-desktop 的 MCP server（stdio）：每个命令都是一个工具（desktop_snapshot、desktop_click、desktop_session_start…），通过无障碍树查看和操作 macOS /… | original |
+| [`browser-harness`](mcp/browser-harness.json) | browser-harness 的 MCP server（stdio）：让 Cursor 等 MCP 客户端通过 CDP 控制你的 Chrome 或 Browser Use 云浏览器。 | original |
 | [`context7`](mcp/context7.json) | Up-to-date, version-specific library documentation and code examples pulled into the prompt. | original |
 | [`craft-anything`](mcp/craft-anything.json) | Craft Anything 的 MCP server：320 个工具，用于研究网站/应用/游戏的实现（页面、代码、文件、运行行为），并驱动编码 Agent 重建（rebuild）。需要先安装 tool/craft-anything。 | original |
 | [`fetch`](mcp/fetch.json) | Fetch web pages and convert them to markdown for the model (official reference server, needs uv). | original |
@@ -276,11 +277,12 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (4)
+#### clis (5)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
+| [`browser-harness`](clis/browser-harness.json) | Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，A… | [link](https://github.com/browser-use/browser-harness) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
