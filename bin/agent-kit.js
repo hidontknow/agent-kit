@@ -26,7 +26,7 @@ ${c.bold('Install')}
   pack [skill...] [--out dir]                                    zip skills for Claude Desktop / claude.ai upload
 
 ${c.bold('Collect & sync upstream')}
-  add <source> [--type t] [--name n] [--ref r] [--path p] [--force]
+  add <source> [--type t] [--name n] [--ref r] [--path p] [--exclude a,b] [--license l] [--force]
       source: https://github.com/o/r/tree/main/path | o/r/path@ref | any git URL with --path
   outdated [item...] [--verbose] [--json] [--exit-code]          check collected items against upstream
   diff <item...> [--base] [--stat]                               local vs upstream (or base vs upstream)

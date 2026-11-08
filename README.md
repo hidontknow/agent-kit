@@ -173,7 +173,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (34)
+#### skills (35)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -184,6 +184,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`animation-vocabulary`](skills/animation-vocabulary) | Reverse-lookup glossary that turns a vague description of a web animation or motion effect into its exact term ("the bo… | [collected](https://github.com/emilkowalski/skills) |
 | [`apple-design`](skills/apple-design) | Apple's approach to interface design and fluid, physical motion, translated for the web. Use when building or reviewing… | [collected](https://github.com/emilkowalski/skills) |
 | [`ask-sonner`](skills/ask-sonner) | Guide to Sonner, the React toast library — install and wire up the Toaster, pick the right toast() call, promise and lo… | [collected](https://github.com/emilkowalski/skills) |
+| [`book-to-skill`](skills/book-to-skill) | Converts books and documents (PDF, EPUB, DOCX, HTML, Markdown, plain text, RTF, MOBI/AZW with Calibre) into structured … | [collected](https://github.com/virgiliojr94/book-to-skill) |
 | [`break-ui`](skills/break-ui) | Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fi… | [collected](https://github.com/emilkowalski/skills) |
 | [`choreograph`](skills/choreograph) | Coordinate several elements that animate together — decide what moves, in what order, how much they overlap, and what s… | [collected](https://github.com/emilkowalski/skills) |
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |

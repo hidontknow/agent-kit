@@ -27,6 +27,7 @@
 | `repo` / `ref` / `path` | 上游的仓库、分支、tag 或 commit，以及工具在上游仓库中的路径。不写 `ref` 时跟随默认分支 |
 | `commit` | 上次同步时上游的 commit，作为三方合并的 **base** |
 | `hash` | 该 commit 下上游内容的哈希，用来判断本地是否改过、上游是否变化 |
+| `exclude` | 可选。不收进仓库的文件或目录（相对工具目录），由 `add --exclude docs,tests` 写入；之后每次 `outdated` / `diff` / `update` 都会先去掉它们，所以只改了这些路径的上游提交不算更新 |
 
 `ref` 写成 tag 或 commit SHA 可以锁定版本，这时 `outdated` 不会报告更新；需要升级时手动修改 `ref`。
 

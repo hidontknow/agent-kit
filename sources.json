@@ -71,6 +71,36 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
     },
+    "skill/book-to-skill": {
+      "repo": "https://github.com/virgiliojr94/book-to-skill",
+      "path": "",
+      "commit": "e7bb659d3261491c8b28793dcb9102fa64a46c22",
+      "hash": "sha256:017dff96ebd2cc4e19ff61b3dde85456f6212df7db28f3ea581c841a47f28f1a",
+      "license": "MIT",
+      "exclude": [
+        "docs",
+        "tests",
+        "evals",
+        "overrides",
+        ".github",
+        "README.ru.md",
+        "README.zh-CN.md",
+        "BACKERS.md",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "AGENTS.md",
+        "CONTRIBUTING.md",
+        "SECURITY.md",
+        "SECURITY-NOTICE.md",
+        "cliff.toml",
+        "mkdocs.yml",
+        ".gitattributes",
+        ".gitignore",
+        "tools/evals"
+      ],
+      "addedAt": "2026-11-08",
+      "updatedAt": "2026-11-08"
+    },
     "skill/break-ui": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",

@@ -226,6 +226,34 @@ test('sync: add → outdated → update (clean and with 3-way merge)', () => {
   assert.match(f.run('outdated'), /up-to-date/);
 });
 
+test('sync: --exclude drops upstream files on add and on every later update', () => {
+  const f = upstreamFixture();
+  fs.mkdirSync(path.join(f.up, 'skills/demo/docs'));
+  fs.writeFileSync(path.join(f.up, 'skills/demo/docs/guide.md'), 'guide v1\n');
+  git(f.up, 'add', '.');
+  git(f.up, 'commit', '-qm', 'docs');
+  f.run('add', f.url, '--path', 'skills/demo', '--exclude', 'docs/,./notes.md');
+  const dir = path.join(f.kit, 'skills/demo');
+  assert.ok(fs.existsSync(path.join(dir, 'SKILL.md')));
+  assert.ok(!fs.existsSync(path.join(dir, 'docs')));
+  assert.ok(!fs.existsSync(path.join(dir, 'notes.md')));
+  assert.deepStrictEqual(JSON.parse(f.read(path.join(f.kit, 'sources.json'))).items['skill/demo'].exclude, ['docs', 'notes.md']);
+  assert.match(f.run('outdated'), /up-to-date/);
+
+  // changes only in excluded paths are not updates; real changes still apply without the excluded paths
+  fs.writeFileSync(path.join(f.up, 'skills/demo/docs/guide.md'), 'guide v2\n');
+  git(f.up, 'commit', '-qam', 'docs v2');
+  assert.match(f.run('outdated'), /up-to-date/);
+  fs.writeFileSync(path.join(f.up, 'skills/demo/extra.md'), 'extra\n');
+  git(f.up, 'add', '.');
+  git(f.up, 'commit', '-qm', 'extra');
+  f.run('update', 'demo');
+  assert.ok(fs.existsSync(path.join(dir, 'extra.md')));
+  assert.ok(!fs.existsSync(path.join(dir, 'docs')));
+  assert.match(f.run('outdated'), /up-to-date/);
+  assert.throws(() => f.run('add', f.url, '--path', 'skills/demo', '--name', 'x', '--exclude', '../y'), /inside the item/);
+});
+
 test('sync: importing a folder of skills', () => {
   const f = upstreamFixture();
   fs.mkdirSync(path.join(f.up, 'skills/other'));
