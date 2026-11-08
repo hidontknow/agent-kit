@@ -315,7 +315,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "46bf6d498fa101a3b11cc64e6d8c20d28d17b720"
+        "commit": "2fffa1ad3089d2ddc1861fca6dfccde73885bb8e"
       },
       "targets": [
         "claude-code",
@@ -338,7 +338,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "46bf6d498fa101a3b11cc64e6d8c20d28d17b720"
+        "commit": "2fffa1ad3089d2ddc1861fca6dfccde73885bb8e"
       },
       "targets": [
         "claude-code",
@@ -407,7 +407,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "993b979cf055de97dd15d4d5751d2672de561679"
+        "commit": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "6fb921e550e13e41f14346ce1b3d3c8bb2c1f44e"
+        "commit": "893fb84db625045f36363ae9de1f999f588d25fd"
       },
       "targets": [
         "claude-code",
@@ -476,7 +476,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "6fb921e550e13e41f14346ce1b3d3c8bb2c1f44e"
+        "commit": "893fb84db625045f36363ae9de1f999f588d25fd"
       },
       "targets": [
         "claude-code",
@@ -634,7 +634,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "871014f955a76fd308ce156e68c93e6372906005"
+        "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700"
       },
       "targets": [
         "claude-code",
@@ -657,7 +657,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "871014f955a76fd308ce156e68c93e6372906005"
+        "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700"
       },
       "targets": [
         "claude-code",
@@ -680,7 +680,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "871014f955a76fd308ce156e68c93e6372906005"
+        "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700"
       },
       "targets": [
         "claude-code",
@@ -703,7 +703,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "871014f955a76fd308ce156e68c93e6372906005"
+        "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700"
       },
       "targets": [
         "claude-code",
@@ -794,7 +794,7 @@
         "repo": "https://github.com/binarywang/WxJava",
         "path": "skills/wxjava-integration-guide",
         "ref": "develop",
-        "commit": "2c1375b42f64eb7f69616dc432b57b02507874ce"
+        "commit": "b650e5d2b80496816adb76b05dcc64865bff4feb"
       },
       "targets": [
         "claude-code",

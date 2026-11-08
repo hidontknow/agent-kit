@@ -145,21 +145,21 @@
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",
       "path": "skills/gpui-kit",
-      "commit": "46bf6d498fa101a3b11cc64e6d8c20d28d17b720",
+      "commit": "2fffa1ad3089d2ddc1861fca6dfccde73885bb8e",
       "hash": "sha256:0c8907392c141f17ef311c531b9b88abdb4cb759a5809acc3d83973812e709e1",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/gpui-kit-design-guides": {
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",
       "path": "skills/gpui-kit-design-guides",
-      "commit": "46bf6d498fa101a3b11cc64e6d8c20d28d17b720",
+      "commit": "2fffa1ad3089d2ddc1861fca6dfccde73885bb8e",
       "hash": "sha256:897081196e86317a0c6572d83db07b8bc25c7c42e39d727a676af099612e5b09",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/improve-animations": {
       "repo": "https://github.com/emilkowalski/skills",
@@ -185,10 +185,10 @@
       "repo": "https://github.com/google/skills",
       "ref": "main",
       "path": "skills/developers/migrate-to-rust",
-      "commit": "993b979cf055de97dd15d4d5751d2672de561679",
+      "commit": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee",
       "hash": "sha256:0ca563d0657a50636c7f00e7e4c71cad4ed3e6bd80ab7d0c6434d5129c1691af",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07",
+      "updatedAt": "2026-11-08",
       "license": "Apache-2.0"
     },
     "skill/mobile-native": {
@@ -205,21 +205,21 @@
       "repo": "https://github.com/longbridge/nsh",
       "ref": "main",
       "path": "skills/nsh",
-      "commit": "6fb921e550e13e41f14346ce1b3d3c8bb2c1f44e",
-      "hash": "sha256:f4d1713e0168d60ad33fb9188c8174867309c69ac35dde3da980e9e9520c24a4",
+      "commit": "893fb84db625045f36363ae9de1f999f588d25fd",
+      "hash": "sha256:4d3015cf51d315ab6264ddf581d3af8287b7ee32a3bccdbaf0ed6596a5856749",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/nsh-design-guides": {
       "repo": "https://github.com/longbridge/nsh",
       "ref": "main",
       "path": "skills/nsh-design-guides",
-      "commit": "6fb921e550e13e41f14346ce1b3d3c8bb2c1f44e",
+      "commit": "893fb84db625045f36363ae9de1f999f588d25fd",
       "hash": "sha256:541bd86b6c8c6f4cc7d8b5786934a2a578281d394059b418223a6a87e9aa132f",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/pick-ui-library": {
       "repo": "https://github.com/emilkowalski/skills",
@@ -275,41 +275,41 @@
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-checking",
-      "commit": "871014f955a76fd308ce156e68c93e6372906005",
+      "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700",
       "hash": "sha256:2bfebdf886764c1d5ff1f8a62cbfc54f3bf73f3fea0f76bf2314ffe2093adaea",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/solidcraft-editing": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-editing",
-      "commit": "871014f955a76fd308ce156e68c93e6372906005",
+      "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700",
       "hash": "sha256:a911e00778be0821da90c3134bb26ef26ac43a0fddb964c72cef61af00605d94",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/solidcraft-mechanisms": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-mechanisms",
-      "commit": "871014f955a76fd308ce156e68c93e6372906005",
+      "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700",
       "hash": "sha256:fa0525e5e75cf724805eda397f9ea9dbf937960b576aa84c5311dc9c0f91324b",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/solidcraft-modeling": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-modeling",
-      "commit": "871014f955a76fd308ce156e68c93e6372906005",
-      "hash": "sha256:de292bd188353b068d793a97a2db84d49ee71099a968813cdff07f08664ce529",
+      "commit": "0d350e7b38e0f6b41ad38baea06307e04d067700",
+      "hash": "sha256:fb72753176c446e2284b149765db34439649325593c216a07f794290ffd8615a",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07"
+      "updatedAt": "2026-11-08"
     },
     "skill/untangle-codebase": {
       "repo": "https://github.com/caldoai/skills",
@@ -344,10 +344,10 @@
       "repo": "https://github.com/binarywang/WxJava",
       "ref": "develop",
       "path": "skills/wxjava-integration-guide",
-      "commit": "2c1375b42f64eb7f69616dc432b57b02507874ce",
+      "commit": "b650e5d2b80496816adb76b05dcc64865bff4feb",
       "hash": "sha256:f158d533c2bd69b7a65748a74bc17065aa027bbff75d872ada0687ce176fb349",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-07",
+      "updatedAt": "2026-11-08",
       "license": "Apache-2.0"
     }
   }
