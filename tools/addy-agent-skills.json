@@ -1,0 +1,17 @@
+{
+  "name": "addy-agent-skills",
+  "description": "Addy Osmani 的 Agent Skills：25 个覆盖完整开发流程的工程 skill（想法打磨 → 写规格 → 拆任务 → 增量实现 → 测试调试 → 代码审查 → 上线），包括 spec 驱动开发、TDD、API 设计、前端工程、安全加固、性能优化、可观测性、CI/CD、文档与 ADR、弃用迁移、上下文工程、git 工作流等；另有 9 个斜杠命令（/spec、/plan、/build、/test、/constraints、/review、/webperf、/code-simplify、/ship）和 4 个审查子 Agent。",
+  "category": "skills",
+  "tags": ["skills", "engineering", "spec", "tdd", "code-review", "workflow"],
+  "repo": "https://github.com/addyosmani/agent-skills",
+  "homepage": "https://github.com/addyosmani/agent-skills",
+  "license": "MIT",
+  "claudePlugin": { "repo": "addyosmani/agent-skills", "name": "agent-skills" },
+  "notes": [
+    "Claude Code：/plugin install agent-skills@agent-kit，等同官方 /plugin marketplace add addyosmani/agent-skills 后 /plugin install agent-skills@addy-agent-skills，二选一",
+    "其他 Agent（Cursor、Codex、Copilot、Cline 等）：npx skills add addyosmani/agent-skills 装全部，--list 先浏览，--skill <名字> 只装一个（例如 code-review-and-quality、interview-me、test-driven-development）",
+    "和 Claude Code 内置命令重名时用带命名空间的写法，例如 /agent-skills:review",
+    "/build auto 在你批准计划后自动生成并实现所有任务",
+    "和 superpowers 定位相近（都是开发流程方法论），一般二选一，同时装容易互相抢着触发"
+  ]
+}
