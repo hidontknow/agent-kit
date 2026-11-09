@@ -1,19 +1,29 @@
 {
   "name": "ponytail",
-  "description": "\"懒惰的资深开发\"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命令。支持 Claude Code、Codex、Cursor、Copilot CLI 等约 20 个 Agent。",
+  "description": "\"懒惰的资深开发\"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查（连同改动波及的未改文件一起看：bug、安全、负载、缺失测试、性能、可删代码）、/ponytail-audit 全仓库审计并排出先修什么、/ponytail-debt 汇总代码里留下的 shortcut: 技术债等命令。支持 Claude Code、Codex、Cursor、Copilot CLI 等约 20 个 Agent。",
   "category": "skills",
-  "tags": ["skills", "code-quality", "code-review", "yagni", "claude-code", "codex"],
+  "tags": [
+    "skills",
+    "code-quality",
+    "code-review",
+    "yagni",
+    "claude-code",
+    "codex"
+  ],
   "repo": "https://github.com/DietrichGebert/ponytail",
   "homepage": "https://ponytail.dev/",
   "docs": "https://github.com/DietrichGebert/ponytail/blob/main/INSTALL.md",
   "license": "MIT",
-  "claudePlugin": { "repo": "DietrichGebert/ponytail" },
+  "claudePlugin": {
+    "repo": "DietrichGebert/ponytail"
+  },
   "notes": [
     "Claude Code：/plugin install ponytail@agent-kit（直接从上游仓库安装，始终是最新版）；也可以用官方市场 /plugin marketplace add DietrichGebert/ponytail 再 /plugin install ponytail@ponytail，二选一，不要都装",
     "Codex：codex plugin marketplace add DietrichGebert/ponytail，然后 codex plugin add ponytail@ponytail，在 /hooks 里信任它的两个 hook",
-    "其他 Agent（Cursor、Copilot CLI、Gemini、Windsurf、Kiro…）见 INSTALL.md；读 AGENTS.md 的 Agent 也可以直接把仓库里的 AGENTS.md 复制到项目",
+    "其他 Agent（Cursor、Copilot CLI、Gemini、Windsurf、Kiro…）见 INSTALL.md，通用方式 npx skills add DietrichGebert/ponytail；读 AGENTS.md 的 Agent 也可以直接把仓库里的 AGENTS.md 复制到项目",
     "插件的 hook 需要 node 在 PATH 上；没有 node 时 skill 仍可用，但每次 hook 调用会提示 node: command not found",
-    "用法：/ponytail（可加 lite / ultra 切换强度）、/ponytail-review 审查改动、/ponytail-audit 审计整个仓库、/ponytail-help",
-    "插件默认在每轮结束后把任务统计写到 ~/.config/ponytail/band/<project>.csv；可选的 webhook 默认关闭，不配置就不会外发数据"
+    "用法：/ponytail（可加 lite / ultra 切换强度）、/ponytail-review 审查改动、/ponytail-audit 审计整个仓库、/ponytail-debt 列出 shortcut: 注释形成的技术债清单、/ponytail-gain 看基准测试里的节省数据、/ponytail-help",
+    "Claude Code 2.1.290+ 会在输入框上方显示任务状态条（成本、token、Agent 用时、复用率、测试是否通过），/ponytail band 隐藏或恢复；默认每轮把任务统计写到 ~/.config/ponytail/band/<project>.csv，可用 /plugin configure ponytail@agent-kit 关闭；可选的 webhook 默认关闭，不配置就不会外发数据",
+    "只从 GitHub 的 DietrichGebert/ponytail 或 npm 的 @dietrichgebert/ponytail 获取；它从不分发 .exe / .dll，带这些的是冒牌"
   ]
 }
