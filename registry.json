@@ -1927,6 +1927,29 @@
       "targets": []
     },
     {
+      "id": "tool/artcraft",
+      "type": "tool",
+      "name": "artcraft",
+      "description": "ArtCraft：面向艺术家的 AI 图像 / 视频创作 IDE（桌面应用，Rust）。先在 2D 画布构图、在 3D 里摆场景、给角色摆姿势、定好机位，再生成最终画面，比单纯写提示词更可控、可复现；支持局部重绘、重新打光，以及图像、视频、音乐音效、3D 网格和世界（高斯泼溅）生成。可接入 ArtCraft 自带的 62 个模型以及 Grok、Midjourney、Sora、World Labs 等服务。",
+      "tags": [
+        "image-generation",
+        "video-generation",
+        "3d",
+        "creative",
+        "desktop",
+        "rust"
+      ],
+      "origin": "linked",
+      "path": "tools/artcraft.json",
+      "category": "app",
+      "repo": "https://github.com/storytold/artcraft",
+      "homepage": "https://getartcraft.com/",
+      "docs": "https://github.com/storytold/artcraft/tree/main/docs",
+      "downloads": "https://getartcraft.com/",
+      "license": "MIT 或 Apache-2.0（二选一）",
+      "targets": []
+    },
+    {
       "id": "tool/bui",
       "type": "tool",
       "name": "bui",
