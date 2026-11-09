@@ -1,0 +1,36 @@
+{
+  "name": "caveman",
+  "description": "Caveman：让 AI 编码 Agent 少说、少读、少花钱。回答压缩成「原始人」短句（代码、命令、报错原样保留）；日志、JSON、CSV、测试输出在模型读到前先压缩；Auto 按问题难度选模型和推理强度；Blocks 复用 Agent 写过的脚本；另有网页压缩、记忆文件压缩、token 用量分析。一条命令接入 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 Agent。",
+  "tags": [
+    "token-saving",
+    "compression",
+    "proxy",
+    "claude-code",
+    "codex",
+    "skills"
+  ],
+  "repo": "https://github.com/JuliusBrussee/caveman",
+  "homepage": "https://github.com/JuliusBrussee/caveman",
+  "docs": "https://github.com/JuliusBrussee/caveman/blob/main/INSTALL.md",
+  "license": "Apache-2.0",
+  "bin": "caveman",
+  "requires": "Node.js >= 22.13",
+  "install": [
+    {
+      "manager": "npm",
+      "package": "@caveman-ai/cli"
+    }
+  ],
+  "claudePlugin": {
+    "repo": "JuliusBrussee/caveman",
+    "name": "caveman"
+  },
+  "notes": [
+    "推荐的安装方式：npx @caveman-ai/cli@latest，自动找到本机的 Agent，列出要改的配置，回车确认；之后直接运行 claude / codex 就是 caveman 模式。重新打开设置界面：caveman setup",
+    "只要「少说」这一项：npx skills add JuliusBrussee/caveman -g，或 Claude Code 插件 /plugin install caveman@agent-kit（等同官方 /plugin marketplace add JuliusBrussee/caveman 后 /plugin install caveman@caveman，二选一）。插件包含 /caveman、/ultracave、/megacave、/caveman-commit、/caveman-review、/caveman-compress 等 skill 和自动启用的 hooks（需要 Node.js）",
+    "在 Agent 里：/caveman 开启，stop caveman 或 /caveman off 关闭；Codex 里用 $caveman",
+    "常用命令：caveman status 查看开了哪些功能；caveman off <output|input|waste-fixes|routing|scripts|browse> 单独关闭；caveman stats 看 token 统计；caveman doctor 排查问题",
+    "隐私：CLI 默认上报匿名使用统计（不含提示词和代码），caveman telemetry off 或 DO_NOT_TRACK=1 关闭；Auto 需要登录免费账号，会把最近的提问发到 Caveman Cloud，不想用就 caveman off routing",
+    "安全警告、不可逆操作等场景它会自动恢复完整句子；它不会改写你的提示词"
+  ]
+}

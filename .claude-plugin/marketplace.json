@@ -43,6 +43,23 @@
       ]
     },
     {
+      "name": "caveman",
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      },
+      "description": "Caveman：让 AI 编码 Agent 少说、少读、少花钱。回答压缩成「原始人」短句（代码、命令、报错原样保留）；日志、JSON、CSV、测试输出在模型读到前先压缩；Auto 按问题难度选模型和推理强度；Blocks 复用 Agent 写过的脚本；另有网页压缩、记忆文件压缩、token 用量分析。一条命令接入 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 Agent。",
+      "homepage": "https://github.com/JuliusBrussee/caveman",
+      "keywords": [
+        "token-saving",
+        "compression",
+        "proxy",
+        "claude-code",
+        "codex",
+        "skills"
+      ]
+    },
+    {
       "name": "design-engineering",
       "source": "./plugins/design-engineering",
       "description": "Emil Kowalski 的设计工程 skill（18 个）：动画从零构建、手势交互、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。",

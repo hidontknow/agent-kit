@@ -278,12 +278,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (5)
+#### clis (6)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`browser-harness`](clis/browser-harness.json) | Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，A… | [link](https://github.com/browser-use/browser-harness) |
+| [`caveman`](clis/caveman.json) | Caveman：让 AI 编码 Agent 少说、少读、少花钱。回答压缩成「原始人」短句（代码、命令、报错原样保留）；日志、JSON、CSV、测试输出在模型读到前先压缩；Auto 按问题难度选模型和推理强度；Blocks 复用 Agent… | [link](https://github.com/JuliusBrussee/caveman) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |

@@ -1646,6 +1646,36 @@
       ]
     },
     {
+      "id": "cli/caveman",
+      "type": "cli",
+      "name": "caveman",
+      "description": "Caveman：让 AI 编码 Agent 少说、少读、少花钱。回答压缩成「原始人」短句（代码、命令、报错原样保留）；日志、JSON、CSV、测试输出在模型读到前先压缩；Auto 按问题难度选模型和推理强度；Blocks 复用 Agent 写过的脚本；另有网页压缩、记忆文件压缩、token 用量分析。一条命令接入 Claude Code、Codex、Gemini CLI、OpenCode 等 30 多个 Agent。",
+      "tags": [
+        "token-saving",
+        "compression",
+        "proxy",
+        "claude-code",
+        "codex",
+        "skills"
+      ],
+      "origin": "linked",
+      "path": "clis/caveman.json",
+      "repo": "https://github.com/JuliusBrussee/caveman",
+      "homepage": "https://github.com/JuliusBrussee/caveman",
+      "docs": "https://github.com/JuliusBrussee/caveman/blob/main/INSTALL.md",
+      "license": "Apache-2.0",
+      "bin": "caveman",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "@caveman-ai/cli"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
       "id": "cli/goofish-cli",
       "type": "cli",
       "name": "goofish-cli",
