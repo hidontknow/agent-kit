@@ -2508,6 +2508,28 @@
       "targets": []
     },
     {
+      "id": "resource/awesome-claude-skills",
+      "type": "resource",
+      "name": "awesome-claude-skills",
+      "description": "Awesome Claude Skills（Composio 维护）：Claude Skills 精选列表，按文档处理、开发工具、数据分析、商业营销、写作沟通、创意媒体、效率、协作、安全等分类收录约 180 个 skill 链接；仓库里还直接放了 30 多个示例 skill，以及 800 多个基于 Composio 的应用自动化 skill（Gmail、Slack、GitHub、Notion 等上千个应用）。",
+      "tags": [
+        "skills",
+        "awesome-list",
+        "directory",
+        "claude-code",
+        "composio",
+        "automation"
+      ],
+      "origin": "linked",
+      "path": "resources/awesome-claude-skills.json",
+      "kind": "list",
+      "repo": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "homepage": "https://github.com/ComposioHQ/awesome-claude-skills",
+      "license": "列表本身 Apache-2.0；单个 skill 可能用不同许可，以各自目录里的 LICENSE 为准",
+      "licenseUrl": "https://github.com/ComposioHQ/awesome-claude-skills#license",
+      "targets": []
+    },
+    {
       "id": "resource/iconmcp",
       "type": "resource",
       "name": "iconmcp",

@@ -1,0 +1,17 @@
+{
+  "name": "awesome-claude-skills",
+  "description": "Awesome Claude Skills（Composio 维护）：Claude Skills 精选列表，按文档处理、开发工具、数据分析、商业营销、写作沟通、创意媒体、效率、协作、安全等分类收录约 180 个 skill 链接；仓库里还直接放了 30 多个示例 skill，以及 800 多个基于 Composio 的应用自动化 skill（Gmail、Slack、GitHub、Notion 等上千个应用）。",
+  "kind": "list",
+  "tags": ["skills", "awesome-list", "directory", "claude-code", "composio", "automation"],
+  "repo": "https://github.com/ComposioHQ/awesome-claude-skills",
+  "homepage": "https://github.com/ComposioHQ/awesome-claude-skills",
+  "license": "列表本身 Apache-2.0；单个 skill 可能用不同许可，以各自目录里的 LICENSE 为准",
+  "licenseUrl": "https://github.com/ComposioHQ/awesome-claude-skills#license",
+  "notes": [
+    "看中某个 skill，用 agent-kit add <它在 GitHub 上的目录链接> 收进本仓库，之后可以跟踪上游更新",
+    "mcp-builder、skill-creator、webapp-testing、document-skills 等是 anthropics/skills 的副本，优先从原仓库收藏（本仓库的 skill/mcp-builder 就来自原仓库）",
+    "composio-skills/ 下的应用自动化 skill 和 connect-apps 插件都依赖 Composio 服务，需要在 dashboard.composio.dev 注册并填 API key，操作会经过 Composio",
+    "connect-apps 插件试用：在仓库目录运行 claude --plugin-dir ./connect-apps-plugin，然后 /connect-apps:setup",
+    "README 写的 Claude Code skill 目录 ~/.config/claude-code/skills/ 不对，实际是 ~/.claude/skills/（项目级 .claude/skills/）"
+  ]
+}
