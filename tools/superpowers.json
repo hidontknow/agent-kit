@@ -1,12 +1,21 @@
 {
   "name": "superpowers",
-  "description": "Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、收尾分支，以及编写新 skill。",
+  "description": "Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、收尾分支，编写新 skill，以及排查 superpowers 会话为什么出问题（重复劳动、没按计划、太慢太贵、skill 没触发）并生成给维护者的 bug 报告。",
   "category": "skills",
-  "tags": ["skills", "tdd", "debugging", "planning", "code-review", "workflow"],
+  "tags": [
+    "skills",
+    "tdd",
+    "debugging",
+    "planning",
+    "code-review",
+    "workflow"
+  ],
   "repo": "https://github.com/obra/superpowers",
   "homepage": "https://github.com/obra/superpowers",
   "license": "MIT",
-  "claudePlugin": { "repo": "obra/superpowers" },
+  "claudePlugin": {
+    "repo": "obra/superpowers"
+  },
   "notes": [
     "Claude Code：/plugin install superpowers@agent-kit（直接从上游仓库安装）；它也在官方插件市场：/plugin install superpowers@claude-plugins-official，二选一",
     "插件带一个 SessionStart hook，在每次会话开始时注入 using-superpowers 的说明，让 Agent 主动使用这些 skill",
