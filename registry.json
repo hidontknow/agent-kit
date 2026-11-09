@@ -1109,6 +1109,29 @@
       ]
     },
     {
+      "id": "mcp/graphify",
+      "type": "mcp",
+      "name": "graphify",
+      "description": "Graphify 的 MCP server（stdio）：把当前项目的知识图谱 graphify-out/graph.json 提供给 Agent，支持 query_graph 等图查询工具。",
+      "tags": [
+        "knowledge-graph",
+        "codebase",
+        "context"
+      ],
+      "origin": "original",
+      "path": "mcp/graphify.json",
+      "transport": "stdio",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
       "id": "mcp/iconmcp",
       "type": "mcp",
       "name": "iconmcp",
@@ -1706,6 +1729,40 @@
         {
           "manager": "pip",
           "package": "goofish-cli"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
+      "id": "cli/graphify",
+      "type": "cli",
+      "name": "graphify",
+      "description": "Graphify：把整个项目（代码、文档、PDF、图片、视频）转成可查询的知识图谱，让 Agent 查图而不是逐个 grep / 读文件。代码用 tree-sitter 在本地解析（约 40 种语言，不调用 LLM），每条边标明是源码里明写的（EXTRACTED）还是推断的（INFERRED）；输出可交互的 graph.html、要点报告 GRAPH_REPORT.md 和 graph.json，支持 query / path / explain 查询。",
+      "tags": [
+        "knowledge-graph",
+        "codebase",
+        "tree-sitter",
+        "context",
+        "mcp",
+        "python"
+      ],
+      "origin": "linked",
+      "path": "clis/graphify.json",
+      "repo": "https://github.com/Graphify-Labs/graphify",
+      "homepage": "https://graphify.com",
+      "docs": "https://docs.graphify.com",
+      "license": "Apache-2.0",
+      "bin": "graphify",
+      "install": [
+        {
+          "manager": "uv",
+          "package": "graphifyy"
+        },
+        {
+          "manager": "pipx",
+          "package": "graphifyy"
         }
       ],
       "targets": [

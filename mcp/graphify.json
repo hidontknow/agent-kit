@@ -1,0 +1,15 @@
+{
+  "name": "graphify",
+  "description": "Graphify 的 MCP server（stdio）：把当前项目的知识图谱 graphify-out/graph.json 提供给 Agent，支持 query_graph 等图查询工具。",
+  "tags": ["knowledge-graph", "codebase", "context"],
+  "homepage": "https://github.com/Graphify-Labs/graphify#cli-skills-or-mcp-instructions",
+  "transport": "stdio",
+  "command": "uvx",
+  "args": ["--from", "graphifyy[mcp]", "graphify-mcp"],
+  "requires": { "bin": ["uvx"] },
+  "notes": [
+    "先在项目里生成图谱（/graphify . 或 graphify update .），server 默认读取工作目录下的 graphify-out/graph.json，所以建议按项目安装：agent-kit install mcp/graphify --scope project",
+    "图谱在别的位置时，在 args 末尾加上 graph.json 的路径",
+    "已经用 uv tool install \"graphifyy[mcp]\" 装过的话，也可以把 command 改成 graphify-mcp、去掉 args"
+  ]
+}

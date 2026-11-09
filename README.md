@@ -228,7 +228,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`explain`](commands/explain.md) | Explain how a file, function or feature works, with a short walkthrough. | original |
 | [`fix-issue`](commands/fix-issue.md) | Investigate and fix a GitHub issue end to end — reproduce, fix, test. | original |
 
-#### mcp (17)
+#### mcp (18)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -241,6 +241,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`github`](mcp/github.json) | GitHub's official remote MCP server: repos, issues, pull requests, actions, code search. | original |
 | [`goofish-sandbox`](mcp/goofish-sandbox.json) | 闲鱼 MCP server（Docker 沙箱模式）：浏览器自动化在容器虚拟桌面中运行，不占用本机浏览器。与 mcp/goofish 使用同一个 server 名，二者互相替换。 | original |
 | [`goofish`](mcp/goofish.json) | 闲鱼（Goofish/Xianyu）MCP server（本机模式）：商品查询/发布/下架、搜索、图片上传、AI 类目识别、IM 消息收发等 17 个工具，由 goofish-cli 提供。 | original |
+| [`graphify`](mcp/graphify.json) | Graphify 的 MCP server（stdio）：把当前项目的知识图谱 graphify-out/graph.json 提供给 Agent，支持 query_graph 等图查询工具。 | original |
 | [`iconmcp`](mcp/iconmcp.json) | IconMCP 的远程 MCP server（无需登录）：按含义搜索约 6,800 个原创图标（search_icons），取 SVG 或 React 组件（get_icon），浏览主题图标集（list_sets / get_set）；找… | original |
 | [`kit-tools`](mcp/kit-tools) | Example self-hosted MCP server shipped in this repo (zero dependencies): current time, UUIDs, text hashing. | original |
 | [`playwright`](mcp/playwright.json) | Browser automation via Playwright accessibility snapshots (Microsoft). | original |
@@ -278,7 +279,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (6)
+#### clis (7)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -286,6 +287,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`browser-harness`](clis/browser-harness.json) | Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，A… | [link](https://github.com/browser-use/browser-harness) |
 | [`caveman`](clis/caveman.json) | Caveman：让 AI 编码 Agent 少说、少读、少花钱。回答压缩成「原始人」短句（代码、命令、报错原样保留）；日志、JSON、CSV、测试输出在模型读到前先压缩；Auto 按问题难度选模型和推理强度；Blocks 复用 Agent… | [link](https://github.com/JuliusBrussee/caveman) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
+| [`graphify`](clis/graphify.json) | Graphify：把整个项目（代码、文档、PDF、图片、视频）转成可查询的知识图谱，让 Agent 查图而不是逐个 grep / 读文件。代码用 tree-sitter 在本地解析（约 40 种语言，不调用 LLM），每条边标明是源码里明… | [link](https://github.com/Graphify-Labs/graphify) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 

@@ -1,0 +1,37 @@
+{
+  "name": "graphify",
+  "description": "Graphify：把整个项目（代码、文档、PDF、图片、视频）转成可查询的知识图谱，让 Agent 查图而不是逐个 grep / 读文件。代码用 tree-sitter 在本地解析（约 40 种语言，不调用 LLM），每条边标明是源码里明写的（EXTRACTED）还是推断的（INFERRED）；输出可交互的 graph.html、要点报告 GRAPH_REPORT.md 和 graph.json，支持 query / path / explain 查询。",
+  "tags": [
+    "knowledge-graph",
+    "codebase",
+    "tree-sitter",
+    "context",
+    "mcp",
+    "python"
+  ],
+  "repo": "https://github.com/Graphify-Labs/graphify",
+  "homepage": "https://graphify.com",
+  "docs": "https://docs.graphify.com",
+  "license": "Apache-2.0",
+  "bin": "graphify",
+  "requires": "Python >= 3.10",
+  "install": [
+    {
+      "manager": "uv",
+      "package": "graphifyy"
+    },
+    {
+      "manager": "pipx",
+      "package": "graphifyy"
+    }
+  ],
+  "notes": [
+    "PyPI 包名是 graphifyy（两个 y），命令是 graphify",
+    "装完运行 graphify install 注册 skill（默认 Claude Code）；其他 Agent 用 graphify install --platform <cursor|codex|gemini|agents…>，--project 装到当前项目，详见 README 的 Install 表",
+    "在 Agent 里输入 /graphify . 生成 graphify-out/（graph.html、GRAPH_REPORT.md、graph.json）；之后终端里可用 graphify query \"问题\"、graphify path A B、graphify explain 概念",
+    "Claude Code / Gemini CLI 会装 PreToolUse hook，在 Agent 搜索或逐个读源码前提示先查图；graphify install --project --strict 会更强制",
+    "代码解析完全本地；文档、PDF、图片的语义提取用当前 Agent 的模型，命令行 graphify extract 需要 ANTHROPIC_API_KEY / OPENAI_API_KEY / GEMINI_API_KEY 等或本机 claude CLI",
+    "查询会记录到 ~/.cache/graphify-queries.log（不含返回内容），GRAPHIFY_QUERY_LOG_DISABLE=1 关闭",
+    "MCP server 见 mcp/graphify；Graphify Cloud 是另外收费的托管服务，不在开源范围内"
+  ]
+}
