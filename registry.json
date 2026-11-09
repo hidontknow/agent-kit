@@ -2250,6 +2250,30 @@
       "targets": []
     },
     {
+      "id": "tool/scientific-agent-skills",
+      "type": "tool",
+      "name": "scientific-agent-skills",
+      "description": "Scientific Agent Skills（原 Claude Scientific Skills）：K-Dense 出的 177 个科研 skill，覆盖生物信息与基因组、化学信息学与药物发现、蛋白质组与质谱、临床研究、医学影像与数字病理、神经科学、材料、物理天文、工程仿真、地理遥感、实验室自动化、数据分析与可视化、科研写作与文献综述等，每个 skill 对应一个科学库、数据库（100 多个）或研究流程。",
+      "tags": [
+        "skills",
+        "science",
+        "research",
+        "bioinformatics",
+        "cheminformatics",
+        "biology",
+        "chemistry",
+        "medicine"
+      ],
+      "origin": "linked",
+      "path": "tools/scientific-agent-skills.json",
+      "category": "skills",
+      "repo": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "homepage": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "docs": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/docs/skills.md",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/solidcraft",
       "type": "tool",
       "name": "solidcraft",

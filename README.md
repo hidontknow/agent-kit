@@ -291,7 +291,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 
-#### tools (20)
+#### tools (21)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -310,6 +310,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`ponytail`](tools/ponytail.json) | "懒惰的资深开发"模式：让 Agent 只写任务需要的代码（YAGNI、优先标准库、不做没要求的抽象），但不省校验、错误处理、安全和可访问性；附带 /ponytail-review 代码审查、/ponytail-audit 全仓库审计等命… | [link](https://github.com/DietrichGebert/ponytail) |
 | [`sand3d`](tools/sand3d.json) | sand3d（Sandflow）：给大模型用的 Python 3D 建模库，在 Blender 的 bpy 之上用很短的程序描述零件、实体、编辑、坐标系、关节和装配体；零件和边面按名字引用、结果确定可复现，同一个零件比 Blender P… | [link](https://github.com/Sandflow-ai/sand3d) |
 | [`scenario-skills`](tools/scenario-skills.json) | Scenario 官方 Agent skill 套件：168 个 skill，分成 23 个插件，覆盖图片、视频、音频、3D 生成与编辑，游戏美术（精灵、图标、瓦片、贴图、天空盒、可行走场景），社交媒体内容，角色与风格一致性和自定义模型训… | [link](https://github.com/scenario-labs/skills) |
+| [`scientific-agent-skills`](tools/scientific-agent-skills.json) | Scientific Agent Skills（原 Claude Scientific Skills）：K-Dense 出的 177 个科研 skill，覆盖生物信息与基因组、化学信息学与药物发现、蛋白质组与质谱、临床研究、医学影像与数字… | [link](https://github.com/K-Dense-AI/scientific-agent-skills) |
 | [`solidcraft`](tools/solidcraft.json) | 开源参数化 3D CAD（纯 Rust）：草图与约束、特征时间线（拉伸/旋转/扫掠/放样/圆角/抽壳…）、参数与配置、装配与运动、钣金，支持 STEP/IGES/3MF/STL/OBJ/glTF；有桌面版、浏览器版、无界面 CLI 和 M… | [link](https://github.com/tangency-labs/solidcraft) |
 | [`superpowers`](tools/superpowers.json) | Superpowers：给编码 Agent 的完整开发方法论，由可组合的 skill 构成：头脑风暴、写计划、执行计划、TDD、系统化调试、代码审查（请求与接收）、子 Agent 驱动开发、并行派发、git worktree、完成前验证、… | [link](https://github.com/obra/superpowers) |
 | [`taste-skill`](tools/taste-skill.json) | Taste Skill：让 Agent 做出 figma.com、x.ai 水准的公司官网（每屏一个区块、真实照片、真实产品 UI，科技和游戏页才加特效），并用真实浏览器做一致性检查。 | [link](https://github.com/Leonxlnx/taste-skill) |
