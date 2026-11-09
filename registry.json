@@ -2061,6 +2061,28 @@
       "targets": []
     },
     {
+      "id": "tool/dsh-superagent",
+      "type": "tool",
+      "name": "dsh-superagent",
+      "description": "dsh-superagent（DeepSeek 研究原型，非官方产品）：给单个 GitHub 仓库配一个主动工作的编码 Agent，以 DeepSeek Harness（DSH）bundle 的形式运行。它监听 GitHub（可选飞书），有权限的人提需求时开一个工作项，在独立的 Agent 会话和目录里完成，再在原对话里回复（例如提一个 PR）；网页面板列出需要人处理的事项。设计原则是尽量少占用人的注意力：只在被请求或团队规则允许时行动，只在有人必须处理或结果可用时发言。",
+      "tags": [
+        "coding-agent",
+        "autonomous-agent",
+        "github",
+        "feishu",
+        "deepseek",
+        "typescript"
+      ],
+      "origin": "linked",
+      "path": "tools/dsh-superagent.json",
+      "category": "framework",
+      "repo": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "homepage": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "docs": "https://github.com/deepseek-ai/dsh-superagent-prototype/blob/main/docs/006-deployment.md",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/ecc",
       "type": "tool",
       "name": "ecc",

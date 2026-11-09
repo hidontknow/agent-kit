@@ -294,7 +294,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 
-#### tools (25)
+#### tools (26)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -304,6 +304,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`cui`](tools/cui.json) | CUI：C 语言的原生 UI 组件库，约 150 个组件（表单、选择器、对话框、表格、命令面板、虚拟化数据表格、看板、日历、甘特图、十几种图表、AI 聊天组件），带弹簧动效和完整键盘支持；一份 C99 代码跑 Windows / macO… | [link](https://github.com/yappologistic/CUI) |
 | [`diagram-design`](tools/diagram-design.json) | Diagram Design：让 Agent 画出编辑级品质的图表，每张图是一个自包含的 HTML + SVG 文件，可套用你自己的品牌配色和字体。支持 45 种类型：架构图（含改动前后对比）、流程图、时序图、状态机、ER / 数据库表结… | [link](https://github.com/cathrynlavery/diagram-design) |
+| [`dsh-superagent`](tools/dsh-superagent.json) | dsh-superagent（DeepSeek 研究原型，非官方产品）：给单个 GitHub 仓库配一个主动工作的编码 Agent，以 DeepSeek Harness（DSH）bundle 的形式运行。它监听 GitHub（可选飞书），… | [link](https://github.com/deepseek-ai/dsh-superagent-prototype) |
 | [`ecc`](tools/ecc.json) | ECC（Everything Claude Code，"Agent 运行环境的操作系统"）：超大型 Agent 增强套件，71 个子 Agent、300+ skill、98 个命令、规则、可复用的 hooks 和 MCP 约定，覆盖 TD… | [link](https://github.com/affaan-m/ECC) |
 | [`gpui-kit`](tools/gpui-kit.json) | GPUI Kit（长桥 Longbridge）：基于 GPUI 的 Rust 桌面应用框架，75+ 组件和基础构件，内置 AccessKit 无障碍、UI 集成测试、WebAssembly、可承载 20 万行的代码编辑器（Tree-sit… | [link](https://github.com/longbridge/gpui-kit) |
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
