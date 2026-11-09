@@ -2084,6 +2084,29 @@
       "targets": []
     },
     {
+      "id": "tool/last30days",
+      "type": "tool",
+      "name": "last30days",
+      "description": "/last30days：把任意话题、人物、公司、产品最近 30 天在 Reddit、X、YouTube（含字幕）、TikTok、Instagram、Hacker News、Polymarket、GitHub、arXiv、Techmeme、LinkedIn、Bluesky、Threads、小红书等平台的讨论并行搜一遍，按点赞、播放量和真金白银的预测市场赔率打分，汇总成一份研究简报；结果存进本地资料库，之后可以检索。适合会前了解一个人、销售前了解一家公司、追踪 AI 社区最新做法。",
+      "tags": [
+        "skills",
+        "research",
+        "reddit",
+        "twitter",
+        "youtube",
+        "trends",
+        "polymarket"
+      ],
+      "origin": "linked",
+      "path": "tools/last30days.json",
+      "category": "skills",
+      "repo": "https://github.com/mvanhorn/last30days-skill",
+      "homepage": "https://github.com/mvanhorn/last30days-skill",
+      "docs": "https://github.com/mvanhorn/last30days-skill/blob/main/CONFIGURATION.md",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/mattpocock-skills",
       "type": "tool",
       "name": "mattpocock-skills",

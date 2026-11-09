@@ -293,7 +293,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 
-#### tools (22)
+#### tools (23)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -305,6 +305,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`gpui-kit`](tools/gpui-kit.json) | GPUI Kit（长桥 Longbridge）：基于 GPUI 的 Rust 桌面应用框架，75+ 组件和基础构件，内置 AccessKit 无障碍、UI 集成测试、WebAssembly、可承载 20 万行的代码编辑器（Tree-sit… | [link](https://github.com/longbridge/gpui-kit) |
 | [`gstack`](tools/gstack.json) | Garry Tan（YC）的开源"虚拟工程团队" skill 套件：约 80 个斜杠命令，覆盖产品梳理（/office-hours）、方案评审（/autoplan）、代码审查（/review）、真实浏览器 QA（/qa）、安全审计（/cs… | [link](https://github.com/garrytan/gstack) |
 | [`interfaces`](tools/interfaces.json) | Jakub Krehel 的界面设计 skill 套件（14 个）：界面综合审查（better-interface）、UI 细节、排版、配色系统、无障碍（WCAG 2.2）、布局、界面文案，以及按 Figma 构建、组件压力测试、状态机预… | [link](https://github.com/jakubkrehel/skills) |
+| [`last30days`](tools/last30days.json) | /last30days：把任意话题、人物、公司、产品最近 30 天在 Reddit、X、YouTube（含字幕）、TikTok、Instagram、Hacker News、Polymarket、GitHub、arXiv、Techmeme、… | [link](https://github.com/mvanhorn/last30days-skill) |
 | [`mattpocock-skills`](tools/mattpocock-skills.json) | Matt Pocock 的工程 skill（27 个）：用提问打磨需求（grill-me / grilling）、需求转规格与工单（to-spec、to-tickets）、实现、TDD、诊断 bug、代码审查、PR、领域建模、代码库架构改… | [link](https://github.com/mattpocock/skills) |
 | [`nsh`](tools/nsh.json) | Native Shell（NSH，长桥 Longbridge）：Rust 写的原生 UI 框架，一套组件、状态和逻辑跑在 iOS、Android、macOS、Windows、Linux、Web、GPUI 和终端上，各平台用自己的原生控件渲… | [link](https://github.com/longbridge/nsh) |
 | [`openmausbot`](tools/openmausbot.json) | OpenMausBot：开源的"聊天软件式"Agent 团队（Grok Bot / Meta Muse / OpenAI dots / Cue 的开源替代）。侧边栏里每个联系人都是一个真实 Agent，底层跑你本机的 claude、cod… | [link](https://github.com/milind-soni/OpenMausBot) |

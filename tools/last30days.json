@@ -1,0 +1,20 @@
+{
+  "name": "last30days",
+  "description": "/last30days：把任意话题、人物、公司、产品最近 30 天在 Reddit、X、YouTube（含字幕）、TikTok、Instagram、Hacker News、Polymarket、GitHub、arXiv、Techmeme、LinkedIn、Bluesky、Threads、小红书等平台的讨论并行搜一遍，按点赞、播放量和真金白银的预测市场赔率打分，汇总成一份研究简报；结果存进本地资料库，之后可以检索。适合会前了解一个人、销售前了解一家公司、追踪 AI 社区最新做法。",
+  "category": "skills",
+  "tags": ["skills", "research", "reddit", "twitter", "youtube", "trends", "polymarket"],
+  "repo": "https://github.com/mvanhorn/last30days-skill",
+  "homepage": "https://github.com/mvanhorn/last30days-skill",
+  "docs": "https://github.com/mvanhorn/last30days-skill/blob/main/CONFIGURATION.md",
+  "license": "MIT",
+  "claudePlugin": { "repo": "mvanhorn/last30days-skill", "name": "last30days" },
+  "notes": [
+    "Claude Code：/plugin install last30days@agent-kit，等同官方 /plugin marketplace add mvanhorn/last30days-skill 后 /plugin install last30days，二选一",
+    "Codex、Cursor、Gemini CLI 等：npx skills add mvanhorn/last30days-skill -g",
+    "Claude Desktop：从 Releases 下载对应平台的 .mcpb 包，拖到 设置 → 扩展；按提示填写想启用的数据源 key（都可留空），存进系统钥匙串",
+    "用法：/last30days <话题或人名>；/last30days search my library for <关键词> 检索以前的研究",
+    "开箱即用：Reddit、Hacker News、Polymarket、GitHub 不需要 key；首次运行的设置向导会解锁 X、YouTube、TikTok、arXiv、Techmeme 等",
+    "可选 key：X 用 X_BEARER_TOKEN，或直接用浏览器里登录的 x.com cookie，或 XAI_API_KEY；TikTok、Instagram、Threads、Pinterest、LinkedIn 用 SCRAPECREATORS_API_KEY（免费 1 万次）；完整列表见 CONFIGURATION.md",
+    "需要 Python 3；小红书需要本机运行已登录的 xiaohongshu-mcp 服务并加 --search xhs"
+  ]
+}
