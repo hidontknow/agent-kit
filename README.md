@@ -173,7 +173,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (37)
+#### skills (38)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -194,6 +194,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`gestures`](skills/gestures) | Build drag, swipe, and sheet interactions that track the finger 1:1 and stay interruptible. Use when building or fixing… | [collected](https://github.com/emilkowalski/skills) |
 | [`gpui-kit`](skills/gpui-kit) | How to build desktop applications with GPUI Kit, the Rust framework published as the gpui-kit crate (GPUI plus gpui_kit… | [collected](https://github.com/longbridge/gpui-kit) |
 | [`gpui-kit-design-guides`](skills/gpui-kit-design-guides) | The normative Design Guides for GPUI Kit desktop applications. Read in full before designing or changing any screen, la… | [collected](https://github.com/longbridge/gpui-kit) |
+| [`humanizer`](skills/humanizer) | Rewrite AI-sounding text so it reads like the writer without changing what it says. Use when editing or reviewing prose… | [collected](https://github.com/blader/humanizer) |
 | [`improve-animations`](skills/improve-animations) | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-con… | [collected](https://github.com/emilkowalski/skills) |
 | [`mcp-builder`](skills/mcp-builder) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external service… | [collected](https://github.com/anthropics/skills) |
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |

@@ -181,6 +181,23 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-08"
     },
+    "skill/humanizer": {
+      "repo": "https://github.com/blader/humanizer",
+      "path": "",
+      "commit": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "hash": "sha256:e1dc779c9a779c169e286ce513b5ebe26d653c99d26742d9b0137f7ab79535c5",
+      "license": "MIT",
+      "exclude": [
+        ".github",
+        ".claude-plugin",
+        ".cursor-plugin",
+        "scripts",
+        "AGENTS.md",
+        "CHANGELOG.md"
+      ],
+      "addedAt": "2026-11-09",
+      "updatedAt": "2026-11-09"
+    },
     "skill/improve-animations": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
