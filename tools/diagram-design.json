@@ -1,0 +1,19 @@
+{
+  "name": "diagram-design",
+  "description": "Diagram Design：让 Agent 画出编辑级品质的图表，每张图是一个自包含的 HTML + SVG 文件，可套用你自己的品牌配色和字体。支持 45 种类型：架构图（含改动前后对比）、流程图、时序图、状态机、ER / 数据库表结构、时间线、泳道图、象限图、雷达图、树、组织架构、分层图、轴测爆炸图、韦恩图、漏斗、桑基图、鱼骨图、Wardley 地图、看板、用户旅程、部署图、依赖图、服务蓝图、UML 类图、甘特图、热力图等；还能从 draw.io、Mermaid、Excalidraw 导入，导出 PNG / SVG。",
+  "category": "skills",
+  "tags": ["skills", "diagrams", "svg", "architecture", "flowchart", "visualization", "mermaid", "drawio"],
+  "repo": "https://github.com/cathrynlavery/diagram-design",
+  "homepage": "https://diagramdesign.dev",
+  "docs": "https://cathrynlavery.github.io/diagram-design/",
+  "license": "MIT",
+  "claudePlugin": { "repo": "cathrynlavery/diagram-design" },
+  "notes": [
+    "skill 本身已收进本仓库：agent-kit install skill/diagram-design 可装到 Claude Code、Codex、Cursor 等",
+    "Claude Code 完整插件（skill + 斜杠命令 /doctor、/export-diagram、/import-drawio、/import-mermaid、/import-excalidraw、/profile）：/plugin install diagram-design@agent-kit，等同官方 /plugin marketplace add cathrynlavery/diagram-design 后 /plugin install diagram-design@diagram-design，二选一",
+    "其他 Agent 官方方式：npx skills add cathrynlavery/diagram-design",
+    "用自然语言提需求即可，例如「给我的应用画架构图：前端、后端、数据库、Redis 缓存」；说「Onboard diagram-design to https://你的网站」会抓取网站配色和字体，之后的图都按这个风格",
+    "默认从 Google Fonts 加载字体；要离线或用系统字体时直接告诉它。网络访问说明见仓库 PRIVACY.md",
+    "只认 cathrynlavery/diagram-design 这个官方仓库，其他名字下的同名插件是非官方副本"
+  ]
+}

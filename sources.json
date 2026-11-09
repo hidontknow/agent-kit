@@ -121,6 +121,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-06"
     },
+    "skill/diagram-design": {
+      "repo": "https://github.com/cathrynlavery/diagram-design",
+      "ref": "main",
+      "path": "skills/diagram-design",
+      "commit": "6a7f19fcc132b39b126bea90167679b46b14bcc4",
+      "hash": "sha256:36adb8d9201496e04b440cd78f0aae10ce1369601daf1db057b77d239802ce84",
+      "license": "MIT",
+      "addedAt": "2026-11-09",
+      "updatedAt": "2026-11-09"
+    },
     "skill/emil-design-eng": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",

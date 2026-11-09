@@ -258,6 +258,29 @@
       ]
     },
     {
+      "id": "skill/diagram-design",
+      "type": "skill",
+      "name": "diagram-design",
+      "description": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm, box plot), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph (arc diagram), UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, and .excalidraw import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/diagram-design",
+      "source": {
+        "repo": "https://github.com/cathrynlavery/diagram-design",
+        "path": "skills/diagram-design",
+        "ref": "main",
+        "commit": "6a7f19fcc132b39b126bea90167679b46b14bcc4"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/emil-design-eng",
       "type": "skill",
       "name": "emil-design-eng",
@@ -1914,6 +1937,30 @@
         "linux",
         "web"
       ],
+      "targets": []
+    },
+    {
+      "id": "tool/diagram-design",
+      "type": "tool",
+      "name": "diagram-design",
+      "description": "Diagram Design：让 Agent 画出编辑级品质的图表，每张图是一个自包含的 HTML + SVG 文件，可套用你自己的品牌配色和字体。支持 45 种类型：架构图（含改动前后对比）、流程图、时序图、状态机、ER / 数据库表结构、时间线、泳道图、象限图、雷达图、树、组织架构、分层图、轴测爆炸图、韦恩图、漏斗、桑基图、鱼骨图、Wardley 地图、看板、用户旅程、部署图、依赖图、服务蓝图、UML 类图、甘特图、热力图等；还能从 draw.io、Mermaid、Excalidraw 导入，导出 PNG / SVG。",
+      "tags": [
+        "skills",
+        "diagrams",
+        "svg",
+        "architecture",
+        "flowchart",
+        "visualization",
+        "mermaid",
+        "drawio"
+      ],
+      "origin": "linked",
+      "path": "tools/diagram-design.json",
+      "category": "skills",
+      "repo": "https://github.com/cathrynlavery/diagram-design",
+      "homepage": "https://diagramdesign.dev",
+      "docs": "https://cathrynlavery.github.io/diagram-design/",
+      "license": "MIT",
       "targets": []
     },
     {
