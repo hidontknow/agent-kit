@@ -9,7 +9,7 @@
   "claudePlugin": { "repo": "Leonxlnx/taste-skill" },
   "notes": [
     "Claude Code：/plugin install taste-skill@agent-kit（直接从上游安装）；或官方市场 /plugin marketplace add Leonxlnx/taste-skill 再 /plugin install taste-skill@taste-skill，二选一",
-    "其他 Agent：npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend；Codex 用 codex plugin marketplace add Leonxlnx/taste-skill",
+    "其他 Agent：npx skills add https://github.com/Leonxlnx/taste-skill --skill design-taste-frontend；Codex 用 codex plugin marketplace add Leonxlnx/taste-skill，再 codex plugin add taste-skill@taste-skill",
     "依赖：Node 22+ 和本机安装的 Chrome / Edge / Chromium（非标准位置设 CHROME_PATH）；可选 ffmpeg 用于输出 WebP",
     "用法：直接让 Agent 做或重做公司官网，skill 会复制 assets/、从 starter.html 起步，交付前运行一致性检查脚本",
     "作者另有桌面应用 TasteCode（https://tastecode.dev），旧版 skill 移到了 Leonxlnx/taste-skill-classics"
