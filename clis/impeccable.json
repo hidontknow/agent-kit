@@ -1,0 +1,29 @@
+{
+  "name": "impeccable",
+  "description": "Impeccable：给编码 Agent 的前端设计词汇和审查工具。一个 skill 带 24 个命令：bolder / quieter / distill / colorize / typeset / layout 调整风格，critique 打分式 UX 评审，audit 检查无障碍、性能、主题和响应式（P0–P3 分级），polish / harden / clarify / adapt / optimize 收尾，live 在浏览器里选中元素实时切换变体；另有 62 条确定性规则的「AI 味」检测器（Inter 字体、紫蓝渐变、卡片套卡片等），可在 Agent hook、命令行 / CI 和 Chrome 扩展里运行。",
+  "tags": ["design", "frontend", "ui", "ux", "linter", "skills", "claude-code"],
+  "repo": "https://github.com/pbakaus/impeccable",
+  "homepage": "https://impeccable.style",
+  "docs": "https://impeccable.style/docs",
+  "license": "Apache-2.0",
+  "bin": "impeccable",
+  "requires": "Node.js >= 22.18（只用于 npx / CLI；skill 自带独立引擎二进制，或首次使用时下载到 ~/.impeccable/bin/）",
+  "install": [
+    {
+      "manager": "npm",
+      "package": "impeccable"
+    }
+  ],
+  "claudePlugin": {
+    "repo": "pbakaus/impeccable",
+    "path": "plugin",
+    "name": "impeccable"
+  },
+  "notes": [
+    "推荐的安装方式：在项目根目录运行 npx impeccable install，自动识别本机的 Agent，选择装到当前项目还是全局，并询问是否启用设计 hook（建议启用）；更新用 npx impeccable update；脚本化：--providers=claude,codex,cursor --scope=project|global",
+    "Claude Code 插件：/plugin install impeccable@agent-kit（包含 skill、4 个子 Agent 和设计 hook；等同官方 /plugin marketplace add pbakaus/impeccable 后 /plugin install impeccable@impeccable，二选一）",
+    "每个项目先运行一次 /impeccable init，生成 PRODUCT.md；之后 /impeccable <命令> <目标>，例如 /impeccable critique the pricing cards；Codex 里用 $impeccable",
+    "命令行 / CI 检测：npx impeccable detect src/，或扫描运行中的页面 npx impeccable detect http://localhost:5173（用本机 Chrome / Edge）；--json 输出 JSON，--github 输出 GitHub Actions 注释；发现问题时退出码为 2",
+    "Codex 需要在 /hooks 里批准项目 hook；live 模式只用于本地开发环境，不要注入线上站点"
+  ]
+}

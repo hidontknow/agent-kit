@@ -142,6 +142,25 @@
       ]
     },
     {
+      "name": "impeccable",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/pbakaus/impeccable.git",
+        "path": "plugin"
+      },
+      "description": "Impeccable：给编码 Agent 的前端设计词汇和审查工具。一个 skill 带 24 个命令：bolder / quieter / distill / colorize / typeset / layout 调整风格，critique 打分式 UX 评审，audit 检查无障碍、性能、主题和响应式（P0–P3 分级），polish / harden / clarify / adapt / optimize 收尾，live 在浏览器里选中元素实时切换变体；另有 62 条确定性规则的「AI 味」检测器（Inter 字体、紫蓝渐变、卡片套卡片等），可在 Agent hook、命令行 / CI 和 Chrome 扩展里运行。",
+      "homepage": "https://impeccable.style",
+      "keywords": [
+        "design",
+        "frontend",
+        "ui",
+        "ux",
+        "linter",
+        "skills",
+        "claude-code"
+      ]
+    },
+    {
       "name": "interfaces",
       "source": {
         "source": "github",
