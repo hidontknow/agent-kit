@@ -173,7 +173,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (38)
+#### skills (39)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -206,6 +206,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`readme-writer`](skills/readme-writer) | Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a … | original |
 | [`remove-animations`](skills/remove-animations) | Find the animations an interface doesn't need and remove them — motion on keyboard actions, high-frequency surfaces, fu… | [collected](https://github.com/emilkowalski/skills) |
 | [`review-animations`](skills/review-animations) | Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. … | [collected](https://github.com/emilkowalski/skills) |
+| [`sag`](skills/sag) | Set up the standalone SAG CLI and search local project files by meaning. Use for SAG installation, project search setup… | [collected](https://github.com/Zleap-AI/SAG-Wiki) |
 | [`security-audit`](skills/security-audit) | Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for se… | [collected](https://github.com/cloudflare/security-audit-skill) |
 | [`solidcraft-checking`](skills/solidcraft-checking) | Use alongside solidcraft-modeling and solidcraft-editing whenever you build, change or port a SolidCraft design. Checks… | [collected](https://github.com/tangency-labs/solidcraft) |
 | [`solidcraft-editing`](skills/solidcraft-editing) | Use when changing, fixing or extending an existing SolidCraft design through its MCP server - a .sc file (or an older .… | [collected](https://github.com/tangency-labs/solidcraft) |
@@ -281,7 +282,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (8)
+#### clis (9)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -292,6 +293,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`graphify`](clis/graphify.json) | Graphify：把整个项目（代码、文档、PDF、图片、视频）转成可查询的知识图谱，让 Agent 查图而不是逐个 grep / 读文件。代码用 tree-sitter 在本地解析（约 40 种语言，不调用 LLM），每条边标明是源码里明… | [link](https://github.com/Graphify-Labs/graphify) |
 | [`impeccable`](clis/impeccable.json) | Impeccable：给编码 Agent 的前端设计词汇和审查工具。一个 skill 带 24 个命令：bolder / quieter / distill / colorize / typeset / layout 调整风格，criti… | [link](https://github.com/pbakaus/impeccable) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
+| [`sag-wiki`](clis/sag-wiki.json) | SAG-Wiki：给人和 Agent 用的轻量本地知识库。添加一个文件夹就能检索里面的文档、笔记和代码，建索引和检索都不调用 LLM、不需要向量库（约 200 ms 索引一百万字），用自研的 SAG2 证据检索跨文件找出处；问答答案可追溯… | [link](https://github.com/Zleap-AI/SAG-Wiki) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 
 #### tools (26)

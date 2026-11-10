@@ -1,0 +1,24 @@
+{
+  "name": "sag-wiki",
+  "description": "SAG-Wiki：给人和 Agent 用的轻量本地知识库。添加一个文件夹就能检索里面的文档、笔记和代码，建索引和检索都不调用 LLM、不需要向量库（约 200 ms 索引一百万字），用自研的 SAG2 证据检索跨文件找出处；问答答案可追溯到原文段落。桌面版（macOS / Windows，约 14 MB）支持快速搜索、带引用的问答、Markdown 编辑和文档关系浏览；PDF、Office、EPUB 开箱转换。CLI sag 可单独使用，让 Claude Code、Codex、OpenCode 检索同一个知识库。",
+  "tags": ["knowledge-base", "search", "retrieval", "rag", "local-first", "cli"],
+  "repo": "https://github.com/Zleap-AI/SAG-Wiki",
+  "homepage": "https://github.com/Zleap-AI/SAG-Wiki",
+  "docs": "https://github.com/Zleap-AI/SAG-Wiki/blob/main/README-CN.md",
+  "license": "MIT",
+  "bin": "sag",
+  "requires": "Node.js >= 18；npm 包只带 macOS Apple Silicon 和 Windows x64 的预编译二进制",
+  "install": [
+    {
+      "manager": "npm",
+      "package": "@zleap-ai/sag"
+    }
+  ],
+  "notes": [
+    "配套 skill 已收进本仓库：agent-kit install skill/sag（含 CLI 安装、配置、建索引和验证流程）；也可以直接对 Agent 说「Install https://github.com/Zleap-AI/SAG-Wiki/blob/main/cli/skills/sag/SKILL.md and follow its setup flow for my current project.」",
+    "装完先在终端运行 sag 完成首次 Jev 配置；在项目里添加文件夹、确认索引就绪后再搜索；sag status 诊断，sag list 列出已登记目录，sag check 检查覆盖和索引状态",
+    "桌面版从 GitHub Releases 下载；macOS 版尚未公证，首次打开会有安全提示。CLI 不依赖桌面版，装了桌面版时共享设置和知识库",
+    "文件索引和快速搜索不需要 API key；SAG2 语义检索要配置 Jev 服务，带引用问答还要配置回答模型和 API key——这两项会把问题和相关段落发给你配置的服务，原文件留在本机",
+    "图片识别、音视频转写是可选组件，按需下载"
+  ]
+}

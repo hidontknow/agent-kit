@@ -298,6 +298,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-09"
     },
+    "skill/sag": {
+      "repo": "https://github.com/Zleap-AI/SAG-Wiki",
+      "ref": "main",
+      "path": "cli/skills/sag",
+      "commit": "61f63c660c66f9600bee6c236c3e9b079f90e105",
+      "hash": "sha256:28f9c060236cdfdbf7990853cd8f77d91ed2ed1b6dd990265749f3be1b0ab85f",
+      "license": "MIT",
+      "addedAt": "2026-11-10",
+      "updatedAt": "2026-11-10"
+    },
     "skill/security-audit": {
       "repo": "https://github.com/cloudflare/security-audit-skill",
       "ref": "main",

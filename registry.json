@@ -668,6 +668,29 @@
       ]
     },
     {
+      "id": "skill/sag",
+      "type": "skill",
+      "name": "sag",
+      "description": "Set up the standalone SAG CLI and search local project files by meaning. Use for SAG installation, project search setup, understanding unfamiliar implementations, or managing indexed folders and ignore rules.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/sag",
+      "source": {
+        "repo": "https://github.com/Zleap-AI/SAG-Wiki",
+        "path": "cli/skills/sag",
+        "ref": "main",
+        "commit": "61f63c660c66f9600bee6c236c3e9b079f90e105"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/security-audit",
       "type": "skill",
       "name": "security-audit",
@@ -1868,6 +1891,36 @@
         {
           "manager": "npm",
           "package": "rea-agents"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
+      "id": "cli/sag-wiki",
+      "type": "cli",
+      "name": "sag-wiki",
+      "description": "SAG-Wiki：给人和 Agent 用的轻量本地知识库。添加一个文件夹就能检索里面的文档、笔记和代码，建索引和检索都不调用 LLM、不需要向量库（约 200 ms 索引一百万字），用自研的 SAG2 证据检索跨文件找出处；问答答案可追溯到原文段落。桌面版（macOS / Windows，约 14 MB）支持快速搜索、带引用的问答、Markdown 编辑和文档关系浏览；PDF、Office、EPUB 开箱转换。CLI sag 可单独使用，让 Claude Code、Codex、OpenCode 检索同一个知识库。",
+      "tags": [
+        "knowledge-base",
+        "search",
+        "retrieval",
+        "rag",
+        "local-first",
+        "cli"
+      ],
+      "origin": "linked",
+      "path": "clis/sag-wiki.json",
+      "repo": "https://github.com/Zleap-AI/SAG-Wiki",
+      "homepage": "https://github.com/Zleap-AI/SAG-Wiki",
+      "docs": "https://github.com/Zleap-AI/SAG-Wiki/blob/main/README-CN.md",
+      "license": "MIT",
+      "bin": "sag",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "@zleap-ai/sag"
         }
       ],
       "targets": [
