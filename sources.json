@@ -121,6 +121,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-10"
     },
+    "skill/chrome-extensions": {
+      "repo": "https://github.com/GoogleChrome/modern-web-guidance",
+      "ref": "main",
+      "path": "skills/chrome-extensions",
+      "commit": "4dd968349e54ca45a05dd5c818fb035c9054b022",
+      "hash": "sha256:9b6dc78168756a2d399967433f31621e5200357879bb26c4187961aa538a3235",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
     "skill/colab-operator": {
       "repo": "https://github.com/googlecolab/google-colab-cli",
       "ref": "main",
@@ -277,6 +287,16 @@
       "license": "MIT",
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-10"
+    },
+    "skill/modern-web-guidance": {
+      "repo": "https://github.com/GoogleChrome/modern-web-guidance",
+      "ref": "main",
+      "path": "skills/modern-web-guidance",
+      "commit": "4dd968349e54ca45a05dd5c818fb035c9054b022",
+      "hash": "sha256:23220e61d3be31176684f2736b9b456dad5c3414c50601b0dd5434c85c255170",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
     },
     "skill/nsh": {
       "repo": "https://github.com/longbridge/nsh",

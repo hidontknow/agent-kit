@@ -1,0 +1,15 @@
+{
+  "name": "modern-web",
+  "description": "Google Chrome 团队（联合 Edge、Firefox、MDN）的现代 Web 开发 skill（2 个）：modern-web-guidance 在写 HTML / CSS / 前端 JS 前先检索最新的平台最佳实践（View Transitions、容器查询、subgrid、Anchor Positioning、Popover、dialog、表单校验、INP 性能、无障碍等，附浏览器兼容数据），避免 Agent 写出过时的写法和多余的 JS；chrome-extensions 按 Manifest V3 最佳实践开发和发布 Chrome 扩展。",
+  "author": {
+    "name": "hidontknow"
+  },
+  "keywords": [
+    "web",
+    "css",
+    "html",
+    "frontend",
+    "best-practices",
+    "chrome-extensions"
+  ]
+}
