@@ -1,0 +1,32 @@
+{
+  "name": "colab-cli",
+  "description": "Google Colab 官方 CLI：在终端里开 Colab 的 CPU / GPU（T4、L4、G4、A100、H100）/ TPU（v5e1、v6e1）运行时，执行本地 Python 脚本、Jupyter 笔记本或管道输入的代码，开 REPL 或 SSH，上传下载远程文件，挂载 Google Drive、授权 GCP；colab run 一条命令完成开机 → 跑脚本 → 取回输出 → 关机。适合把训练、数据处理交给 AI Agent 在云端 GPU 上跑。",
+  "tags": ["colab", "gpu", "tpu", "jupyter", "cloud", "python", "google"],
+  "repo": "https://github.com/googlecolab/google-colab-cli",
+  "homepage": "https://github.com/googlecolab/google-colab-cli",
+  "docs": "https://github.com/googlecolab/google-colab-cli/tree/main/docs",
+  "license": "Apache-2.0",
+  "bin": "colab",
+  "requires": "Python >= 3.12；只支持 Linux 和 macOS；需要 Google 账号",
+  "install": [
+    {
+      "manager": "uv",
+      "package": "google-colab-cli"
+    },
+    {
+      "manager": "pipx",
+      "package": "google-colab-cli"
+    },
+    {
+      "manager": "pip",
+      "package": "google-colab-cli"
+    }
+  ],
+  "notes": [
+    "配套 skill 已收进本仓库：agent-kit install skill/colab-operator，让 Agent 会用 colab 命令管理会话、跑代码、同步文件",
+    "认证默认用 Google 应用默认凭据（ADC，即 gcloud auth application-default login），也可以 --auth oauth2 走复制粘贴的 OAuth 流程；会话令牌存在 ~/.config/colab-cli/sessions.json",
+    "快速上手：colab new 开机 → echo 'print(1)' | colab exec → colab stop 关机；开 GPU：colab new --gpu A100；一次性任务：colab run --gpu T4 train.py",
+    "GPU / TPU 和 --high-mem 消耗 Colab 计算单元，部分规格需要 Colab Pro / Pro+；colab usage 查看余额，用完记得 colab stop，否则会一直占用",
+    "想在笔记本里交互式让 Agent 写代码，官方另有 Colab MCP Server：github.com/googlecolab/colab-mcp"
+  ]
+}

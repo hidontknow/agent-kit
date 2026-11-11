@@ -121,6 +121,16 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-09"
     },
+    "skill/colab-operator": {
+      "repo": "https://github.com/googlecolab/google-colab-cli",
+      "ref": "main",
+      "path": "skills/colab-operator",
+      "commit": "6045e34cd9b50319ab92e38e200ceaf411d8b96c",
+      "hash": "sha256:03143f263a5711039026915859c903467e71f1f69d3e0887d309d9ad18bd147d",
+      "license": "Apache-2.0",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
     "skill/diagram-design": {
       "repo": "https://github.com/cathrynlavery/diagram-design",
       "ref": "main",

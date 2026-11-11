@@ -173,7 +173,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (39)
+#### skills (40)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -187,6 +187,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`book-to-skill`](skills/book-to-skill) | Converts books and documents (PDF, EPUB, DOCX, HTML, Markdown, plain text, RTF, MOBI/AZW with Calibre) into structured … | [collected](https://github.com/virgiliojr94/book-to-skill) |
 | [`break-ui`](skills/break-ui) | Try to break a piece of UI by feeding it worst-case data — long names, unbreakable emails, one-letter names, missing fi… | [collected](https://github.com/emilkowalski/skills) |
 | [`choreograph`](skills/choreograph) | Coordinate several elements that animate together — decide what moves, in what order, how much they overlap, and what s… | [collected](https://github.com/emilkowalski/skills) |
+| [`colab-operator`](skills/colab-operator) | Operate Google Colab environments via the `colab` CLI. Use when asked to create or manage GPU/TPU sessions, run Python/… | [collected](https://github.com/googlecolab/google-colab-cli) |
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |
 | [`diagram-design`](skills/diagram-design) | Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, t… | [collected](https://github.com/cathrynlavery/diagram-design) |
 | [`emil-design-eng`](skills/emil-design-eng) | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible de… | [collected](https://github.com/emilkowalski/skills) |
@@ -282,13 +283,14 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (9)
+#### clis (10)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`agent-desktop`](clis/agent-desktop.json) | Vercel Labs 的桌面 computer use 工具：通过操作系统无障碍树（macOS AX / Windows UI Automation / Linux AT-SPI）读取并操作桌面应用，输出带 ref 的 JSON，不依赖… | [link](https://github.com/vercel-labs/agent-desktop) |
 | [`browser-harness`](clis/browser-harness.json) | Browser Use 出的浏览器控制工具：通过 Chrome DevTools Protocol 直接驱动你正在用的 Chrome（带登录态），也能连 Browser Use 云浏览器。截图 + 坐标点击、持久化 Python 会话，A… | [link](https://github.com/browser-use/browser-harness) |
 | [`caveman`](clis/caveman.json) | Caveman：让 AI 编码 Agent 少说、少读、少花钱。回答压缩成「原始人」短句（代码、命令、报错原样保留）；日志、JSON、CSV、测试输出在模型读到前先压缩；Auto 按问题难度选模型和推理强度；Blocks 复用 Agent… | [link](https://github.com/JuliusBrussee/caveman) |
+| [`colab-cli`](clis/colab-cli.json) | Google Colab 官方 CLI：在终端里开 Colab 的 CPU / GPU（T4、L4、G4、A100、H100）/ TPU（v5e1、v6e1）运行时，执行本地 Python 脚本、Jupyter 笔记本或管道输入的代码，开… | [link](https://github.com/googlecolab/google-colab-cli) |
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`graphify`](clis/graphify.json) | Graphify：把整个项目（代码、文档、PDF、图片、视频）转成可查询的知识图谱，让 Agent 查图而不是逐个 grep / 读文件。代码用 tree-sitter 在本地解析（约 40 种语言，不调用 LLM），每条边标明是源码里明… | [link](https://github.com/Graphify-Labs/graphify) |
 | [`impeccable`](clis/impeccable.json) | Impeccable：给编码 Agent 的前端设计词汇和审查工具。一个 skill 带 24 个命令：bolder / quieter / distill / colorize / typeset / layout 调整风格，criti… | [link](https://github.com/pbakaus/impeccable) |
