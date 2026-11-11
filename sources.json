@@ -5,71 +5,71 @@
       "repo": "https://github.com/vercel-labs/agent-desktop",
       "ref": "main",
       "path": "skills/agent-desktop",
-      "commit": "b43ac4f6e892ef608f8851428613c4009f0e84c7",
-      "hash": "sha256:22b9fda90def3892f27447a25257a3bcee2b555573b68d803fa71bbe582d14f4",
+      "commit": "ab7dfb218cddc1594aa1d87a5bfcd0ac76da2276",
+      "hash": "sha256:5f34355bd93c05e0fdc36ec62c32fe73c162c6000d19efc2837020cb31f413be",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-06"
+      "updatedAt": "2026-11-10"
     },
     "skill/animate": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/animate",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:ba0f1ee37132a5d1d33122a8ffcb1b0e7c1d9bbfaf342b7547fdb22ac6af383e",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/animate-expo": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/animate-expo",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:83879713a792d9e1b9e25287f4d59f066ed108f3f5baf5f3dd7fdc4c55e55ece",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/animation-performance": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/animation-performance",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:509b2e0f8d67109e1e0ec96cd3ff87e7756b22b664cd8de24c6eacb479cb0616",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/animation-vocabulary": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/animation-vocabulary",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:6ac7c5c1cc9a674dc7c3555634bb0090b6b1610ed45047eaf9b5be13220ef339",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/apple-design": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/apple-design",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:79b75afd2538d394256f38f54b6b3815bb8e26bd5e3b33dbef8e858fd8ecbebf",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/ask-sonner": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/ask-sonner",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:3b0a56217f25ec077cdd60e460fa0df0cd08d39d2d4abd6af24d104cdcb25967",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/book-to-skill": {
       "repo": "https://github.com/virgiliojr94/book-to-skill",
@@ -105,21 +105,21 @@
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/break-ui",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:7cfa3cc21210099fa7ab9b2e7968b9f8674cac8f0f495240715f2561b0846883",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/choreograph": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/choreograph",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:f29db80c10f91b1dd2958fcb4826696cf92a22c6a87a8a1c78d539da5240f5ae",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/colab-operator": {
       "repo": "https://github.com/googlecolab/google-colab-cli",
@@ -135,67 +135,67 @@
       "repo": "https://github.com/cathrynlavery/diagram-design",
       "ref": "main",
       "path": "skills/diagram-design",
-      "commit": "6a7f19fcc132b39b126bea90167679b46b14bcc4",
-      "hash": "sha256:36adb8d9201496e04b440cd78f0aae10ce1369601daf1db057b77d239802ce84",
+      "commit": "f2496acbde9f45ccb55c24d4f75210c8a1355df8",
+      "hash": "sha256:e6101b65eb966977097b82eaca30c2fb96cf06691f8d55b82a4c68ac6ac8c70f",
       "license": "MIT",
       "addedAt": "2026-11-09",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/emil-design-eng": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/emil-design-eng",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:7ff4377666dee33b7dc894f10ea35b60dc0af9f59ab3b0dbe2179c3d531f2468",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/find-animation-opportunities": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/find-animation-opportunities",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:423427212a66d9d1ea2648399c9bd9d7fc7003c196e8c250f9578a8409abd184",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/gestures": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/gestures",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
-      "hash": "sha256:fc5d1d49f3b0dff634678e1ac32328401a63311b1d5b4612cf1af5673e0568ec",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
+      "hash": "sha256:58e3fa1b81b78b610a0bb4ccf880ec7b44643b3c9a2ade44550ad08613864cd4",
       "license": "MIT",
       "addedAt": "2026-11-08",
-      "updatedAt": "2026-11-08"
+      "updatedAt": "2026-11-10"
     },
     "skill/gpui-kit": {
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",
       "path": "skills/gpui-kit",
-      "commit": "7cace79d91dfb71c42822355d73dfbf32f85be7c",
+      "commit": "1f3dcb4a0c86879a135666bfd49ca25d51e20d0d",
       "hash": "sha256:0c8907392c141f17ef311c531b9b88abdb4cb759a5809acc3d83973812e709e1",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/gpui-kit-design-guides": {
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",
       "path": "skills/gpui-kit-design-guides",
-      "commit": "7cace79d91dfb71c42822355d73dfbf32f85be7c",
+      "commit": "1f3dcb4a0c86879a135666bfd49ca25d51e20d0d",
       "hash": "sha256:897081196e86317a0c6572d83db07b8bc25c7c42e39d727a676af099612e5b09",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/humanizer": {
       "repo": "https://github.com/blader/humanizer",
       "path": "",
-      "commit": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
-      "hash": "sha256:e1dc779c9a779c169e286ce513b5ebe26d653c99d26742d9b0137f7ab79535c5",
+      "commit": "b48c832f0f809c1b5658edbb838c2521b72f2413",
+      "hash": "sha256:9cce59af24c3e4d8b5005e8263ef433d8483cce85295170df018e7e55794b740",
       "license": "MIT",
       "exclude": [
         ".github",
@@ -206,17 +206,17 @@
         "CHANGELOG.md"
       ],
       "addedAt": "2026-11-09",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/improve-animations": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/improve-animations",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:c5981691f37bc9000e4be73e98bec618fa24cf84191a488caf4ecf55de841b33",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/mcp-builder": {
       "repo": "https://github.com/anthropics/skills",
@@ -232,81 +232,81 @@
       "repo": "https://github.com/google/skills",
       "ref": "main",
       "path": "skills/developers/migrate-to-rust",
-      "commit": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee",
+      "commit": "793c036c3af827151ada918c5f8cba823ef7086d",
       "hash": "sha256:0ca563d0657a50636c7f00e7e4c71cad4ed3e6bd80ab7d0c6434d5129c1691af",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-08",
+      "updatedAt": "2026-11-10",
       "license": "Apache-2.0"
     },
     "skill/mobile-native": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/mobile-native",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:952dad47a2f9683f93f3afc47bf24b2d4fd11bbca60432667b18d76383fa07b2",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/nsh": {
       "repo": "https://github.com/longbridge/nsh",
       "ref": "main",
       "path": "skills/nsh",
-      "commit": "64ab8a1dad8c419f6c34768d938049619b080f5b",
-      "hash": "sha256:f1b8548d32cc409e5a88d15bf695304860f967e94a4570bbf8beac058a97ca0e",
+      "commit": "d6de5667e2093e55034bbe3e06a65acd470017b8",
+      "hash": "sha256:15c2c71c107bd5c1e59e67b8183db5945d39a44883d8798d5e4cfd83923b21c7",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/nsh-design-guides": {
       "repo": "https://github.com/longbridge/nsh",
       "ref": "main",
       "path": "skills/nsh-design-guides",
-      "commit": "64ab8a1dad8c419f6c34768d938049619b080f5b",
+      "commit": "d6de5667e2093e55034bbe3e06a65acd470017b8",
       "hash": "sha256:541bd86b6c8c6f4cc7d8b5786934a2a578281d394059b418223a6a87e9aa132f",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/pick-ui-library": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/pick-ui-library",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:2fadb0aa9dc8d11763a161b4360993c70976c1092339e0f50f069481e9cda9f5",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/prototype": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/prototype",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:3787e7b2e94c91fe0f80fa362d636c48c1b1fc93a817f71f347edd332a657c71",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/remove-animations": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/remove-animations",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:77d35bce3686731a3dd006339deb04029fb2ce46d6fa650e598ef69874126cf4",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/review-animations": {
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/review-animations",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:31f3c6dd28d9e11d31a66ea040650cf7c23c599a4bba8d0a5f332e12cf4110fe",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/sag": {
       "repo": "https://github.com/Zleap-AI/SAG-Wiki",
@@ -332,41 +332,41 @@
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-checking",
-      "commit": "f9ed9a90b453517d83e787169887c180e17656fd",
+      "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1",
       "hash": "sha256:2bfebdf886764c1d5ff1f8a62cbfc54f3bf73f3fea0f76bf2314ffe2093adaea",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/solidcraft-editing": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-editing",
-      "commit": "f9ed9a90b453517d83e787169887c180e17656fd",
+      "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1",
       "hash": "sha256:a911e00778be0821da90c3134bb26ef26ac43a0fddb964c72cef61af00605d94",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/solidcraft-mechanisms": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-mechanisms",
-      "commit": "f9ed9a90b453517d83e787169887c180e17656fd",
+      "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1",
       "hash": "sha256:fa0525e5e75cf724805eda397f9ea9dbf937960b576aa84c5311dc9c0f91324b",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/solidcraft-modeling": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-modeling",
-      "commit": "f9ed9a90b453517d83e787169887c180e17656fd",
-      "hash": "sha256:38997abde9dd3e486b4d431b5e5e77ca1a4837cda717521b57be9fdd07a6acb6",
+      "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1",
+      "hash": "sha256:75ae32a7213e1f7f37126a2aabd1fe4d256bdaef02668a2c89a3a93f913e420b",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/untangle-codebase": {
       "repo": "https://github.com/caldoai/skills",
@@ -391,11 +391,11 @@
       "repo": "https://github.com/emilkowalski/skills",
       "ref": "main",
       "path": "skills/write-swift",
-      "commit": "5206a950b715e0cabe7043ea0b2304332b91494e",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "hash": "sha256:0a46a8bf742e630f5b1ca2ac6ecb9e50dadf944072a70adbef6640621afd3ce1",
       "license": "MIT",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-09"
+      "updatedAt": "2026-11-10"
     },
     "skill/wxjava-integration-guide": {
       "repo": "https://github.com/binarywang/WxJava",
