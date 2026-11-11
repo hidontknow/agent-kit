@@ -281,6 +281,29 @@
       ]
     },
     {
+      "id": "skill/defuddle",
+      "type": "skill",
+      "name": "defuddle",
+      "description": "Extract clean Markdown from HTML pages with Defuddle CLI.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/defuddle",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "skills/defuddle",
+        "ref": "main",
+        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/diagram-design",
       "type": "skill",
       "name": "diagram-design",
@@ -464,6 +487,52 @@
       ]
     },
     {
+      "id": "skill/json-canvas",
+      "type": "skill",
+      "name": "json-canvas",
+      "description": "Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas files, creating visual canvases, mind maps, flowcharts, or when the user mentions Canvas files in Obsidian.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/json-canvas",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "skills/json-canvas",
+        "ref": "main",
+        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/knap",
+      "type": "skill",
+      "name": "knap",
+      "description": "Render Markdown from templates and structured data using Knap CLI. Use when the user asks to apply a Knap template, turn JSON or CSV data into notes, batch-generate Markdown files, or format Defuddle output into a note.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/knap",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "skills/knap",
+        "ref": "main",
+        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
       "id": "skill/mcp-builder",
       "type": "skill",
       "name": "mcp-builder",
@@ -568,6 +637,75 @@
         "path": "skills/nsh-design-guides",
         "ref": "main",
         "commit": "d6de5667e2093e55034bbe3e06a65acd470017b8"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/obsidian-bases",
+      "type": "skill",
+      "name": "obsidian-bases",
+      "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/obsidian-bases",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "skills/obsidian-bases",
+        "ref": "main",
+        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/obsidian-cli",
+      "type": "skill",
+      "name": "obsidian-cli",
+      "description": "Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and more. Also supports plugin and theme development with commands to reload plugins, run JavaScript, capture errors, take screenshots, and inspect the DOM. Use when the user asks to interact with their Obsidian vault, manage notes, search vault content, perform vault operations from the command line, or develop and debug Obsidian plugins and themes.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/obsidian-cli",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "skills/obsidian-cli",
+        "ref": "main",
+        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/obsidian-markdown",
+      "type": "skill",
+      "name": "obsidian-markdown",
+      "description": "Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific syntax. Use when working with .md files in Obsidian, or when the user mentions wikilinks, callouts, frontmatter, tags, embeds, or Obsidian notes.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/obsidian-markdown",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "skills/obsidian-markdown",
+        "ref": "main",
+        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
       },
       "targets": [
         "claude-code",
@@ -1529,6 +1667,32 @@
       ],
       "origin": "original",
       "path": "plugins/dev-essentials",
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gemini",
+        "gpt"
+      ]
+    },
+    {
+      "id": "plugin/obsidian",
+      "type": "plugin",
+      "name": "obsidian",
+      "description": "Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（6 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、JSON Canvas（.canvas 白板、思维导图）、Obsidian CLI（读写搜索笔记、任务、属性，插件 / 主题开发调试），以及 Defuddle（网页转干净 Markdown）和 Knap（用模板把 JSON / CSV 批量生成笔记）。",
+      "tags": [
+        "obsidian",
+        "markdown",
+        "bases",
+        "canvas",
+        "pkm",
+        "notes"
+      ],
+      "origin": "original",
+      "path": "plugins/obsidian",
+      "bundle": "bundles/obsidian.json",
       "targets": [
         "claude-code",
         "claude-desktop",

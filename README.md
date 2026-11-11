@@ -113,6 +113,7 @@ claude plugin install rust-native-ui@agent-kit     # Rust 原生 UI：NSH 与 GP
 claude plugin install ecc@agent-kit                # ECC 大型增强套件：子 Agent、skill、命令、hooks（直接从上游 affaan-m/ECC 安装）
 claude plugin install prompts-chat@agent-kit       # prompts.chat 提示词库：MCP + 检索 skill（上游仓库子目录中的官方插件）
 claude plugin install utools@agent-kit             # uTools 插件开发（官方 utools-plugin-dev skill）
+claude plugin install obsidian@agent-kit           # Obsidian 笔记：Markdown、Bases、Canvas、CLI、Defuddle、Knap
 ```
 
 在 Claude Code 里也可以用 `/plugin marketplace add hidontknow/agent-kit`，然后 `/plugin install <name>@agent-kit`。`.claude-plugin/marketplace.json` 由 `agent-kit build` 根据 `plugins/` 目录自动生成。
@@ -173,7 +174,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (40)
+#### skills (46)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -189,6 +190,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`choreograph`](skills/choreograph) | Coordinate several elements that animate together — decide what moves, in what order, how much they overlap, and what s… | [collected](https://github.com/emilkowalski/skills) |
 | [`colab-operator`](skills/colab-operator) | Operate Google Colab environments via the `colab` CLI. Use when asked to create or manage GPU/TPU sessions, run Python/… | [collected](https://github.com/googlecolab/google-colab-cli) |
 | [`conventional-commit`](skills/conventional-commit) | Write a Conventional Commits message for the staged changes. Use when the user asks to commit, write a commit message, … | original |
+| [`defuddle`](skills/defuddle) | Extract clean Markdown from HTML pages with Defuddle CLI. | [collected](https://github.com/kepano/obsidian-skills) |
 | [`diagram-design`](skills/diagram-design) | Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, t… | [collected](https://github.com/cathrynlavery/diagram-design) |
 | [`emil-design-eng`](skills/emil-design-eng) | This skill encodes Emil Kowalski's philosophy on UI polish, component design, animation decisions, and the invisible de… | [collected](https://github.com/emilkowalski/skills) |
 | [`find-animation-opportunities`](skills/find-animation-opportunities) | Search a codebase or UI for places that don't animate but should, and reject everything that shouldn't. Read-only; it p… | [collected](https://github.com/emilkowalski/skills) |
@@ -197,11 +199,16 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`gpui-kit-design-guides`](skills/gpui-kit-design-guides) | The normative Design Guides for GPUI Kit desktop applications. Read in full before designing or changing any screen, la… | [collected](https://github.com/longbridge/gpui-kit) |
 | [`humanizer`](skills/humanizer) | Rewrite AI-sounding text so it reads like the writer without changing what it says. Use when editing or reviewing prose… | [collected](https://github.com/blader/humanizer) |
 | [`improve-animations`](skills/improve-animations) | Survey a codebase's animation and motion code as a senior motion advisor, then produce a prioritized audit and self-con… | [collected](https://github.com/emilkowalski/skills) |
+| [`json-canvas`](skills/json-canvas) | Create and edit JSON Canvas files (.canvas) with nodes, edges, groups, and connections. Use when working with .canvas f… | [collected](https://github.com/kepano/obsidian-skills) |
+| [`knap`](skills/knap) | Render Markdown from templates and structured data using Knap CLI. Use when the user asks to apply a Knap template, tur… | [collected](https://github.com/kepano/obsidian-skills) |
 | [`mcp-builder`](skills/mcp-builder) | Guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external service… | [collected](https://github.com/anthropics/skills) |
 | [`migrate-to-rust`](skills/migrate-to-rust) | Clones, analyzes, plans, and migrates legacy codebases (C++, Fortran, Java, Python, C, Shell) from a GitHub URL or loca… | [collected](https://github.com/google/skills) |
 | [`mobile-native`](skills/mobile-native) | Make a web app feel native on a phone — the small CSS and meta-tag fixes that separate "a website in a browser" from so… | [collected](https://github.com/emilkowalski/skills) |
 | [`nsh`](skills/nsh) | Build, run, test and package Native Shell (NSH) apps in Rust, TSX or both. Use for NSH development requests and project… | [collected](https://github.com/longbridge/nsh) |
 | [`nsh-design-guides`](skills/nsh-design-guides) | The normative Design Guides for Native Shell (NSH) apps. Read before designing or changing any screen, layout, spacing,… | [collected](https://github.com/longbridge/nsh) |
+| [`obsidian-bases`](skills/obsidian-bases) | Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base … | [collected](https://github.com/kepano/obsidian-skills) |
+| [`obsidian-cli`](skills/obsidian-cli) | Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and … | [collected](https://github.com/kepano/obsidian-skills) |
+| [`obsidian-markdown`](skills/obsidian-markdown) | Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific sy… | [collected](https://github.com/kepano/obsidian-skills) |
 | [`pick-ui-library`](skills/pick-ui-library) | Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, comman… | [collected](https://github.com/emilkowalski/skills) |
 | [`prototype`](skills/prototype) | Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip… | [collected](https://github.com/emilkowalski/skills) |
 | [`readme-writer`](skills/readme-writer) | Draft or improve a project README by inspecting the repository. Use when the user asks to write, rewrite, or improve a … | original |
@@ -262,7 +269,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`block-dangerous-commands`](hooks/block-dangerous-commands) | Blocks destructive shell commands (rm -rf /, force-push to main, mkfs, dd to disks, curl \| sh …) before the agent runs … | original |
 | [`notify-on-stop`](hooks/notify-on-stop) | Desktop notification when the agent finishes a turn or needs your input (macOS, Linux, Windows). | original |
 
-#### plugins (9)
+#### plugins (10)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -270,6 +277,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`design-engineering`](plugins/design-engineering) | Emil Kowalski 的设计工程 skill（18 个）：动画从零构建、手势交互、编排、性能、审查与精简，Apple 设计原则，移动端原生体验，破坏性测试 UI，多版本原型，UI 库选择，Sonner，现代 Swift。 | bundle（[bundles/design-engineering.json](bundles/design-engineering.json)） |
 | [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。插件自带 agent-d… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
+| [`obsidian`](plugins/obsidian) | Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（6 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、J… | bundle（[bundles/obsidian.json](bundles/obsidian.json)） |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
 | [`rust-native-ui`](plugins/rust-native-ui) | 长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规… | bundle（[bundles/rust-native-ui.json](bundles/rust-native-ui.json)） |
 | [`security`](plugins/security) | 安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。 | bundle（[bundles/security.json](bundles/security.json)） |

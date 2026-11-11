@@ -131,6 +131,16 @@
       "addedAt": "2026-11-11",
       "updatedAt": "2026-11-11"
     },
+    "skill/defuddle": {
+      "repo": "https://github.com/kepano/obsidian-skills",
+      "ref": "main",
+      "path": "skills/defuddle",
+      "commit": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "hash": "sha256:3d52ffc7f4e446cfd52270165364a5cb2746a0b1718e41301d884020124ca235",
+      "license": "MIT",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
     "skill/diagram-design": {
       "repo": "https://github.com/cathrynlavery/diagram-design",
       "ref": "main",
@@ -218,6 +228,26 @@
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-10"
     },
+    "skill/json-canvas": {
+      "repo": "https://github.com/kepano/obsidian-skills",
+      "ref": "main",
+      "path": "skills/json-canvas",
+      "commit": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "hash": "sha256:88737ed26c1485422688b8baf27029a6bd43540afcb15c8bd15ea212fffceec9",
+      "license": "MIT",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    "skill/knap": {
+      "repo": "https://github.com/kepano/obsidian-skills",
+      "ref": "main",
+      "path": "skills/knap",
+      "commit": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "hash": "sha256:50c560c77d298dc7c0b5c4c434b77360f7c4f6996ee2f39391467a5decded4ba",
+      "license": "MIT",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
     "skill/mcp-builder": {
       "repo": "https://github.com/anthropics/skills",
       "ref": "main",
@@ -267,6 +297,36 @@
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
       "updatedAt": "2026-11-10"
+    },
+    "skill/obsidian-bases": {
+      "repo": "https://github.com/kepano/obsidian-skills",
+      "ref": "main",
+      "path": "skills/obsidian-bases",
+      "commit": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "hash": "sha256:961677a303532498416463c804aa55bc9a4b58fd49fa39b4488654363d8c498f",
+      "license": "MIT",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    "skill/obsidian-cli": {
+      "repo": "https://github.com/kepano/obsidian-skills",
+      "ref": "main",
+      "path": "skills/obsidian-cli",
+      "commit": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "hash": "sha256:58fec9d58ebc0c4ddbbdecf49a43fbdb2748b81729382708f84269fa84104564",
+      "license": "MIT",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
+    },
+    "skill/obsidian-markdown": {
+      "repo": "https://github.com/kepano/obsidian-skills",
+      "ref": "main",
+      "path": "skills/obsidian-markdown",
+      "commit": "3ccff5338ea700537839b21900aa5358a0402c98",
+      "hash": "sha256:dd1f743ff755f0b472ec73b4f1f451342f149b58d8556fb07874665ce988368c",
+      "license": "MIT",
+      "addedAt": "2026-11-11",
+      "updatedAt": "2026-11-11"
     },
     "skill/pick-ui-library": {
       "repo": "https://github.com/emilkowalski/skills",
