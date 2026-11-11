@@ -20,7 +20,7 @@
         "repo": "https://github.com/vercel-labs/agent-desktop",
         "path": "skills/agent-desktop",
         "ref": "main",
-        "commit": "ab7dfb218cddc1594aa1d87a5bfcd0ac76da2276"
+        "commit": "54855b6225aec00da4ac65e2d0362fd41cd9fcb3"
       },
       "targets": [
         "claude-code",
@@ -407,7 +407,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "1f3dcb4a0c86879a135666bfd49ca25d51e20d0d"
+        "commit": "b9e15969c5e14b435b631228d26ad20780c292ea"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "1f3dcb4a0c86879a135666bfd49ca25d51e20d0d"
+        "commit": "b9e15969c5e14b435b631228d26ad20780c292ea"
       },
       "targets": [
         "claude-code",
@@ -567,7 +567,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "793c036c3af827151ada918c5f8cba823ef7086d"
+        "commit": "4d0971dd4b8e52c10128bfbe249a57f4f13210aa"
       },
       "targets": [
         "claude-code",
@@ -613,7 +613,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "d6de5667e2093e55034bbe3e06a65acd470017b8"
+        "commit": "0a8f4d99a3778da547501f13ad0bd3e5c06e840e"
       },
       "targets": [
         "claude-code",
@@ -628,7 +628,7 @@
       "id": "skill/nsh-design-guides",
       "type": "skill",
       "name": "nsh-design-guides",
-      "description": "The normative Design Guides for Native Shell (NSH) apps. Read before designing or changing any screen, layout, spacing, visual hierarchy, color, density, component choice, interaction state, overlay, motion, data-heavy view or interface copy in an NSH app, in TSX or Rust, and before reviewing UI work for design quality. Also use when asked what the design rules are, or whether a UI decision follows them.",
+      "description": "The normative Design Guides for Native Shell (NSH) apps. Read before designing or changing any screen, layout, spacing, visual hierarchy, color, density, component choice, interaction state, overlay, motion (transitions, springs, gestures, layout animation, shaders), data-heavy view or interface copy in an NSH app, in TSX or Rust, and before reviewing UI work for design quality. Also use when asked what the design rules are, or whether a UI decision follows them.",
       "tags": [],
       "origin": "collected",
       "path": "skills/nsh-design-guides",
@@ -636,7 +636,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "d6de5667e2093e55034bbe3e06a65acd470017b8"
+        "commit": "0a8f4d99a3778da547501f13ad0bd3e5c06e840e"
       },
       "targets": [
         "claude-code",
@@ -840,7 +840,7 @@
         "repo": "https://github.com/Zleap-AI/SAG-Wiki",
         "path": "cli/skills/sag",
         "ref": "main",
-        "commit": "61f63c660c66f9600bee6c236c3e9b079f90e105"
+        "commit": "49ce53079ed7cfec905fa1cab43a3b572f07a567"
       },
       "targets": [
         "claude-code",
@@ -886,7 +886,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1"
+        "commit": "a23b231a600eb606ddfa4be4deecb4f4f719196d"
       },
       "targets": [
         "claude-code",
@@ -909,7 +909,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1"
+        "commit": "a23b231a600eb606ddfa4be4deecb4f4f719196d"
       },
       "targets": [
         "claude-code",
@@ -932,7 +932,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1"
+        "commit": "a23b231a600eb606ddfa4be4deecb4f4f719196d"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "16c720dfbe8c3480b279aad7949bca83a6f579d1"
+        "commit": "a23b231a600eb606ddfa4be4deecb4f4f719196d"
       },
       "targets": [
         "claude-code",
