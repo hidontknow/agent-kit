@@ -3021,6 +3021,30 @@
       "targets": []
     },
     {
+      "id": "resource/claude-code-templates",
+      "type": "resource",
+      "name": "claude-code-templates",
+      "description": "Claude Code Templates（aitmpl.com）：Claude Code 组件目录，约 2,000 个可一条命令安装的组件——skill 918、子 Agent 422、斜杠命令 288、MCP 119、设置 80、hook 63、mod 50、loop 18、项目模板 14 等；每个 PR 都经过 Claude Code 插件校验和 NVIDIA SkillSpector 安全扫描。配套 CLI 还带本地会话分析面板、对话浏览器和安装体检。",
+      "tags": [
+        "claude-code",
+        "skills",
+        "agents",
+        "commands",
+        "mcp",
+        "hooks",
+        "directory"
+      ],
+      "origin": "linked",
+      "path": "resources/claude-code-templates.json",
+      "kind": "list",
+      "repo": "https://github.com/davila7/claude-code-templates",
+      "homepage": "https://www.aitmpl.com",
+      "docs": "https://docs.aitmpl.com",
+      "license": "目录与 CLI 为 MIT；单个组件以其来源和页面上标注的许可为准",
+      "licenseUrl": "https://github.com/davila7/claude-code-templates/blob/main/LICENSE",
+      "targets": []
+    },
+    {
       "id": "resource/iconmcp",
       "type": "resource",
       "name": "iconmcp",

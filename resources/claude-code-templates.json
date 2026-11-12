@@ -1,0 +1,17 @@
+{
+  "name": "claude-code-templates",
+  "description": "Claude Code Templates（aitmpl.com）：Claude Code 组件目录，约 2,000 个可一条命令安装的组件——skill 918、子 Agent 422、斜杠命令 288、MCP 119、设置 80、hook 63、mod 50、loop 18、项目模板 14 等；每个 PR 都经过 Claude Code 插件校验和 NVIDIA SkillSpector 安全扫描。配套 CLI 还带本地会话分析面板、对话浏览器和安装体检。",
+  "kind": "list",
+  "tags": ["claude-code", "skills", "agents", "commands", "mcp", "hooks", "directory"],
+  "repo": "https://github.com/davila7/claude-code-templates",
+  "homepage": "https://www.aitmpl.com",
+  "docs": "https://docs.aitmpl.com",
+  "license": "目录与 CLI 为 MIT；单个组件以其来源和页面上标注的许可为准",
+  "licenseUrl": "https://github.com/davila7/claude-code-templates/blob/main/LICENSE",
+  "notes": [
+    "交互浏览并安装：npx claude-code-templates@latest；装单个组件：npx claude-code-templates@latest --skill creative-design/frontend-design（也有 --agent、--command、--mcp、--hook、--setting、--mod、--loop、--plugin），加 --yes 跳过确认；终端搜索：--search \"code review\"",
+    "本地工具：--analytics 在 localhost:3333 看会话和用量，--chats 在 localhost:9876 浏览搜索历史对话（只监听本机），--health-check 诊断 Claude Code 安装和项目配置",
+    "组件通过 npx 装进当前项目的 .claude/，不会被本仓库跟踪更新；想长期跟踪的组件，找到它在 GitHub 上的目录，用 agent-kit add <链接> 收进本仓库",
+    "组件来自社区投稿，安装前看一下内容，尤其是 hook、MCP 和会执行命令的组件"
+  ]
+}
