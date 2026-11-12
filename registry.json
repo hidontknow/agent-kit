@@ -2844,6 +2844,28 @@
       "targets": []
     },
     {
+      "id": "tool/stickman-video-director",
+      "type": "tool",
+      "name": "stickman-video-director",
+      "description": "Stickman Video Director：把话题、文章链接或脚本做成火柴人动画视频的 skill（directing-stickman-videos），面向不露脸的 YouTube / TikTok 科普、心理学、科技寓言、奇闻故事类频道。导演模式生成导演提案、分镜、逐段视频提示词和声音设计，由你自己生成片段和剪辑；全自动模式调用已配置的生图、配音工具和本地渲染器，直接交付带配音、字幕、音效和微动画的成片。支持 9:16 / 16:9 / 1:1 画幅和多种旁白语言，内置十余种画风，还能生成配套封面和发布文案。",
+      "tags": [
+        "skills",
+        "video",
+        "animation",
+        "storyboard",
+        "youtube",
+        "content-creation"
+      ],
+      "origin": "linked",
+      "path": "tools/stickman-video-director.json",
+      "category": "skills",
+      "repo": "https://github.com/kaomei/stickman-video-director",
+      "homepage": "https://github.com/kaomei/stickman-video-director",
+      "docs": "https://github.com/kaomei/stickman-video-director/blob/main/README.zh-CN.md",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/superpowers",
       "type": "tool",
       "name": "superpowers",

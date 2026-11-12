@@ -1,0 +1,17 @@
+{
+  "name": "stickman-video-director",
+  "description": "Stickman Video Director：把话题、文章链接或脚本做成火柴人动画视频的 skill（directing-stickman-videos），面向不露脸的 YouTube / TikTok 科普、心理学、科技寓言、奇闻故事类频道。导演模式生成导演提案、分镜、逐段视频提示词和声音设计，由你自己生成片段和剪辑；全自动模式调用已配置的生图、配音工具和本地渲染器，直接交付带配音、字幕、音效和微动画的成片。支持 9:16 / 16:9 / 1:1 画幅和多种旁白语言，内置十余种画风，还能生成配套封面和发布文案。",
+  "category": "skills",
+  "tags": ["skills", "video", "animation", "storyboard", "youtube", "content-creation"],
+  "repo": "https://github.com/kaomei/stickman-video-director",
+  "homepage": "https://github.com/kaomei/stickman-video-director",
+  "docs": "https://github.com/kaomei/stickman-video-director/blob/main/README.zh-CN.md",
+  "license": "MIT",
+  "notes": [
+    "安装：把这句话发给 Agent——「帮我安装这个 Skill：https://github.com/kaomei/stickman-video-director，安装成功后立即读取 SKILL.md，介绍两种模式和所需工具，告诉我还缺什么」；或 npx skills add kaomei/stickman-video-director。skill 在仓库的 skills/directing-stickman-videos/（含约 53 MB 画风素材）",
+    "作者推荐用 Codex 以接近示例效果；Claude Code、Cursor 等能读写文件、运行命令的 Agent 也能用，效果可能有差异",
+    "全自动模式需要 Node.js 20+（本地渲染依赖 @napi-rs/canvas、sharp），以及可用的生图和配音工具（如 GPT 内置生图、Gemini、ElevenLabs），费用按你选择的服务计；先用 npm run doctor 检查配置，制作前会先给脚本和 20 秒有声样片确认",
+    "导演模式只产出分镜和提示词，不需要额外配置",
+    "仓库本身免费开源（MIT），可用于商业变现；生成的人物、素材是否可商用以你使用的生成服务条款为准"
+  ]
+}
