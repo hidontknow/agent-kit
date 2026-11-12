@@ -310,12 +310,13 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`sag-wiki`](clis/sag-wiki.json) | SAG-Wiki：给人和 Agent 用的轻量本地知识库。添加一个文件夹就能检索里面的文档、笔记和代码，建索引和检索都不调用 LLM、不需要向量库（约 200 ms 索引一百万字），用自研的 SAG2 证据检索跨文件找出处；问答答案可追溯… | [link](https://github.com/Zleap-AI/SAG-Wiki) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
 
-#### tools (27)
+#### tools (28)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
 | [`addy-agent-skills`](tools/addy-agent-skills.json) | Addy Osmani 的 Agent Skills：25 个覆盖完整开发流程的工程 skill（想法打磨 → 写规格 → 拆任务 → 增量实现 → 测试调试 → 代码审查 → 上线），包括 spec 驱动开发、TDD、API 设计、前端… | [link](https://github.com/addyosmani/agent-skills) |
 | [`artcraft`](tools/artcraft.json) | ArtCraft：面向艺术家的 AI 图像 / 视频创作 IDE（桌面应用，Rust）。先在 2D 画布构图、在 3D 里摆场景、给角色摆姿势、定好机位，再生成最终画面，比单纯写提示词更可控、可复现；支持局部重绘、重新打光，以及图像、视频… | [link](https://github.com/storytold/artcraft) |
+| [`article2media`](tools/article2media.json) | article2media：把一篇文章或一条视频做成可以直接发布的中文视觉内容——小红书 3:4 图文卡片、手机长图、公众号排版、带本地 AI 配音和逐字字幕的竖屏口播视频，以及白板论证图和黑白漫画。由 10 个可单独使用、自由组合的 s… | [link](https://github.com/threerocks/article2media) |
 | [`bui`](tools/bui.json) | BUI：把 Blender 的用户界面拆成独立的 UI 库，可以在 Python、Rust、JavaScript（React、Svelte）、C / C++ 和 Dear ImGui 里使用；提供 Blender 风格组件（面板、数值滑块… | [link](https://github.com/ppmpreetham/BUI) |
 | [`craft-anything`](tools/craft-anything.json) | 研究任意网站、应用或游戏的实现方式，再让 AI 编码 Agent 按要求重建一个自己的版本（Study → Build → Check → Refine）。纯 Rust 的开源 clean-room 引擎，带桌面应用、CLI 和 MCP … | [link](https://github.com/storytold/craft-anything) |
 | [`cui`](tools/cui.json) | CUI：C 语言的原生 UI 组件库，约 150 个组件（表单、选择器、对话框、表格、命令面板、虚拟化数据表格、看板、日历、甘特图、十几种图表、AI 聊天组件），带弹簧动效和完整键盘支持；一份 C99 代码跑 Windows / macO… | [link](https://github.com/yappologistic/CUI) |

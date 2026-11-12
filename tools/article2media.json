@@ -1,0 +1,26 @@
+{
+  "name": "article2media",
+  "description": "article2media：把一篇文章或一条视频做成可以直接发布的中文视觉内容——小红书 3:4 图文卡片、手机长图、公众号排版、带本地 AI 配音和逐字字幕的竖屏口播视频，以及白板论证图和黑白漫画。由 10 个可单独使用、自由组合的 skill 加一个总入口组成：文章抓取（X 长文、网页、公众号）、视频转文字（抖音、YouTube、B 站、本地音视频）、改写总结、全文翻译、长图、卡片、公众号排版、口播视频、白板、漫画；原文排版一字不改并逐块校验，12 套主题，每种产出自动验收，还能批量处理并记录发布数据对比效果。",
+  "category": "skills",
+  "tags": [
+    "skills",
+    "content-creation",
+    "xiaohongshu",
+    "wechat",
+    "video",
+    "chinese"
+  ],
+  "repo": "https://github.com/threerocks/article2media",
+  "homepage": "https://github.com/threerocks/article2media",
+  "license": "MIT",
+  "claudePlugin": {
+    "repo": "threerocks/article2media"
+  },
+  "notes": [
+    "Claude Code：/plugin install article2media@agent-kit，一次装好全部 11 个 skill；等同官方 claude plugin marketplace add threerocks/article2media 后 claude plugin install article2media@article2media，二选一",
+    "Codex 等其他 Agent 的安装方式见仓库 README 的「安装」一节",
+    "依赖只有 Node.js 22 和 Chrome；做视频另需 ffmpeg。可选能力自动探测、缺了会降级或提示，不会自动安装：出图按 已登录的 Codex CLI → OpenAI → Gemini 依次尝试，配音按 VoxCPM2 → edge-tts → 系统语音，逐字对齐和视频转写用 Whisper。在仓库里运行 bash scripts/install.sh 可检查环境，插件首次使用时也会自检",
+    "用法：直接给 Agent 一个链接，说想要什么形式，例如「把这篇做成小红书卡片」「原文排成公众号」「翻译后排公众号」「这条视频做成口播」；产出在当前目录的 article2media-out/<slug>/ 下；Codex 里用 $article2media、$wechat-layout 这样调用",
+    "合规：随包音色都是按文字描述设计、不模仿真人；成片首帧和 MP4 元数据带 AI 生成标识，产出署原文出处。转载他人文章或视频前先确认授权"
+  ]
+}

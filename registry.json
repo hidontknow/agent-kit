@@ -2301,6 +2301,27 @@
       "targets": []
     },
     {
+      "id": "tool/article2media",
+      "type": "tool",
+      "name": "article2media",
+      "description": "article2media：把一篇文章或一条视频做成可以直接发布的中文视觉内容——小红书 3:4 图文卡片、手机长图、公众号排版、带本地 AI 配音和逐字字幕的竖屏口播视频，以及白板论证图和黑白漫画。由 10 个可单独使用、自由组合的 skill 加一个总入口组成：文章抓取（X 长文、网页、公众号）、视频转文字（抖音、YouTube、B 站、本地音视频）、改写总结、全文翻译、长图、卡片、公众号排版、口播视频、白板、漫画；原文排版一字不改并逐块校验，12 套主题，每种产出自动验收，还能批量处理并记录发布数据对比效果。",
+      "tags": [
+        "skills",
+        "content-creation",
+        "xiaohongshu",
+        "wechat",
+        "video",
+        "chinese"
+      ],
+      "origin": "linked",
+      "path": "tools/article2media.json",
+      "category": "skills",
+      "repo": "https://github.com/threerocks/article2media",
+      "homepage": "https://github.com/threerocks/article2media",
+      "license": "MIT",
+      "targets": []
+    },
+    {
       "id": "tool/bui",
       "type": "tool",
       "name": "bui",
