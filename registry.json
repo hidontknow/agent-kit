@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "7ab77b5a10162068dca484e57b940f7a2e005706"
+        "commit": "e06090d15d1f185a9a9f07b5edfee502c8f24a4b"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "7ab77b5a10162068dca484e57b940f7a2e005706"
+        "commit": "e06090d15d1f185a9a9f07b5edfee502c8f24a4b"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "9b92cc7c2f279b083a378107feb9adb284fbcb5b"
+        "commit": "53b2cfa438dfe23bcd4436121f41db10b19695e6"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "9b92cc7c2f279b083a378107feb9adb284fbcb5b"
+        "commit": "53b2cfa438dfe23bcd4436121f41db10b19695e6"
       },
       "targets": [
         "claude-code",
@@ -909,7 +909,7 @@
         "repo": "https://github.com/Zleap-AI/SAG-Wiki",
         "path": "cli/skills/sag",
         "ref": "main",
-        "commit": "2fb9860d94e4c9e4c39b937bb780d13ffc742284"
+        "commit": "fbdf6a4527c2a3a5485b2e870006a6fc8b842050"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
+        "commit": "fff3f983fc5f4e50479b8d233abea2511746b0fd"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
+        "commit": "fff3f983fc5f4e50479b8d233abea2511746b0fd"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
+        "commit": "fff3f983fc5f4e50479b8d233abea2511746b0fd"
       },
       "targets": [
         "claude-code",
@@ -1024,7 +1024,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
+        "commit": "fff3f983fc5f4e50479b8d233abea2511746b0fd"
       },
       "targets": [
         "claude-code",
