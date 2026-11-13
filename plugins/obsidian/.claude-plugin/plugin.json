@@ -1,6 +1,6 @@
 {
   "name": "obsidian",
-  "description": "Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（6 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、JSON Canvas（.canvas 白板、思维导图）、Obsidian CLI（读写搜索笔记、任务、属性，插件 / 主题开发调试），以及 Defuddle（网页转干净 Markdown）和 Knap（用模板把 JSON / CSV 批量生成笔记）。",
+  "description": "Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（7 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、JSON Canvas（.canvas 白板、思维导图）、Obsidian CLI（读写搜索笔记、任务、属性，插件 / 主题开发调试）、Obsidian Headless（不开桌面版，用 ob 命令在服务器或 CI 上做 Sync 和 Publish），以及 Defuddle（网页转干净 Markdown）和 Knap（用模板把 JSON / CSV 批量生成笔记）。",
   "author": {
     "name": "hidontknow"
   },

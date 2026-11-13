@@ -113,7 +113,7 @@ claude plugin install rust-native-ui@agent-kit     # Rust 原生 UI：NSH 与 GP
 claude plugin install ecc@agent-kit                # ECC 大型增强套件：子 Agent、skill、命令、hooks（直接从上游 affaan-m/ECC 安装）
 claude plugin install prompts-chat@agent-kit       # prompts.chat 提示词库：MCP + 检索 skill（上游仓库子目录中的官方插件）
 claude plugin install utools@agent-kit             # uTools 插件开发（官方 utools-plugin-dev skill）
-claude plugin install obsidian@agent-kit           # Obsidian 笔记：Markdown、Bases、Canvas、CLI、Defuddle、Knap
+claude plugin install obsidian@agent-kit           # Obsidian 笔记：Markdown、Bases、Canvas、CLI、Headless、Defuddle、Knap
 claude plugin install modern-web@agent-kit         # 现代 Web 最佳实践（Chrome / Edge / Firefox / MDN）+ Chrome 扩展开发
 ```
 
@@ -175,7 +175,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 ## 工具目录
 
 <!-- catalog:start -->
-#### skills (48)
+#### skills (49)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -211,6 +211,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`nsh-design-guides`](skills/nsh-design-guides) | The normative Design Guides for Native Shell (NSH) apps. Read before designing or changing any screen, layout, spacing,… | [collected](https://github.com/longbridge/nsh) |
 | [`obsidian-bases`](skills/obsidian-bases) | Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base … | [collected](https://github.com/kepano/obsidian-skills) |
 | [`obsidian-cli`](skills/obsidian-cli) | Interact with Obsidian vaults using the Obsidian CLI to read, create, search, and manage notes, tasks, properties, and … | [collected](https://github.com/kepano/obsidian-skills) |
+| [`obsidian-headless`](skills/obsidian-headless) | Sync and publish Obsidian vaults from the command line with Obsidian Headless (`ob`), without the desktop app. Use when… | [collected](https://github.com/kepano/obsidian-skills) |
 | [`obsidian-markdown`](skills/obsidian-markdown) | Create and edit Obsidian Flavored Markdown with wikilinks, embeds, callouts, properties, and other Obsidian-specific sy… | [collected](https://github.com/kepano/obsidian-skills) |
 | [`pick-ui-library`](skills/pick-ui-library) | Pick the right library for a given frontend task from a curated, opinionated list — numbers, OTP inputs, charts, comman… | [collected](https://github.com/emilkowalski/skills) |
 | [`prototype`](skills/prototype) | Build multiple genuinely different versions of a UI piece you describe, rendered behind a visual picker so you can flip… | [collected](https://github.com/emilkowalski/skills) |
@@ -281,7 +282,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`desktop-automation`](plugins/desktop-automation) | 桌面 computer use：用 Vercel Labs 的 agent-desktop 通过无障碍树查看和操作 macOS / Windows / Linux 桌面应用（skill + MCP server）。插件自带 agent-d… | bundle（[bundles/desktop-automation.json](bundles/desktop-automation.json)） |
 | [`dev-essentials`](plugins/dev-essentials) | Everyday development bundle: /review and /test commands, a test-writer sub-agent and a changelog skill. | original |
 | [`modern-web`](plugins/modern-web) | Google Chrome 团队（联合 Edge、Firefox、MDN）的现代 Web 开发 skill（2 个）：modern-web-guidance 在写 HTML / CSS / 前端 JS 前先检索最新的平台最佳实践（View… | bundle（[bundles/modern-web.json](bundles/modern-web.json)） |
-| [`obsidian`](plugins/obsidian) | Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（6 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、J… | bundle（[bundles/obsidian.json](bundles/obsidian.json)） |
+| [`obsidian`](plugins/obsidian) | Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（7 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、J… | bundle（[bundles/obsidian.json](bundles/obsidian.json)） |
 | [`rust-migration`](plugins/rust-migration) | 把 C/C++、Fortran、Java、Python、Shell 等遗留代码迁移到 Safe Rust：分析、规划、迁移、PGO 与遥测报告。 | bundle（[bundles/rust-migration.json](bundles/rust-migration.json)） |
 | [`rust-native-ui`](plugins/rust-native-ui) | 长桥 Longbridge 的 Rust 原生 UI 开发：Native Shell（NSH，iOS / Android / 桌面 / Web / 终端跨平台）和 GPUI Kit（GPUI 桌面应用框架）各自的编码 skill 与设计规… | bundle（[bundles/rust-native-ui.json](bundles/rust-native-ui.json)） |
 | [`security`](plugins/security) | 安全审计：对代码库、API、服务、CLI、库和守护进程做漏洞审查与安全评估，按信任边界给出证据、复现方式、优先级和最小修复（Cloudflare security-audit skill）。 | bundle（[bundles/security.json](bundles/security.json)） |

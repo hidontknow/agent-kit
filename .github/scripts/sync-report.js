@@ -45,6 +45,9 @@ const summary = [
   results.length ? table(results) : '_no collected items_',
   '',
   ...errors.map((r) => `- ⚠️ \`${r.id}\`: ${r.error || r.action}`),
+  ...(errors.some((r) => r.action === 'removed-upstream')
+    ? ['', '`removed-upstream`: the recorded path no longer exists upstream (moved or deleted); local copies were left untouched. If it moved, re-register it with `agent-kit add <new GitHub URL> --force`; if it was deleted, `agent-kit untrack <item>`.']
+    : []),
 ].join('\n');
 if (process.env.GITHUB_STEP_SUMMARY) fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, summary + '\n');
 console.log(summary);

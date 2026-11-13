@@ -313,9 +313,9 @@
       "path": "skills/defuddle",
       "source": {
         "repo": "https://github.com/kepano/obsidian-skills",
-        "path": "skills/defuddle",
+        "path": "plugins/obsidian/skills/defuddle",
         "ref": "main",
-        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
       },
       "targets": [
         "claude-code",
@@ -519,9 +519,9 @@
       "path": "skills/json-canvas",
       "source": {
         "repo": "https://github.com/kepano/obsidian-skills",
-        "path": "skills/json-canvas",
+        "path": "plugins/obsidian/skills/json-canvas",
         "ref": "main",
-        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
       },
       "targets": [
         "claude-code",
@@ -542,9 +542,9 @@
       "path": "skills/knap",
       "source": {
         "repo": "https://github.com/kepano/obsidian-skills",
-        "path": "skills/knap",
+        "path": "plugins/obsidian/skills/knap",
         "ref": "main",
-        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
       },
       "targets": [
         "claude-code",
@@ -697,15 +697,15 @@
       "id": "skill/obsidian-bases",
       "type": "skill",
       "name": "obsidian-bases",
-      "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, filters, or formulas in Obsidian.",
+      "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card views, kanban boards, filters, or formulas in Obsidian.",
       "tags": [],
       "origin": "collected",
       "path": "skills/obsidian-bases",
       "source": {
         "repo": "https://github.com/kepano/obsidian-skills",
-        "path": "skills/obsidian-bases",
+        "path": "plugins/obsidian/skills/obsidian-bases",
         "ref": "main",
-        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
       },
       "targets": [
         "claude-code",
@@ -726,9 +726,32 @@
       "path": "skills/obsidian-cli",
       "source": {
         "repo": "https://github.com/kepano/obsidian-skills",
-        "path": "skills/obsidian-cli",
+        "path": "plugins/obsidian/skills/obsidian-cli",
         "ref": "main",
-        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
+      },
+      "targets": [
+        "claude-code",
+        "claude-desktop",
+        "codex",
+        "cursor",
+        "windsurf",
+        "gpt"
+      ]
+    },
+    {
+      "id": "skill/obsidian-headless",
+      "type": "skill",
+      "name": "obsidian-headless",
+      "description": "Sync and publish Obsidian vaults from the command line with Obsidian Headless (`ob`), without the desktop app. Use when the user wants to set up or run Obsidian Sync or Obsidian Publish on a server, in CI, or from a terminal, or change a vault's Sync or Publish settings.",
+      "tags": [],
+      "origin": "collected",
+      "path": "skills/obsidian-headless",
+      "source": {
+        "repo": "https://github.com/kepano/obsidian-skills",
+        "path": "plugins/obsidian/skills/obsidian-headless",
+        "ref": "main",
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
       },
       "targets": [
         "claude-code",
@@ -749,9 +772,9 @@
       "path": "skills/obsidian-markdown",
       "source": {
         "repo": "https://github.com/kepano/obsidian-skills",
-        "path": "skills/obsidian-markdown",
+        "path": "plugins/obsidian/skills/obsidian-markdown",
         "ref": "main",
-        "commit": "3ccff5338ea700537839b21900aa5358a0402c98"
+        "commit": "398127736bd4ba42d767b1419fee1a927508370b"
       },
       "targets": [
         "claude-code",
@@ -1753,7 +1776,7 @@
       "id": "plugin/obsidian",
       "type": "plugin",
       "name": "obsidian",
-      "description": "Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（6 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、JSON Canvas（.canvas 白板、思维导图）、Obsidian CLI（读写搜索笔记、任务、属性，插件 / 主题开发调试），以及 Defuddle（网页转干净 Markdown）和 Knap（用模板把 JSON / CSV 批量生成笔记）。",
+      "description": "Obsidian CEO Steph Ango（kepano）出的 Obsidian skill（7 个）：Obsidian 风格 Markdown（双链、嵌入、callout、属性）、Bases（.base 数据库视图、筛选、公式）、JSON Canvas（.canvas 白板、思维导图）、Obsidian CLI（读写搜索笔记、任务、属性，插件 / 主题开发调试）、Obsidian Headless（不开桌面版，用 ob 命令在服务器或 CI 上做 Sync 和 Publish），以及 Defuddle（网页转干净 Markdown）和 Knap（用模板把 JSON / CSV 批量生成笔记）。",
       "tags": [
         "obsidian",
         "markdown",
