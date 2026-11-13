@@ -20,7 +20,7 @@
         "repo": "https://github.com/vercel-labs/agent-desktop",
         "path": "skills/agent-desktop",
         "ref": "main",
-        "commit": "54855b6225aec00da4ac65e2d0362fd41cd9fcb3"
+        "commit": "2f6507051f6790e2645ca1afd5bac5ad187354d7"
       },
       "targets": [
         "claude-code",
@@ -43,7 +43,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/animate",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -66,7 +66,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/animate-expo",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -89,7 +89,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/animation-performance",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -112,7 +112,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/animation-vocabulary",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -135,7 +135,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/apple-design",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -158,7 +158,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/ask-sonner",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -203,7 +203,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/break-ui",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -226,7 +226,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/choreograph",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -272,7 +272,7 @@
         "repo": "https://github.com/googlecolab/google-colab-cli",
         "path": "skills/colab-operator",
         "ref": "main",
-        "commit": "6045e34cd9b50319ab92e38e200ceaf411d8b96c"
+        "commit": "10f442a96fd91143bcbe7675af0272cfba8f2b06"
       },
       "targets": [
         "claude-code",
@@ -330,7 +330,7 @@
       "id": "skill/diagram-design",
       "type": "skill",
       "name": "diagram-design",
-      "description": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm, box plot), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph (arc diagram), UML class, story map, or database schema diagrams as HTML/SVG/PNG, with .drawio, Mermaid, .excalidraw, and PlantUML import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
+      "description": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, steps, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, unit grid, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm, box plot), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph (arc diagram), UML class, story map, database schema, SBGN, requirement traceability, or event modeling diagrams as HTML/SVG/PNG, with .drawio, Mermaid, .excalidraw, and PlantUML import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
       "tags": [],
       "origin": "collected",
       "path": "skills/diagram-design",
@@ -338,7 +338,7 @@
         "repo": "https://github.com/cathrynlavery/diagram-design",
         "path": "skills/diagram-design",
         "ref": "main",
-        "commit": "f2496acbde9f45ccb55c24d4f75210c8a1355df8"
+        "commit": "f6db0decea96de66b901331a0f79a8d4b147ebae"
       },
       "targets": [
         "claude-code",
@@ -361,7 +361,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/emil-design-eng",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -384,7 +384,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/find-animation-opportunities",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -407,7 +407,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/gestures",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "c6e3c8c25c27370af5e3942271674a3cc8f57f4b"
+        "commit": "7ab77b5a10162068dca484e57b940f7a2e005706"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "c6e3c8c25c27370af5e3942271674a3cc8f57f4b"
+        "commit": "7ab77b5a10162068dca484e57b940f7a2e005706"
       },
       "targets": [
         "claude-code",
@@ -498,7 +498,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/improve-animations",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -590,7 +590,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "e5250c8a02c28097b11a0c22d77143f4a0e5a408"
+        "commit": "85f227ea6a8f347d34b76039d826c446f891f75d"
       },
       "targets": [
         "claude-code",
@@ -613,7 +613,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/mobile-native",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "e8d1100685bbc7370e1424ee0d436e9e5ef77c11"
+        "commit": "9b92cc7c2f279b083a378107feb9adb284fbcb5b"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "e8d1100685bbc7370e1424ee0d436e9e5ef77c11"
+        "commit": "9b92cc7c2f279b083a378107feb9adb284fbcb5b"
       },
       "targets": [
         "claude-code",
@@ -774,7 +774,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/pick-ui-library",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -797,7 +797,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/prototype",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -840,7 +840,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/remove-animations",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -863,7 +863,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/review-animations",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
@@ -886,7 +886,7 @@
         "repo": "https://github.com/Zleap-AI/SAG-Wiki",
         "path": "cli/skills/sag",
         "ref": "main",
-        "commit": "283f990a4cf2e00ee8598f0dfa52f961e37dd03b"
+        "commit": "2fb9860d94e4c9e4c39b937bb780d13ffc742284"
       },
       "targets": [
         "claude-code",
@@ -932,7 +932,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "b46bbe07355c9c82d8d0ddc3012d13acce15154a"
+        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "b46bbe07355c9c82d8d0ddc3012d13acce15154a"
+        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "b46bbe07355c9c82d8d0ddc3012d13acce15154a"
+        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "b46bbe07355c9c82d8d0ddc3012d13acce15154a"
+        "commit": "06fcdf53d8d1dec352f59d2fdc7166adb2514e2c"
       },
       "targets": [
         "claude-code",
@@ -1069,7 +1069,7 @@
         "repo": "https://github.com/emilkowalski/skills",
         "path": "skills/write-swift",
         "ref": "main",
-        "commit": "4061b67b8d976a186aca118594f54b638c5f718a"
+        "commit": "f7ce8c02d6e3c8f0d980a44c57bcc41a40254349"
       },
       "targets": [
         "claude-code",
