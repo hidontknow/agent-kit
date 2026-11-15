@@ -20,7 +20,7 @@
         "repo": "https://github.com/vercel-labs/agent-desktop",
         "path": "skills/agent-desktop",
         "ref": "main",
-        "commit": "46d2adf885002633b77d5a9956c9464b24f61431"
+        "commit": "8ffecc1d3d088727f8d84baf4dde0224aab2e8ad"
       },
       "targets": [
         "claude-code",
@@ -272,7 +272,7 @@
         "repo": "https://github.com/googlecolab/google-colab-cli",
         "path": "skills/colab-operator",
         "ref": "main",
-        "commit": "10f442a96fd91143bcbe7675af0272cfba8f2b06"
+        "commit": "02d2321c38dd215b7804eebf78b61d98b856bcd3"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "cf3e84bd367ef96678294153bece8cd7c52f0add"
+        "commit": "8e612899af9bbda0a56ce8fe62579ea03eae9d5d"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "cf3e84bd367ef96678294153bece8cd7c52f0add"
+        "commit": "8e612899af9bbda0a56ce8fe62579ea03eae9d5d"
       },
       "targets": [
         "claude-code",
@@ -567,7 +567,7 @@
         "repo": "https://github.com/anthropics/skills",
         "path": "skills/mcp-builder",
         "ref": "main",
-        "commit": "2c5958ecac7cee2b583967a2c4981d0f4a75c579"
+        "commit": "1780c5e5a552fd4d1c9d6a7b0cab26b0c2bef064"
       },
       "targets": [
         "claude-code",
@@ -590,7 +590,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "67c4dbc8ff6313ef117d938e53bb21315fc281ae"
+        "commit": "e3c591afe426ea585e4c21799e5199d6d47cd1be"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "4bd7d21064046b18df43a1d5e738b2ebff79c63b"
+        "commit": "4cb0ec20c7fb7609d263f0c017d03210288ee1c8"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "4bd7d21064046b18df43a1d5e738b2ebff79c63b"
+        "commit": "4cb0ec20c7fb7609d263f0c017d03210288ee1c8"
       },
       "targets": [
         "claude-code",
@@ -909,7 +909,7 @@
         "repo": "https://github.com/Zleap-AI/SAG-Wiki",
         "path": "cli/skills/sag",
         "ref": "main",
-        "commit": "3c02c51d22d08c633db343143ab44a1d0c51cdd8"
+        "commit": "16288e78ac5163f75cfe04d471abb96f09e5fc6f"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "5a986bf6bbd45829ab3710ce379249e46bcc7611"
+        "commit": "be6ecb06420d501a8362d6de3d0de7ef324dafb9"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "5a986bf6bbd45829ab3710ce379249e46bcc7611"
+        "commit": "be6ecb06420d501a8362d6de3d0de7ef324dafb9"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "5a986bf6bbd45829ab3710ce379249e46bcc7611"
+        "commit": "be6ecb06420d501a8362d6de3d0de7ef324dafb9"
       },
       "targets": [
         "claude-code",
@@ -1024,7 +1024,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "5a986bf6bbd45829ab3710ce379249e46bcc7611"
+        "commit": "be6ecb06420d501a8362d6de3d0de7ef324dafb9"
       },
       "targets": [
         "claude-code",
@@ -1115,7 +1115,7 @@
         "repo": "https://github.com/binarywang/WxJava",
         "path": "skills/wxjava-integration-guide",
         "ref": "develop",
-        "commit": "fe562152ed51aaf0a0740709d7310a3e7638c4c6"
+        "commit": "a311095b66829b696e03c90f4bb7739ddfcb1f4c"
       },
       "targets": [
         "claude-code",
