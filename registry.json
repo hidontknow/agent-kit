@@ -2190,6 +2190,36 @@
       ]
     },
     {
+      "id": "cli/open-code-review",
+      "type": "cli",
+      "name": "open-code-review",
+      "description": "OpenCodeReview（阿里巴巴开源）：AI 代码审查 CLI，阿里内部用了两年的官方代码审查助手。读取 Git diff，按文件特征精确挑选、分组和匹配审查规则（确定性工程保证不漏文件、行号不漂移），再由带工具调用的 Agent 读全文件、搜代码库，生成逐行定位的结构化审查意见。官方基准（50 个开源仓库、200 个真实 PR）显示，同模型下比 Claude Code 加 skill 的精度和 F1 更高，token 只用约 1/9。支持工作区改动、分支区间、单个提交和整仓扫描，另有 GitHub Action 在 PR 上发行内评论。",
+      "tags": [
+        "code-review",
+        "ai",
+        "git",
+        "ci",
+        "github-action",
+        "claude-code"
+      ],
+      "origin": "linked",
+      "path": "clis/open-code-review.json",
+      "repo": "https://github.com/alibaba/open-code-review",
+      "homepage": "https://open-codereview.ai",
+      "docs": "https://open-codereview.ai/docs/installation",
+      "license": "Apache-2.0",
+      "bin": "ocr",
+      "install": [
+        {
+          "manager": "npm",
+          "package": "@alibaba-group/open-code-review"
+        }
+      ],
+      "targets": [
+        "system"
+      ]
+    },
+    {
       "id": "cli/rea",
       "type": "cli",
       "name": "rea",

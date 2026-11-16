@@ -1,0 +1,29 @@
+{
+  "name": "open-code-review",
+  "description": "OpenCodeReview（阿里巴巴开源）：AI 代码审查 CLI，阿里内部用了两年的官方代码审查助手。读取 Git diff，按文件特征精确挑选、分组和匹配审查规则（确定性工程保证不漏文件、行号不漂移），再由带工具调用的 Agent 读全文件、搜代码库，生成逐行定位的结构化审查意见。官方基准（50 个开源仓库、200 个真实 PR）显示，同模型下比 Claude Code 加 skill 的精度和 F1 更高，token 只用约 1/9。支持工作区改动、分支区间、单个提交和整仓扫描，另有 GitHub Action 在 PR 上发行内评论。",
+  "tags": ["code-review", "ai", "git", "ci", "github-action", "claude-code"],
+  "repo": "https://github.com/alibaba/open-code-review",
+  "homepage": "https://open-codereview.ai",
+  "docs": "https://open-codereview.ai/docs/installation",
+  "license": "Apache-2.0",
+  "bin": "ocr",
+  "requires": "Git >= 2.41",
+  "install": [
+    {
+      "manager": "npm",
+      "package": "@alibaba-group/open-code-review"
+    }
+  ],
+  "claudePlugin": {
+    "repo": "alibaba/open-code-review",
+    "path": "plugins/open-code-review/claude-code",
+    "name": "open-code-review"
+  },
+  "notes": [
+    "先配置模型：ocr config provider 选择服务商并填 API key，ocr config model 选模型（用的是 OCR 自己的配置，不是 Claude Pro/Max 登录）；不想配置可以用委托模式，让当前 Agent 自己的模型来审",
+    "常用：ocr review 审工作区全部改动；ocr review --from main --to feature 审分支区间；ocr review --commit <sha> 审单个提交；ocr scan 审整仓或 --path 指定目录；--format json --output result.json 输出给 Agent；ocr session list 后用 --resume 续审",
+    "委托模式：ocr delegate preview / ocr delegate rule <文件…>，OCR 只负责挑文件和匹配规则，审查由宿主 Agent 完成，不需要配置模型",
+    "Claude Code 插件（/open-code-review:review 用 OCR 配置的模型，/open-code-review:delegate-review 用 Claude Code 自己的模型）：/plugin install open-code-review@agent-kit，等同官方 /plugin marketplace add alibaba/open-code-review 后 /plugin install open-code-review@open-code-review，二选一；插件同样需要先装 CLI",
+    "Codex、Copilot CLI、OpenCode、Kimi Code 的插件安装见仓库 plugins/open-code-review/README.md；GitHub Action 见仓库 action.yml（在 PR 上发行内评论和汇总）"
+  ]
+}

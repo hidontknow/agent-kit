@@ -296,7 +296,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`agent-context`](scripts/agent-context.sh) | Print a compact project snapshot (tree, manifests, recent commits) to paste into any AI chat. | original |
 | [`git-prune-branches`](scripts/git-prune-branches.sh) | Delete local git branches whose upstream is gone or that are merged into the default branch. | original |
 
-#### clis (10)
+#### clis (11)
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
@@ -307,6 +307,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 | [`goofish-cli`](clis/goofish-cli.json) | 闲鱼（Goofish/Xianyu）自动化 CLI，原生支持 MCP：商品发布/下架/查询、图片上传、AI 类目识别、IM 实时收发、风控限流，内置 5 个 Claude Skills。 | [link](https://github.com/fancyboi999/goofish-cli) |
 | [`graphify`](clis/graphify.json) | Graphify：把整个项目（代码、文档、PDF、图片、视频）转成可查询的知识图谱，让 Agent 查图而不是逐个 grep / 读文件。代码用 tree-sitter 在本地解析（约 40 种语言，不调用 LLM），每条边标明是源码里明… | [link](https://github.com/Graphify-Labs/graphify) |
 | [`impeccable`](clis/impeccable.json) | Impeccable：给编码 Agent 的前端设计词汇和审查工具。一个 skill 带 24 个命令：bolder / quieter / distill / colorize / typeset / layout 调整风格，criti… | [link](https://github.com/pbakaus/impeccable) |
+| [`open-code-review`](clis/open-code-review.json) | OpenCodeReview（阿里巴巴开源）：AI 代码审查 CLI，阿里内部用了两年的官方代码审查助手。读取 Git diff，按文件特征精确挑选、分组和匹配审查规则（确定性工程保证不漏文件、行号不漂移），再由带工具调用的 Agent … | [link](https://github.com/alibaba/open-code-review) |
 | [`rea`](clis/rea.json) | REA（Reverse Engineer Anything）：给 Agent 用的逆向工程工具，一个 MCP 覆盖原生二进制、JavaScript / Electron 应用、.NET 程序集和网站，本地分析并给出每个结论的证据和局限；也… | [link](https://github.com/morluto/rea) |
 | [`sag-wiki`](clis/sag-wiki.json) | SAG-Wiki：给人和 Agent 用的轻量本地知识库。添加一个文件夹就能检索里面的文档、笔记和代码，建索引和检索都不调用 LLM、不需要向量库（约 200 ms 索引一百万字），用自研的 SAG2 证据检索跨文件找出处；问答答案可追溯… | [link](https://github.com/Zleap-AI/SAG-Wiki) |
 | [`wxa-runner`](clis/wxa-runner.json) | wxa-runner：在普通浏览器里用微信官方基础库运行小程序（原生小程序目录，或 uni-app / Taro 编译产物），渲染、组件、setData、生命周期都和真机一致；用于本地调试（Chrome DevTools、热更新、地址直达… | [link](https://github.com/open-wxa/wxa-runner) |
