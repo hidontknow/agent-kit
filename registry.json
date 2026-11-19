@@ -180,7 +180,7 @@
       "source": {
         "repo": "https://github.com/virgiliojr94/book-to-skill",
         "path": "",
-        "commit": "e7bb659d3261491c8b28793dcb9102fa64a46c22"
+        "commit": "8ea549fa455bec7656802b3473ac827a2e887cfd"
       },
       "targets": [
         "claude-code",
@@ -272,7 +272,7 @@
         "repo": "https://github.com/googlecolab/google-colab-cli",
         "path": "skills/colab-operator",
         "ref": "main",
-        "commit": "602462f2192b814b9609b3f3b6dfa84a105f2ec3"
+        "commit": "0abf82dadc2b95c02b6ab2c08b1b4d664e616fbb"
       },
       "targets": [
         "claude-code",
@@ -330,7 +330,7 @@
       "id": "skill/diagram-design",
       "type": "skill",
       "name": "diagram-design",
-      "description": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, steps, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, unit grid, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm, box plot), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph (arc diagram), UML class, story map, database schema, SBGN, requirement traceability, or event modeling diagrams as HTML/SVG/PNG, with .drawio, Mermaid, .excalidraw, and PlantUML import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
+      "description": "Create branded architecture, architecture delta, IT current-state, flowchart, sequence, state machine, ER/data model, steps, timeline, swimlane, quadrant, radar/spider, polar chart (polar/radial lollipop), loop/flywheel, nested, tree, org chart, layer stack, exploded axonometric, axonometric plan, Venn, pyramid/funnel, treemap and marimekko, unit grid, heatmap, bar and dumbbell, waterfall, line (slopegraph, ridgeline, streamgraph, bump), Gantt and scatter charts (bubble, beeswarm, box plot), high-level, process, medallion, data flow, DP integration, DP security matrix, Sankey, fishbone, Wardley map, kanban, user journey, service blueprint, deployment, dependency graph (arc diagram), UML class, story map, database schema, SBGN, requirement traceability, event modeling, or schedule network diagrams as HTML/SVG/PNG, with .drawio, Mermaid, .excalidraw, and PlantUML import, plus lifecycle phase maps, block decomposition trees, and onboarding guidance.",
       "tags": [],
       "origin": "collected",
       "path": "skills/diagram-design",
@@ -338,7 +338,7 @@
         "repo": "https://github.com/cathrynlavery/diagram-design",
         "path": "skills/diagram-design",
         "ref": "main",
-        "commit": "f6db0decea96de66b901331a0f79a8d4b147ebae"
+        "commit": "d74d8c2d0c78a9e1efd43137f6a9a51182a8b5f0"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "3fbbaec1cd13fa558d996f02721850093898e95e"
+        "commit": "9bcad2367f095d85b4e1f64ca4b47eec1d13e1f5"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "3fbbaec1cd13fa558d996f02721850093898e95e"
+        "commit": "9bcad2367f095d85b4e1f64ca4b47eec1d13e1f5"
       },
       "targets": [
         "claude-code",
@@ -590,7 +590,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "739e294750207dcdb90e2a1b74c7517411a974d6"
+        "commit": "06fff9e3edb7fc3c115a1769406047fcaf0a6289"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "0713ce96dd9d4bbb8d16bc3f7892bfbebb6e82cb"
+        "commit": "e901163fa6185fb7a7832898d7991c55ac0674df"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "0713ce96dd9d4bbb8d16bc3f7892bfbebb6e82cb"
+        "commit": "e901163fa6185fb7a7832898d7991c55ac0674df"
       },
       "targets": [
         "claude-code",
@@ -909,7 +909,7 @@
         "repo": "https://github.com/Zleap-AI/SAG-Wiki",
         "path": "cli/skills/sag",
         "ref": "main",
-        "commit": "92cec195f9262f8506a3ae4b02ddce24b18635ac"
+        "commit": "a5aaf6592583f3a13925abc716fccda745384b93"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "84418862b0c0f5432f83216fd26f6dda96d87dd5"
+        "commit": "963c98314301473464ab5bf7f144c0c8facd9103"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "84418862b0c0f5432f83216fd26f6dda96d87dd5"
+        "commit": "963c98314301473464ab5bf7f144c0c8facd9103"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "84418862b0c0f5432f83216fd26f6dda96d87dd5"
+        "commit": "963c98314301473464ab5bf7f144c0c8facd9103"
       },
       "targets": [
         "claude-code",
@@ -1024,7 +1024,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "84418862b0c0f5432f83216fd26f6dda96d87dd5"
+        "commit": "963c98314301473464ab5bf7f144c0c8facd9103"
       },
       "targets": [
         "claude-code",
