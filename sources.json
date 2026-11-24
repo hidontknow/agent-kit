@@ -5,11 +5,11 @@
       "repo": "https://github.com/vercel-labs/agent-desktop",
       "ref": "main",
       "path": "skills/agent-desktop",
-      "commit": "8f4b69003d586afb69e3a2b91666f84e2c720c30",
+      "commit": "ce2ddf07226346818de2a1c6bae9869cfad142df",
       "hash": "sha256:b0b930dbb7c3587c9e32ef3e15b134fc1f030b399cf62c71a528bac4929a2fac",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/animate": {
       "repo": "https://github.com/emilkowalski/skills",
@@ -125,21 +125,21 @@
       "repo": "https://github.com/GoogleChrome/modern-web-guidance",
       "ref": "main",
       "path": "skills/chrome-extensions",
-      "commit": "64a6d708f5a43f2cd3fde5d4d7db3905ba1bdf65",
+      "commit": "2b4aa13a72dd47cd135b06ce5abfccd92e19b24f",
       "hash": "sha256:9b6dc78168756a2d399967433f31621e5200357879bb26c4187961aa538a3235",
       "license": "Apache-2.0",
       "addedAt": "2026-11-11",
-      "updatedAt": "2026-11-17"
+      "updatedAt": "2026-11-24"
     },
     "skill/colab-operator": {
       "repo": "https://github.com/googlecolab/google-colab-cli",
       "ref": "main",
       "path": "skills/colab-operator",
-      "commit": "0abf82dadc2b95c02b6ab2c08b1b4d664e616fbb",
+      "commit": "33eacf1116968ef4e053b15f23cddd54d5288d02",
       "hash": "sha256:e008bbaf405812bdb87191687af97815dafab58b69235c17d9ac5bdc29a8bc36",
       "license": "Apache-2.0",
       "addedAt": "2026-11-11",
-      "updatedAt": "2026-11-19"
+      "updatedAt": "2026-11-24"
     },
     "skill/defuddle": {
       "repo": "https://github.com/kepano/obsidian-skills",
@@ -155,11 +155,11 @@
       "repo": "https://github.com/cathrynlavery/diagram-design",
       "ref": "main",
       "path": "skills/diagram-design",
-      "commit": "ff6fffa70a5cc520aa73b2ff77e1dcc0f5cc3733",
-      "hash": "sha256:e5bd3caf77881fa440bbd95ad2febbaf0e2819a353a9916637d1d3172342cab1",
+      "commit": "0eeda75a708f419560d5e032693618bb9954f17b",
+      "hash": "sha256:f668ddfbb33fe4b523842fecf28e254a3f6dcb9fa45e7f1041281afd8348f0bf",
       "license": "MIT",
       "addedAt": "2026-11-09",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/emil-design-eng": {
       "repo": "https://github.com/emilkowalski/skills",
@@ -195,21 +195,21 @@
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",
       "path": "skills/gpui-kit",
-      "commit": "48e53b11762a7ac37835acca889a924c569ff681",
+      "commit": "9d90e5a9b612c53c158d682c5ea44af27c9e118b",
       "hash": "sha256:d14eecc90199bd2a9eb21c19adf8efb14ca37dff559ae11fdfad315b3c47b1c6",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/gpui-kit-design-guides": {
       "repo": "https://github.com/longbridge/gpui-kit",
       "ref": "main",
       "path": "skills/gpui-kit-design-guides",
-      "commit": "48e53b11762a7ac37835acca889a924c569ff681",
+      "commit": "9d90e5a9b612c53c158d682c5ea44af27c9e118b",
       "hash": "sha256:6455128a4503a36cdfaf47a2b7e86c54e599600132e76a6575d08ee3f0536703",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/humanizer": {
       "repo": "https://github.com/blader/humanizer",
@@ -272,10 +272,10 @@
       "repo": "https://github.com/google/skills",
       "ref": "main",
       "path": "skills/developers/migrate-to-rust",
-      "commit": "4bb21ebfa085f6307d5d62bc21765e1d3433f11d",
+      "commit": "12c78e848e4800d701bdf8baa836e3eb111f628d",
       "hash": "sha256:0ca563d0657a50636c7f00e7e4c71cad4ed3e6bd80ab7d0c6434d5129c1691af",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-21",
+      "updatedAt": "2026-11-24",
       "license": "Apache-2.0"
     },
     "skill/mobile-native": {
@@ -292,31 +292,31 @@
       "repo": "https://github.com/GoogleChrome/modern-web-guidance",
       "ref": "main",
       "path": "skills/modern-web-guidance",
-      "commit": "64a6d708f5a43f2cd3fde5d4d7db3905ba1bdf65",
-      "hash": "sha256:856a62f4c85a37fee26df53c10731f49fe7b1937110e2b6b7e5b15531971fa04",
+      "commit": "2b4aa13a72dd47cd135b06ce5abfccd92e19b24f",
+      "hash": "sha256:37facf1997c7d7ada847008524566c9871ffcdb6b5df18fdd8e9f33e944e3a24",
       "license": "Apache-2.0",
       "addedAt": "2026-11-11",
-      "updatedAt": "2026-11-17"
+      "updatedAt": "2026-11-24"
     },
     "skill/nsh": {
       "repo": "https://github.com/longbridge/nsh",
       "ref": "main",
       "path": "skills/nsh",
-      "commit": "5f66febdcc70230949250615b0ad0529462da1de",
-      "hash": "sha256:d8c02bd7aedea64e43bc381552ce40b34b109754ebd1323afb17b8cf625fe13d",
+      "commit": "84980b16afbffd8101cf708a02aa93082334b14b",
+      "hash": "sha256:f083f434f4f3497373bf793d14e4ca1fb107b732260a4068fe3230201101e5ad",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/nsh-design-guides": {
       "repo": "https://github.com/longbridge/nsh",
       "ref": "main",
       "path": "skills/nsh-design-guides",
-      "commit": "5f66febdcc70230949250615b0ad0529462da1de",
-      "hash": "sha256:cc5165e8c47f9c9626a767aa96ea07d29717c0ac52e9bd7bae5bc01e7d9303a9",
+      "commit": "84980b16afbffd8101cf708a02aa93082334b14b",
+      "hash": "sha256:33631dd0df467db77d2313559795bc9febc2f865f381e4f1a3c338701931cae8",
       "license": "Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/obsidian-bases": {
       "repo": "https://github.com/kepano/obsidian-skills",
@@ -402,11 +402,11 @@
       "repo": "https://github.com/Zleap-AI/SAG-Wiki",
       "ref": "main",
       "path": "cli/skills/sag",
-      "commit": "c346b7f7910080e982638e4bc0cf0f8e711a890d",
+      "commit": "b6940ac834b3b1ec651c0b49dc1b0c45d4d74c4a",
       "hash": "sha256:3776ccde8eeeb459650735bccea8807f9fc92d6b71b39c6af6d4b238b26e227d",
       "license": "MIT",
       "addedAt": "2026-11-10",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/security-audit": {
       "repo": "https://github.com/cloudflare/security-audit-skill",
@@ -422,41 +422,41 @@
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-checking",
-      "commit": "85aa7201ccafe61518608beb561ff8c5f6295fba",
-      "hash": "sha256:3b70a571c6335e95b7e123ae7f437adfbc4977634971e27a3431e5634bf810fb",
+      "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00",
+      "hash": "sha256:f78dd3071ba10a1db04422f2b43324dd3af15b7dcc689ccbb74eed21bf572856",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/solidcraft-editing": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-editing",
-      "commit": "85aa7201ccafe61518608beb561ff8c5f6295fba",
+      "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00",
       "hash": "sha256:a911e00778be0821da90c3134bb26ef26ac43a0fddb964c72cef61af00605d94",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/solidcraft-mechanisms": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-mechanisms",
-      "commit": "85aa7201ccafe61518608beb561ff8c5f6295fba",
+      "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00",
       "hash": "sha256:1981c1707ffc04bca3cd57231263d32b478aa34808b321d86ac51eeebe226b62",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/solidcraft-modeling": {
       "repo": "https://github.com/tangency-labs/solidcraft",
       "ref": "main",
       "path": "skills/solidcraft-modeling",
-      "commit": "85aa7201ccafe61518608beb561ff8c5f6295fba",
-      "hash": "sha256:d7a459d980553c7865ccdbb13c0074317cb04571c7075616d45cfedea872f72d",
+      "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00",
+      "hash": "sha256:091672832b7fe6b5c96ccbc9186099ff13962ab037de0c6fe5cdb4c94503ca6a",
       "license": "MIT OR Apache-2.0",
       "addedAt": "2026-11-06",
-      "updatedAt": "2026-11-23"
+      "updatedAt": "2026-11-24"
     },
     "skill/untangle-codebase": {
       "repo": "https://github.com/caldoai/skills",
