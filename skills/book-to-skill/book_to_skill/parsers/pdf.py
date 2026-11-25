@@ -123,11 +123,12 @@ def extract_with_pdftotext(pdf_path: str) -> str | None:
 
 
 def looks_image_only(pdf_path: str, pages: int = 5) -> bool:
-    """True when the first `pages` pages yield no extractable text — the signature
-    of a scanned/image-only PDF. Cheap pre-flight so a scan fails in a second
-    instead of after the whole extraction chain has run. Best-effort: without
-    pdftotext it reports False and the normal chain (plus the final empty-text
-    guard) still applies."""
+    """Best-effort preflight for a PDF with no extractable text.
+
+    The initial sample is cheap. A textless prefix does not establish that a
+    longer document is image-only, so check the remaining pages before stopping.
+    Unknown counts and failed probes defer to the normal extraction chain.
+    """
     if not shutil.which("pdftotext"):
         return False
     try:
@@ -136,9 +137,59 @@ def looks_image_only(pdf_path: str, pages: int = 5) -> bool:
             capture_output=True, text=True, timeout=30,
             encoding="utf-8", errors="replace",
         )
-        return result.returncode == 0 and not result.stdout.strip()
+        if result.returncode != 0 or result.stdout.strip():
+            return False
+        total_pages = count_pages(pdf_path)
+        if total_pages <= 0:
+            return False
+        if total_pages <= pages:
+            return True
+        remaining = subprocess.run(
+            ["pdftotext", "-f", str(pages + 1), "-enc", "UTF-8", os.path.abspath(pdf_path), "-"],
+            capture_output=True, text=True, timeout=30,
+            encoding="utf-8", errors="replace",
+        )
+        return remaining.returncode == 0 and not remaining.stdout.strip()
     except Exception:
         return False
+
+
+def count_pdf_images(pdf_path: str) -> int | None:
+    """Count distinct embedded images (``pdfimages -list``); text extraction
+    reads none of them.
+
+    An image object drawn on many pages (a logo) counts once. Inline images have
+    no object id, so each occurrence counts. Stencil images (1-bit
+    ``/ImageMask`` images, common for bilevel scans) count; ``mask`` and
+    ``smask`` rows belong to another image and do not. Returns None when
+    pdfimages is missing or fails, so the count stays unknown rather than
+    reading as zero."""
+    if not shutil.which("pdfimages"):
+        return None
+    try:
+        result = subprocess.run(
+            ["pdfimages", "-list", os.path.abspath(pdf_path)],
+            capture_output=True, text=True, timeout=30,
+            encoding="utf-8", errors="replace",
+        )
+    except Exception as e:
+        print(f"  [warn] pdfimages -list failed: {type(e).__name__}: {e}", file=sys.stderr)
+        return None
+    if result.returncode != 0:
+        return None
+    objects = set()
+    inline = 0
+    # Two header lines, then: page num type width height color comp bpc enc
+    # interp object-id generation ...; inline images print "[inline]" as the id.
+    for line in result.stdout.splitlines()[2:]:
+        fields = line.split()
+        if len(fields) < 11 or fields[2] not in ("image", "stencil"):
+            continue
+        if fields[10] == "[inline]":
+            inline += 1
+        elif len(fields) > 11:
+            objects.add((fields[10], fields[11]))
+    return len(objects) + inline
 
 
 def extract_with_pypdf(pdf_path: str) -> str | None:
@@ -308,9 +359,10 @@ def count_pages(pdf_path: str) -> int:
         try:
             pdf_path = os.path.abspath(pdf_path)
             result = subprocess.run(
-                ["pdfinfo", pdf_path],
+                ["pdfinfo", "-enc", "UTF-8", pdf_path],
                 capture_output=True,
                 text=True,
+                encoding="utf-8", errors="replace",
                 timeout=15,
             )
             for line in result.stdout.splitlines():

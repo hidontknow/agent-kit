@@ -8,7 +8,7 @@ import sys
 import zipfile
 from urllib.parse import unquote, urlsplit
 
-from book_to_skill.parsers.html import _HTMLTextExtractor
+from book_to_skill.parsers.html import _beautiful_soup_to_text, _HTMLTextExtractor
 
 
 _IMAGE_EXTENSIONS = (
@@ -28,6 +28,23 @@ _IMAGE_EXTENSIONS = (
 # permits an explicit namespace prefix (for example ``<opf:item>``). Keep the
 # existing tolerant, regex-based fallback while accepting that equivalent form.
 _OPF_ELEMENT_PREFIX = r"(?:[A-Za-z_][\w.-]*:)?"
+
+
+def _without_xml_comments(text: str) -> str:
+    """Skip complete comments before the tolerant XML tag scans."""
+    parts = []
+    cursor = 0
+    while True:
+        start = text.find("<!--", cursor)
+        if start < 0:
+            break
+        end = text.find("-->", start + 4)
+        if end < 0:
+            break  # Preserve the existing best-effort behavior on malformed XML.
+        parts.append(text[cursor:start])
+        cursor = end + 3
+    parts.append(text[cursor:])
+    return "".join(parts)
 
 
 def _decode_container_reference(match: re.Match) -> str:
@@ -59,6 +76,8 @@ def _decode_epub_xml(data: bytes) -> str:
 
 def _opf_opening_tags(opf_text: str, local_name: str) -> list[str]:
     """Return opening tags for an OPF element, with or without a prefix."""
+    # Commented-out manifest/spine entries are not publication resources.
+    opf_text = _without_xml_comments(opf_text)
     return re.findall(
         rf"<{_OPF_ELEMENT_PREFIX}{re.escape(local_name)}\b[^>]*?/?>",
         opf_text,
@@ -95,7 +114,7 @@ def extract_with_ebooklib(epub_path: str) -> str | None:
         parts = []
         for item in ordered_items:
             soup = BeautifulSoup(item.get_content(), "html.parser")
-            parts.append(soup.get_text(separator="\n"))
+            parts.append(_beautiful_soup_to_text(soup))
         return "\n\n".join(parts)
     except ImportError:
         return None
@@ -112,7 +131,7 @@ def _find_opf_path(zf: zipfile.ZipFile) -> str | None:
     """
     # Spec-defined: read container.xml for the rootfile path
     try:
-        container = _decode_epub_xml(zf.read("META-INF/container.xml"))
+        container = _without_xml_comments(_decode_epub_xml(zf.read("META-INF/container.xml")))
         match = re.search(r'full-path[ \t\r\n]*=[ \t\r\n]*["\']([^"\']+\.opf)["\']', container)
         if match:
             # Decode XML's predefined and numeric references once. Restrict the

@@ -180,7 +180,7 @@
       "source": {
         "repo": "https://github.com/virgiliojr94/book-to-skill",
         "path": "",
-        "commit": "57f3db51ff338edfd940a255b885c60ac90e40fa"
+        "commit": "79b3fa66d249635453f8e9bc517fe033ac9d5a91"
       },
       "targets": [
         "claude-code",
@@ -272,7 +272,7 @@
         "repo": "https://github.com/googlecolab/google-colab-cli",
         "path": "skills/colab-operator",
         "ref": "main",
-        "commit": "33eacf1116968ef4e053b15f23cddd54d5288d02"
+        "commit": "5cafdfaef456cfc7b3e218638c506df8f7088997"
       },
       "targets": [
         "claude-code",
@@ -338,7 +338,7 @@
         "repo": "https://github.com/cathrynlavery/diagram-design",
         "path": "skills/diagram-design",
         "ref": "main",
-        "commit": "0eeda75a708f419560d5e032693618bb9954f17b"
+        "commit": "b228c5d77794a84150fca41b22940bb316b1398d"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "9d90e5a9b612c53c158d682c5ea44af27c9e118b"
+        "commit": "f8993a53721439f119d492fbf3c57c0b963e33f5"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "9d90e5a9b612c53c158d682c5ea44af27c9e118b"
+        "commit": "f8993a53721439f119d492fbf3c57c0b963e33f5"
       },
       "targets": [
         "claude-code",
@@ -590,7 +590,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "12c78e848e4800d701bdf8baa836e3eb111f628d"
+        "commit": "afc7485ec4ac555722a334fab84f423d2010c1f0"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "84980b16afbffd8101cf708a02aa93082334b14b"
+        "commit": "66f247aafb7f620de23c21fc0114907a331535c4"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "84980b16afbffd8101cf708a02aa93082334b14b"
+        "commit": "66f247aafb7f620de23c21fc0114907a331535c4"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00"
+        "commit": "c390f5e7e4645e34bbc37996f02f472d288cb36b"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00"
+        "commit": "c390f5e7e4645e34bbc37996f02f472d288cb36b"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00"
+        "commit": "c390f5e7e4645e34bbc37996f02f472d288cb36b"
       },
       "targets": [
         "claude-code",
@@ -1024,7 +1024,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "d43e0934fc1837fad94ee0d0df755fe0b33cbd00"
+        "commit": "c390f5e7e4645e34bbc37996f02f472d288cb36b"
       },
       "targets": [
         "claude-code",
