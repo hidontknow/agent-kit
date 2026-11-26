@@ -1,6 +1,6 @@
 ---
 name: sag
-description: Set up the standalone SAG CLI and search local project files by meaning. Use for SAG installation, project search setup, understanding unfamiliar implementations, or managing indexed folders and ignore rules.
+description: Use the standalone SAG CLI for setup, search, indexed folders, ignore rules, Markdown sharing, API Key folder permissions, and MCP configuration.
 ---
 
 Run the installed `sag` command from the project directory, not this Skill directory. Use `sag status` for service and configuration diagnostics, `sag list` for registered directories, and `sag check` for directory coverage and index readiness.
@@ -32,6 +32,8 @@ Each search accepts **one directory**, never a file path or several directories.
 
 ## Read only when needed
 
+- To share Markdown files or receive a share code, read [sharing and downloading](references/setup.md#sharing-and-downloading). These commands need no search model or existing index. Use the requested files and destination, then report the share code or downloaded path.
+- To limit an API Key to project folders or export its MCP configuration, read [API Key scopes and MCP configuration](references/setup.md#api-key-scopes-and-mcp-configuration).
 - For search options, `-E` / `-F` matching, output formats, limits and exit codes, read [parameters](references/parameters.md).
 - To create or change `.sagignore`, handle `.gitignore` precedence or restore ignored files, read [ignore rules](references/ignores.md).
 - For `status`, `list`, `check`, `add`, `remove`, `config`, `service`, `install` or `uninstall`, read [setup](references/setup.md). Respect existing access and exclusion choices.

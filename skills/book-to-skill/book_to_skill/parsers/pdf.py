@@ -55,6 +55,28 @@ def clean_pdftotext(text: str) -> str:
                 if len(nb) > 1:
                     edge[nb[-1]] += 1
         boiler = {ln for ln, c in edge.items() if c > len(pages) / 2}
+        # #113 keeps a genuine heading identical to the running header by
+        # stripping page edges only, which works because that heading sits
+        # mid-page. A chapter opening does not: it sits at the TOP of a page,
+        # exactly where the header is. So a long chapter whose title is the
+        # running header has every copy at an edge, lands in `boiler`, and the
+        # genuine opening is deleted with the headers -- the chapter then
+        # vanishes from detect_structure() with nothing logged.
+        #
+        # Keep the first edge occurrence of a boilerplate line that carries a
+        # number and drop the rest: the first is the opening, the rest are
+        # headers. A number is the signal because an unnumbered running header
+        # ("DESIGNING SYSTEMS", "O'Reilly Media") has none, so those keep their
+        # existing full removal. str.isdigit() is used rather than ASCII-only
+        # matching so Devanagari, Bengali and the other non-ASCII chapter
+        # numerals this extractor supports count too.
+        # ponytail: a numbered running header ("Section 3.2", "Smith 2019")
+        # leaves one copy behind; reuse the extractor's own _chapter_number if
+        # that bites, once it can be imported without an import cycle.
+        numbered_boiler = {
+            ln for ln in boiler if any(ch.isdigit() for ch in ln)
+        }
+        seen_numbered: set[str] = set()
         kept = []
         for p in pages:
             lines = p.splitlines()
@@ -70,7 +92,9 @@ def clean_pdftotext(text: str) -> str:
                 # along with the headers.
                 if i in (first, last):
                     s = ln.strip()
-                    if s in boiler or _PDF_PAGE_NUM.match(s):
+                    if s in numbered_boiler and s not in seen_numbered:
+                        seen_numbered.add(s)
+                    elif s in boiler or _PDF_PAGE_NUM.match(s):
                         continue
                 kept.append(ln)
         text = "\n".join(kept)
@@ -99,11 +123,12 @@ def extract_with_pdftotext(pdf_path: str) -> str | None:
 
 
 def looks_image_only(pdf_path: str, pages: int = 5) -> bool:
-    """True when the first `pages` pages yield no extractable text — the signature
-    of a scanned/image-only PDF. Cheap pre-flight so a scan fails in a second
-    instead of after the whole extraction chain has run. Best-effort: without
-    pdftotext it reports False and the normal chain (plus the final empty-text
-    guard) still applies."""
+    """Best-effort preflight for a PDF with no extractable text.
+
+    The initial sample is cheap. A textless prefix does not establish that a
+    longer document is image-only, so check the remaining pages before stopping.
+    Unknown counts and failed probes defer to the normal extraction chain.
+    """
     if not shutil.which("pdftotext"):
         return False
     try:
@@ -112,9 +137,59 @@ def looks_image_only(pdf_path: str, pages: int = 5) -> bool:
             capture_output=True, text=True, timeout=30,
             encoding="utf-8", errors="replace",
         )
-        return result.returncode == 0 and not result.stdout.strip()
+        if result.returncode != 0 or result.stdout.strip():
+            return False
+        total_pages = count_pages(pdf_path)
+        if total_pages <= 0:
+            return False
+        if total_pages <= pages:
+            return True
+        remaining = subprocess.run(
+            ["pdftotext", "-f", str(pages + 1), "-enc", "UTF-8", os.path.abspath(pdf_path), "-"],
+            capture_output=True, text=True, timeout=30,
+            encoding="utf-8", errors="replace",
+        )
+        return remaining.returncode == 0 and not remaining.stdout.strip()
     except Exception:
         return False
+
+
+def count_pdf_images(pdf_path: str) -> int | None:
+    """Count distinct embedded images (``pdfimages -list``); text extraction
+    reads none of them.
+
+    An image object drawn on many pages (a logo) counts once. Inline images have
+    no object id, so each occurrence counts. Stencil images (1-bit
+    ``/ImageMask`` images, common for bilevel scans) count; ``mask`` and
+    ``smask`` rows belong to another image and do not. Returns None when
+    pdfimages is missing or fails, so the count stays unknown rather than
+    reading as zero."""
+    if not shutil.which("pdfimages"):
+        return None
+    try:
+        result = subprocess.run(
+            ["pdfimages", "-list", os.path.abspath(pdf_path)],
+            capture_output=True, text=True, timeout=30,
+            encoding="utf-8", errors="replace",
+        )
+    except Exception as e:
+        print(f"  [warn] pdfimages -list failed: {type(e).__name__}: {e}", file=sys.stderr)
+        return None
+    if result.returncode != 0:
+        return None
+    objects = set()
+    inline = 0
+    # Two header lines, then: page num type width height color comp bpc enc
+    # interp object-id generation ...; inline images print "[inline]" as the id.
+    for line in result.stdout.splitlines()[2:]:
+        fields = line.split()
+        if len(fields) < 11 or fields[2] not in ("image", "stencil"):
+            continue
+        if fields[10] == "[inline]":
+            inline += 1
+        elif len(fields) > 11:
+            objects.add((fields[10], fields[11]))
+    return len(objects) + inline
 
 
 def extract_with_pypdf(pdf_path: str) -> str | None:
@@ -284,15 +359,17 @@ def count_pages(pdf_path: str) -> int:
         try:
             pdf_path = os.path.abspath(pdf_path)
             result = subprocess.run(
-                ["pdfinfo", pdf_path],
+                ["pdfinfo", "-enc", "UTF-8", pdf_path],
                 capture_output=True,
                 text=True,
+                encoding="utf-8", errors="replace",
                 timeout=15,
             )
             for line in result.stdout.splitlines():
                 if line.startswith("Pages:"):
                     return int(line.split(":")[1].strip())
         except Exception:
+            # Optional pdfinfo lookup failed or returned non-numeric output; fall through to Python fallbacks.
             pass
 
     # Fallback: count pages with pypdf.
