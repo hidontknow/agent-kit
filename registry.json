@@ -3098,6 +3098,28 @@
       "targets": []
     },
     {
+      "id": "resource/cursor-plugins",
+      "type": "resource",
+      "name": "cursor-plugins",
+      "description": "Cursor 官方插件市场（cursor/plugins）：约 160 个 Cursor 插件，每个是仓库根目录（或 third_party/）下带 .cursor-plugin/plugin.json 的独立目录。包括 Cursor 自己的开发工作流插件——thermos 分支深度审查、pstack / dyl-stack 高质量 Agent 工作流、orchestrate 多云端 Agent 并行、advisor 向更强模型求助、ralph-loop、continual-learning（从对话持续更新 AGENTS.md）、cursor-team-kit、PR / 文档画布、create-plugin 脚手架等；以及 Gmail、Google Workspace、GitHub、Playwright、Salesforce、HubSpot、Zoom、X 等 SaaS 集成（多为 MCP）。",
+      "tags": [
+        "cursor",
+        "plugins",
+        "marketplace",
+        "skills",
+        "mcp",
+        "directory"
+      ],
+      "origin": "linked",
+      "path": "resources/cursor-plugins.json",
+      "kind": "list",
+      "repo": "https://github.com/cursor/plugins",
+      "homepage": "https://github.com/cursor/plugins",
+      "license": "MIT（各插件目录内带各自的 LICENSE）",
+      "licenseUrl": "https://github.com/cursor/plugins#license",
+      "targets": []
+    },
+    {
       "id": "resource/iconmcp",
       "type": "resource",
       "name": "iconmcp",

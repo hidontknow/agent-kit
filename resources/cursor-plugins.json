@@ -1,0 +1,16 @@
+{
+  "name": "cursor-plugins",
+  "description": "Cursor 官方插件市场（cursor/plugins）：约 160 个 Cursor 插件，每个是仓库根目录（或 third_party/）下带 .cursor-plugin/plugin.json 的独立目录。包括 Cursor 自己的开发工作流插件——thermos 分支深度审查、pstack / dyl-stack 高质量 Agent 工作流、orchestrate 多云端 Agent 并行、advisor 向更强模型求助、ralph-loop、continual-learning（从对话持续更新 AGENTS.md）、cursor-team-kit、PR / 文档画布、create-plugin 脚手架等；以及 Gmail、Google Workspace、GitHub、Playwright、Salesforce、HubSpot、Zoom、X 等 SaaS 集成（多为 MCP）。",
+  "kind": "list",
+  "tags": ["cursor", "plugins", "marketplace", "skills", "mcp", "directory"],
+  "repo": "https://github.com/cursor/plugins",
+  "homepage": "https://github.com/cursor/plugins",
+  "license": "MIT（各插件目录内带各自的 LICENSE）",
+  "licenseUrl": "https://github.com/cursor/plugins#license",
+  "notes": [
+    "Cursor 里直接从官方市场安装，或把某个插件目录链接到 ~/.cursor/plugins/local/",
+    "仓库也带一个 Claude Code 市场，但只有 2 个插件：/plugin marketplace add cursor/plugins 后 /plugin install pstack@cursor-plugins（Lauren Tan 的「先深入再加速」Agent 工作流）或 /plugin install origin-apps@cursor-plugins（基于 Cursor Origin API 开发）",
+    "其他插件只针对 Cursor；其中的 skill 是标准 SKILL.md，想在别的 Agent 用，可以用 agent-kit add <插件里 skills 目录的 GitHub 链接> 收进本仓库",
+    "third_party/ 下的 SaaS 插件大多接远程 MCP，需要对应服务的账号授权"
+  ]
+}
