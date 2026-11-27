@@ -315,7 +315,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/defuddle",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -338,7 +338,7 @@
         "repo": "https://github.com/cathrynlavery/diagram-design",
         "path": "skills/diagram-design",
         "ref": "main",
-        "commit": "b228c5d77794a84150fca41b22940bb316b1398d"
+        "commit": "795eec47fd376e5dda0b9e056a49520060cd2f13"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "f807c1b2c49ef25ddfbe73e465e33b8a5fa5632e"
+        "commit": "fd099511d72e60d7f5a46e965a170e30f16ae4df"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "f807c1b2c49ef25ddfbe73e465e33b8a5fa5632e"
+        "commit": "fd099511d72e60d7f5a46e965a170e30f16ae4df"
       },
       "targets": [
         "claude-code",
@@ -521,7 +521,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/json-canvas",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -544,7 +544,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/knap",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -590,7 +590,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "c413c1fdc1714f2e4ae44a449b9744348197119c"
+        "commit": "27c1beae9cd7c34aa4ebde9de3735898e50a1a19"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "d04027d7cea8bcfbdd05fdbd43caac2c0a99e355"
+        "commit": "54ca221590c001c86d07874f06f7e42954ae39e9"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "d04027d7cea8bcfbdd05fdbd43caac2c0a99e355"
+        "commit": "54ca221590c001c86d07874f06f7e42954ae39e9"
       },
       "targets": [
         "claude-code",
@@ -705,7 +705,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/obsidian-bases",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -728,7 +728,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/obsidian-cli",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -751,7 +751,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/obsidian-headless",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -774,7 +774,7 @@
         "repo": "https://github.com/kepano/obsidian-skills",
         "path": "plugins/obsidian/skills/obsidian-markdown",
         "ref": "main",
-        "commit": "79e85b73ef041fdfb6437ab3824e2fe29eda9244"
+        "commit": "9c9560a870fd490b0e1a847f2c8401a50e2d931d"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "0bc66c4b67eb7c8a5863699193c28005c58c36f5"
+        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "0bc66c4b67eb7c8a5863699193c28005c58c36f5"
+        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "0bc66c4b67eb7c8a5863699193c28005c58c36f5"
+        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
       },
       "targets": [
         "claude-code",
@@ -1024,7 +1024,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "0bc66c4b67eb7c8a5863699193c28005c58c36f5"
+        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
       },
       "targets": [
         "claude-code",
