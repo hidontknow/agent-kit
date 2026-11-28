@@ -5,7 +5,7 @@
 
 | 类型 | 名称 | 说明 | 来源 |
 | --- | --- | --- | --- |
-| skill | `agent-desktop` | Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CLI. Use when an AI agent must see or act on a desktop GUI: click buttons, fill forms, read UI state, navigate menus, toggle checkboxes, scroll, drag, type text, press shortcuts, take screenshots, manage windows, use the clipboard, launch or close apps, read notifications. Triggers on: "click button", "fill form", "open app", "read UI", "computer use", "operate desktop", "accessibility tree", "snapshot app", "type into field", "navigate menu", "toggle checkbox", "take screenshot", "desktop automation", "agent-desktop", or any desktop GUI task on macOS, Windows or Linux. | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop/tree/main/skills/agent-desktop) · Apache-2.0 |
+| skill | `agent-desktop` | Operate desktop apps on macOS, Windows, and Linux through native accessibility trees with agent-desktop. Use for desktop GUI tasks: observe controls, click, edit fields, navigate menus, manage windows, launch apps, or read notifications. | [vercel-labs/agent-desktop](https://github.com/vercel-labs/agent-desktop/tree/main/skills/agent-desktop) · Apache-2.0 |
 
 ## 安装
 

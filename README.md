@@ -179,7 +179,7 @@ agent-kit install skill/my-skill --link   # 用软链接安装，边改边测
 
 | 名称 | 说明 | 来源 |
 | --- | --- | --- |
-| [`agent-desktop`](skills/agent-desktop) | Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CL… | [collected](https://github.com/vercel-labs/agent-desktop) |
+| [`agent-desktop`](skills/agent-desktop) | Operate desktop apps on macOS, Windows, and Linux through native accessibility trees with agent-desktop. Use for deskto… | [collected](https://github.com/vercel-labs/agent-desktop) |
 | [`animate`](skills/animate) | Build an animation from scratch, making the decisions in the order that determines whether it feels right — should it a… | [collected](https://github.com/emilkowalski/skills) |
 | [`animate-expo`](skills/animate-expo) | Build animations in React Native and Expo, making the decisions in the order that determines whether they feel right — … | [collected](https://github.com/emilkowalski/skills) |
 | [`animation-performance`](skills/animation-performance) | Keep web animations inside the frame budget — animate composite-only properties, keep motion off the main thread when t… | [collected](https://github.com/emilkowalski/skills) |

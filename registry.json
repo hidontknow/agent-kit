@@ -5,7 +5,7 @@
       "id": "skill/agent-desktop",
       "type": "skill",
       "name": "agent-desktop",
-      "description": "Operate desktop applications on macOS, Windows and Linux through native accessibility trees, using the agent-desktop CLI. Use when an AI agent must see or act on a desktop GUI: click buttons, fill forms, read UI state, navigate menus, toggle checkboxes, scroll, drag, type text, press shortcuts, take screenshots, manage windows, use the clipboard, launch or close apps, read notifications. Triggers on: \"click button\", \"fill form\", \"open app\", \"read UI\", \"computer use\", \"operate desktop\", \"accessibility tree\", \"snapshot app\", \"type into field\", \"navigate menu\", \"toggle checkbox\", \"take screenshot\", \"desktop automation\", \"agent-desktop\", or any desktop GUI task on macOS, Windows or Linux.",
+      "description": "Operate desktop apps on macOS, Windows, and Linux through native accessibility trees with agent-desktop. Use for desktop GUI tasks: observe controls, click, edit fields, navigate menus, manage windows, launch apps, or read notifications.",
       "tags": [
         "computer-use",
         "desktop-automation",
@@ -20,7 +20,7 @@
         "repo": "https://github.com/vercel-labs/agent-desktop",
         "path": "skills/agent-desktop",
         "ref": "main",
-        "commit": "ce2ddf07226346818de2a1c6bae9869cfad142df"
+        "commit": "e3d65c25fd9a5271b6cbc0c98b7761a4815377c0"
       },
       "targets": [
         "claude-code",
@@ -430,7 +430,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit",
         "ref": "main",
-        "commit": "fd099511d72e60d7f5a46e965a170e30f16ae4df"
+        "commit": "5aedca6062d9531c7be80e97c577d72cf4569004"
       },
       "targets": [
         "claude-code",
@@ -453,7 +453,7 @@
         "repo": "https://github.com/longbridge/gpui-kit",
         "path": "skills/gpui-kit-design-guides",
         "ref": "main",
-        "commit": "fd099511d72e60d7f5a46e965a170e30f16ae4df"
+        "commit": "5aedca6062d9531c7be80e97c577d72cf4569004"
       },
       "targets": [
         "claude-code",
@@ -590,7 +590,7 @@
         "repo": "https://github.com/google/skills",
         "path": "skills/developers/migrate-to-rust",
         "ref": "main",
-        "commit": "27c1beae9cd7c34aa4ebde9de3735898e50a1a19"
+        "commit": "10c799ee69bcdb10b82836403d1531bfcc3d9d24"
       },
       "targets": [
         "claude-code",
@@ -659,7 +659,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh",
         "ref": "main",
-        "commit": "54ca221590c001c86d07874f06f7e42954ae39e9"
+        "commit": "ff30a1509149c3d31f11723c46ff68e931806dc3"
       },
       "targets": [
         "claude-code",
@@ -682,7 +682,7 @@
         "repo": "https://github.com/longbridge/nsh",
         "path": "skills/nsh-design-guides",
         "ref": "main",
-        "commit": "54ca221590c001c86d07874f06f7e42954ae39e9"
+        "commit": "ff30a1509149c3d31f11723c46ff68e931806dc3"
       },
       "targets": [
         "claude-code",
@@ -909,7 +909,7 @@
         "repo": "https://github.com/Zleap-AI/SAG-Wiki",
         "path": "cli/skills/sag",
         "ref": "main",
-        "commit": "b6940ac834b3b1ec651c0b49dc1b0c45d4d74c4a"
+        "commit": "863cf57acd268e679570a54e6aa519a47ba466b5"
       },
       "targets": [
         "claude-code",
@@ -955,7 +955,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-checking",
         "ref": "main",
-        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
+        "commit": "3abab5b0a400895ee90642f15389213c6bada70b"
       },
       "targets": [
         "claude-code",
@@ -978,7 +978,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-editing",
         "ref": "main",
-        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
+        "commit": "3abab5b0a400895ee90642f15389213c6bada70b"
       },
       "targets": [
         "claude-code",
@@ -1001,7 +1001,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-mechanisms",
         "ref": "main",
-        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
+        "commit": "3abab5b0a400895ee90642f15389213c6bada70b"
       },
       "targets": [
         "claude-code",
@@ -1024,7 +1024,7 @@
         "repo": "https://github.com/tangency-labs/solidcraft",
         "path": "skills/solidcraft-modeling",
         "ref": "main",
-        "commit": "176ee2ee9ae9b40758efb55e8018d9d8a7bc6a61"
+        "commit": "3abab5b0a400895ee90642f15389213c6bada70b"
       },
       "targets": [
         "claude-code",
